@@ -1,0 +1,15 @@
+{
+  "copiedAt": "2026-11-08 Asia/Seoul",
+  "source": "esg_campaign",
+  "files": {
+    "design/reference/AIMI_UX_Light.pdf": {
+      "sha256": "ed6aeaabe8dd4fdecf6c90be8d24454d720ec5b2f1e4e131bfbf07bec1b574a7"
+    },
+    "design/figma/AIMI_Figma_Importer.zip": {
+      "sha256": "3216e0649aeaa644751538e9623dd3f9f59c18ce79293414d4d3119e1b35493e"
+    },
+    "docs/DEVELOPMENT_SPEC.md": {
+      "sha256": "029b6171aee0174d27178366e3443f86877a8e18b0dda727dec733141959e494"
+    }
+  }
+}

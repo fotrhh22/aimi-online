@@ -1,0 +1,26 @@
+{
+  "name": "aimi-online",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/miniapp",
+    "apps/api",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @aimi/miniapp",
+    "build": "npm run build:api && npm run build --workspace @aimi/miniapp",
+    "typecheck": "npm run build --workspace @aimi/contracts && npm run typecheck --workspace @aimi/api && npm run typecheck --workspace @aimi/miniapp",
+    "ait:build": "npm run ait:build --workspace @aimi/miniapp",
+    "build:api": "npm run build --workspace @aimi/contracts && npm run build --workspace @aimi/api",
+    "dev:api": "npm run dev --workspace @aimi/api",
+    "start:api": "npm run start --workspace @aimi/api",
+    "db:migrate": "npm run db:migrate --workspace @aimi/api",
+    "test": "npm run test --workspace @aimi/api",
+    "test:db": "npm run test:db --workspace @aimi/api"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

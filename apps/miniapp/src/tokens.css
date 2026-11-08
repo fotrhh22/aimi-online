@@ -1,0 +1,27 @@
+:root {
+  /* PDF/Figma logical px. Runtime font inherits the host when available. */
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --color-background: #f8faf0;
+  --color-background-top: #c3d9aa;
+  --color-background-bottom: #d7e7c4;
+  --color-ink: #242820;
+  --color-muted: #4c5944;
+  --color-brand: #527a41;
+  --color-brand-text: #274e2f;
+  --color-surface: #f1f5e9;
+  --color-weak: #e7eedd;
+  --color-garden: #4f783f;
+  --space-1: 4px;
+  --space-peer: 8px;
+  --space-copy-list: 12px;
+  --space-content: 16px;
+  --space-section: 24px;
+  --page-margin: 24px;
+  --card-padding: 16px;
+  --button-height: 56px;
+  --radius-button: 16px;
+  --radius-card: 20px;
+  --type-page-title: 22px;
+  --type-body: 15px;
+  --type-caption: 12px;
+}

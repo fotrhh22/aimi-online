@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.ait
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Local configuration and generated output
+secrets/
+*.key
+*.pem
+*.p12
