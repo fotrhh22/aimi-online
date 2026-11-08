@@ -30,6 +30,8 @@ The server-only schema is `aimi`, not `public`. The miniapp still uses its origi
 
 ## Render
 
+The root `.npmrc` includes devDependencies during source builds, including when NODE_ENV=production.
+
 Node 22.22.0; root directory empty; build `npm ci && npm run build:api`; start `npm run start:api`; readiness `/health/ready`. Set `NODE_ENV=production`, `HOST=0.0.0.0`, `ENABLE_DEV_AUTH=false`, runtime `DATABASE_URL`, and a separate random `SESSION_SIGNING_KEY`. Never deploy migration/admin credentials. Startup does not execute DDL.
 
 ## Checks
