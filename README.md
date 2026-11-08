@@ -9,6 +9,7 @@
 - [구현 상태](docs/IMPLEMENTATION_STATUS.md)
 - [환경변수·Supabase·Render 구축 계획](docs/INFRASTRUCTURE_PLAN.md)
 - [전체 앱 구현 계획](docs/IMPLEMENTATION_PLAN.md)
+- [API 개발 배포·실행 안내](docs/DEPLOYMENT.md)
 - [API·Gemini 예산·Actions·게임 소스 계획](docs/API_AND_GAME_RESOURCES_PLAN.md)
 
 ```sh

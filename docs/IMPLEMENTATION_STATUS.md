@@ -2,6 +2,20 @@
 
 갱신: 2026-11-08.
 
+## GitHub·Render 배포 검증 결과
+
+- 사용자 전체 공개 승인 후 GitHub main 업로드 완료: https://github.com/fotrhh22/aimi-online
+- 코드 커밋 `8772899`의 GitHub CI 성공: https://github.com/fotrhh22/aimi-online/actions/runs/42459690522
+- Render `My Workspace` / `aimi-online-api` / Singapore / Free 개발용 서비스 생성.
+- API: https://aimi-online-api.onrender.com
+- Dashboard: https://dashboard.render.com/web/srv-dbo2dvp5efls73cmt7qg
+- 배포 `dep-dbo2edm8bjmc73aomg10` live 확인. 처음 production 빌드의 devDependencies 누락은 `.npmrc`의 include=dev로 수정.
+- 외부 HTTP 검증: `/health/live` 200, `/health/ready` 200, 인증 없는 `/wallet` 401, `/auth/dev` 404.
+- 런타임 전용 DB 연결과 서버 키 등록. 관리자 migration 연결은 Render에 등록하지 않음. 운영 세션 키는 로컬 개발용 키와 별도 생성.
+- 플랫폼 health check는 현재 기본 TCP 검사. DB readiness HTTP 경로는 위 외부 호출로 검증했으며 Dashboard Settings에서 `/health/ready`로 지정 가능.
+- 모델 자료의 주간 Actions 수집은 아직 미구현. 현재 Actions는 build·타입·단위·PostgreSQL 통합 검증 CI다.
+- 전체 앱 출시 완료가 아님. 토스 인증·미니앱 API 연결·게임·정원·AI 기능 구현은 후속 단계.
+
 ## API·DB 기반 구현 결과
 
 - 독립 Git 저장소 초기화, 원격 `fotrhh22/aimi-online` 연결. 부모 원격은 변경하지 않음.
