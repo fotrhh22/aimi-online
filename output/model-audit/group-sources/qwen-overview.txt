@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en" class="transparent alicloud back-to-top new_default light" traceid="a3b5169b17942774568205887e">
+<link rel="stylesheet" href="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.66/css/index.css" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="spm-id" content="a2c63">
+<meta name="data-spm" content="a2c63" />
+<meta name="aplus-core" content="aplus.js">
+<meta name="aplus-ajax" content="chksum">
+<meta name="aplus-waiting" content="MAN">
+<meta name="aplus-pvhash" content="1">
+ <!-- MINOR_LANG_ENTRY_GATE：ko/de/vi/th 入口暂关；开放时把码追加到下方 content 并同步 Constants 卡点列表 -->
+<meta name="kloud:supported-langs" content="en,zh,tc,ja,id,pt-BR,fr,es,tr"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="aplus-rhost-v" content="sg.mmstat.com">
+<meta name="aplus-rhost-g" content="sg.mmstat.com">
+<title>
+ Text Generation and Visual Understanding - Alibaba Cloud Model Studio - Alibaba Cloud Documentation Center
+
+</title>
+ <meta name="keywords" content="text generation,large language models,Qwen,DeepSeek,GLM,model selection,Model Studio,Bailian">
+ <meta name="description" content="Text Generation and Visual Understanding,Alibaba Cloud Model Studio:Qwen Plus, Max, and Flash accept text, images, and video and respond with text. Use the same model to generate content, understand images, or analyze video. Image or video input alone does not require...">
+ <script>
+window.globalData = {
+website: "intl",
+language: "en",
+nodeId:"3026903",
+channel: "",
+notfound: "",
+statusCode: "",
+errorType: ""
+};
+// UT的全局配置变量，在CDN加载前配置
+window.$ACE_TRACKER_CONFIG = {
+enableHistory: true,
+enableHash: false
+};
+</script>
+<!-- <base href="https://www.alibabacloud.com">-->
+<link rel="canonical" href="https://www.alibabacloud.com/help/en/model-studio/text-generation-model/"/>
+ <meta property="og:title" content="Text Generation and Visual Understanding - Alibaba Cloud" />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://www.alibabacloud.com/help/en/model-studio/text-generation-model/" />
+ <meta property="og:image" content="https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp" />
+ <meta property="og:description" content="Text Generation and Visual Understanding,Alibaba Cloud Model Studio:Qwen Plus, Max, and Flash accept text, images, and video and respond with text. Use the same model to generate content, understand images, or analyze video. Image or video input alone does not require..." />
+ <link rel="shortcut icon" href="//img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png"/>
+<link rel="stylesheet" href="https://o.alicdn.com/fund/alicloud-pure-layout/css/index.min.css" />
+ <link
+rel="icon"
+href="https://img.alicdn.com/imgextra/i2/O1CN01TFs5Qw27uYvfA6gib_!!6000000007857-55-tps-32-32.svg"
+type="image/x-icon"
+/>
+</head>
+<body data-spm="" class="HAS_ALPS_RESOURCE"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=a3b5169b17942774568205887e&asid=AQAAAABRgPJqq/CJaQAAAADZGZDrLydtfw==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+ <script async src="https://o.alicdn.com/fund/alicloud-pure-layout/index.js"></script>
+
+<div id="app">
+<div class="aliyun-app-layout">
+
+<!-- docId:3026903 -->
+<input type="hidden" id="website" value="intl">
+<div class="products-wrapper$tip" data-spm="879954">
+<section id="products" class="intl-product container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="navDocument">
+<div class="doc-nav">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+</div>
+<div class="placeholder-ele">&nbsp;</div>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 doc-content">
+<div class="all-products action" id="J_AllProducts">
+<div class="all-products-head">
+<div class="all-products-title">All Products</div>
+<div class="all-products-search-wrapper">
+<div class="all-products-search focus">
+<input autocomplete="off" class="all-products-search-box-input" id="J_AllProductsSearch" placeholder="Search Product" data-spm-anchor-id="a2c4g.11186623.6.i0.1f753945H9RVzu">
+<i class="icon-search icon-docs icon-docs-search"></i>
+<ul class="all-products-search-result" style="display: none;">
+</ul>
+</div>
+</div>
+</div>
+<div class="all-products-body" id="J_AllProductsBody"></div>
+</div>
+<div class="search-product-modal">
+Search
+</div>
+<div class="breadcrumbs-top" data-spm="a1">
+<div class="row nav-breadcrumb">
+ <div class="col-md-12 hidden-sm hidden-xs">
+<ul class="breadcrumb text-sm">
+<li><a class="active" title="Document Center" href="/help/en">Document Center</a></li>
+ <li><a class="active" title="Alibaba Cloud Model Studio" href="/help/en/model-studio/">Alibaba Cloud Model Studio</a></li>
+ <li><a class="active" title="Models" href="/help/en/model-studio/model-user-guide/">Models</a></li>
+ <li><a class="active" title="Model calls" href="/help/en/model-studio/model-experience/">Model calls</a></li>
+ <li><a class="active" title="Text" href="/help/en/model-studio/text-generation-model/">Text</a></li>
+ </ul>
+</div>
+ <div class="col-md-4 col-sm-12">
+<button type="button" class="navbar-toggle bc mr0" data-toggle="collapse"
+data-target="#sideMenu-mobile">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+all-products-head <span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<form class="search-bar clearfix" method="GET" action="/s/en">
+<input type="hidden" name="type" value="doc"/>
+<div class="select">
+<p class="select-text">
+<span class="placeholder">This Product</span>
+<i class="icon-docs icon-docs-selected"></i>
+</p>
+<ul class="select-options" style="display:none;">
+<li class="option selected" data-value="h_pid_$productId">This Product</li>
+<li class="option" data-value="">All Products</li>
+</ul>
+<input type="hidden" name="rangeinfo" value="h_pid_2400256"/>
+</div>
+<input autocomplete="off" class="search-key" type="text" placeholder="Search by keyword" name="k"/>
+<ul class="help-top-search-result" style="display: block;"></ul>
+<button class="search-submit" type="submit">
+<i class="icon-docs icon-docs-search"></i>
+</button>
+<div class="collapse-menus select">
+<p class="select-text">
+<span class="placeholder">Alibaba Cloud Model Studio:Text Generation and Visual Understanding</span>
+<i class="icon-docs icon-docs-more"></i>
+</p>
+</div>
+</form>
+</div>
+<header id="header-faq" class="clearfix">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+<div class="download-links">
+ </div>
+<h1 class="page-title">Alibaba Cloud Model Studio:Text Generation and Visual Understanding</h1>
+<div class="doc-status">
+Last Updated:Nov 05, 2026
+</div>
+</header>
+<article class="product-description markdown-body">
+<div lang="en" class="icms-help-docs-content">
+<meta property="og:title" content="Text Generation and Visual Understanding"/><div lang="en" class="icms-help-docs-content"><p data-tag="shortdesc" class="shortdesc">Qwen Plus, Max, and Flash accept text, images, and video and respond with text. Use the same model to generate content, understand images, or analyze video. Image or video input alone does not require switching to a VL model.</p>
+<h2 id="choose-a-model">Choose a model <span id="oc1a2b3c4d5e02"></span> <span id="oc1a2b3c4d5e01"></span> <span id="mg1a2b3c4d5e02"></span> <span id="mg1a2b3c4d5e01"></span> <span id="t1a2b3c4d5e6f8"></span> <span id="t1a2b3c4d5e6f7"></span> <span id="h3-office-productivity"></span> <span id="v7a002"></span> <span id="v7a01d"></span> <span id="t1a2b3c4d5e701"></span> <span id="t1a2b3c4d5e700"></span> <span id="v7a005"></span> <span id="v7a004"></span> <span id="v7a008"></span> <span id="v7a007"></span> <span id="t1a2b3c4d5e709"></span> <span id="t1a2b3c4d5e708"></span> <span id="t1a2b3c4d5e713"></span> <span id="t1a2b3c4d5e712"></span> <span id="v7a011"></span> <span id="v7a010"></span> <span id="t1a2b3c4d5e721"></span> <span id="t1a2b3c4d5e720"></span> <span id="v7a019"></span> <span id="v7a018"></span> <span id="t1a2b3c4d5e725"></span> <span id="t1a2b3c4d5e724"></span></h2>
+<p>Plus, Max, and Flash accept text, images, and video and respond with text. Text generation creates or processes text based on your input. Image and video understanding interprets visual content and answers questions, including tasks that combine visual input with text instructions.</p>
+<ul>
+<li><strong>Start here</strong>: <code>qwen3.7-plus</code> balances capability and cost.</li>
+<li><strong>Prioritize quality</strong>: <code>qwen3.8-max</code> for tasks with higher reasoning and understanding requirements.</li>
+<li><strong>Prioritize cost</strong>: <code>qwen3.8-flash</code>; verify that results meet your requirements.</li>
+</ul>
+<p>Get started with <a href="/help/en/model-studio/text-generation">Text generation</a> and <a href="/help/en/model-studio/vision">Image and video understanding</a>.</p>
+<p><strong>Deep thinking</strong>: Use step-by-step reasoning for problems that require multiple stages of analysis, allowing the model to reason more thoroughly before answering. Adjust the thinking mode to suit your task. See <a href="/help/en/model-studio/deep-thinking">Deep thinking</a>.</p>
+<p><strong>Tool calling</strong>: Models can call tools based on your input. Function Calling connects functions or business APIs that you define. Built-in tools provide web search, a code interpreter, and web scraping to retrieve external information or process data. See <a href="/help/en/model-studio/tool-calls">Tool calling</a>.</p>
+<p><strong>Structured output</strong>: Organize information from text, images, or video into valid JSON for programs to read, validate, and process. See <a href="/help/en/model-studio/qwen-structured-output">Structured output</a>.</p>
+<p><strong>Batch inference</strong>: For large numbers of requests that do not require immediate results, batch inference can reduce request costs. See <a href="/help/en/model-studio/batch-inference">Batch inference</a>.</p>
+<h2 id="domain-specific-models">Domain-specific models</h2>
+<p>For specific tasks, you can also choose a model optimized for that task.</p>
+<ul>
+<li><a href="/help/en/model-studio/machine-translation">Translation</a>: Qwen-MT translates text across languages.</li>
+<li><a href="/help/en/model-studio/long-context-qwen-long">Long documents</a>: Qwen-Long processes very long documents through file uploads and references.</li>
+<li><a href="/help/en/model-studio/role-play">Role-playing</a>: Qwen-Character supports human-like conversations that maintain a defined persona.</li>
+<li><a href="/help/en/model-studio/data-mining-qwen-doc">Data mining</a>: Qwen-Doc extracts information, classifies content, and generates summaries from documents.</li>
+<li><a href="/help/en/model-studio/qwen-deep-research">Deep research</a>: Qwen-Deep-Research plans research steps and uses multiple rounds of web search to produce research reports.</li>
+<li><a href="/help/en/model-studio/qwen-vl-ocr">Text extraction</a>: Qwen-OCR extracts text from images of documents, tables, or handwriting.</li>
+</ul>
+<p>Regions and invocation methods vary by model. See the linked guides for details.</p>
+<h2 id="recommended-models">Recommended models <span id="t1a2b3c4d5e729"></span> <span id="t1a2b3c4d5e728"></span></h2>
+<h3 id="feature-support">Feature support</h3>
+<table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><code>qwen3.8-max</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>qwen3.8-flash</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>qwen3.7-plus</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>deepseek-v4.1-flash-1017</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>glm-5.3</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Unsupported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>kimi-k3.1-pro</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported (Responses)</td><td style="vertical-align:top">Supported (JSON Mode)</td></tr><tr><td style="vertical-align:top"><code>kimi-k3</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Unsupported</td><td style="vertical-align:top">Supported</td></tr><tr><td style="vertical-align:top"><code>MiniMax-M2.5</code></td><td style="vertical-align:top">200k</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Unsupported</td><td style="vertical-align:top">Unsupported</td></tr></tbody></table>
+<h3 id="image-and-video-parameters">Image and video parameters <span id="v7a020"></span></h3>
+<table class="table-wide" autofit="false" tablewidth="1100" style="overflow-wrap:anywhere"><colgroup><col style="width:18.0%"/><col style="width:5.4%"/><col style="width:10%"/><col style="width:7.2%"/><col style="width:7.2%"/><col style="width:7.2%"/><col style="width:6.3%"/><col style="width:6.3%"/><col style="width:8.1%"/><col style="width:10.8%"/><col style="width:13.5%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p>Max output</p></th><th style="vertical-align:top"><p><strong>Max pixels/image</strong></p></th><th style="vertical-align:top"><p><strong>Max video duration</strong></p></th><th style="vertical-align:top"><p><strong>Max video size</strong></p></th><th style="vertical-align:top"><p><strong>Max images</strong></p></th><th style="vertical-align:top"><p><strong>Max videos</strong></p></th><th style="vertical-align:top"><p><strong>Function calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen3.8-max</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>16M</p></td><td style="vertical-align:top"><p>2 hours</p></td><td style="vertical-align:top"><p>2 GB</p></td><td style="vertical-align:top"><p>2048</p></td><td style="vertical-align:top"><p>64</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.8-flash</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>16M</p></td><td style="vertical-align:top"><p>2 hours</p></td><td style="vertical-align:top"><p>2 GB</p></td><td style="vertical-align:top"><p>2048</p></td><td style="vertical-align:top"><p>64</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.7-plus</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>16M</p></td><td style="vertical-align:top"><p>2 hours</p></td><td style="vertical-align:top"><p>2 GB</p></td><td style="vertical-align:top"><p>2048</p></td><td style="vertical-align:top"><p>64</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr></tbody></table>
+<h2 id="older-models">Older models <span id="t1a2b3c4d5e801"></span> <span id="t1a2b3c4d5e800"></span></h2>
+<p>These models are no longer the first recommendation. Each model is listed once, without duplicate preview names or snapshots.</p>
+<section class="collapse" id="accordion-view-older-models"><p>View older models</p><div><h3>Qwen3.7</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><strong>Model ID</strong></th><th style="vertical-align:top"><strong>Context</strong></th><th style="vertical-align:top"><strong>Thinking mode</strong></th><th style="vertical-align:top"><strong>Function Calling</strong></th><th style="vertical-align:top"><strong>Built-in tools</strong></th><th style="vertical-align:top"><strong>Structured output</strong></th></tr></thead><tbody><tr><td style="vertical-align:top"><code>qwen3.7-max</code></td><td style="vertical-align:top"> 1M </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td></tr><tr><td style="vertical-align:top"><code>qwen3.7-flash</code></td><td style="vertical-align:top">1M</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td><td style="vertical-align:top">Supported</td></tr></tbody></table><h4>Image and video parameters</h4><table class="table-wide" autofit="false" tablewidth="1100" style="overflow-wrap:anywhere"><colgroup><col style="width:20%"/><col style="width:6%"/><col style="width:8%"/><col style="width:8%"/><col style="width:8%"/><col style="width:7%"/><col style="width:7%"/><col style="width:9%"/><col style="width:12%"/><col style="width:15%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Max pixels/image</strong></p></th><th style="vertical-align:top"><p><strong>Max video duration</strong></p></th><th style="vertical-align:top"><p><strong>Max video size</strong></p></th><th style="vertical-align:top"><p><strong>Max images</strong></p></th><th style="vertical-align:top"><p><strong>Max videos</strong></p></th><th style="vertical-align:top"><p><strong>Function calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen3.7-flash</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>16M</p></td><td style="vertical-align:top"><p>2 hours</p></td><td style="vertical-align:top"><p>2 GB</p></td><td style="vertical-align:top"><p>256</p></td><td style="vertical-align:top"><p>64</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr></tbody></table><h3>Qwen3.6</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><strong>Model ID</strong></th><th style="vertical-align:top"><strong>Context</strong></th><th style="vertical-align:top"><strong>Thinking mode</strong></th><th style="vertical-align:top"><strong>Function Calling</strong></th><th style="vertical-align:top"><strong>Built-in tools</strong></th><th style="vertical-align:top"><strong>Structured output</strong></th></tr></thead><tbody><tr><td style="vertical-align:top"><code>qwen3.6-plus</code></td><td style="vertical-align:top"> 1M </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td></tr><tr><td style="vertical-align:top"><code>qwen3.6-flash</code></td><td style="vertical-align:top"> 1M </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td></tr></tbody></table><h3>Qwen3.5</h3><h4>Image and video parameters</h4><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen3.5-plus</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.5-flash</code></p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.5-397b-a17b</code></p></td><td style="vertical-align:top"><p>256k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.5-122b-a10b</code></p></td><td style="vertical-align:top"><p>256k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.5-27b</code></p></td><td style="vertical-align:top"><p>256k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen3.5-35b-a3b</code></p></td><td style="vertical-align:top"><p>256k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr></tbody></table><h3>Qwen3-Coder</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><strong>Model ID</strong></th><th style="vertical-align:top"><strong>Context</strong></th><th style="vertical-align:top"><strong>Thinking mode</strong></th><th style="vertical-align:top"><strong>Function Calling</strong></th><th style="vertical-align:top"><strong>Built-in tools</strong></th><th style="vertical-align:top"><strong>Structured output</strong></th></tr></thead><tbody><tr><td style="vertical-align:top"><code>qwen3-coder-flash</code></td><td style="vertical-align:top"> 1M </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Supported </td><td style="vertical-align:top"> Unsupported </td><td style="vertical-align:top"> Supported </td></tr></tbody></table><h3>Qwen-MT</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen-mt-plus</code></p></td><td style="vertical-align:top"><p>16k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-mt-flash</code></p></td><td style="vertical-align:top"><p>16k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-mt-lite</code></p></td><td style="vertical-align:top"><p>16k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr></tbody></table><h3>Qwen-Long</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><strong>Model ID</strong></th><th style="vertical-align:top"><strong>Context</strong></th><th style="vertical-align:top"><strong>Thinking mode</strong></th><th style="vertical-align:top"><strong>Function Calling</strong></th><th style="vertical-align:top"><strong>Built-in tools</strong></th><th style="vertical-align:top"><strong>Structured output</strong></th></tr></thead><tbody><tr><td style="vertical-align:top"><code>qwen-long</code></td><td style="vertical-align:top"> 10M </td><td style="vertical-align:top"> Unsupported </td><td style="vertical-align:top"> Unsupported </td><td style="vertical-align:top"> Unsupported </td><td style="vertical-align:top"> Supported </td></tr></tbody></table><h3>Qwen-Character</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen-plus-character</code></p></td><td style="vertical-align:top"><p>32k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-plus-character-ja</code></p></td><td style="vertical-align:top"><p>32k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-flash-character</code></p></td><td style="vertical-align:top"><p>8k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr></tbody></table><h3>Qwen</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>qwen-plus</code> and its snapshots</p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-max</code> and its snapshots</p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr><tr><td style="vertical-align:top"><p><code>qwen-flash</code> and its snapshots</p></td><td style="vertical-align:top"><p>1M</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Supported</p></td></tr></tbody></table><h3>DeepSeek</h3><h4>Feature support</h4><table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:27.576792%"/><col style="width:11.467577%"/><col style="width:13.788396%"/><col style="width:17.269625%"/><col style="width:14.948805%"/><col style="width:14.948805%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model ID</strong></p></th><th style="vertical-align:top"><p><strong>Context</strong></p></th><th style="vertical-align:top"><p><strong>Thinking mode</strong></p></th><th style="vertical-align:top"><p><strong>Function Calling</strong></p></th><th style="vertical-align:top"><p><strong>Built-in tools</strong></p></th><th style="vertical-align:top"><p><strong>Structured output</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p><code>deepseek-r1-distill-llama-70b</code></p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr><tr><td style="vertical-align:top"><p><code>deepseek-r1-distill-qwen-1.5b</code></p></td><td style="vertical-align:top"><p>128k</p></td><td style="vertical-align:top"><p>Supported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td><td style="vertical-align:top"><p>Unsupported</p></td></tr></tbody></table></div></section>
+<span id="v7a01f"></span>
+<span id="v7a0a4"></span>
+<span id="v7a0a3"></span>
+<span id="3d7f167281kx4"></span>
+<span id="0b0739f2bbtlt"></span>
+<span id="t1a2b3c4d5e803"></span>
+<span id="t1a2b3c4d5e802"></span>
+<span id="t1a2b3c4d5e861"></span>
+<span id="t1a2b3c4d5e860"></span>
+<span id="lgcy101"></span>
+<span id="lgcy100"></span>
+<span id="lgcy401"></span>
+<span id="lgcy400"></span>
+<span id="lgcy501"></span>
+<span id="lgcy500"></span>
+<span id="lgcy601"></span>
+<span id="lgcy600"></span>
+<span id="lgcy701"></span>
+<span id="lgcy700"></span>
+<span id="c885247d230bw"></span>
+<span id="3224ea96370tn"></span></div>
+</div>
+</article>
+<script type="text/javascript">
+window.storeDocs = {
+language: '$lang',
+docGithubLink: '$!githubInfo.url'
+}
+</script>
+<div class="nav-footer">
+ </div>
+<div class="alicloud-document-ask clearfix"></div>
+<div class="feedback-message" style="display:none;">
+<span class="hasfeedback acon acon-done-16"></span>
+Thank you! We've received your  feedback.
+</div>
+</div>
+<div class="col-log-2 col-md-2 col-sm-0 col-xs-0 nav-catalog">
+<div class="article-catalog" id="articleCatalog"></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script
+crossorigin
+src="https://g.alicdn.com/code/lib/??react/16.8.6/umd/react.production.min.js,react-dom/16.8.6/umd/react-dom.production.min.js"
+></script>
+<script
+src="https://g.alicdn.com/code/lib/lodash.js/4.17.21/lodash.min.js"
+crossorigin="anonymous"
+></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.66/js/vendor.js"></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.66/js/index.js"></script>
+<script defer src="https://cloud-assets.alicdn.com/alicdn/dawn/user-tracker/latest/js/index.js"></script>
+</body>
+</html>
