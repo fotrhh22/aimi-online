@@ -1,0 +1,797 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-04",
+  "title": "보라 화분의 선인장",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-KREA_GUIDE"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "자연어 시각 묘사",
+  "prompt_lines": [
+    "노란색 배경의 화면 중앙에 보라색 화분을 놓는다.",
+    "화분 안에 초록색 선인장 한 개가 있는 사진풍 장면을 만든다."
+  ],
+  "authored_prompt": "노란색 배경의 화면 중앙에 보라색 화분을 놓는다.\n화분 안에 초록색 선인장 한 개가 있는 사진풍 장면을 만든다.",
+  "alternate_prompt": "노란색 배경의 화면 중앙에 보라색 화분을 놓는다. 화분 안에 초록색 선인장 한 개가 있는 사진풍 장면을 만든다.",
+  "conditions": [
+    {
+      "id": "day-04-c01",
+      "variable": "subject",
+      "entity": "cactus",
+      "context": "식물",
+      "requested_value": "선인장",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c02",
+      "variable": "count",
+      "entity": "cactus",
+      "context": "선인장 수",
+      "requested_value": "한 개",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c03",
+      "variable": "color",
+      "entity": "cactus",
+      "context": "선인장 색",
+      "requested_value": "초록색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c04",
+      "variable": "color",
+      "entity": "pot",
+      "context": "화분 색",
+      "requested_value": "보라색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c05",
+      "variable": "subject",
+      "entity": "pot",
+      "context": "식물이 담긴 용기",
+      "requested_value": "화분",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c06",
+      "variable": "containment",
+      "entity": "cactus->pot",
+      "context": "선인장 위치",
+      "requested_value": "안에",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c07",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "노란색 배경",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c08",
+      "variable": "screen_position",
+      "entity": "pot",
+      "context": "화분의 화면 위치",
+      "requested_value": "화면 중앙",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-04-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "사진풍",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-9f2260abca62047b",
+      "label": "선인장",
+      "context": "식물",
+      "condition_id": "day-04-c01"
+    },
+    {
+      "id": "k-9e4216418fb8f0b4",
+      "label": "한 개",
+      "context": "선인장 수",
+      "condition_id": "day-04-c02"
+    },
+    {
+      "id": "k-c387c13fe9f5bb74",
+      "label": "초록색",
+      "context": "선인장 색",
+      "condition_id": "day-04-c03"
+    },
+    {
+      "id": "k-8a57af967cf0d5a3",
+      "label": "보라색",
+      "context": "화분 색",
+      "condition_id": "day-04-c04"
+    },
+    {
+      "id": "k-c5d165b90520da5a",
+      "label": "화분",
+      "context": "식물이 담긴 용기",
+      "condition_id": "day-04-c05"
+    },
+    {
+      "id": "k-9fc863663b88a6ff",
+      "label": "안에",
+      "context": "선인장 위치",
+      "condition_id": "day-04-c06"
+    },
+    {
+      "id": "k-637ec14e6f3e0b21",
+      "label": "노란색 배경",
+      "context": "배경",
+      "condition_id": "day-04-c07"
+    },
+    {
+      "id": "k-8a510ea2fb7ab3d8",
+      "label": "화면 중앙",
+      "context": "화분의 화면 위치",
+      "condition_id": "day-04-c08"
+    },
+    {
+      "id": "k-8307842150af0546",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-04-c09"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-69d5be07d7b19105",
+      "label": "해바라기",
+      "context": "식물",
+      "contradicts_condition_id": "day-04-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-fcd716d737221bb7",
+      "label": "소나무",
+      "context": "식물",
+      "contradicts_condition_id": "day-04-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ec26edc399adee8f",
+      "label": "두 개",
+      "context": "선인장 수",
+      "contradicts_condition_id": "day-04-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-fe5cc4d93802258a",
+      "label": "네 개",
+      "context": "선인장 수",
+      "contradicts_condition_id": "day-04-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-5df3e41c919f75e5",
+      "label": "빨간색",
+      "context": "선인장 색",
+      "contradicts_condition_id": "day-04-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-6fca881040835633",
+      "label": "파란색",
+      "context": "선인장 색",
+      "contradicts_condition_id": "day-04-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-07d8249f58d76434",
+      "label": "검은색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-04-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bdcb5649d2ac37ab",
+      "label": "흰색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-04-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ff6cae6f5a474a6a",
+      "label": "접시",
+      "context": "식물이 담긴 용기",
+      "contradicts_condition_id": "day-04-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f5bd966f453f1f28",
+      "label": "주전자",
+      "context": "식물이 담긴 용기",
+      "contradicts_condition_id": "day-04-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f60a7e97f2bbf1fc",
+      "label": "밖에",
+      "context": "선인장 위치",
+      "contradicts_condition_id": "day-04-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-83540729e6b6daa5",
+      "label": "검정 배경",
+      "context": "배경",
+      "contradicts_condition_id": "day-04-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-1011a75fa4780926",
+      "label": "흰색 배경",
+      "context": "배경",
+      "contradicts_condition_id": "day-04-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bc6aa57172969723",
+      "label": "화면 오른쪽",
+      "context": "화분의 화면 위치",
+      "contradicts_condition_id": "day-04-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-0c5862d65739d319",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-04-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-16a047125967aca3",
+      "label": "먹그림",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-04-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-3488d01801fe9436",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-2134ca920e3b1b94",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-3e9cbe7cc34803fa",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-8dc4447668b73e42",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-8dea3b4fe0d8086a",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-aef07d8682d3180d",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-fa652ce89756bab1",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-68c6285b96286a77",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-ece4575d227703b1",
+      "label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-98a4f0ef03825e52",
+      "label": "바나나",
+      "context": "식물",
+      "contradicts_condition_id": "day-04-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-b848126f95b04511",
+      "label": "빨간색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-04-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-3718cabdf4bbfc45",
+      "label": "바나나",
+      "context": "식물이 담긴 용기",
+      "contradicts_condition_id": "day-04-c05",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-07d8249f58d76434",
+      "label": "검은색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-0c5862d65739d319",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-1011a75fa4780926",
+      "label": "흰색 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-16a047125967aca3",
+      "label": "먹그림",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-2134ca920e3b1b94",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-3488d01801fe9436",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-3718cabdf4bbfc45",
+      "label": "바나나",
+      "context": "식물이 담긴 용기"
+    },
+    {
+      "id": "k-3e9cbe7cc34803fa",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-5df3e41c919f75e5",
+      "label": "빨간색",
+      "context": "선인장 색"
+    },
+    {
+      "id": "k-637ec14e6f3e0b21",
+      "label": "노란색 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-68c6285b96286a77",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-69d5be07d7b19105",
+      "label": "해바라기",
+      "context": "식물"
+    },
+    {
+      "id": "k-6fca881040835633",
+      "label": "파란색",
+      "context": "선인장 색"
+    },
+    {
+      "id": "k-8307842150af0546",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-83540729e6b6daa5",
+      "label": "검정 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-8a510ea2fb7ab3d8",
+      "label": "화면 중앙",
+      "context": "화분의 화면 위치"
+    },
+    {
+      "id": "k-8a57af967cf0d5a3",
+      "label": "보라색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-8dc4447668b73e42",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-8dea3b4fe0d8086a",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-98a4f0ef03825e52",
+      "label": "바나나",
+      "context": "식물"
+    },
+    {
+      "id": "k-9e4216418fb8f0b4",
+      "label": "한 개",
+      "context": "선인장 수"
+    },
+    {
+      "id": "k-9f2260abca62047b",
+      "label": "선인장",
+      "context": "식물"
+    },
+    {
+      "id": "k-9fc863663b88a6ff",
+      "label": "안에",
+      "context": "선인장 위치"
+    },
+    {
+      "id": "k-aef07d8682d3180d",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-b848126f95b04511",
+      "label": "빨간색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-bc6aa57172969723",
+      "label": "화면 오른쪽",
+      "context": "화분의 화면 위치"
+    },
+    {
+      "id": "k-bdcb5649d2ac37ab",
+      "label": "흰색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-c387c13fe9f5bb74",
+      "label": "초록색",
+      "context": "선인장 색"
+    },
+    {
+      "id": "k-c5d165b90520da5a",
+      "label": "화분",
+      "context": "식물이 담긴 용기"
+    },
+    {
+      "id": "k-ec26edc399adee8f",
+      "label": "두 개",
+      "context": "선인장 수"
+    },
+    {
+      "id": "k-ece4575d227703b1",
+      "label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-f5bd966f453f1f28",
+      "label": "주전자",
+      "context": "식물이 담긴 용기"
+    },
+    {
+      "id": "k-f60a7e97f2bbf1fc",
+      "label": "밖에",
+      "context": "선인장 위치"
+    },
+    {
+      "id": "k-fa652ce89756bab1",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-fcd716d737221bb7",
+      "label": "소나무",
+      "context": "식물"
+    },
+    {
+      "id": "k-fe5cc4d93802258a",
+      "label": "네 개",
+      "context": "선인장 수"
+    },
+    {
+      "id": "k-ff6cae6f5a474a6a",
+      "label": "접시",
+      "context": "식물이 담긴 용기"
+    }
+  ],
+  "total_candidate_count": 37,
+  "answer_ratio": 0.24324324324324326,
+  "highlights": [
+    {
+      "keyword_id": "k-9f2260abca62047b",
+      "condition_id": "day-04-c01",
+      "matched_text": "선인장",
+      "start_utf16": 38,
+      "end_utf16": 41
+    },
+    {
+      "keyword_id": "k-9e4216418fb8f0b4",
+      "condition_id": "day-04-c02",
+      "matched_text": "한 개",
+      "start_utf16": 42,
+      "end_utf16": 45
+    },
+    {
+      "keyword_id": "k-c387c13fe9f5bb74",
+      "condition_id": "day-04-c03",
+      "matched_text": "초록색",
+      "start_utf16": 34,
+      "end_utf16": 37
+    },
+    {
+      "keyword_id": "k-8a57af967cf0d5a3",
+      "condition_id": "day-04-c04",
+      "matched_text": "보라색",
+      "start_utf16": 15,
+      "end_utf16": 18
+    },
+    {
+      "keyword_id": "k-c5d165b90520da5a",
+      "condition_id": "day-04-c05",
+      "matched_text": "화분",
+      "start_utf16": 19,
+      "end_utf16": 21
+    },
+    {
+      "keyword_id": "k-9fc863663b88a6ff",
+      "condition_id": "day-04-c06",
+      "matched_text": "안에",
+      "start_utf16": 31,
+      "end_utf16": 33
+    },
+    {
+      "keyword_id": "k-637ec14e6f3e0b21",
+      "condition_id": "day-04-c07",
+      "matched_text": "노란색 배경",
+      "start_utf16": 0,
+      "end_utf16": 6
+    },
+    {
+      "keyword_id": "k-8a510ea2fb7ab3d8",
+      "condition_id": "day-04-c08",
+      "matched_text": "화면 중앙",
+      "start_utf16": 8,
+      "end_utf16": 13
+    },
+    {
+      "keyword_id": "k-8307842150af0546",
+      "condition_id": "day-04-c09",
+      "matched_text": "사진풍",
+      "start_utf16": 50,
+      "end_utf16": 53
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-04-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T06",
+      "title": "길이보다 표현할 내용",
+      "text": "자연어로 작성하고, 이미지에 표시할 글자는 인용부호로 구분해 보세요. 간단한 장면과 세부 장면은 필요한 설명량이 다릅니다.",
+      "scope": "계열 가이드·Turbo 예시",
+      "source_ids": [
+        "model-KREA_GUIDE"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "krea/krea-2-large",
+        "krea/krea-2-medium",
+        "krea/krea-2-medium-turbo"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "krea/krea-2-medium",
+    "actual_model_id": "krea/krea-2-medium",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "5a6a70d7add9d61fb75d5e6d7103bb72a4a74b9ddb5809a0d13cebfb9b7e12f7",
+    "width": 1376,
+    "height": 768,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:31:28.188Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 9,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-07d8249f58d76434": "화분 색 · 검은색",
+    "k-0c5862d65739d319": "픽셀아트",
+    "k-1011a75fa4780926": "흰색 배경",
+    "k-16a047125967aca3": "먹그림",
+    "k-5df3e41c919f75e5": "선인장 색 · 빨간색",
+    "k-637ec14e6f3e0b21": "노란색 배경",
+    "k-69d5be07d7b19105": "해바라기",
+    "k-6fca881040835633": "선인장 색 · 파란색",
+    "k-8307842150af0546": "사진풍",
+    "k-83540729e6b6daa5": "검정 배경",
+    "k-8a510ea2fb7ab3d8": "화분의 화면 위치 · 화면 중앙",
+    "k-8a57af967cf0d5a3": "화분 색 · 보라색",
+    "k-9e4216418fb8f0b4": "선인장 수 · 한 개",
+    "k-9f2260abca62047b": "선인장",
+    "k-9fc863663b88a6ff": "선인장 위치 · 안에",
+    "k-bc6aa57172969723": "화분의 화면 위치 · 화면 오른쪽",
+    "k-bdcb5649d2ac37ab": "화분 색 · 흰색",
+    "k-c387c13fe9f5bb74": "선인장 색 · 초록색",
+    "k-c5d165b90520da5a": "화분",
+    "k-ec26edc399adee8f": "선인장 수 · 두 개",
+    "k-f5bd966f453f1f28": "주전자",
+    "k-f60a7e97f2bbf1fc": "선인장 위치 · 밖에",
+    "k-fcd716d737221bb7": "소나무",
+    "k-fe5cc4d93802258a": "선인장 수 · 네 개",
+    "k-ff6cae6f5a474a6a": "접시",
+    "k-3488d01801fe9436": "배경에 번개가 친다",
+    "k-2134ca920e3b1b94": "배경에 무지개가 있다",
+    "k-3e9cbe7cc34803fa": "천장에 샹들리에가 있다",
+    "k-8dc4447668b73e42": "바닥에 체스판 무늬가 있다",
+    "k-8dea3b4fe0d8086a": "화면에 눈사람이 있다",
+    "k-aef07d8682d3180d": "물속에 산호초가 보인다",
+    "k-fa652ce89756bab1": "옆에 드럼 세트가 있다",
+    "k-68c6285b96286a77": "배경에 풍차가 있다",
+    "k-ece4575d227703b1": "화면에 커다란 모닥불이 있다",
+    "k-98a4f0ef03825e52": "식물 · 바나나",
+    "k-b848126f95b04511": "화분 색 · 빨간색",
+    "k-3718cabdf4bbfc45": "바나나"
+  }
+}

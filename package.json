@@ -6,21 +6,43 @@
   "workspaces": [
     "apps/miniapp",
     "apps/api",
-    "packages/contracts"
+    "packages/contracts",
+    "packages/game-core",
+    "packages/recommender"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace @aimi/miniapp",
+    "dev": "npm run build:shared && node tools/dev.mjs",
     "build": "npm run build:api && npm run build --workspace @aimi/miniapp",
-    "typecheck": "npm run build --workspace @aimi/contracts && npm run typecheck --workspace @aimi/api && npm run typecheck --workspace @aimi/miniapp",
-    "ait:build": "npm run ait:build --workspace @aimi/miniapp",
-    "build:api": "npm run build --workspace @aimi/contracts && npm run build --workspace @aimi/api",
+    "typecheck": "npm run build:shared && npm run typecheck --workspace @aimi/api && npm run typecheck --workspace @aimi/miniapp",
+    "ait:build": "npm run build:shared && npm run ait:build --workspace @aimi/miniapp",
+    "build:api": "npm run build:shared && npm run build --workspace @aimi/api",
     "dev:api": "npm run dev --workspace @aimi/api",
     "start:api": "npm run start --workspace @aimi/api",
     "db:migrate": "npm run db:migrate --workspace @aimi/api",
     "test": "npm run test --workspace @aimi/api",
-    "test:db": "npm run test:db --workspace @aimi/api"
+    "test:db": "npm run test:db --workspace @aimi/api",
+    "build:shared": "npm run build --workspace @aimi/contracts && npm run build --workspace @aimi/game-core && npm run build --workspace @aimi/recommender",
+    "dev:prototype": "npm run build:shared && npm run dev:prototype --workspace @aimi/api",
+    "dev:ui": "npm run dev --workspace @aimi/miniapp",
+    "qa:flows": "node tools/qa/flows.mjs",
+    "assets:build": "npm run build:shared && node tools/assets/build-expansion.mjs && npm run build:shared && node tools/assets/prepare-garden.mjs",
+    "assets:check": "node tools/assets/check-expansion.mjs",
+    "models:build": "node tools/model-sync/build-selected.mjs",
+    "models:groups": "node tools/model-sync/build-group-review.mjs",
+    "eval:recommendation": "npm run build:api && node tools/eval-recommendation.mjs",
+    "models:media:sync": "node tools/model-sync/collect-media.mjs",
+    "models:media:build": "node tools/model-sync/build-media.mjs",
+    "eval:output-routing": "npm run build:api && node tools/eval-output-routing.mjs",
+    "models:audit:collect": "node tools/model-sync/audit-lifecycle-collect.mjs",
+    "models:audit:build": "python3 tools/model-sync/build-lifecycle-policy.py",
+    "models:audit:report": "npm run build:shared && node tools/model-sync/report-lifecycle.mjs"
   },
   "engines": {
     "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "prettier": "^3.9.10"
   }
 }

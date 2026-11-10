@@ -1,6 +1,6 @@
 import type { Pool } from 'pg';
 import { createHash } from 'node:crypto';
-import { seoulDate, type RewardType, type RewardResult } from '@aimi/contracts';
+import { ECONOMY_POLICY, seoulDate, type RewardType, type RewardResult } from '@aimi/contracts';
 import { ApiError } from './db.js';
 
 export async function claimReward(pool: Pool, userId: string, type: RewardType, key: string, production: boolean, at = new Date()): Promise<RewardResult> {
@@ -18,7 +18,7 @@ export async function claimReward(pool: Pool, userId: string, type: RewardType, 
       await client.query('COMMIT');
       return previous.rows[0].response;
     }
-    const policy = await client.query('SELECT * FROM aimi.reward_policies WHERE version=$1', ['development-v1']);
+    const policy = await client.query('SELECT * FROM aimi.reward_policies WHERE version=$1', [ECONOMY_POLICY.version]);
     if (!policy.rowCount || (production && policy.rows[0].development_only)) throw new ApiError('REWARD_POLICY_UNAVAILABLE', 503);
     const claimed = await client.query('SELECT 1 FROM aimi.daily_reward_claims WHERE user_id=$1 AND local_date=$2 AND reward_type=$3', [userId, day, type]);
     let balance = wallet.rows[0].balance;

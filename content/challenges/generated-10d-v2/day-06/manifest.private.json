@@ -1,0 +1,890 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-06",
+  "title": "공 위에 놓인 오리 인형",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-BFL2_GUIDE"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "대상·속성·관계 목록",
+  "prompt_lines": [
+    "표현 방식: 종이 콜라주.",
+    "주요 대상: 노란색 오리 인형 한 개.",
+    "받침 대상: 빨간색 공.",
+    "관계: 오리 인형을 공 위에 놓는다.",
+    "배경: 파란색 배경.",
+    "관점: 오리 인형의 옆면이 보이도록 구성한다."
+  ],
+  "authored_prompt": "표현 방식: 종이 콜라주.\n주요 대상: 노란색 오리 인형 한 개.\n받침 대상: 빨간색 공.\n관계: 오리 인형을 공 위에 놓는다.\n배경: 파란색 배경.\n관점: 오리 인형의 옆면이 보이도록 구성한다.",
+  "alternate_prompt": "표현 방식: 종이 콜라주. 주요 대상: 노란색 오리 인형 한 개. 받침 대상: 빨간색 공. 관계: 오리 인형을 공 위에 놓는다. 배경: 파란색 배경. 관점: 오리 인형의 옆면이 보이도록 구성한다.",
+  "conditions": [
+    {
+      "id": "day-06-c01",
+      "variable": "subject",
+      "entity": "duck",
+      "context": "주요 대상",
+      "requested_value": "오리 인형",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c02",
+      "variable": "count",
+      "entity": "duck",
+      "context": "오리 인형 수",
+      "requested_value": "한 개",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c03",
+      "variable": "color",
+      "entity": "duck",
+      "context": "오리 인형 색",
+      "requested_value": "노란색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c04",
+      "variable": "subject",
+      "entity": "ball",
+      "context": "받침 대상",
+      "requested_value": "공",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c05",
+      "variable": "color",
+      "entity": "ball",
+      "context": "공 색",
+      "requested_value": "빨간색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c06",
+      "variable": "vertical_relation",
+      "entity": "duck->ball",
+      "context": "오리 인형과 공",
+      "requested_value": "위에",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c07",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "파란색 배경",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c08",
+      "variable": "visible_side",
+      "entity": "duck",
+      "context": "오리 인형의 보이는 면",
+      "requested_value": "옆면",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-06-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "종이 콜라주",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-9231483d09e2ff30",
+      "label": "오리 인형",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01"
+    },
+    {
+      "id": "k-27cd11588f054f62",
+      "label": "한 개",
+      "context": "오리 인형 수",
+      "condition_id": "day-06-c02"
+    },
+    {
+      "id": "k-da4e395a3a77950f",
+      "label": "노란색",
+      "context": "오리 인형 색",
+      "condition_id": "day-06-c03"
+    },
+    {
+      "id": "k-fa7d40c8d4adc84e",
+      "label": "공",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04"
+    },
+    {
+      "id": "k-3647f6b83a61ba29",
+      "label": "빨간색",
+      "context": "공 색",
+      "condition_id": "day-06-c05"
+    },
+    {
+      "id": "k-4e5986b846324fb3",
+      "label": "위에",
+      "context": "오리 인형과 공",
+      "condition_id": "day-06-c06"
+    },
+    {
+      "id": "k-30ba4a7451576a36",
+      "label": "파란색 배경",
+      "context": "배경",
+      "condition_id": "day-06-c07"
+    },
+    {
+      "id": "k-1eaa224d9528dddc",
+      "label": "옆면",
+      "context": "오리 인형의 보이는 면",
+      "condition_id": "day-06-c08"
+    },
+    {
+      "id": "k-2122d8d283eeb578",
+      "label": "종이 콜라주",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-fad92d9417d414a3",
+      "label": "고양이 인형",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-06-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-22b31d174e890977",
+      "label": "자동차 장난감",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-06-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-970ffc66eb39b586",
+      "label": "두 개",
+      "context": "오리 인형 수",
+      "contradicts_condition_id": "day-06-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-611bcb1b8c765a62",
+      "label": "세 개",
+      "context": "오리 인형 수",
+      "contradicts_condition_id": "day-06-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9eb14629ba048c78",
+      "label": "보라색",
+      "context": "오리 인형 색",
+      "contradicts_condition_id": "day-06-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-d1de5e9c334cbaa2",
+      "label": "초록색",
+      "context": "오리 인형 색",
+      "contradicts_condition_id": "day-06-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8fc5b51550d8cae2",
+      "label": "상자",
+      "context": "받침 대상",
+      "contradicts_condition_id": "day-06-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-25096df41c28d172",
+      "label": "책",
+      "context": "받침 대상",
+      "contradicts_condition_id": "day-06-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-0116ce9e6784616f",
+      "label": "검은색",
+      "context": "공 색",
+      "contradicts_condition_id": "day-06-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a6ae5112058a634c",
+      "label": "흰색",
+      "context": "공 색",
+      "contradicts_condition_id": "day-06-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-15727ee6195f832d",
+      "label": "아래에",
+      "context": "오리 인형과 공",
+      "contradicts_condition_id": "day-06-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-1265aed2cbcb8122",
+      "label": "안에",
+      "context": "오리 인형과 공",
+      "contradicts_condition_id": "day-06-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ad03cf841e89f670",
+      "label": "검정 배경",
+      "context": "배경",
+      "contradicts_condition_id": "day-06-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9937fa0926baac6f",
+      "label": "분홍 배경",
+      "context": "배경",
+      "contradicts_condition_id": "day-06-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-cbee3a679aeb7752",
+      "label": "정면",
+      "context": "오리 인형의 보이는 면",
+      "contradicts_condition_id": "day-06-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e9a60532ea77acfe",
+      "label": "뒷면",
+      "context": "오리 인형의 보이는 면",
+      "contradicts_condition_id": "day-06-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9f27603c2b67d127",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-06-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-51d240aa49bc0b30",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-06-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a65c78988c96f4e3",
+      "label": "수채화",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-06-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-7d0bfae41ec83edd",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-57be3a1319a4d372",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-4935362214c2c3bb",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-260bca2e8b888b7b",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-2dc442050b10887a",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-519921af4d854ca6",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-9d24f08c3fed9c14",
+      "label": "바나나",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-06-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-4f9672162be899a7",
+      "label": "바나나",
+      "context": "받침 대상",
+      "contradicts_condition_id": "day-06-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-64d00b0f0ee70442",
+      "label": "흰색 배경",
+      "context": "배경",
+      "contradicts_condition_id": "day-06-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-7f74ef45e2ed1312",
+      "label": "수박",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-06-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-d3a4c5fbad01a162",
+      "label": "주황색",
+      "context": "오리 인형 색",
+      "contradicts_condition_id": "day-06-c03",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-82330fe1902a2153",
+      "label": "수박",
+      "context": "받침 대상",
+      "contradicts_condition_id": "day-06-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-48a0a9b3968dde33",
+      "label": "포도",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-06-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-b844e201c1983c02",
+      "label": "포도",
+      "context": "받침 대상",
+      "contradicts_condition_id": "day-06-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-6a5cd9101fa487ba",
+      "label": "유화",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-06-c09",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-0116ce9e6784616f",
+      "label": "검은색",
+      "context": "공 색"
+    },
+    {
+      "id": "k-1265aed2cbcb8122",
+      "label": "안에",
+      "context": "오리 인형과 공"
+    },
+    {
+      "id": "k-15727ee6195f832d",
+      "label": "아래에",
+      "context": "오리 인형과 공"
+    },
+    {
+      "id": "k-1eaa224d9528dddc",
+      "label": "옆면",
+      "context": "오리 인형의 보이는 면"
+    },
+    {
+      "id": "k-2122d8d283eeb578",
+      "label": "종이 콜라주",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-22b31d174e890977",
+      "label": "자동차 장난감",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-25096df41c28d172",
+      "label": "책",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-260bca2e8b888b7b",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-27cd11588f054f62",
+      "label": "한 개",
+      "context": "오리 인형 수"
+    },
+    {
+      "id": "k-2dc442050b10887a",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-30ba4a7451576a36",
+      "label": "파란색 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-3647f6b83a61ba29",
+      "label": "빨간색",
+      "context": "공 색"
+    },
+    {
+      "id": "k-48a0a9b3968dde33",
+      "label": "포도",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-4935362214c2c3bb",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-4e5986b846324fb3",
+      "label": "위에",
+      "context": "오리 인형과 공"
+    },
+    {
+      "id": "k-4f9672162be899a7",
+      "label": "바나나",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-519921af4d854ca6",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-51d240aa49bc0b30",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-57be3a1319a4d372",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-611bcb1b8c765a62",
+      "label": "세 개",
+      "context": "오리 인형 수"
+    },
+    {
+      "id": "k-64d00b0f0ee70442",
+      "label": "흰색 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-6a5cd9101fa487ba",
+      "label": "유화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-7d0bfae41ec83edd",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-7f74ef45e2ed1312",
+      "label": "수박",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-82330fe1902a2153",
+      "label": "수박",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-8fc5b51550d8cae2",
+      "label": "상자",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-9231483d09e2ff30",
+      "label": "오리 인형",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-970ffc66eb39b586",
+      "label": "두 개",
+      "context": "오리 인형 수"
+    },
+    {
+      "id": "k-9937fa0926baac6f",
+      "label": "분홍 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-9d24f08c3fed9c14",
+      "label": "바나나",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-9eb14629ba048c78",
+      "label": "보라색",
+      "context": "오리 인형 색"
+    },
+    {
+      "id": "k-9f27603c2b67d127",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-a65c78988c96f4e3",
+      "label": "수채화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-a6ae5112058a634c",
+      "label": "흰색",
+      "context": "공 색"
+    },
+    {
+      "id": "k-ad03cf841e89f670",
+      "label": "검정 배경",
+      "context": "배경"
+    },
+    {
+      "id": "k-b844e201c1983c02",
+      "label": "포도",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-cbee3a679aeb7752",
+      "label": "정면",
+      "context": "오리 인형의 보이는 면"
+    },
+    {
+      "id": "k-d1de5e9c334cbaa2",
+      "label": "초록색",
+      "context": "오리 인형 색"
+    },
+    {
+      "id": "k-d3a4c5fbad01a162",
+      "label": "주황색",
+      "context": "오리 인형 색"
+    },
+    {
+      "id": "k-da4e395a3a77950f",
+      "label": "노란색",
+      "context": "오리 인형 색"
+    },
+    {
+      "id": "k-e9a60532ea77acfe",
+      "label": "뒷면",
+      "context": "오리 인형의 보이는 면"
+    },
+    {
+      "id": "k-fa7d40c8d4adc84e",
+      "label": "공",
+      "context": "받침 대상"
+    },
+    {
+      "id": "k-fad92d9417d414a3",
+      "label": "고양이 인형",
+      "context": "주요 대상"
+    }
+  ],
+  "total_candidate_count": 43,
+  "answer_ratio": 0.20930232558139536,
+  "highlights": [
+    {
+      "keyword_id": "k-9231483d09e2ff30",
+      "condition_id": "day-06-c01",
+      "matched_text": "오리 인형",
+      "start_utf16": 26,
+      "end_utf16": 31
+    },
+    {
+      "keyword_id": "k-27cd11588f054f62",
+      "condition_id": "day-06-c02",
+      "matched_text": "한 개",
+      "start_utf16": 32,
+      "end_utf16": 35
+    },
+    {
+      "keyword_id": "k-da4e395a3a77950f",
+      "condition_id": "day-06-c03",
+      "matched_text": "노란색",
+      "start_utf16": 22,
+      "end_utf16": 25
+    },
+    {
+      "keyword_id": "k-fa7d40c8d4adc84e",
+      "condition_id": "day-06-c04",
+      "matched_text": "공",
+      "start_utf16": 48,
+      "end_utf16": 49
+    },
+    {
+      "keyword_id": "k-3647f6b83a61ba29",
+      "condition_id": "day-06-c05",
+      "matched_text": "빨간색",
+      "start_utf16": 44,
+      "end_utf16": 47
+    },
+    {
+      "keyword_id": "k-4e5986b846324fb3",
+      "condition_id": "day-06-c06",
+      "matched_text": "위에",
+      "start_utf16": 64,
+      "end_utf16": 66
+    },
+    {
+      "keyword_id": "k-30ba4a7451576a36",
+      "condition_id": "day-06-c07",
+      "matched_text": "파란색 배경",
+      "start_utf16": 76,
+      "end_utf16": 82
+    },
+    {
+      "keyword_id": "k-1eaa224d9528dddc",
+      "condition_id": "day-06-c08",
+      "matched_text": "옆면",
+      "start_utf16": 95,
+      "end_utf16": 97
+    },
+    {
+      "keyword_id": "k-2122d8d283eeb578",
+      "condition_id": "day-06-c09",
+      "matched_text": "종이 콜라주",
+      "start_utf16": 7,
+      "end_utf16": 13
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-06-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T03",
+      "title": "핵심 대상과 행동부터",
+      "text": "대상과 행동을 먼저 분명하게 쓰고 스타일·장소·빛을 덧붙여 보세요.",
+      "scope": "해당 모델 명시 가이드",
+      "source_ids": [
+        "model-BFL2_GUIDE"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "black-forest-labs/flux.2-pro",
+        "black-forest-labs/flux.2-max"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "black-forest-labs/flux.2-pro",
+    "actual_model_id": "black-forest-labs/flux.2-pro",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "ac536e05f01e4b8a09a4b3363055ddf789c6eade406de72e8d24c0a7e5bdd673",
+    "width": 1824,
+    "height": 1024,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:36:58.733Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 9,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-0116ce9e6784616f": "공 색 · 검은색",
+    "k-1265aed2cbcb8122": "오리 인형과 공 · 안에",
+    "k-15727ee6195f832d": "오리 인형과 공 · 아래에",
+    "k-1eaa224d9528dddc": "옆면",
+    "k-2122d8d283eeb578": "종이 콜라주",
+    "k-22b31d174e890977": "자동차 장난감",
+    "k-25096df41c28d172": "책",
+    "k-27cd11588f054f62": "오리 인형 수 · 한 개",
+    "k-30ba4a7451576a36": "파란색 배경",
+    "k-3647f6b83a61ba29": "공 색 · 빨간색",
+    "k-4e5986b846324fb3": "오리 인형과 공 · 위에",
+    "k-51d240aa49bc0b30": "픽셀아트",
+    "k-611bcb1b8c765a62": "오리 인형 수 · 세 개",
+    "k-8fc5b51550d8cae2": "상자",
+    "k-9231483d09e2ff30": "오리 인형",
+    "k-970ffc66eb39b586": "오리 인형 수 · 두 개",
+    "k-9937fa0926baac6f": "분홍 배경",
+    "k-9eb14629ba048c78": "오리 인형 색 · 보라색",
+    "k-9f27603c2b67d127": "사진풍",
+    "k-a65c78988c96f4e3": "수채화",
+    "k-a6ae5112058a634c": "공 색 · 흰색",
+    "k-ad03cf841e89f670": "검정 배경",
+    "k-cbee3a679aeb7752": "정면",
+    "k-d1de5e9c334cbaa2": "오리 인형 색 · 초록색",
+    "k-da4e395a3a77950f": "오리 인형 색 · 노란색",
+    "k-e9a60532ea77acfe": "뒷면",
+    "k-fa7d40c8d4adc84e": "공",
+    "k-fad92d9417d414a3": "고양이 인형",
+    "k-7d0bfae41ec83edd": "배경에 번개가 친다",
+    "k-57be3a1319a4d372": "배경에 무지개가 있다",
+    "k-4935362214c2c3bb": "천장에 샹들리에가 있다",
+    "k-260bca2e8b888b7b": "바닥에 체스판 무늬가 있다",
+    "k-2dc442050b10887a": "화면에 눈사람이 있다",
+    "k-519921af4d854ca6": "물속에 산호초가 보인다",
+    "k-9d24f08c3fed9c14": "주요 대상 · 바나나",
+    "k-4f9672162be899a7": "바나나",
+    "k-64d00b0f0ee70442": "흰색 배경",
+    "k-7f74ef45e2ed1312": "주요 대상 · 수박",
+    "k-d3a4c5fbad01a162": "오리 인형 색 · 주황색",
+    "k-82330fe1902a2153": "수박",
+    "k-48a0a9b3968dde33": "주요 대상 · 포도",
+    "k-b844e201c1983c02": "포도",
+    "k-6a5cd9101fa487ba": "유화"
+  }
+}

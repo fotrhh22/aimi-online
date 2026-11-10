@@ -1,0 +1,1951 @@
+{
+  "version": "media-model-groups-v1",
+  "asOf": "2026-11-10T13:18:50.472Z",
+  "notes": "AIMI manual product positioning; not measured generation quality. Unknown auxiliary outputs excluded from recommendation.",
+  "models": [
+    {
+      "id": "nace-ai/drex-max-finance",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nace-ai/drex-max-finance",
+      "sourceExcerpt": "Drex Max Finance is a finance-tuned version of Nace.AI's Drex Max, a 27B multimodal decision model. Given a state as text, JSON, or images such as invoices, receipts, and statements,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-omni-1.2-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-omni-1.2-flash",
+      "sourceExcerpt": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash. It generates clips up to 15 seconds long with native...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-2.6-sunburst",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-2.6-sunburst",
+      "sourceExcerpt": "GPT Image 2.6 Sunburst is OpenAI's image generation and editing model optimized for detail: dense compositions, text-heavy layouts, and edits that keep details consistent from one edit to the next...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-2.6-flare",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-2.6-flare",
+      "sourceExcerpt": "GPT Image 2.6 Flare is OpenAI's image generation and editing model optimized for speed: fast iteration and interactive text-to-image and image-to-image workflows, generating about 50% faster than GPT Image 2.5....",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/gemini-omni-1.1-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-omni-1.1-flash",
+      "sourceExcerpt": "Gemini Omni 1.1 Flash is Google's native multimodal video generation and editing model, the generally available successor to Gemini Omni Flash Preview. It is suited for text-to-video, image-to-video, first and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "morph/reflex",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/morph/reflex",
+      "sourceExcerpt": "Morph's decision model. Answers typed choice, noul and score questions about a state. The state is prefix-cached across requests, so repeat questions on the same state bill at the cached-input...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/embed-5-fast",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/embed-5-fast",
+      "sourceExcerpt": "Embed 5 Fast is the lower-latency, cost-efficient tier of Cohere's Embed 5 family of multimodal embedding models (about 1B parameters). It embeds text, images, and interleaved text and image content...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/embed-5-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/embed-5-pro",
+      "sourceExcerpt": "Embed 5 Pro is the higher-accuracy tier of Cohere's Embed 5 family of multimodal embedding models (about 2.4B parameters). It embeds text, images, and interleaved text and image content into...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/rerank-5-fast",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/rerank-5-fast",
+      "sourceExcerpt": "Rerank 5 Fast is the low-latency tier of Cohere's Rerank 5 family of reranking models. It scores and reorders candidate documents against a query and is suited for high-throughput retrieval...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/rerank-5-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/rerank-5-pro",
+      "sourceExcerpt": "Rerank 5 Pro is the higher-accuracy tier of Cohere's Rerank 5 family of reranking models. It scores and reorders candidate documents against a query and is suited for retrieval pipelines...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cloudflare/clairic",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cloudflare/clairic",
+      "sourceExcerpt": "Clairic is Cloudflare's System One-style extraction model served on Workers AI. Given a text state and optional images plus a schema of typed fields, it extracts, computes, estimates, and forecasts...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "moondream/parakeet-ultra",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/moondream/parakeet-ultra",
+      "sourceExcerpt": "Parakeet Ultra is Moondream's post-trained version of NVIDIA's Parakeet TDT 0.6B v3 speech-to-text model, with the same architecture, tokenizer, and 0.6B parameters. It lowers word error rate on the Open...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "tbc/mischief-1",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/tbc/mischief-1",
+      "sourceExcerpt": "TBC mischief 1 is the world's first neuron-derived video model from The Biological Computing Co. It supports image to video and is a fast and affordable way to bring ideas...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "baseten/joey-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baseten/joey-1",
+      "sourceExcerpt": "Joey 1 is a 2B decision model from Base Labs, Baseten's research team, built on Qwen3.5-2B. Given a state (text or JSON) and typed questions (yes/no, multiple choice, or ordinal...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sourceful/riverflow-v2.6-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/sourceful/riverflow-v2.6-pro",
+      "sourceExcerpt": "Riverflow 2.6 Pro is the flagship model of Sourceful's Riverflow 2.6 lineup, a unified text-to-image and image-to-image family that treats generation as a production workflow: an integrated reasoning model plans...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "nvidia/nemotron-3.5-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nvidia/nemotron-3.5-transcribe",
+      "sourceExcerpt": "Nemotron 3.5 Transcribe is an open-weight speech recognition model from NVIDIA, a 30B mixture-of-experts with about 4B active parameters. It transcribes recordings of up to one hour in 40 languages,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "assemblyai/assemblyai-tts-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/assemblyai/assemblyai-tts-1",
+      "sourceExcerpt": "AssemblyAI TTS 1 is a text-to-speech model from AssemblyAI. It is suited for voice agents, narration, and multilingual applications, and draws on a public library of several thousand voices across...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "liquid/d1.1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/liquid/d1.1",
+      "sourceExcerpt": "d1.1 is Liquid AI's structured decision model, served as a System One endpoint and the successor to d1. Send a state along with typed questions, and it returns a choice,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "~liquid/d1-ultra-latest",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/~liquid/d1-ultra-latest",
+      "sourceExcerpt": "This model always redirects to the latest model in the d1-ultra family.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "~liquid/d1-latest",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/~liquid/d1-latest",
+      "sourceExcerpt": "This model always redirects to the latest model in the d1 family.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "amazon/titan-embed-image-v1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/amazon/titan-embed-image-v1",
+      "sourceExcerpt": "Amazon Titan Multimodal Embeddings G1 embeds text, images, or text and image together into a shared vector space for multimodal search and recommendation. Images are sent as base64 (up to...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "amazon/titan-embed-text-v1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/amazon/titan-embed-text-v1",
+      "sourceExcerpt": "Amazon Titan Embeddings G1 - Text is the first-generation Titan text embedding model. It accepts up to 8,192 tokens per input and returns fixed 1,536-dimension vectors; the `dimensions` parameter is...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "amazon/titan-embed-text-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/amazon/titan-embed-text-v2",
+      "sourceExcerpt": "Amazon Titan Text Embeddings V2 is a text embedding model for retrieval, search, and clustering. It accepts up to 8,192 tokens per input and returns normalized vectors of 1,024 dimensions...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "heygen/heygen-voice-1-turbo",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/heygen/heygen-voice-1-turbo",
+      "sourceExcerpt": "HeyGen Voice Turbo is a lower-latency version of HeyGen Voice, HeyGen's text-to-speech model. It has the same 10 default voices, or bring your own HeyGen key to use voice clones...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "baseten/mammoth-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baseten/mammoth-1",
+      "sourceExcerpt": "Mammoth 1 is a 27B decision model from Base Labs, Baseten's research team, built on Qwen3.5-27B. Given a state (text or JSON) and typed questions (yes/no, multiple choice, or ordinal...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "baseten/elephant-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baseten/elephant-1",
+      "sourceExcerpt": "Elephant 1 is a 9B decision model from Base Labs, Baseten's research team, built on Qwen3.5-9B. Given a state (text or JSON) and typed questions (yes/no, multiple choice, or ordinal...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "nace-ai/drex-max",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nace-ai/drex-max",
+      "sourceExcerpt": "Drex Max is the largest decision model from Nace.AI, the successor to [Drex v2.0](https://openrouter.ai/nace-ai/drex-v2.0). Given a state (text, JSON, or up to four images) and typed questions (yes/no, multiple choice,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/voxtral-mini-tts-3-0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-mini-tts-3-0",
+      "sourceExcerpt": "Voxtral TTS 3 is Mistral's text-to-speech model. It converts text into natural-sounding speech, offers a library of preset voices, supports zero-shot voice cloning, and accepts emotion and pace tags in...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/voxtral-small-transcribe-3-0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-small-transcribe-3-0",
+      "sourceExcerpt": "Voxtral Small Transcribe 3 is Mistral's flagship speech-to-text model. It takes audio input and returns a transcript with timestamps and speaker diarization, and supports context biasing for domain-specific vocabulary. Suited...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/voxtral-mini-transcribe-3-0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-mini-transcribe-3-0",
+      "sourceExcerpt": "Voxtral Mini Transcribe 3 is Mistral's compact speech-to-text model. It takes audio input and returns a transcript with timestamps and speaker diarization. It also supports context biasing for domain terms....",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen-image-2.1-turbo",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-image-2.1-turbo",
+      "sourceExcerpt": "Qwen Image 2.1 Turbo is the fast, lower-cost tier of the Qwen Image 2.1 series from Qwen, for image generation and editing where throughput and price matter more than peak...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "qwen/qwen-image-2.1-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-image-2.1-pro",
+      "sourceExcerpt": "Qwen Image 2.1 Pro is an image generation and editing model from Qwen, the higher-quality tier of the Qwen Image 2.1 series. Choose it over Qwen Image 2.1 Turbo when...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "perplexity/pplx-decider-flash-v1.2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/perplexity/pplx-decider-flash-v1.2",
+      "sourceExcerpt": "Decider Flash V1.2 is a 4B-parameter decision model from Perplexity, a smaller, lower-cost sibling of [Decider V1.2](/perplexity/pplx-decider-v1.2) with the same API contract. Instead of generating text, it reads content passed...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "perplexity/pplx-decider-v1.2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/perplexity/pplx-decider-v1.2",
+      "sourceExcerpt": "Decider V1.2 is a new 27B checkpoint of Perplexity's decision model, succeeding [Decider V1.1 27B](/perplexity/pplx-decider-v1.1-27b) with the same API contract. Instead of generating text, it reads content passed as `state`...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "~perplexity/pplx-decider-flash-latest",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/~perplexity/pplx-decider-flash-latest",
+      "sourceExcerpt": "This model always redirects to the latest model in the Decider Flash family.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "respan/span-02",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/respan/span-02",
+      "sourceExcerpt": "Span-02 is an open-weight decision model from Respan. It reads a state of text and images and answers the questions you define about it: picking one of several options, a...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "liquid/d1-ultra",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/liquid/d1-ultra",
+      "sourceExcerpt": "d1-ultra is Liquid AI's largest decision model, served as a System One endpoint. Send a state of text and images along with typed questions, and it returns a choice, a...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "krea/k3-edit",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/krea/k3-edit",
+      "sourceExcerpt": "Krea K3 Edit is an image-to-image editing model from Krea. It takes one to eight reference images plus a text prompt and returns a single edited image, following instructions that...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux-3-image-klein",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux-3-image-klein",
+      "sourceExcerpt": "FLUX 3 Image Klein is an open-weights image generation and editing model from Black Forest Labs. It is suited for text-to-image, multi-reference editing that keeps characters and subjects consistent across...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "typesafe/jev-1.14",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/typesafe/jev-1.14",
+      "sourceExcerpt": "Jev 1.14 is the latest version of Jev, TypeSafe's structured decision model and the first of its System One models. System One models make fast, structured decisions for software, returning...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "assemblyai/universal-3-6-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/assemblyai/universal-3-6-pro",
+      "sourceExcerpt": "Universal-3.6 Pro is AssemblyAI's speech-to-text model and the successor to Universal-3.5 Pro, served here through AssemblyAI's Sync API. Compared with Universal-3.5 Pro, AssemblyAI reports 30% fewer errors on short conversational...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "~perplexity/pplx-decider-latest",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/~perplexity/pplx-decider-latest",
+      "sourceExcerpt": "This model always redirects to the latest model in the Decider family.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "heygen/heygen-voice-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/heygen/heygen-voice-1",
+      "sourceExcerpt": "HeyGen Voice is a text-to-speech model from HeyGen. It comes with 10 default voices, or bring your own HeyGen key to use voice clones from your own account. It streams...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "fish-audio/drama-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/drama-3",
+      "sourceExcerpt": "Drama 3 is a text-to-speech model from Fish Audio built for directed voice performances. You write the direction in plain language in square brackets before a line, such as `[nervous,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "scaledown/classify-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/scaledown/classify-1",
+      "sourceExcerpt": "Classify-1 is a structured decision model from ScaleDown, served through OpenRouter's Decisions API. It scores text or a document against caller-defined choice, yes/no, and ordered-scale questions and returns calibrated probabilities...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "nace-ai/drex-v2.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nace-ai/drex-v2.0",
+      "sourceExcerpt": "Drex v2.0 is a 35B mixture-of-experts decision model (3B active) from Nace.AI, the larger successor to [Drex v1.5](https://openrouter.ai/nace-ai/drex-v1.5). Given a state (text or JSON) and typed questions (yes/no, multiple choice,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/microsoft-decision-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/microsoft-decision-1",
+      "sourceExcerpt": "Microsoft-Decision-1 is a small model built for fast decision-making. Instead of generating text, it reads the provided content and returns a calibrated probability for each fixed answer option, so the...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "nace-ai/drex-v1.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nace-ai/drex-v1.5",
+      "sourceExcerpt": "Drex v1.5 is a 9B decision model from Nace.AI. Given a state (text or JSON) and typed questions (yes/no, multiple choice, or ordinal score), it returns a calibrated probability for...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cloudflare/clef-omni",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cloudflare/clef-omni",
+      "sourceExcerpt": "Clef Omni is the mixture-of-experts member of Cloudflare's open-source Clef decision model family, a fine-tune of Qwen3-Omni-30B-A3B (30B total, 3B active parameters) served on Workers AI. It turns a state...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "upstage/solar-decide-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/upstage/solar-decide-flash",
+      "sourceExcerpt": "Solar Decide Flash is Upstage's low-latency structured decision model, a faster variant of [Solar Decide](/upstage/solar-decide) built on Solar Mini 4 and served through the System One (`/v1/systemone`) API. Instead of...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-v4",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-v4",
+      "sourceExcerpt": "Eleven v4 is a text-to-speech model from ElevenLabs. It is ElevenLabs' most expressive model, with inline audio tags for emotional and delivery control, support for 90+ languages, and a 10,000-character...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-v4-turbo",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-v4-turbo",
+      "sourceExcerpt": "Eleven v4 Turbo is a low-latency text-to-speech model from ElevenLabs. It keeps Eleven v4's expressive delivery and audio tags while being tuned for faster generation, with support for 90+ languages...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-v3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-v3",
+      "sourceExcerpt": "Eleven v3 is a text-to-speech model from ElevenLabs. It produces emotionally rich, highly expressive speech with inline audio tags, supports 70+ languages, and has a 5,000-character request limit.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-v3-conversational",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-v3-conversational",
+      "sourceExcerpt": "Eleven v3 Conversational is a text-to-speech model from ElevenLabs, a variant of Eleven v3 optimized for natural dialogue in conversational agents. It supports 70+ languages and has a 5,000-character request...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-flash-v2.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-flash-v2.5",
+      "sourceExcerpt": "Eleven Flash v2.5 is an ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time use cases, supports 32 languages, and has a 40,000-character request limit.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-turbo-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-turbo-v2",
+      "sourceExcerpt": "Eleven Turbo v2 is an English-only, low-latency text-to-speech model from ElevenLabs. It is suited for developer use cases where speed matters and only English is needed, and has a 30,000-character...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-multilingual-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-multilingual-v2",
+      "sourceExcerpt": "Eleven Multilingual v2 is a text-to-speech model from ElevenLabs. It is suited for lifelike, consistent long-form narration such as voice-overs and audiobooks, supports 29 languages, and has a 10,000-character request...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-turbo-v2.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-turbo-v2.5",
+      "sourceExcerpt": "Eleven Turbo v2.5 is a low-latency text-to-speech model from ElevenLabs. It balances quality and speed for developer use cases that need non-English languages, supports 32 languages, and has a 40,000-character...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/eleven-flash-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/eleven-flash-v2",
+      "sourceExcerpt": "Eleven Flash v2 is an English-only, ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time English use cases, and has a 30,000-character request limit.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/scribe-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/scribe-v2",
+      "sourceExcerpt": "ElevenLabs Scribe v2 is a speech-to-text model that transcribes audio in 90+ languages with word-level timestamps, optional speaker diarization, and audio-event tagging.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "elevenlabs/scribe-v2-medical",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/elevenlabs/scribe-v2-medical",
+      "sourceExcerpt": "ElevenLabs Scribe v2 Medical is a speech-to-text model tuned for clinical and medical terminology, with word-level timestamps, optional speaker diarization, and audio-event tagging.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/gpt-6-luna-decisions",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-6-luna-decisions",
+      "sourceExcerpt": "GPT-6 Luna Decisions is [GPT-6 Luna](/openai/gpt-6-luna) served through OpenAI's Decisions API. Instead of generating text, it reads the content passed as `state` (text, JSON, or images) and returns typed, probabilistic...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "x-ai/grok-imagine-video-1.5-lite",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-imagine-video-1.5-lite",
+      "sourceExcerpt": "Grok Imagine Video 1.5 Lite is a faster, lower-cost video generation model from SpaceXAI, distilled from [Grok Imagine Video 1.5](/x-ai/grok-imagine-video-1.5). It supports text-to-video and image-to-video, trading some quality for speed...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/gemini-nano-banana-2.1",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/google/gemini-nano-banana-2.1",
+      "sourceExcerpt": "Nano Banana 2.1 (Gemini Nano Banana 2.1) is Google's image generation and editing model on the Flash tier, succeeding Nano Banana 2 and Nano Banana Pro. It improves product recontextualization,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "tencent/hy-image-v3.5-preview",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/tencent/hy-image-v3.5-preview",
+      "sourceExcerpt": "Hy Image 3.5 Preview is a unified image generation and editing model from Tencent. It handles text-to-image, image-to-image, and multi-turn editing through one endpoint, taking up to 20 reference images...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance-seed/seedream-5-0-flash",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/bytedance-seed/seedream-5-0-flash",
+      "sourceExcerpt": "Seedream 5.0 Flash is an image generation and editing model from ByteDance Seed. It is the fast, cost-efficient tier of the Seedream 5.0 family, suited for high-volume production and interactive...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux-3-image",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux-3-image",
+      "sourceExcerpt": "FLUX.3 Image is Black Forest Labs' flagship image generation and editing model. It handles text-to-image and multi-reference editing with up to 10 input images, and renders at fixed resolution tiers...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "liquid/d1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/liquid/d1",
+      "sourceExcerpt": "d1 is Liquid AI's structured decision model, served as a System One endpoint. Send a state along with typed questions, and it returns a choice, a score, or a yes/no...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cloudflare/clef-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cloudflare/clef-flash",
+      "sourceExcerpt": "Clef-flash is the fast 9B member of Cloudflare's open-source Clef decision model family, a fine-tune of Qwen3.5-9B served on Workers AI. It turns a state (text or structured JSON) plus...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cloudflare/clef",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cloudflare/clef",
+      "sourceExcerpt": "Clef is Cloudflare's open-source 27B multimodal decision model, a fine-tune of Qwen3.8-27B served on Workers AI. It turns a state (text or structured JSON) plus a schema of typed questions...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/mai-voice-2.1-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-voice-2.1-flash",
+      "sourceExcerpt": "MAI-Voice-2.1-Flash is a low-latency text-to-speech model from Microsoft AI, optimized for real-time responsiveness. It produces natural, expressive speech across 23 languages, with human-like intonation, rhythm, and emotional nuance. It is...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/mai-voice-2.1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-voice-2.1",
+      "sourceExcerpt": "MAI-Voice-2.1 is Microsoft AI's highest-fidelity, most expressive text-to-speech model. It produces natural, studio-grade speech across 23 languages, with detailed prosody, nuanced expressiveness, and speaker consistency over long-form content. It is...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "heygen/heygen-video-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/heygen/heygen-video-1",
+      "sourceExcerpt": "HeyGen Video is a general-purpose video generation model from HeyGen. It renders short clips with synthesized audio (dialogue, ambience, and sound effects) in a single call, working from a text...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "togethercomputer/tev1-4b-experimental",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/togethercomputer/tev1-4b-experimental",
+      "sourceExcerpt": "Tev1 4B Experimental is an experimental decision model from Together AI, a supervised fine-tune of Qwen3.5-4B trained to choose one option from a structured state, question, and list of 2-24...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/rerank-3-lite",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/rerank-3-lite",
+      "sourceExcerpt": "rerank-3-lite is a reranker optimized for both latency and quality and a drop-in upgrade to rerank-2.5-lite, improving on it by 0.94% NDCG@10 on average across domain evaluations and by 1.86%...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/rerank-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/rerank-3",
+      "sourceExcerpt": "rerank-3 is a reranker optimized for quality and a drop-in upgrade to rerank-2.5, improving on it by 0.80% NDCG@10 on average across domain evaluations and by 3.35% on long-document evaluations,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "upstage/solar-decide",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/upstage/solar-decide",
+      "sourceExcerpt": "Solar Decide is Upstage's structured decision model, served as a System One endpoint on Solar Mini 4. Send a state along with typed questions, and it returns a choice, a...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "respan/span-01",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/respan/span-01",
+      "sourceExcerpt": "Span-01 is a behavior scoring model from Respan. It reads a conversation span and returns, for each plain-language behavior you define, the probability that the behavior is present. It is...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "respan/span-01-lite",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/respan/span-01-lite",
+      "sourceExcerpt": "Span-01 Lite is the free, lighter tier of Span-01, a behavior scoring model from Respan. It returns, for each plain-language behavior you define, the probability that the behavior is present...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "bytedance-seed/seed-audio-1-0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/bytedance-seed/seed-audio-1-0",
+      "sourceExcerpt": "Seed Audio 1.0 is ByteDance Seed's non-streaming audio generation model. It produces speech and other audio from a natural-language text prompt that can describe the desired voice, tone, and sound...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "jaredpalmer/kev-4b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/jaredpalmer/kev-4b",
+      "sourceExcerpt": "Kev 4B is a small open-weight decision model from Jared Palmer, built as a LoRA adapter and pointer head on Qwen3.5-4B-Base and served over the same /v1/systemone contract as TypeSafe's...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-3.5-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.5-transcribe",
+      "sourceExcerpt": "Gemini 3.5 Transcribe is a speech-to-text model from Google. It is suited for synchronous transcription that needs word-level timestamps or speaker diarization, with support for up to eight speakers. Audio...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "fish-audio/transcribe-1-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/transcribe-1-pro",
+      "sourceExcerpt": "Transcribe 1 Pro is a speech-to-text model from Fish Audio tuned for interviews, meetings, and podcasts. It labels speakers with inline `speaker` markers, preserves emotion and vocal-event cues such as...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-3.8-flash-lite-tts",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.8-flash-lite-tts",
+      "sourceExcerpt": "Gemini 3.8 Flash Lite TTS is a text-to-speech model from Google and the fast, high-throughput member of the 3.8 TTS family alongside [Gemini 3.8 Flash TTS](https://openrouter.ai/google/gemini-3.8-flash-tts). It is suited for...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-3.8-flash-tts",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.8-flash-tts",
+      "sourceExcerpt": "Gemini 3.8 Flash TTS is a text-to-speech model from Google and the successor to [Gemini 3.1 Flash TTS Preview](https://openrouter.ai/google/gemini-3.1-flash-tts-preview). It is the creative tier of the 3.8 TTS family, suited...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "recraft/recraft-v4.1-flash",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-flash",
+      "sourceExcerpt": "Recraft V4.1 Flash is a text-to-image model from Recraft, the speed and cost tier of the V4.1 family. It generates ~1K raster images in about 1.5 seconds end to end,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "assemblyai/universal-3-5-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/assemblyai/universal-3-5-pro",
+      "sourceExcerpt": "Universal-3.5 Pro is AssemblyAI's speech-to-text model served through its Sync API, returning a complete transcript with word-level timestamps in a single synchronous response for audio up to 20 minutes. It...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "~typesafe/jev-latest",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/~typesafe/jev-latest",
+      "sourceExcerpt": "This model always redirects to the latest model in the Jev family.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "typesafe/jev-1.13",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/typesafe/jev-1.13",
+      "sourceExcerpt": "Jev is a structured decision model from TypeSafe, and the first of its System One models. System One models make fast, structured decisions for software, returning a typed choice rather...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "meta/muse-voice-transcribe-1.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/meta/muse-voice-transcribe-1.0",
+      "sourceExcerpt": "Muse Voice Transcribe 1.0 is a synchronous speech-to-text model from Meta. It is suited for push-to-talk, endpointing, and speaker-aware transcription, with keyword biasing for domain terms and language biasing through...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "black-forest-labs/flux-video-edit",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux-video-edit",
+      "sourceExcerpt": "FLUX Video Edit [fast] takes a source video and an edit prompt and returns a precisely edited video. Add, remove, or replace objects and characters, rebuild the setting, edit on-screen...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-2.5-sunburst",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-2.5-sunburst",
+      "sourceExcerpt": "GPT Image 2.5 Sunburst is an image generation and editing model from OpenAI, positioned as the precision-oriented tier of the GPT Image 2.5 series. It is suited to detailed creative...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-2.5-flare",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-2.5-flare",
+      "sourceExcerpt": "GPT Image 2.5 Flare is an image generation and editing model from OpenAI, positioned as the speed-oriented tier of the GPT Image 2.5 series. It is suited to high-volume everyday...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "microsoft/mai-image-2.6",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-image-2.6",
+      "sourceExcerpt": "MAI-Image-2.6 is an image generation and editing model from Microsoft AI, the precision tier of the MAI-Image-2.6 family alongside the faster [MAI-Image-2.6 Flash](/microsoft/mai-image-2.6-flash). It is suited for design-ready visuals and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "microsoft/mai-image-2.6-flash",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-image-2.6-flash",
+      "sourceExcerpt": "MAI-Image-2.6 Flash is the lower-latency, lower-cost member of the [MAI-Image-2.6](/microsoft/mai-image-2.6) family from Microsoft AI, built for latency-sensitive, high-throughput production image generation and editing at comparable quality to the precision tier....",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "microsoft/mai-transcribe-2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-transcribe-2",
+      "sourceExcerpt": "MAI-Transcribe 2 is a multilingual speech-to-text model from Microsoft AI, ranked #1 on the FLEURS multilingual benchmark. It supports 60 languages with automatic language identification, code switching for mixed-language speech,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "minimax/hailuo-3-max",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/minimax/hailuo-3-max",
+      "sourceExcerpt": "MiniMax H3 Max is a video-generation model from MiniMax, jointly released with fal.ai. Derived through additional training from MiniMax H3, it is designed for faster text-to-video and image-to-video generation with...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "alibaba/wan-3.0-prime",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/alibaba/wan-3.0-prime",
+      "sourceExcerpt": "Wan 3.0 Prime is a fast-mode variant of [Wan 3.0](https://openrouter.ai/alibaba/wan-3.0) from Alibaba. It supports text-to-video and first-frame image-to-video generation.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "meta/muse-image",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/meta/muse-image",
+      "sourceExcerpt": "Muse Image is an agentic image generation model from Meta that generates and edits images from text and reference images. Unlike single-pass image models, it reasons before it renders, breaking...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-styles-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-styles-pro",
+      "sourceExcerpt": "Recraft V4 Styles Pro is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-styles-vector",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-styles-vector",
+      "sourceExcerpt": "Recraft V4 Styles Vector is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-styles-pro-vector",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-styles-pro-vector",
+      "sourceExcerpt": "Recraft V4 Styles Pro Vector is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-styles",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-styles",
+      "sourceExcerpt": "Recraft V4 Styles is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's rendering...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "qwen/qwen3-reranker-0.6b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-reranker-0.6b",
+      "sourceExcerpt": "Qwen3 Reranker 0.6B is the smallest text reranking model from Alibaba Cloud in the Qwen3 Reranker series. Built on the Qwen3 architecture, it evaluates query-document pairs to produce relevance scores...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "alibaba/wan-3.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/alibaba/wan-3.0",
+      "sourceExcerpt": "Wan 3.0 is a video generation model from Alibaba for text-to-video, image-to-video, and reference-guided video generation. It produces 480p, 720p, or 1080p video with durations from 2 to 30 seconds.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "heygen/avatar-iv",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/heygen/avatar-iv",
+      "sourceExcerpt": "HeyGen: Avatar IV is an image-to-video model that animates a single photo into an expressive, lip-synced talking-head video. Rather than only matching mouth shapes to words, it interprets the vocal...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux-video-upscale",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux-video-upscale",
+      "sourceExcerpt": "FLUX Video Upscale is a video upscaling model from Black Forest Labs. It enlarges a single source video by 1.5× to 3× while preserving its duration, with an optional prompt...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "nvidia/nemotron-3.5-asr-streaming-multilingual-0.6b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nvidia/nemotron-3.5-asr-streaming-multilingual-0.6b",
+      "sourceExcerpt": "Nemotron 3.5 ASR Streaming Multilingual 0.6B is a speech recognition model from NVIDIA. Its prompt-conditioned, cache-aware FastConformer-RNNT design targets low-latency transcription across more than 40 languages for real-time captioning, voice...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/voxtral-small-24b-2507-stt",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-small-24b-2507-stt",
+      "sourceExcerpt": "Voxtral Small 24B 2507 STT is a speech transcription model from Mistral AI. It is suited for transcription, translation, and audio understanding workloads that benefit from its larger model capacity.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/voxtral-mini-3b-2507",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-mini-3b-2507",
+      "sourceExcerpt": "Voxtral Mini 3B 2507 is a speech and audio understanding model from Mistral AI. It is suited for transcription, translation, and compact audio processing workloads.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "bytedance-seed/seedream-5-0-lite",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/bytedance-seed/seedream-5-0-lite",
+      "sourceExcerpt": "Seedream 5.0 Lite is an image generation model from ByteDance Seed. It is suited for professional visual creation that benefits from web-connected retrieval, complex-prompt comprehension, visual references, and broad knowledge...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "mongodb/voyage-code-4",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/voyage-code-4",
+      "sourceExcerpt": "voyage-code-4 is a code embedding model from Voyage AI, a MongoDB company. It is designed for coding agents and code retrieval, with Matryoshka embeddings at 2048t voyage-code-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen3-reranker-8b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-reranker-8b",
+      "sourceExcerpt": "Qwen3 Reranker 8B is a text reranking model from Alibaba Cloud built on the Qwen3 architecture. It evaluates query-document pairs to produce relevance scores for use in retrieval and RAG...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen3-asr-1.7b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-asr-1.7b",
+      "sourceExcerpt": "Qwen3 ASR 1.7B is an automatic speech recognition model from Qwen. It supports multilingual language identification and transcription across 30 languages and 22 Chinese dialects, with streaming and offline inference...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen3-asr-0.6b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-asr-0.6b",
+      "sourceExcerpt": "Qwen3 ASR 0.6B is a compact automatic speech recognition model from Qwen. It supports multilingual language identification and transcription across 30 languages and 22 Chinese dialects, with streaming and offline...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "bytedance-seed/seedream-5-0-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/bytedance-seed/seedream-5-0-pro",
+      "sourceExcerpt": "Seedream 5.0 Pro is an image generation and editing model from ByteDance Seed. It is suited for commercial visual-production workflows that require precise editing control, lifelike scenes, and natural rendering.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "deepgram/flux-tts",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/deepgram/flux-tts",
+      "sourceExcerpt": "Flux TTS is a text-to-speech model from Deepgram. It is suited for natural, expressive English speech synthesis across Deepgram's Flux voice catalog.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "bytedance/seedance-2.0-mini",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/bytedance/seedance-2.0-mini",
+      "sourceExcerpt": "Seedance 2.0 Mini is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video with image, video, and audio inputs. It...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "x-ai/grok-imagine-image-2.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-imagine-image-2.0",
+      "sourceExcerpt": "Grok Imagine Image 2.0 is an image generation and editing model from xAI. It is suited for creating images from text prompts and editing images from references, with low and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance/seedance-2.5",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/bytedance/seedance-2.5",
+      "sourceExcerpt": "Seedance 2.5 is a video generation model from ByteDance. It is suited for long-form storytelling, multimodal reference-based generation, video editing, and video extension. It supports first-frame and first-and-last-frame control, up...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-transcribe",
+      "sourceExcerpt": "GPT Transcribe is a high-accuracy speech-to-text model from OpenAI. It is suited for recorded audio, streamed file transcription, and committed Realtime turns, with free-form context, keyword hints, and multiple language...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen-image-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-image-3",
+      "sourceExcerpt": "Qwen Image 3 is a unified image generation and editing model from Qwen. It supports precise rendering of text and details as small as 10px, along with a richer world...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "qwen/qwen-image-3-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-image-3-pro",
+      "sourceExcerpt": "Qwen Image 3 Pro is an image generation and editing model from Qwen. It supports precise rendering of text and details as small as 10px, along with richer world knowledge...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux-3-video",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux-3-video",
+      "sourceExcerpt": "FLUX.3 Video is a video generation model from Black Forest Labs. It supports text-to-video, image-guided generation with opening and closing keyframes, and video continuation workflows, making it suited for controlled...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "minimax/hailuo-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/minimax/hailuo-3",
+      "sourceExcerpt": "MiniMax H3 is a lightweight, open-weights video generation model from MiniMax. It is designed for precise multimodal editing and controlled content generation, including instruction-guided edits, text and brand rendering, and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "fish-audio/transcribe-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/transcribe-1",
+      "sourceExcerpt": "Transcribe 1 is a speech-to-text model from Fish Audio. It is suited for audio transcription with automatic language detection and can return timestamped word-level segments when alignment details are requested.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "fish-audio/s1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/s1",
+      "sourceExcerpt": "S1 is a multilingual text-to-speech model from Fish Audio. It is suited for voice applications that need broad emotional expression, using parenthetical controls to guide speaking style across its supported...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "fish-audio/s2-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/s2-pro",
+      "sourceExcerpt": "S2 Pro is a multilingual text-to-speech model from Fish Audio. It is suited for expressive narration and multi-speaker dialogue, with natural-language controls for speaking style and emotion.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "fish-audio/s2.1-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/fish-audio/s2.1-pro",
+      "sourceExcerpt": "S2.1 Pro is a production-oriented text-to-speech model from Fish Audio. It is suited for multilingual voice applications, expressive narration, and dialogue synthesis, with open-ended natural-language controls for speaking style and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "runway/aleph-2",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/runway/aleph-2",
+      "sourceExcerpt": "Runway Aleph 2.0 is an in-context video editing model from Runway. It applies text instructions and keyframe-guided edits across existing footage while preserving details that are not meant to change....",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "runway/gen-4.5",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/runway/gen-4.5",
+      "sourceExcerpt": "Runway Gen-4.5 is a video generation model from Runway for text-to-video and image-to-video workflows. It is designed for cinematic scene creation with strong motion quality, visual fidelity, and prompt adherence....",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "mongodb/rerank-2.5-lite",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/rerank-2.5-lite",
+      "sourceExcerpt": "rerank-2.5-lite is a reranker optimized for both latency and quality, delivering a 7.16% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/rerank-2.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/rerank-2.5",
+      "sourceExcerpt": "rerank-2.5 is a cutting-edge reranker optimized for quality, delivering a 7.94% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 12.70%...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/voyage-multimodal-3.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/voyage-multimodal-3.5",
+      "sourceExcerpt": "voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable of vectorizing not only text, images, and video individually, but also content that interleaves all three modalities. It delivers excellent performance for...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/voyage-4-lite",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/voyage-4-lite",
+      "sourceExcerpt": "voyage-4-lite is a lightweight, general-purpose embedding model optimized for low latency and cost. Enabled by Matryoshka learning and quantization-aware training, voyage-4-lite supports embeddings t voyage-4-lite here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/voyage-4",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/voyage-4",
+      "sourceExcerpt": "voyage-4 is a general-purpose (including multilingual) embedding model optimized for retrieval/search and AI applications. voyage-4 supports embedd about voyage-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mongodb/voyage-4-large",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mongodb/voyage-4-large",
+      "sourceExcerpt": "voyage-4-large is a state-of-the-art general-purpose and multilingual embedding optimized for retrieval quality. Enabled by Matryoshka learning and quantization-aware training, voyage-4-large supports embeddings  voyage-4-large here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/mai-image-2.5-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-image-2.5-pro",
+      "sourceExcerpt": "Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "microsoft/mai-voice-2-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-voice-2-flash",
+      "sourceExcerpt": "MAI-Voice-2-Flash is a low-latency text-to-speech model from Microsoft AI for voice agents, assistants, call centers, accessibility, narration, and other interactive applications. It generates expressive 24 kHz mono speech across 15...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen-audio-3.0-tts-flash",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-audio-3.0-tts-flash",
+      "sourceExcerpt": "Qwen-Audio-3.0-TTS Flash is Alibaba's fast, cost-efficient text-to-speech model, generating spoken audio from text via the DashScope Speech Synthesizer API.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen-audio-3.0-tts-plus",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen-audio-3.0-tts-plus",
+      "sourceExcerpt": "Qwen-Audio-3.0-TTS Plus is Alibaba's higher-quality text-to-speech model, generating spoken audio from text via the DashScope Speech Synthesizer API.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "x-ai/grok-stt-1.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-stt-1.0",
+      "sourceExcerpt": "Grok STT is SpaceXAI's speech-to-text model, available via the REST /v1/stt endpoint. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "krea/krea-2-large",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/krea/krea-2-large",
+      "sourceExcerpt": "Krea 2 Large is Krea's high-capability image generation model, more than twice the size of Krea 2 Medium. Its lighter post-training gives images a rawer, more textured, and flexible character,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "krea/krea-2-medium",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/krea/krea-2-medium",
+      "sourceExcerpt": "Krea 2 Medium is Krea's balanced, cost-efficient image generation model and a practical starting point for a broad range of use cases. Its extensive post-training supports stable, consistent generations, with...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "krea/krea-2-medium-turbo",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/krea/krea-2-medium-turbo",
+      "sourceExcerpt": "Krea 2 Medium Turbo is a distilled, speed-focused variant of Krea 2 Medium from Krea. It is designed for rapid iteration and graphic design exploration where fast generation is the...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "x-ai/grok-imagine-video-1.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-imagine-video-1.5",
+      "sourceExcerpt": "Grok Imagine Video 1.5 is a video generation model from SpaceXAI. It creates videos from text prompts, with an optional starting image to guide the scene. It can direct subject...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "deepgram/aura-2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/deepgram/aura-2",
+      "sourceExcerpt": "Aura-2 is a multilingual text-to-speech model from Deepgram. It supports Deepgram’s canonical Aura-2 voice catalog for speech synthesis across multiple languages.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "minimax/speech-2.8-hd",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/minimax/speech-2.8-hd",
+      "sourceExcerpt": "MiniMax Speech 2.8 HD is a text-to-speech model from MiniMax. It is suited for applications that generate spoken audio from text and accepts arbitrary MiniMax voice IDs.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "minimax/speech-2.8-turbo",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/minimax/speech-2.8-turbo",
+      "sourceExcerpt": "MiniMax Speech 2.8 Turbo is a text-to-speech model from MiniMax. It is suited for applications that generate spoken audio from text and accepts arbitrary MiniMax voice IDs.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "deepgram/nova-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/deepgram/nova-3",
+      "sourceExcerpt": "Deepgram Nova-3 general-purpose speech-to-text model with monolingual and multilingual transcription support.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite-image",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.1-flash-lite-image",
+      "sourceExcerpt": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) is Google's fastest, most cost-efficient Gemini image model, built for high-velocity developer pipelines and rapid-fire visual exploration. It delivers text-to-image generation...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "alibaba/happyhorse-1.1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/alibaba/happyhorse-1.1",
+      "sourceExcerpt": "HappyHorse 1.1 is a video generation model from Alibaba. It generates short videos from a text prompt, a single starting image, or a set of reference images, with output up...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-2",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-2",
+      "sourceExcerpt": "OpenAI's latest image generation model. Supports high-fidelity image generation and editing via the dedicated Images API.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-1",
+      "sourceExcerpt": "OpenAI's GPT Image 1 generates and edits images via the dedicated Images API. Features accurate text rendering, transparent backgrounds, and up to 16 reference images for edits.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-image-1-mini",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-image-1-mini",
+      "sourceExcerpt": "A cost-efficient variant of GPT Image 1 for high-quality image generation at reduced latency and cost via OpenAI's dedicated Images API.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "alibaba/happyhorse-1.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/alibaba/happyhorse-1.0",
+      "sourceExcerpt": "HappyHorse 1.0 is a video generation model from Alibaba. It generates short videos from a text prompt, a single starting image, or a set of reference images, with output up...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/gemini-3.1-flash-image",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.1-flash-image",
+      "sourceExcerpt": "Gemini 3.1 Flash Image, a.k.a. \"Nano Banana 2,\" is Google’s latest state of the art image generation and editing model, delivering Pro-level visual quality at Flash speed. It combines advanced...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/gemini-3-pro-image",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3-pro-image",
+      "sourceExcerpt": "Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro. It extends the original Nano Banana with significantly improved multimodal reasoning, real-world grounding, and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "sourceful/riverflow-v2.5-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/sourceful/riverflow-v2.5-pro",
+      "sourceExcerpt": "Riverflow V2.5 Pro is the most powerful variant of Sourceful's Riverflow 2.5 lineup, best for top-tier control and quality-sensitive outputs. The Riverflow 2.5 series is a unified text-to-image and image-to-image...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "sourceful/riverflow-v2.5-fast",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/sourceful/riverflow-v2.5-fast",
+      "sourceExcerpt": "Riverflow V2.5 Fast is the speed-optimized variant of Sourceful's Riverflow 2.5 lineup, best for production deployments and latency-critical workflows. The Riverflow 2.5 series is a unified text-to-image and image-to-image family...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "microsoft/mai-voice-2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-voice-2",
+      "sourceExcerpt": "MAI-Voice-2 is an expressive text-to-speech model from Microsoft AI. It is suited for conversational assistants, media narration, accessibility, education, and other long-form voice applications. It supports 15 languages across 18...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/mai-transcribe-1.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-transcribe-1.5",
+      "sourceExcerpt": "MAI-Transcribe 1.5 is a multilingual speech-to-text model from Microsoft AI. It is suited for captions, call transcription, subtitling, accessibility, and other voice-enabled applications, with reliable transcription across 43 languages, diverse...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "microsoft/mai-image-2.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/microsoft/mai-image-2.5",
+      "sourceExcerpt": "Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "nvidia/parakeet-tdt-0.6b-v3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/nvidia/parakeet-tdt-0.6b-v3",
+      "sourceExcerpt": "Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-embedding-2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-embedding-2",
+      "sourceExcerpt": "Gemini Embedding 2 is Google's first multimodal embedding model. We currently support mapping text and images into a unified vector space for semantic search and retrieval-augmented generation (RAG). It supports...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "x-ai/grok-imagine-video",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-imagine-video",
+      "sourceExcerpt": "Grok Imagine Video is SpaceXAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios -...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "mistralai/voxtral-mini-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-mini-transcribe",
+      "sourceExcerpt": "Voxtral Mini Transcribe is Mistral's speech-to-text model, derived from the Voxtral Mini family. It accepts audio input and returns transcribed text via the standard transcription API. Suited for transcribing meetings,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "x-ai/grok-voice-tts-1.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/x-ai/grok-voice-tts-1.0",
+      "sourceExcerpt": "Grok Voice TTS 1.0 is a text-to-speech model from SpaceXAI. It converts text into spoken audio across 20+ languages with automatic language detection, and offers five built-in voices (Eve, Ara,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "recraft/recraft-v4.1-pro-vector",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-pro-vector",
+      "sourceExcerpt": "Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4.1-vector",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-vector",
+      "sourceExcerpt": "Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4.1-utility-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-utility-pro",
+      "sourceExcerpt": "Recraft V4.1 Utility Pro is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios — double...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4.1-utility",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-utility",
+      "sourceExcerpt": "Recraft V4.1 Utility is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4.1-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1-pro",
+      "sourceExcerpt": "Recraft V4.1 Pro is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4.1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4.1",
+      "sourceExcerpt": "Recraft V4.1 is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-pro-vector",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-pro-vector",
+      "sourceExcerpt": "Recraft V4 Pro Vector is the vector (SVG) variant of Recraft V4 Pro. It supports text and image inputs and produces vector image output across multiple aspect ratios at the...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-vector",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-vector",
+      "sourceExcerpt": "Recraft V4 Vector is the vector (SVG) variant of Recraft V4. It supports text and image inputs and produces vector image output across multiple aspect ratios. Compared to the raster...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4-pro",
+      "sourceExcerpt": "Recraft V4 Pro is an image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios, double the resolution of...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v4",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v4",
+      "sourceExcerpt": "Recraft V4 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. It delivers stronger compositional judgment,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "recraft/recraft-v3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/recraft/recraft-v3",
+      "sourceExcerpt": "Recraft V3 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. Supports the following `image_config` parameters:...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/chirp-3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/chirp-3",
+      "sourceExcerpt": "Chirp 3 is Google's latest multilingual speech-to-text model. It offers enhanced transcription accuracy across 24 GA languages and 77+ preview languages, with support for automatic language detection, automatic punctuation, and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/gpt-4o-mini-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-4o-mini-transcribe",
+      "sourceExcerpt": "GPT-4o Mini Transcribe is OpenAI's smaller, cost-efficient speech-to-text model built on GPT-4o Mini audio capabilities. It's priced per token (input and output), making it suitable for high-volume transcription workflows that...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/whisper-large-v3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/whisper-large-v3",
+      "sourceExcerpt": "Whisper Large V3 is OpenAI's open-source automatic speech recognition model offering both audio transcription and translation. It supports 99+ languages and accepts common audio formats including mp3, mp4, wav, webm,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/whisper-large-v3-turbo",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/whisper-large-v3-turbo",
+      "sourceExcerpt": "Whisper Large V3 Turbo is an optimized version of OpenAI's Whisper Large V3 speech recognition model, designed for speed and cost efficiency. It supports transcription across 99+ languages with a...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "kwaivgi/kling-v3.0-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/kwaivgi/kling-v3.0-pro",
+      "sourceExcerpt": "Kling v3.0 Pro is Kuaishou's premium video generation model, offering higher visual quality than the Standard tier. It supports text-to-video and image-to-video workflows, with first-frame and last-frame control for precise...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "kwaivgi/kling-v3.0-std",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/kwaivgi/kling-v3.0-std",
+      "sourceExcerpt": "Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-to-video and image-to-video workflows, with first-frame and last-frame control for guided scene composition. Clips range from 3 to...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/whisper-1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/whisper-1",
+      "sourceExcerpt": "Whisper is OpenAI's open-source automatic speech recognition model, available via API as `whisper-1`. It supports transcription and translation across 50+ languages from audio files up to 25 MB. Accepts formats...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/gpt-4o-transcribe",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-4o-transcribe",
+      "sourceExcerpt": "GPT-4o Transcribe is OpenAI's high-quality speech-to-text model built on GPT-4o audio capabilities. It's priced per token (input and output), making it suitable for workflows that benefit from token-level billing transparency.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-3.1-flash-tts-preview",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-3.1-flash-tts-preview",
+      "sourceExcerpt": "Gemini 3.1 Flash TTS Preview is a text-to-speech model from Google, and a substantial generational step up from Gemini 2.5 Flash TTS. It takes text input and produces audio output...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/veo-3.1-fast",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/google/veo-3.1-fast",
+      "sourceExcerpt": "Google's mid-tier video generation model balancing speed and quality. Veo 3.1 Fast generates high-quality video from text or image prompts with native synchronized audio, offering faster turnaround than Veo 3.1...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "canopylabs/orpheus-3b-0.1-ft",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/canopylabs/orpheus-3b-0.1-ft",
+      "sourceExcerpt": "Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for natural prosody and expressive delivery. It offers 7 preset voices and is suited for narration, voice assistants, and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sesame/csm-1b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sesame/csm-1b",
+      "sourceExcerpt": "CSM 1B is a conversational speech model from Sesame. It accepts text input and produces English speech output, with voice options spanning conversational and read-speech styles. At 1B parameters, it...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "hexgrad/kokoro-82m",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/hexgrad/kokoro-82m",
+      "sourceExcerpt": "Kokoro 82M is a lightweight, open-weight text-to-speech model from hexgrad. It converts text to speech across 8 languages (American and British English, Spanish, French, Hindi, Italian, Japanese, Portuguese, and Chinese)...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/veo-3.1-lite",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/google/veo-3.1-lite",
+      "sourceExcerpt": "Google's most cost-effective video generation model, designed for high-volume applications and rapid iteration. Veo 3.1 Lite generates 720p and 1080p video from text or image prompts with native synchronized audio...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-5.4-image-2",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-5.4-image-2",
+      "sourceExcerpt": "[GPT-5.4](https://openrouter.ai/openai/gpt-5.4) Image 2 combines OpenAI's GPT-5.4 model with state-of-the-art image generation capabilities from GPT Image 2. It enables rich multimodal workflows, allowing users to seamlessly move between reasoning, coding, and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "kwaivgi/kling-video-o1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/kwaivgi/kling-video-o1",
+      "sourceExcerpt": "Kling Video O1 is a video generation model from Kuaishou. It supports text and image inputs with video output, enabling text-to-video and image-to-video workflows. It is suited for cinematic content...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "minimax/hailuo-2.3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/minimax/hailuo-2.3",
+      "sourceExcerpt": "Hailuo 2.3 is a video generation model from MiniMax. It accepts text prompts and reference images as input and generates video output, supporting both text-to-video and image-to-video workflows. It is...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "mistralai/voxtral-mini-tts-2603",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/voxtral-mini-tts-2603",
+      "sourceExcerpt": "Voxtral Mini TTS is Mistral's text-to-speech model featuring zero-shot voice cloning and multilingual support. It converts text input into natural-sounding audio output.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "alibaba/wan-2.7",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/alibaba/wan-2.7",
+      "sourceExcerpt": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance/seedance-2.0",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/bytedance/seedance-2.0",
+      "sourceExcerpt": "Seedance 2.0 is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It is particularly strong at preserving character consistency,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance/seedance-2.0-fast",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/bytedance/seedance-2.0-fast",
+      "sourceExcerpt": "Seedance 2.0 Fast is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It prioritizes generation speed and lower cost...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "cohere/rerank-4-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/rerank-4-pro",
+      "sourceExcerpt": "Cohere's AI search foundation model for enhancing the relevance of information surfaced within search and RAG systems. Features a 32K context window, multilingual support across 100+ languages, no data pre-processing...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/rerank-4-fast",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/rerank-4-fast",
+      "sourceExcerpt": "Cohere's AI search foundation model for enhancing the relevance of information surfaced within search and RAG systems. Features a 32K context window, multilingual support across 100+ languages, no data pre-processing...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "cohere/rerank-v3.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/cohere/rerank-v3.5",
+      "sourceExcerpt": "Rerank v3.5 is designed to reorder search results for improved relevance. It supports multi-aspect and semi-structured data reranking over 100+ languages. Ideal for refining results from semantic or keyword search...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/lyria-3-pro-preview",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/lyria-3-pro-preview",
+      "sourceExcerpt": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/lyria-3-clip-preview",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/lyria-3-clip-preview",
+      "sourceExcerpt": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "alibaba/wan-2.6",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/alibaba/wan-2.6",
+      "sourceExcerpt": "Alibaba's most advanced video generation model, supporting over 10 visual creation capabilities in a unified system. Wan 2.6 generates 1080p video at 24fps from text, images, reference videos, or audio,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance/seedance-1-5-pro",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/bytedance/seedance-1-5-pro",
+      "sourceExcerpt": "ByteDance's next-generation audio-visual generation model with a 4.5B parameter Dual-Branch Diffusion Transformer architecture. Seedance 1.5 Pro generates video and audio simultaneously in a single unified pass — eliminating the timing...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/veo-3.1",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/google/veo-3.1",
+      "sourceExcerpt": "Google's state-of-the-art video generation model, built for maximum visual fidelity in final production cuts. Veo 3.1 generates high-quality 1080p video from text or image prompts with native synchronized audio —...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI video 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "perplexity/pplx-embed-v1-4b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/perplexity/pplx-embed-v1-4b",
+      "sourceExcerpt": "pplx-embed-v1 -4B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 4B parameter model maximizing retrieval...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "perplexity/pplx-embed-v1-0.6b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/perplexity/pplx-embed-v1-0.6b",
+      "sourceExcerpt": "pplx-embed-v1-0.6B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 0.6B parameter model targeting lightweight, low-latency...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sourceful/riverflow-v2-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/sourceful/riverflow-v2-pro",
+      "sourceExcerpt": "Riverflow V2 Pro is the most powerful variant of Sourceful's Riverflow 2.0 lineup, best for top-tier control and perfect text rendering. The Riverflow 2.0 series represents SOTA performance on image...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "sourceful/riverflow-v2-fast",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/sourceful/riverflow-v2-fast",
+      "sourceExcerpt": "Riverflow V2 Fast is the fastest variant of Sourceful's Riverflow 2.0 lineup, best for production deployments and latency-critical workflows. The Riverflow 2.0 series represents SOTA performance on image generation and...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-audio",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-audio",
+      "sourceExcerpt": "The gpt-audio model is OpenAI's first generally available audio model. The new snapshot features an upgraded decoder for more natural sounding voices and maintains better voice consistency. Audio is priced...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/gpt-audio-mini",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-audio-mini",
+      "sourceExcerpt": "A cost-efficient version of GPT Audio. The new snapshot features an upgraded decoder for more natural sounding voices and maintains better voice consistency. Input is priced at $0.60 per million...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "black-forest-labs/flux.2-klein-4b",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux.2-klein-4b",
+      "sourceExcerpt": "FLUX.2 [klein] 4B is the fastest and most cost-effective model in the FLUX.2 family, optimized for high-throughput use cases while maintaining excellent image quality. Pricing is based on the output...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "bytedance-seed/seedream-4.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/bytedance-seed/seedream-4.5",
+      "sourceExcerpt": "Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux.2-max",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux.2-max",
+      "sourceExcerpt": "FLUX.2 [max] is the new top-tier image model from Black Forest Labs, pushing image quality, prompt understanding, and editing consistency to the highest level yet. Pricing is as follows, [per...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux.2-flex",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux.2-flex",
+      "sourceExcerpt": "FLUX.2 [flex] excels at rendering complex text, typography, and fine details, and supports multi-reference editing in the same unified architecture. Pricing is as follows, [per the docs](https://bfl.ai/pricing?category=flux.2): We charge $0.06...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "black-forest-labs/flux.2-pro",
+      "tier": "High",
+      "sourceUrl": "https://openrouter.ai/black-forest-labs/flux.2-pro",
+      "sourceExcerpt": "A high-end image generation and editing model focused on frontier-level visual quality and reliability. It delivers strong prompt adherence, stable lighting, sharp textures, and consistent character/style reproduction across multi-reference inputs....",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 상위 제작·정밀 출력 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "thenlper/gte-base",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/thenlper/gte-base",
+      "sourceExcerpt": "The gte-base embedding model encodes English sentences and paragraphs into a 768-dimensional dense vector space, delivering efficient and effective semantic embeddings optimized for textual similarity, semantic search, and clustering applications.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "thenlper/gte-large",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/thenlper/gte-large",
+      "sourceExcerpt": "The gte-large embedding model converts English sentences, paragraphs and moderate-length documents into a 1024-dimensional dense vector space, delivering high-quality semantic embeddings optimized for information retrieval, semantic textual similarity, reranking and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "intfloat/e5-large-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/intfloat/e5-large-v2",
+      "sourceExcerpt": "The e5-large-v2 embedding model maps English sentences, paragraphs, and documents into a 1024-dimensional dense vector space, delivering high-accuracy semantic embeddings optimized for retrieval, semantic search, reranking, and similarity-scoring tasks.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "intfloat/e5-base-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/intfloat/e5-base-v2",
+      "sourceExcerpt": "The e5-base-v2 embedding model encodes English sentences and paragraphs into a 768-dimensional dense vector space, producing efficient and high-quality semantic embeddings optimized for tasks such as semantic search, similarity scoring,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "intfloat/multilingual-e5-large",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/intfloat/multilingual-e5-large",
+      "sourceExcerpt": "The multilingual-e5-large embedding model encodes sentences, paragraphs, and documents across over 90 languages into a 1024-dimensional dense vector space, delivering robust semantic embeddings optimized for multilingual retrieval, cross-language similarity, and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sentence-transformers/paraphrase-minilm-l6-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sentence-transformers/paraphrase-minilm-l6-v2",
+      "sourceExcerpt": "The paraphrase-MiniLM-L6-v2 embedding model converts sentences and short paragraphs into a 384-dimensional dense vector space, producing high-quality semantic embeddings optimized for paraphrase detection, semantic similarity scoring, clustering, and lightweight retrieval...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sentence-transformers/all-minilm-l12-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sentence-transformers/all-minilm-l12-v2",
+      "sourceExcerpt": "The all-MiniLM-L12-v2 embedding model maps sentences and short paragraphs into a 384-dimensional dense vector space, producing efficient and high-quality semantic embeddings optimized for tasks such as semantic search, clustering, and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "baai/bge-base-en-v1.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baai/bge-base-en-v1.5",
+      "sourceExcerpt": "The bge-base-en-v1.5 embedding model converts English sentences and paragraphs into 768-dimensional dense vectors, delivering efficient, high-quality semantic embeddings optimized for retrieval, semantic search, and document-matching workflows. This version (v1.5) features...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sentence-transformers/multi-qa-mpnet-base-dot-v1",
+      "sourceExcerpt": "The multi-qa-mpnet-base-dot-v1 embedding model transforms sentences and short paragraphs into a 768-dimensional dense vector space, generating high-quality semantic embeddings optimized for question-and-answer retrieval, semantic search, and similarity-scoring across diverse content.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "baai/bge-large-en-v1.5",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baai/bge-large-en-v1.5",
+      "sourceExcerpt": "The bge-large-en-v1.5 embedding model maps English sentences, paragraphs, and documents into a 1024-dimensional dense vector space, delivering high-fidelity semantic embeddings optimized for semantic search, document retrieval, and downstream NLP tasks...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "baai/bge-m3",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/baai/bge-m3",
+      "sourceExcerpt": "The bge-m3 embedding model encodes sentences, paragraphs, and long documents into a 1024-dimensional dense vector space, delivering high-quality semantic embeddings optimized for multilingual retrieval, semantic search, and large-context applications.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sentence-transformers/all-mpnet-base-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sentence-transformers/all-mpnet-base-v2",
+      "sourceExcerpt": "The all-mpnet-base-v2 embedding model encodes sentences and short paragraphs into a 768-dimensional dense vector space, providing high-fidelity semantic embeddings well suited for tasks like information retrieval, clustering, similarity scoring, and...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "sentence-transformers/all-minilm-l6-v2",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/sentence-transformers/all-minilm-l6-v2",
+      "sourceExcerpt": "The all-MiniLM-L6-v2 embedding model maps sentences and short paragraphs into a 384-dimensional dense vector space, enabling high-quality semantic representations that are ideal for downstream tasks such as information retrieval, clustering,...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/mistral-embed-2312",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/mistral-embed-2312",
+      "sourceExcerpt": "Mistral Embed is a specialized embedding model for text data, optimized for semantic search and RAG applications. Developed by Mistral AI in late 2023, it produces 1024-dimensional vectors that effectively...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "google/gemini-embedding-001",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-embedding-001",
+      "sourceExcerpt": "gemini-embedding-001 provides a unified cutting edge experience across domains, including science, legal, finance, and coding. This embedding model has consistently held a top spot on the Massive Text Embedding Benchmark...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/text-embedding-ada-002",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/text-embedding-ada-002",
+      "sourceExcerpt": "text-embedding-ada-002 is OpenAI's legacy text embedding model.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "mistralai/codestral-embed-2505",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/mistralai/codestral-embed-2505",
+      "sourceExcerpt": "Mistral Codestral Embed is specially designed for code, perfect for embedding code databases, repositories, and powering coding assistants with state-of-the-art retrieval.",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/text-embedding-3-large",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/text-embedding-3-large",
+      "sourceExcerpt": "text-embedding-3-large is OpenAI's most capable embedding model for both english and non-english tasks. Embeddings are a numerical representation of text that can be used to measure the relatedness between two...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/text-embedding-3-small",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/text-embedding-3-small",
+      "sourceExcerpt": "text-embedding-3-small is OpenAI's improved, more performant version of the ada embedding model. Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen3-embedding-8b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-embedding-8b",
+      "sourceExcerpt": "The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. This series inherits the exceptional multilingual capabilities, long-text...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "qwen/qwen3-embedding-4b",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3-embedding-4b",
+      "sourceExcerpt": "The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. This series inherits the exceptional multilingual capabilities, long-text...",
+      "reviewStatus": "unreviewed",
+      "reason": "출력 형태별 탐색용 임시 배치. 가격·품질 검수 전 추천 제외."
+    },
+    {
+      "id": "openai/gpt-5-image-mini",
+      "tier": "Small",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-5-image-mini",
+      "sourceExcerpt": "GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [GPT-5 Mini](https://openrouter.ai/openai/gpt-5-mini), with GPT Image 1 Mini for efficient image generation. This natively multimodal model features superior instruction following, text...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 효율·속도 중심. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "openai/gpt-5-image",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/openai/gpt-5-image",
+      "sourceExcerpt": "[GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's GPT-5 model with state-of-the-art image generation capabilities. It offers major improvements in reasoning, code quality, and user experience while incorporating GPT Image 1's superior instruction following,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    },
+    {
+      "id": "google/gemini-2.5-flash-image",
+      "tier": "Medium",
+      "sourceUrl": "https://openrouter.ai/google/gemini-2.5-flash-image",
+      "sourceExcerpt": "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It is a state of the art image generation model with contextual understanding. It is capable of image generation,...",
+      "reviewStatus": "source-reviewed",
+      "reason": "AIMI image 제품군 정책: 범용 제작·균형형. API 제품 설명을 참고한 포지셔닝이며 실측 품질 등급이 아닙니다."
+    }
+  ]
+}

@@ -10,7 +10,13 @@
     "ait:build": "npm run build && ait build"
   },
   "dependencies": {
+    "@aimi/contracts": "0.1.0",
+    "@aimi/game-core": "0.1.0",
+    "@aimi/recommender": "0.1.0",
     "@apps-in-toss/web-framework": "3.10.0",
+    "@emotion/react": "^11.14.0",
+    "@toss/tds-mobile": "^2.5.1",
+    "@toss/tds-mobile-ait": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

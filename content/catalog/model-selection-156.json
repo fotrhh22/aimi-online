@@ -1,0 +1,1404 @@
+{
+  "version": "catalogue-156-v1",
+  "decisionDate": "2026-11-10",
+  "expectedCount": 156,
+  "aaAsOf": "2026-11-08",
+  "openrouterAsOf": "2026-11-09T12:58:15.443Z",
+  "models": [
+    {
+      "id": "openai/gpt-6.1-terra",
+      "canonicalId": "openai/gpt-6.1-terra-20261026",
+      "aaCandidateIds": [
+        "b0c462cf-f2d0-4126-9434-28db9502219f",
+        "0d3c777f-6817-42d7-9bb9-223314bc5a57",
+        "c441e158-a87d-4116-911b-93325e4b4f1c",
+        "c955b262-a17f-4f1a-b097-6860b866295b",
+        "e8d443ba-8aca-4830-a186-ae869bb9c6fe",
+        "ea3e1f50-f62d-41d2-849a-9af0413e4d37"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "canonicalId": "moonshotai/kimi-k3.1-pro-20261023",
+      "aaCandidateIds": [
+        "665c67ca-09eb-48f0-a7a3-0096e1d5de51"
+      ],
+      "defaultReasoningEffort": "max"
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "canonicalId": "minimax/minimax-m3.1-flash-20261019",
+      "aaCandidateIds": [
+        "d49c8680-e29b-400e-9511-824f7ddebe07"
+      ],
+      "defaultReasoningEffort": "max"
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "canonicalId": "deepseek/deepseek-v4.1-flash-20261017",
+      "aaCandidateIds": [
+        "f151fd0b-2139-40cf-a3ec-995e8cedc592",
+        "5720fd2f-873a-4765-8640-a153b38bd64d",
+        "c3b66080-fdcb-48e4-8ade-6baf77921c7c"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "meta/muse-spark-open",
+      "canonicalId": "meta/muse-spark-open-20261015",
+      "aaCandidateIds": [
+        "3661c8fb-caf7-4118-aa18-65b84fea8e44"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "canonicalId": "nvidia/nemotron-3.5-super-vl-20261015",
+      "aaCandidateIds": [
+        "e2c0623e-c855-4a61-bb66-be1f1ed43234"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-4-argon",
+      "canonicalId": "google/gemini-4-argon-20261013",
+      "aaCandidateIds": [
+        "d366dfa1-d940-4788-aa73-d298c45699b3"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "meta/muse-wonder",
+      "canonicalId": "meta/muse-wonder-20261012",
+      "aaCandidateIds": [
+        "ff2f3f3d-783f-4e27-8a39-47237501a313",
+        "38a98e3d-779b-49ec-b005-230a3a72088a"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "stepfun/step-5-preview",
+      "canonicalId": "stepfun/step-5-preview-20261008",
+      "aaCandidateIds": [
+        "094ea3e3-ce41-419e-8bd1-723389663158"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-haiku-5.5",
+      "canonicalId": "anthropic/claude-haiku-5.5-20261007",
+      "aaCandidateIds": [
+        "7d064a11-6e78-4030-b535-cdf940615041",
+        "20829974-af06-497e-9f42-77fb958d43b9",
+        "41b5bf5e-daf6-42d9-b8d1-60e340a3028d",
+        "42908ae3-d3bd-4934-be19-fbff93d3fde8",
+        "af26fff4-8120-41be-a5f0-86aaea023f20"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "mistralai/mistral-large-4-0",
+      "canonicalId": "mistralai/mistral-large-4-0-20261006",
+      "aaCandidateIds": [
+        "ea5019ae-b0b7-49a5-80b3-0e584807af0f",
+        "27b24366-fd1a-44b7-8011-e24d7501318d"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "canonicalId": "inclusionai/ling-3.1-flash-20261002",
+      "aaCandidateIds": [
+        "a6043b9b-628a-4a76-a021-2834e0627d05"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "canonicalId": "openai/gpt-6.1-sol-20260929",
+      "aaCandidateIds": [
+        "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+        "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+        "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+        "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+        "e76e0fe5-93ca-4272-9359-2eb1740467d1"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "canonicalId": "anthropic/claude-sonnet-5.5-20260928",
+      "aaCandidateIds": [
+        "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+        "042e8a37-fcd0-40f4-8f41-99215fb68eda",
+        "268525e2-f873-4178-bc07-e6a0ee1f002d",
+        "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
+        "bbc2ffea-cf6b-43be-8c41-1769347e234d"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "upstage/solar-mini4",
+      "canonicalId": "upstage/solar-mini4-20260922",
+      "aaCandidateIds": [
+        "62ea3198-9866-4d9f-8406-a79ee78c7164"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "cohere/command-a-plus",
+      "canonicalId": "cohere/command-a-plus-05-2026",
+      "aaCandidateIds": [
+        "2e9ff877-fd2c-4ce7-b631-7ca1bdb6d13e",
+        "3bc32f13-5afa-4e28-bce1-10e57376686b"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "canonicalId": "openai/gpt-6-luna-20260922",
+      "aaCandidateIds": [
+        "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+        "19813eb2-460a-475c-af65-810bb8660fec",
+        "36667da0-9222-4967-adbb-f7efa15ad213",
+        "63cb48ea-0b0c-4e07-8ded-6d28dec4fa28",
+        "7d1229bc-deea-4717-ba5b-f59a35d991e3",
+        "bf9708d8-933d-44f6-affa-b696a7a650c9"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "canonicalId": "openai/gpt-6-sol-20260922",
+      "aaCandidateIds": [
+        "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+        "01459872-433a-4ab2-8e99-7083162172eb",
+        "52eebe3e-6ede-4e46-92db-c5dea49fc410",
+        "780a4a85-17ff-4175-a8dd-ebca4823e61b",
+        "d3e20e76-9e1a-45b6-b809-ad6aa37430cf",
+        "da2642fe-9f73-4788-b5af-24edcd55b37e"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "canonicalId": "anthropic/claude-opus-5.5-20260921",
+      "aaCandidateIds": [
+        "2f3c4dc9-a450-4303-8697-0237257cf08f",
+        "4416ca93-fde6-4b7b-abbc-3a6be109cc3d",
+        "df5bf99d-d228-4715-b41b-19ca86118777",
+        "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
+        "f314eade-2232-44bf-a3ab-9b326bc67de6"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "canonicalId": "xiaomi/mimo-v2.6-flash-20260921",
+      "aaCandidateIds": [
+        "127de816-57d3-4037-8484-480a613cd413"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "canonicalId": "xiaomi/mimo-v2.6-pro-20260921",
+      "aaCandidateIds": [
+        "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "x-ai/grok-4.7",
+      "canonicalId": "x-ai/grok-4.7-20260916",
+      "aaCandidateIds": [
+        "59627802-1546-422c-9a65-65b61c022d36",
+        "208c16f0-8c5b-4524-ac8a-ac74c02e80a9",
+        "272f5f03-aea9-4675-a244-2b753b618cdf"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "canonicalId": "deepseek/deepseek-v4.1-flash-20260910",
+      "aaCandidateIds": [
+        "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "73c96f99-0de3-4668-a4bd-b106a0fe18f2"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "openai/gpt-6-astra",
+      "canonicalId": "openai/gpt-6-astra-20260903",
+      "aaCandidateIds": [
+        "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+        "1f541ef3-913f-4eb2-9d07-0e93c7a9a5e3",
+        "a3f8100d-e38f-408b-b0fa-0085dae18dc1",
+        "e05a4828-0536-4876-870d-a235023f992b",
+        "e97a4ef5-e817-480e-9595-12f81dc4974f"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "qwen/qwen3.8-max-0902",
+      "canonicalId": "qwen/qwen3.8-max-20260902",
+      "aaCandidateIds": [
+        "b112af07-3bd5-4647-b09f-b23204361bb2"
+      ],
+      "defaultReasoningEffort": "xhigh"
+    },
+    {
+      "id": "meta/muse-spark-1.3",
+      "canonicalId": "meta/muse-spark-1.3-20260902",
+      "aaCandidateIds": [
+        "9999672c-b687-4026-9c15-5cef02ff53bb",
+        "d5170215-69be-4129-849b-26d8d8825bfc"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "google/gemini-3.8-flash",
+      "canonicalId": "google/gemini-3.8-flash-20260902",
+      "aaCandidateIds": [
+        "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+        "744fa3c1-42a7-4995-b138-fb6be11f463c",
+        "f6db039b-0f3b-485c-9d7f-982988e44f26"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-fable-5.1",
+      "canonicalId": "anthropic/claude-fable-5.1-20260831",
+      "aaCandidateIds": [
+        "3e87c73e-a257-495e-9730-367a66229811",
+        "05776db7-f5c0-40f7-b824-079160f8cfa8",
+        "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
+        "9b166bf3-42db-4f63-8338-1c4a1244ffe8",
+        "9d7d72cd-d95d-45a0-b109-4ad292c9aabd"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "ibm-granite/granite-4.2-8b",
+      "canonicalId": "ibm-granite/granite-4.2-8b-20260831",
+      "aaCandidateIds": [
+        "adfae555-f489-4f3e-9064-c6b7fcdd0783"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "canonicalId": "z-ai/glm-5.3-flash-20260826",
+      "aaCandidateIds": [
+        "19496b81-9f41-4214-a77a-1df803b3c5ae"
+      ],
+      "defaultReasoningEffort": "max"
+    },
+    {
+      "id": "z-ai/glm-5.3",
+      "canonicalId": "z-ai/glm-5.3-20260816",
+      "aaCandidateIds": [
+        "cd684ea4-b475-4269-b001-d469d06d8a7a",
+        "cc1e488b-8ba4-464d-875d-690166b15ad3"
+      ],
+      "defaultReasoningEffort": "max"
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "canonicalId": "qwen/qwen3.8-27b-20260814",
+      "aaCandidateIds": [
+        "b01dee41-c62b-48ed-8d16-984adc405e5c",
+        "353c92f3-2148-4c2d-9231-aa7e1322a1fd",
+        "6657d7de-a2a9-40bc-a32f-86e80ad63698",
+        "7e30585f-fad7-40df-a8cb-03c1d96df38a"
+      ],
+      "defaultReasoningEffort": "xhigh"
+    },
+    {
+      "id": "qwen/qwen3.8-2.4t-a95b",
+      "canonicalId": "qwen/qwen3.8-2.4t-a95b-20260812",
+      "aaCandidateIds": [
+        "8df710d3-9dae-4498-9b4e-9818238e6f31"
+      ],
+      "defaultReasoningEffort": "xhigh"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "canonicalId": "deepseek/deepseek-v4-pro-20260813",
+      "aaCandidateIds": [
+        "83173329-c09a-41f1-a028-a282a5f908d7",
+        "d4f5b250-be37-4801-85e6-32fda4179337"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "x-ai/grok-4.6",
+      "canonicalId": "x-ai/grok-4.6-20260810",
+      "aaCandidateIds": [
+        "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+        "26614164-6840-4e17-a65a-2deb2fe7e87b",
+        "c07e65e6-32fc-451e-938d-7477a1c3ffcc",
+        "d6f43d0a-e8c4-447c-9ff7-5cf0a9d59aa3"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "canonicalId": "nvidia/nemotron-3.5-lightning-20260807",
+      "aaCandidateIds": [
+        "29976311-665a-4b2f-ac72-557c33e0758e"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "upstage/solar-pro4",
+      "canonicalId": "upstage/solar-pro4-20260810",
+      "aaCandidateIds": [
+        "15c4cbd7-b9aa-42c8-9ce5-5abbde0e6963"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "inclusionai/ling-3.0-tiny",
+      "canonicalId": "inclusionai/ling-3.0-tiny-20260806",
+      "aaCandidateIds": [
+        "7eaf926c-5f39-4e58-ae50-c38b5fc630fc"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "meta/muse-spark-1.2",
+      "canonicalId": "meta/muse-spark-1.2-20260805",
+      "aaCandidateIds": [
+        "04ee6719-0327-463b-a1a1-70a6a78254f9"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "canonicalId": "deepseek/deepseek-v4-flash-20260731",
+      "aaCandidateIds": [
+        "fe4c0848-e284-4e52-a79d-cdc28392f1a9"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "thinkingmachines/inkling-small",
+      "canonicalId": "thinkingmachines/inkling-small-20260730",
+      "aaCandidateIds": [
+        "7261504e-503c-4a66-a9d3-a3272cdf9ad6"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "anthropic/claude-opus-5",
+      "canonicalId": "anthropic/claude-opus-5-20260723",
+      "aaCandidateIds": [
+        "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+        "1305c921-7aaa-4d6d-99b5-99b3acf15e19",
+        "20928ba9-3a3f-415f-9519-b84ff64ecf34",
+        "712be54a-77ae-41b2-9a58-21181479d6ee",
+        "ff51be8f-e362-4a7e-9043-687ba15de207"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash",
+      "canonicalId": "inclusionai/ling-3.0-flash-20260723",
+      "aaCandidateIds": [
+        "e33dc369-ae81-40e0-8c4e-28b002d02197"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-3.6-flash",
+      "canonicalId": "google/gemini-3.6-flash-20260721",
+      "aaCandidateIds": [
+        "78332c88-fe60-42c8-af9d-3617e44cf1f5"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "google/gemini-3.5-flash-lite",
+      "canonicalId": "google/gemini-3.5-flash-lite-20260721",
+      "aaCandidateIds": [
+        "093b9df2-ebee-4309-943f-5a7e88360adf"
+      ],
+      "defaultReasoningEffort": "minimal"
+    },
+    {
+      "id": "thinkingmachines/inkling",
+      "canonicalId": "thinkingmachines/inkling-20260715",
+      "aaCandidateIds": [
+        "0de09623-2b1a-4c8d-86ef-7f5245d4e24b"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "canonicalId": "moonshotai/kimi-k3-20260715",
+      "aaCandidateIds": [
+        "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+        "512d17ef-13d2-4f65-bf9b-154b0dec7e8d"
+      ],
+      "defaultReasoningEffort": "max"
+    },
+    {
+      "id": "meta/muse-spark-1.1",
+      "canonicalId": "meta/muse-spark-1.1-20260709",
+      "aaCandidateIds": [
+        "d61493e2-43ff-460c-9054-eaf6ba317360"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.6-luna",
+      "canonicalId": "openai/gpt-5.6-luna-20260709",
+      "aaCandidateIds": [
+        "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+        "050c61cd-cddc-463a-a30a-a82aaa37be59",
+        "58b812bf-8498-46db-b834-f43ccc614b61",
+        "87110ff0-1f79-41b4-9976-eda250597317",
+        "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
+        "dc64f856-3ded-497d-9527-d41d31267ed5"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.6-terra",
+      "canonicalId": "openai/gpt-5.6-terra-20260709",
+      "aaCandidateIds": [
+        "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
+        "81972fba-1219-477e-bbfb-18c656a63ff7",
+        "9b97a35e-6ac7-44d9-91c6-422fa678963e",
+        "9e30696f-16fa-4b4f-ba53-161895a85fed",
+        "cc4a20cd-09fe-4962-a430-119c815e85fa"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "canonicalId": "openai/gpt-5.6-sol-20260709",
+      "aaCandidateIds": [
+        "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+        "0904b596-8932-43bd-9b21-324f128e1723",
+        "6f174934-5b7d-4333-86cb-f5ebf4a862e3",
+        "7c4d1e30-6ecb-46cf-880c-41446d7b51f1",
+        "8afc250d-b538-45a2-812a-4605f4ffd87e",
+        "d998db47-9b67-4727-a2bb-2e1261020ac0"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "x-ai/grok-4.5",
+      "canonicalId": "x-ai/grok-4.5-20260708",
+      "aaCandidateIds": [
+        "794f69b5-cede-482b-b1cc-d769478497cd"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "tencent/hy3",
+      "canonicalId": "tencent/hy3-20260706",
+      "aaCandidateIds": [
+        "b23e6c69-96e5-44c9-8f58-4b42e0c399d5"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "anthropic/claude-sonnet-5",
+      "canonicalId": "anthropic/claude-sonnet-5-20260630",
+      "aaCandidateIds": [
+        "23c86e4a-c769-43c0-a056-79e3cd15834f",
+        "142b93bf-09c4-42dc-9c3a-50b1a222cbd4",
+        "99f376bf-cbcb-4124-bf3e-6b0a4e6e9bea",
+        "ba0224cf-0351-4f56-8508-b3f1a740ae4a",
+        "d58b9ada-fd9d-4fff-a086-242034657963",
+        "effcd151-7c31-4437-af3d-e88daeae9385"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "canonicalId": "cohere/north-mini-code-20260617",
+      "aaCandidateIds": [
+        "1e9907e0-ffac-4595-b006-962e4f1da7cf"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "canonicalId": "z-ai/glm-5.2-20260616",
+      "aaCandidateIds": [
+        "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+        "e8aa417f-18fe-46b0-ba62-ef99785a9585"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "moonshotai/kimi-k2.7-code",
+      "canonicalId": "moonshotai/kimi-k2.7-code-20260612",
+      "aaCandidateIds": [
+        "8d0cb231-7303-452c-9923-a9620b948475"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "anthropic/claude-fable-5",
+      "canonicalId": "anthropic/claude-5-fable-20260609",
+      "aaCandidateIds": [
+        "cd55210d-358e-4df1-ba9c-9acb5f186cc9"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "canonicalId": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "aaCandidateIds": [
+        "5b52def2-ac9b-4465-ad80-91ea8079e253"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "qwen/qwen3.7-plus",
+      "canonicalId": "qwen/qwen3.7-plus-20260602",
+      "aaCandidateIds": [
+        "a87fce42-eea3-4e45-a96d-fe057814f371"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "minimax/minimax-m3",
+      "canonicalId": "minimax/minimax-m3-20260531",
+      "aaCandidateIds": [
+        "277f939a-985b-4b37-859d-b3eabc7c0b26"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "stepfun/step-3.7-flash",
+      "canonicalId": "stepfun/step-3.7-flash-20260528",
+      "aaCandidateIds": [
+        "6c7b322e-2f35-48ff-9171-fb621a726fc0"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-opus-4.8",
+      "canonicalId": "anthropic/claude-4.8-opus-20260528",
+      "aaCandidateIds": [
+        "992b7b84-5069-4c6a-9295-834252553d50"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "qwen/qwen3.7-max",
+      "canonicalId": "qwen/qwen3.7-max-20260520",
+      "aaCandidateIds": [
+        "69534bed-2ffd-4235-832b-e20a810333ab"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-3.5-flash",
+      "canonicalId": "google/gemini-3.5-flash-20260519",
+      "aaCandidateIds": [
+        "0097ebf5-124f-42f6-9463-33b00e711f03",
+        "033ade17-d9ec-44e0-b792-b5f1fcd5ab4c",
+        "5016ea75-7b0e-4737-a7e6-1062c6d90fd4"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite",
+      "canonicalId": "google/gemini-3.1-flash-lite-20260507",
+      "aaCandidateIds": [
+        "598190f8-dc9c-4fea-a7ea-4b81c402ab18"
+      ],
+      "defaultReasoningEffort": "minimal"
+    },
+    {
+      "id": "x-ai/grok-4.3",
+      "canonicalId": "x-ai/grok-4.3-20260430",
+      "aaCandidateIds": [
+        "948892b5-db03-4118-a4a8-ccd51ed871ea",
+        "5e8b0d98-a3b4-42b5-93d8-ecb748788754",
+        "90c2a9cf-ad7e-4332-9be2-2fd1309833e2",
+        "fe2c2289-d261-4433-8681-46448372c1f6"
+      ],
+      "defaultReasoningEffort": "low"
+    },
+    {
+      "id": "mistralai/mistral-medium-3-5",
+      "canonicalId": "mistralai/mistral-medium-3.5-20260430",
+      "aaCandidateIds": [
+        "dd059b25-d82a-4ead-82a4-4adceaaec48b"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "qwen/qwen3.6-35b-a3b",
+      "canonicalId": "qwen/qwen3.6-35b-a3b-20260415",
+      "aaCandidateIds": [
+        "8665ca00-c687-44c7-875c-22618cb31c4f",
+        "66938aab-78fa-49d7-8461-b48b6833e837"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "canonicalId": "qwen/qwen3.6-27b-20260422",
+      "aaCandidateIds": [
+        "8c29d66d-bf98-4ea3-8572-5409353ecc66",
+        "3b156101-b0d7-4438-b350-2d1f1168f40a"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "canonicalId": "openai/gpt-5.5-20260423",
+      "aaCandidateIds": [
+        "1f054429-397e-4fdb-9e71-67bc92c1735e",
+        "6b79f899-e3c0-45f6-923c-243faccdb2fc",
+        "6f1a7562-6e96-46ac-af4f-6ba5a7a3da96",
+        "b13c1257-d746-4027-8fc8-4892dc14701c",
+        "c77cfe51-f4a0-4692-9dee-5061ef667f23"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "canonicalId": "deepseek/deepseek-v4-pro-20260423",
+      "aaCandidateIds": [
+        "83173329-c09a-41f1-a028-a282a5f908d7"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "canonicalId": "deepseek/deepseek-v4-flash-20260423",
+      "aaCandidateIds": [
+        "fe4c0848-e284-4e52-a79d-cdc28392f1a9"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "canonicalId": "moonshotai/kimi-k2.6-20260420",
+      "aaCandidateIds": [
+        "0de67206-4d36-4d10-b8f6-cf37fa747a03",
+        "0fc6308e-fbd2-42d3-a216-06da3c43e34e"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "anthropic/claude-opus-4.7",
+      "canonicalId": "anthropic/claude-4.7-opus-20260416",
+      "aaCandidateIds": [
+        "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
+        "2fa8e143-77a8-4d05-bfa8-d3b54634c00f"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "canonicalId": "z-ai/glm-5.1-20260406",
+      "aaCandidateIds": [
+        "5aa1c578-af76-4b91-8699-cdd43582b3af",
+        "92f245a7-43b4-4ffd-8bfb-866746bf824d"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "canonicalId": "google/gemma-4-26b-a4b-it-20260403",
+      "aaCandidateIds": [
+        "6e1b44ff-c227-496b-aef4-19b70cd18c76",
+        "70882ec6-914c-41f0-9754-5e8f75005f77"
+      ],
+      "defaultReasoningEffort": "none"
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "canonicalId": "google/gemma-4-31b-it-20260402",
+      "aaCandidateIds": [
+        "cd26a386-4873-46ff-b853-d239050025a2",
+        "d0aa27aa-4705-4184-9a1d-483b78c9331c"
+      ],
+      "defaultReasoningEffort": "none"
+    },
+    {
+      "id": "qwen/qwen3.6-plus",
+      "canonicalId": "qwen/qwen3.6-plus-04-02",
+      "aaCandidateIds": [
+        "f371ad68-6947-4767-a78f-1f6c81f96b93"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "x-ai/grok-4.20",
+      "canonicalId": "x-ai/grok-4.20-20260309",
+      "aaCandidateIds": [
+        "c72cb85a-18a4-4235-b455-77dff2f16c50"
+      ],
+      "defaultReasoningEffort": "none"
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "canonicalId": "minimax/minimax-m2.7-20260318",
+      "aaCandidateIds": [
+        "4bbceacb-cf47-464b-b60f-e1d1fe016d67"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.4-nano",
+      "canonicalId": "openai/gpt-5.4-nano-20260317",
+      "aaCandidateIds": [
+        "d4fc3f33-f2b0-4da1-88ee-f1f82bd4de31",
+        "8869f28a-a6ff-487f-8d32-93fe335fdda5",
+        "c298d1a8-606c-4971-8613-ccdaaf941043"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "canonicalId": "openai/gpt-5.4-mini-20260317",
+      "aaCandidateIds": [
+        "ba242e40-83b7-4cd3-a0e0-b56237984914",
+        "392063ba-c3b5-47e8-ba67-a7b0b34f6824",
+        "ae447455-940d-4d30-9139-a664fa896eaf"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "canonicalId": "mistralai/mistral-small-2603",
+      "aaCandidateIds": [
+        "3fd96175-4ef1-434c-8795-f873aec2abc1",
+        "12f6a061-0ab3-4c76-b225-49abee253651"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "canonicalId": "nvidia/nemotron-3-super-120b-a12b-20230311",
+      "aaCandidateIds": [
+        "63872e9c-3377-4a6b-b477-7bba244c38e9"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "qwen/qwen3.5-9b",
+      "canonicalId": "qwen/qwen3.5-9b-20260310",
+      "aaCandidateIds": [
+        "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
+        "20da3b31-fc0a-4359-abec-d59367bf1d9f"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "canonicalId": "openai/gpt-5.4-20260305",
+      "aaCandidateIds": [
+        "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+        "493f6a1e-7717-4e98-9d6f-548b92c4702d",
+        "538e945c-6c27-4fd3-995d-ded80a36cd10"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite-preview",
+      "canonicalId": "google/gemini-3.1-flash-lite-preview-20260303",
+      "aaCandidateIds": [
+        "598190f8-dc9c-4fea-a7ea-4b81c402ab18"
+      ],
+      "defaultReasoningEffort": "minimal"
+    },
+    {
+      "id": "qwen/qwen3.5-35b-a3b",
+      "canonicalId": "qwen/qwen3.5-35b-a3b-20260224",
+      "aaCandidateIds": [
+        "46d8315e-1630-463f-ab62-84185fa0faab",
+        "eebfef01-709e-4ffe-b72f-0db75ef2434b"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3.5-27b",
+      "canonicalId": "qwen/qwen3.5-27b-20260224",
+      "aaCandidateIds": [
+        "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
+        "509e94e3-f1cb-43fb-98ff-e0e9872cfd1f"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3.5-122b-a10b",
+      "canonicalId": "qwen/qwen3.5-122b-a10b-20260224",
+      "aaCandidateIds": [
+        "2236df45-0699-40d1-b5cc-69ee345d2257",
+        "021b1b31-d2fc-4653-ab74-c10bd2f41c8e"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.3-codex",
+      "canonicalId": "openai/gpt-5.3-codex-20260224",
+      "aaCandidateIds": [
+        "59b5b14b-5365-4ee7-824a-18a8e6309644"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview",
+      "canonicalId": "google/gemini-3.1-pro-preview-20260219",
+      "aaCandidateIds": [
+        "bbd93ebe-80da-4594-bb19-61e69d0331df"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "canonicalId": "anthropic/claude-4.6-sonnet-20260217",
+      "aaCandidateIds": [
+        "2e40e695-3cec-43da-83f9-615af30b8e91",
+        "df8d14e0-3997-4e4d-b4ad-9c047acc9c69",
+        "f2e21112-192e-4aed-ae82-68ca3b38e667"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "canonicalId": "qwen/qwen3.5-397b-a17b-20260216",
+      "aaCandidateIds": [
+        "0e66bae9-41f1-42fc-9276-ce8cb6f72919",
+        "30ef2a79-e800-4165-9f13-2a338f120db7"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "minimax/minimax-m2.5",
+      "canonicalId": "minimax/minimax-m2.5-20260211",
+      "aaCandidateIds": [
+        "12adec16-19fe-4d92-aeff-5ef3eb7e780a"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-5",
+      "canonicalId": "z-ai/glm-5-20260211",
+      "aaCandidateIds": [
+        "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
+        "f164b41f-44c5-4675-bca3-fea1db4bd9ae"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "canonicalId": "anthropic/claude-4.6-opus-20260205",
+      "aaCandidateIds": [
+        "4386585e-71b4-4a0c-8a63-afb333419cd6",
+        "53c98840-47af-49aa-94e6-469fb17e9a1b"
+      ],
+      "defaultReasoningEffort": "high"
+    },
+    {
+      "id": "qwen/qwen3-coder-next",
+      "canonicalId": "qwen/qwen3-coder-next-2025-02-03",
+      "aaCandidateIds": [
+        "fc92f822-04b7-420d-9c07-a21af5e9aac7"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "canonicalId": "stepfun/step-3.5-flash",
+      "aaCandidateIds": [
+        "1aa3694e-b656-4dbe-8f84-0c65d8897abb",
+        "c8158c23-6fff-4c31-911d-954c32d80c28"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "canonicalId": "moonshotai/kimi-k2.5-0127",
+      "aaCandidateIds": [
+        "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+        "ba04694d-326a-4a6a-8f1b-46316f872a7f"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-4.7-flash",
+      "canonicalId": "z-ai/glm-4.7-flash-20260119",
+      "aaCandidateIds": [
+        "2c4394a2-b443-470a-908e-5c4a271b780c",
+        "c8673741-5e1a-46a1-9e4f-710a5c920982"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.2-codex",
+      "canonicalId": "openai/gpt-5.2-codex-20260114",
+      "aaCandidateIds": [
+        "019e86f6-e66b-42d8-8a50-235a06b53003"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "z-ai/glm-4.7",
+      "canonicalId": "z-ai/glm-4.7-20251222",
+      "aaCandidateIds": [
+        "6fc35842-0165-44cf-8570-c484a92b3d8c",
+        "81b6ddfc-111e-4422-bd44-42ee6165b699"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-3-flash-preview",
+      "canonicalId": "google/gemini-3-flash-preview-20251217",
+      "aaCandidateIds": [
+        "783a0ea2-1eef-422a-8c3d-f6d40d943f54",
+        "7c73c3be-7f51-4d14-bec8-d5789488df25"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.2",
+      "canonicalId": "openai/gpt-5.2-20251211",
+      "aaCandidateIds": [
+        "498862c3-f9ac-49d2-852f-16a02bb0c38f",
+        "6dd8ba55-5680-44a9-b309-82928165d5f0",
+        "84e3f11e-d659-4941-8988-1dbfabbaf538"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "z-ai/glm-4.6v",
+      "canonicalId": "z-ai/glm-4.6-20251208",
+      "aaCandidateIds": [
+        "43098bd0-77ca-408b-b698-9d60b1d1c3b8",
+        "d2d7dd95-770f-4cb0-9bbc-d275ac19c265"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "anthropic/claude-opus-4.5",
+      "canonicalId": "anthropic/claude-4.5-opus-20251124",
+      "aaCandidateIds": [
+        "4077490a-bbfb-404e-979a-a97a20e3b5de",
+        "2660d74f-ce79-48a8-8b53-6e668e2071a2"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5.1",
+      "canonicalId": "openai/gpt-5.1-20251113",
+      "aaCandidateIds": [
+        "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
+        "d0b3d47e-aec6-425e-9de7-168dcc6d1e28"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.1-codex",
+      "canonicalId": "openai/gpt-5.1-codex-20251113",
+      "aaCandidateIds": [
+        "04d023f3-025c-4d78-9571-53edda3eaf2a"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5.1-codex-mini",
+      "canonicalId": "openai/gpt-5.1-codex-mini-20251113",
+      "aaCandidateIds": [
+        "fd4454ff-e703-46c0-a7f5-fa69af09486d"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "moonshotai/kimi-k2-thinking",
+      "canonicalId": "moonshotai/kimi-k2-thinking-20251106",
+      "aaCandidateIds": [
+        "bddebfd3-0a8d-47f5-b722-bc4c2ca5a5dc"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-instruct",
+      "canonicalId": "qwen/qwen3-vl-30b-a3b-instruct",
+      "aaCandidateIds": [
+        "51d0b717-953d-4b44-af61-406c6b7dff39"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-4.6",
+      "canonicalId": "z-ai/glm-4.6",
+      "aaCandidateIds": [
+        "946e7aab-db1c-4c3f-b0b3-7720d0cff187",
+        "6a5d56e1-bb68-4205-8d9b-26b97888bc84"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "canonicalId": "qwen/qwen3-vl-235b-a22b-instruct",
+      "aaCandidateIds": [
+        "d58cf573-1bd3-4d1f-9182-5482a460f570"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "deepseek/deepseek-v3.1-terminus",
+      "canonicalId": "deepseek/deepseek-v3.1-terminus",
+      "aaCandidateIds": [
+        "dfb9292d-bc7c-4425-a260-4256217e709f",
+        "0a7dda4d-cc9c-4a90-abc1-abb5772c901b"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "canonicalId": "qwen/qwen3-next-80b-a3b-instruct-2509",
+      "aaCandidateIds": [
+        "2698f6c6-e436-47ce-a583-dbc25596c571"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "moonshotai/kimi-k2-0905",
+      "canonicalId": "moonshotai/kimi-k2-0905",
+      "aaCandidateIds": [
+        "66445f84-b2e3-4202-afdc-92ba0f0e5f36"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "canonicalId": "deepseek/deepseek-chat-v3.1",
+      "aaCandidateIds": [
+        "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+        "198b717f-42c8-4ab7-a699-ae9373d669d3"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-4.5v",
+      "canonicalId": "z-ai/glm-4.5v",
+      "aaCandidateIds": [
+        "0081ab31-d10a-44a0-a10d-eee5533fec65",
+        "3068def4-7270-4c06-a320-6f6a5623d564"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-5",
+      "canonicalId": "openai/gpt-5-2025-08-07",
+      "aaCandidateIds": [
+        "48e50f00-1fd1-4acc-b337-61078aa341e6",
+        "5e965af0-ca5c-4f47-9ba9-06000508b84a",
+        "7f3c9423-3ee3-4369-a6d9-3f2a40aff00e",
+        "c3738fb0-3408-4430-a699-760ae4b70c93"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5-mini",
+      "canonicalId": "openai/gpt-5-mini-2025-08-07",
+      "aaCandidateIds": [
+        "29855680-7469-43eb-8b88-cd3fb1d99da3",
+        "bc26bfdb-4923-4442-a6ca-e77392923581",
+        "c3274a19-6d3c-4d01-ab9b-5055a0a40429"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-5-nano",
+      "canonicalId": "openai/gpt-5-nano-2025-08-07",
+      "aaCandidateIds": [
+        "e18e5e6a-5a31-4c0b-b80b-ac401392f446",
+        "05e45a36-b5c6-47a1-8adb-9ddc19add5b3",
+        "8eb02396-f231-4189-ae15-05f7facebd9b"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "canonicalId": "openai/gpt-oss-120b",
+      "aaCandidateIds": [
+        "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+        "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "canonicalId": "openai/gpt-oss-20b",
+      "aaCandidateIds": [
+        "36f73aaf-d38a-4b56-a2b3-d04d17186910",
+        "16149b9c-a1e9-4669-a5cb-ff3c00d78f89"
+      ],
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "id": "qwen/qwen3-coder-30b-a3b-instruct",
+      "canonicalId": "qwen/qwen3-coder-30b-a3b-instruct",
+      "aaCandidateIds": [
+        "da9fe224-8af3-46d7-a8c4-6220779c3f35"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "z-ai/glm-4.5-air",
+      "canonicalId": "z-ai/glm-4.5-air",
+      "aaCandidateIds": [
+        "5d303dc9-c027-401f-9803-4e9aa3331007"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-2.5-flash-lite",
+      "canonicalId": "google/gemini-2.5-flash-lite",
+      "aaCandidateIds": [
+        "1d81aa1c-64c8-442a-9c41-81b37e407b91",
+        "f4e8194a-d0e6-48eb-92be-4307de5aeeec"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-235b-a22b-2507",
+      "canonicalId": "qwen/qwen3-235b-a22b-07-25",
+      "aaCandidateIds": [
+        "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+        "f6ccbe1d-bd7e-484b-9795-18cc9f91552d"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "moonshotai/kimi-k2",
+      "canonicalId": "moonshotai/kimi-k2",
+      "aaCandidateIds": [
+        "441734a9-8901-4850-9bae-b474c370291f"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-2.5-flash",
+      "canonicalId": "google/gemini-2.5-flash",
+      "aaCandidateIds": [
+        "6afbfb62-27e4-435e-9c85-d9fe1b92519e",
+        "219ed587-60c5-4a48-9517-8480e08d0ca1"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "google/gemini-2.5-pro",
+      "canonicalId": "google/gemini-2.5-pro",
+      "aaCandidateIds": [
+        "27202e5f-c82d-4710-92e9-4317877d4883"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "mistralai/mistral-medium-3",
+      "canonicalId": "mistralai/mistral-medium-3",
+      "aaCandidateIds": [
+        "59e22326-1bca-4432-a5fa-147fbe8854e7"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "canonicalId": "qwen/qwen3-30b-a3b-04-28",
+      "aaCandidateIds": [
+        "3e6cf518-a1f4-42d3-8fcf-827c9bd8e6d5",
+        "f3169f25-8c6f-48e4-ae87-0cf872dc0ec1"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-14b",
+      "canonicalId": "qwen/qwen3-14b-04-28",
+      "aaCandidateIds": [
+        "4559e9f0-8aad-4681-89fb-68cb915e0f16",
+        "ecc6524a-d521-458a-8327-5009e8ce6549"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "canonicalId": "qwen/qwen3-32b-04-28",
+      "aaCandidateIds": [
+        "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
+        "bf60740e-6aa5-422f-ba49-ef6e9d171205"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/o3",
+      "canonicalId": "openai/o3-2025-04-16",
+      "aaCandidateIds": [
+        "16c5b637-8bce-4252-81f2-1b87a36a4e4c"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/o4-mini:batch",
+      "canonicalId": "openai/o4-mini-2025-04-16",
+      "aaCandidateIds": [
+        "84b49308-6b93-47aa-a4f6-776ee1a1e8cd"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4.1",
+      "canonicalId": "openai/gpt-4.1-2025-04-14",
+      "aaCandidateIds": [
+        "3b608b70-6434-4baa-99ad-45d499703c67"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4.1-mini",
+      "canonicalId": "openai/gpt-4.1-mini-2025-04-14",
+      "aaCandidateIds": [
+        "9f7c7566-a704-49a2-a383-cb3181da33a4"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4.1-nano",
+      "canonicalId": "openai/gpt-4.1-nano-2025-04-14",
+      "aaCandidateIds": [
+        "72c358fd-7d45-4d68-89aa-699743710924"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "canonicalId": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "aaCandidateIds": [
+        "922c69c7-9037-43c6-8bcf-a1c555e7f3eb"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "meta-llama/llama-4-scout",
+      "canonicalId": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "aaCandidateIds": [
+        "adf9a85e-abc3-4f28-937b-db6655cc5238"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "canonicalId": "deepseek/deepseek-chat-v3-0324",
+      "aaCandidateIds": [
+        "75e1c197-f239-4361-a9d6-66dccfead236"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "cohere/command-a",
+      "canonicalId": "cohere/command-a-03-2025",
+      "aaCandidateIds": [
+        "2e9ff877-fd2c-4ce7-b631-7ca1bdb6d13e",
+        "3bc32f13-5afa-4e28-bce1-10e57376686b"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "rekaai/reka-flash-3",
+      "canonicalId": "rekaai/reka-flash-3",
+      "aaCandidateIds": [
+        "dbbcf240-a69e-4078-8f16-7c94c7a8c514"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/o3-mini:batch",
+      "canonicalId": "openai/o3-mini-2025-01-31",
+      "aaCandidateIds": [
+        "2dad8957-4c16-4e74-bf2d-8b21514e0ae9",
+        "076f2674-bc4b-4925-be59-50832eb8c090"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "mistralai/mistral-small-24b-instruct-2501",
+      "canonicalId": "mistralai/mistral-small-24b-instruct-2501",
+      "aaCandidateIds": [
+        "e5dd499f-c330-45ec-9ff0-a99209c82af7"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "microsoft/phi-4",
+      "canonicalId": "microsoft/phi-4",
+      "aaCandidateIds": [
+        "ee708f92-374e-4123-b900-e22d7b2afc19"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "deepseek/deepseek-chat",
+      "canonicalId": "deepseek/deepseek-chat-v3",
+      "aaCandidateIds": [
+        "43fc5506-c5ed-4dee-9b85-962bf7ae3986"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "qwen/qwen-2.5-72b-instruct",
+      "canonicalId": "qwen/qwen-2.5-72b-instruct",
+      "aaCandidateIds": [
+        "b4f7d7a4-869a-4ee7-b17a-4046cd1e79fd"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4o-2024-08-06",
+      "canonicalId": "openai/gpt-4o-2024-08-06",
+      "aaCandidateIds": [
+        "8c1be908-67b6-4cf4-ba08-83ddbe44fde3"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4o-mini",
+      "canonicalId": "openai/gpt-4o-mini",
+      "aaCandidateIds": [
+        "b5c1c91a-7474-4409-9a9c-9c2ac45d9eb6"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4o",
+      "canonicalId": "openai/gpt-4o",
+      "aaCandidateIds": [
+        "c1045dc0-4fd3-4adb-9548-18763e0d051f"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4o-2024-05-13",
+      "canonicalId": "openai/gpt-4o-2024-05-13",
+      "aaCandidateIds": [
+        "e98e911e-9fb2-4a9a-826e-3d681d0cdca8"
+      ],
+      "defaultReasoningEffort": null
+    },
+    {
+      "id": "openai/gpt-4-turbo:batch",
+      "canonicalId": "openai/gpt-4-turbo",
+      "aaCandidateIds": [
+        "76aa6af5-fdc6-4739-a300-983f14e74a67"
+      ],
+      "defaultReasoningEffort": null
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+import React, { useState, useEffect } from "react";
+import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
+import { AppProvider, useApp } from "./context";
+import { Button, Asset, Icon, Modal } from "../ui/primitives";
+import { login } from "../lib/toss/bridge";
+import { Home, Mission } from "../features/home/screens";
+import { Garden, Shop, Social, Account } from "../features/garden/screens";
+import { Challenge } from "../features/challenge/screens";
+import {
+  Optimizer,
+  Recommendations,
+  ModelDetails,
+} from "../features/optimizer/screens";
+import { GameScreen } from "../games/shared/GameScreen";
+const titles: Record<string, string> = {
+  "/": "AIMI",
+  "/mission": "오늘의 미션",
+  "/optimizer": "내 질문 다듬기",
+  "/recommendations": "AI 모델 추천",
+  "/garden": "나의 정원",
+  "/garden/edit": "정원 편집",
+  "/shop/garden": "정원 상점",
+  "/shop/characters": "캐릭터 상점",
+  "/social": "소셜",
+  "/account": "계정 관리",
+  "/challenge": "키워드 고르기",
+  "/challenge/combination": "조합 확인",
+};
+function Screens() {
+  const a = useApp(),
+    [devName, setDevName] = useState("player"),
+    [noticeOpen, setNoticeOpen] = useState(false);
+  useEffect(() => {
+    if (a.authenticated && sessionStorage.getItem("aimi.pending-invite"))
+      a.navigate("/social");
+  }, [a.authenticated]);
+  if (a.loading)
+    return (
+      <main className="loading-screen">
+        <Asset id="seed" size={120} />
+        <h1>AIMI</h1>
+        <p>오늘의 작은 도전을 준비해요</p>
+        <progress aria-label="불러오는 중" />
+        <small>잠시만 기다려주세요</small>
+      </main>
+    );
+  if (!a.authenticated)
+    return (
+      <main className="login-screen">
+        <Asset id="seed" size={120} />
+        <h1>AIMI</h1>
+        <p>오늘의 작은 도전과 나만의 정원</p>
+        {a.localRuntime && (
+          <label>
+            개발용 사용자
+            <input
+              aria-label="개발용 사용자"
+              value={devName}
+              onChange={(e) => setDevName(e.target.value)}
+            />
+          </label>
+        )}
+        <Button
+          loading={a.busy}
+          onClick={() =>
+            void a.perform(async () => {
+              await login(devName);
+              a.setAuthenticated(true);
+              await a.refresh();
+            })
+          }
+        >
+          {a.localRuntime ? "개발용으로 시작하기" : "토스로 시작하기"}
+        </Button>
+        {a.error && <p role="alert">{a.error}</p>}
+        {a.toast && <p role="alert">{a.toast}</p>}
+      </main>
+    );
+  if (!a.data || !a.content)
+    return (
+      <main className="login-screen">
+        <h1>다시 연결해주세요</h1>
+        <p role="alert">{a.error}</p>
+        <Button onClick={() => void a.refresh()}>다시 시도하기</Button>
+      </main>
+    );
+  const game = a.path.startsWith("/game"),
+    nav = ["/", "/mission", "/garden", "/social"].includes(a.path),
+    shop = a.path.startsWith("/shop"),
+    hasBalance = a.path === "/" || a.path === "/garden" || shop;
+  let body: React.ReactNode;
+  if (game) body = <GameScreen />;
+  else if (a.path === "/") body = <Home />;
+  else if (a.path === "/mission") body = <Mission />;
+  else if (a.path.startsWith("/challenge")) body = <Challenge />;
+  else if (a.path.startsWith("/garden")) body = <Garden />;
+  else if (shop) body = <Shop />;
+  else if (a.path === "/social" || a.path.startsWith("/friends/"))
+    body = <Social />;
+  else if (a.path === "/optimizer")
+    body = <Optimizer key={"optimizer-" + a.aiEpoch} />;
+  else if (a.path === "/recommendations")
+    body = <Recommendations key={"recommendations-" + a.aiEpoch} />;
+  else if (a.path.startsWith("/models/"))
+    body = <ModelDetails key={"models-" + a.aiEpoch} />;
+  else if (a.path === "/account") body = <Account />;
+  else
+    body = (
+      <>
+        <p>화면을 찾지 못했어요.</p>
+        <Button onClick={() => a.navigate("/")}>홈으로</Button>
+      </>
+    );
+  return (
+    <div className={"app-shell " + (game ? "game-shell" : "")}>
+      {a.localRuntime && (
+        <div className="dev-platform">
+          {a.path !== "/" ? (
+            <button aria-label="뒤로가기" onClick={a.back}>
+              <Icon name="back" />
+            </button>
+          ) : (
+            <span />
+          )}
+          <button onClick={() => a.navigate("/account")} aria-label="계정 관리">
+            ···
+          </button>
+        </div>
+      )}
+      {!game && (
+        <header className="screen-head">
+          <h1>
+            {a.path.startsWith("/models/")
+              ? "모델 상세"
+              : a.path.startsWith("/friends/")
+                ? "친구 정원"
+                : (titles[a.path] ?? "AIMI")}
+          </h1>
+          {a.path === "/" && (
+            <button
+              className="home-notice-button"
+              aria-label="공지"
+              onClick={() => setNoticeOpen(true)}
+            >
+              공지
+            </button>
+          )}
+          {hasBalance && (
+            <span className="balance">
+              {a.data.balance} <small>EP</small>
+            </span>
+          )}
+        </header>
+      )}
+      {noticeOpen && a.path === "/" && (
+        <Modal title="업데이트 예정 안내" onClose={() => setNoticeOpen(false)}>
+          <p>
+            AI 사용 기록을 돌아볼 수 있는 ‘AI 사용 영수증’ 기능을 준비하고
+            있어요.
+          </p>
+          <p className="caption">제공 범위와 일정은 추후 안내할게요.</p>
+          <div className="dialog-actions">
+            <Button onClick={() => setNoticeOpen(false)}>확인</Button>
+          </div>
+        </Modal>
+      )}
+      <main
+        data-screen={a.path.split("?")[0]}
+        className={game ? "game-main" : "page " + (nav ? "with-tabs" : "")}
+      >
+        {body}
+      </main>
+      {nav && (
+        <nav className="bottom-nav" aria-label="하단 메뉴">
+          {[
+            ["/", "home", "홈"],
+            ["/mission", "mission", "미션"],
+            ["/garden", "garden", "정원"],
+            ["/social", "social", "소셜"],
+          ].map(([url, icon, title]) => (
+            <button
+              key={url}
+              aria-current={url === a.path ? "page" : undefined}
+              onClick={() => a.navigate(url)}
+            >
+              <span>
+                <Icon name={icon} />
+              </span>
+              <small>{title}</small>
+            </button>
+          ))}
+        </nav>
+      )}
+      {a.localRuntime && (
+        <span className="development-marker">개발용 예시 · 실제 보상 아님</span>
+      )}
+      {a.toast && (
+        <div className="toast" role="status">
+          {a.toast}
+        </div>
+      )}
+    </div>
+  );
+}
+export function App() {
+  return (
+    <TDSMobileAITProvider brandPrimaryColor="#527A41">
+      <AppProvider>
+        <Screens />
+      </AppProvider>
+    </TDSMobileAITProvider>
+  );
+}

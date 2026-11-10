@@ -1,0 +1,871 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-03",
+  "title": "해변에서 인사하는 로봇",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-OPENAI_GUIDE"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "대상·배치·하늘을 나눈 지시",
+  "prompt_lines": [
+    "파란색 금속 로봇 한 대가 해변에 서 있다.",
+    "로봇은 한쪽 손을 들고 있다. 배경에는 별이 빛나는 검은 하늘을 보여준다.",
+    "로봇의 전신을 화면 왼쪽에 배치한다.",
+    "장면을 픽셀아트로 표현한다."
+  ],
+  "authored_prompt": "파란색 금속 로봇 한 대가 해변에 서 있다.\n로봇은 한쪽 손을 들고 있다. 배경에는 별이 빛나는 검은 하늘을 보여준다.\n로봇의 전신을 화면 왼쪽에 배치한다.\n장면을 픽셀아트로 표현한다.",
+  "alternate_prompt": "파란색 금속 로봇 한 대가 해변에 서 있다. 로봇은 한쪽 손을 들고 있다. 배경에는 별이 빛나는 검은 하늘을 보여준다. 로봇의 전신을 화면 왼쪽에 배치한다. 장면을 픽셀아트로 표현한다.",
+  "conditions": [
+    {
+      "id": "day-03-c01",
+      "variable": "subject",
+      "entity": "robot",
+      "context": "주요 대상",
+      "requested_value": "로봇",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c02",
+      "variable": "count",
+      "entity": "robot",
+      "context": "로봇 수",
+      "requested_value": "한 대",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c03",
+      "variable": "color",
+      "entity": "robot",
+      "context": "로봇 몸 색",
+      "requested_value": "파란색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c04",
+      "variable": "material",
+      "entity": "robot",
+      "context": "로봇의 표면 표현",
+      "requested_value": "금속",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c05",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 자세",
+      "requested_value": "서 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c06",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 손 동작",
+      "requested_value": "한쪽 손을 들고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c07",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "해변",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘",
+      "requested_value": "검은 하늘",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c09",
+      "variable": "framing",
+      "entity": "robot",
+      "context": "로봇이 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c10",
+      "variable": "screen_position",
+      "entity": "robot",
+      "context": "로봇의 화면 위치",
+      "requested_value": "화면 왼쪽",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-03-c11",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "픽셀아트",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-d4a5924a2c68eae1",
+      "label": "로봇",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01"
+    },
+    {
+      "id": "k-97560a2ceba2b49e",
+      "label": "한 대",
+      "context": "로봇 수",
+      "condition_id": "day-03-c02"
+    },
+    {
+      "id": "k-9bd3b90c227e81df",
+      "label": "파란색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-03-c03"
+    },
+    {
+      "id": "k-12599dd2c1e460d8",
+      "label": "금속",
+      "context": "로봇의 표면 표현",
+      "condition_id": "day-03-c04"
+    },
+    {
+      "id": "k-4dafee7ed0d16917",
+      "label": "서 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-03-c05"
+    },
+    {
+      "id": "k-ddeb73c35f52e819",
+      "label": "한쪽 손을 들고 있다",
+      "context": "로봇 손 동작",
+      "condition_id": "day-03-c06"
+    },
+    {
+      "id": "k-8e89d1ed74e2998c",
+      "label": "해변",
+      "context": "배경 장소",
+      "condition_id": "day-03-c07"
+    },
+    {
+      "id": "k-dc0ebeddc7fafe86",
+      "label": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-03-c08"
+    },
+    {
+      "id": "k-b9a97fef298b1e01",
+      "label": "전신",
+      "context": "로봇이 보이는 범위",
+      "condition_id": "day-03-c09"
+    },
+    {
+      "id": "k-c5d23575cf621b30",
+      "label": "화면 왼쪽",
+      "context": "로봇의 화면 위치",
+      "condition_id": "day-03-c10"
+    },
+    {
+      "id": "k-b9d9cdd69a5eae48",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-03-c11"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-7646dc539f232e51",
+      "label": "코끼리",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-03-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-88f7b2799034de36",
+      "label": "자전거",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-03-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-14be973cda708ebc",
+      "label": "두 대",
+      "context": "로봇 수",
+      "contradicts_condition_id": "day-03-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-76953c3ace24cf9f",
+      "label": "세 대",
+      "context": "로봇 수",
+      "contradicts_condition_id": "day-03-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a791d915dc065841",
+      "label": "빨간색",
+      "context": "로봇 몸 색",
+      "contradicts_condition_id": "day-03-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8b0fd3925d0cb821",
+      "label": "노란색",
+      "context": "로봇 몸 색",
+      "contradicts_condition_id": "day-03-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-5091c1c8b4ef392d",
+      "label": "나뭇결",
+      "context": "로봇의 표면 표현",
+      "contradicts_condition_id": "day-03-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8c5d73fd578b35de",
+      "label": "종이",
+      "context": "로봇의 표면 표현",
+      "contradicts_condition_id": "day-03-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-dd5027a9f222e63c",
+      "label": "누워 있다",
+      "context": "로봇 자세",
+      "contradicts_condition_id": "day-03-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-90d6a2e27a2d834e",
+      "label": "물속에서 헤엄치고 있다",
+      "context": "로봇 자세",
+      "contradicts_condition_id": "day-03-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bf8ef81f07ae0e30",
+      "label": "양손을 내리고 있다",
+      "context": "로봇 손 동작",
+      "contradicts_condition_id": "day-03-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-4142f34ad6d226af",
+      "label": "사막",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-03-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-87bc675e928de61f",
+      "label": "교실",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-03-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-fb7544ed9fd1e6c6",
+      "label": "분홍 하늘",
+      "context": "하늘",
+      "contradicts_condition_id": "day-03-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-4ae08975c34bcc6f",
+      "label": "흰색 하늘",
+      "context": "하늘",
+      "contradicts_condition_id": "day-03-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f6ca799c47d54e91",
+      "label": "얼굴만 확대",
+      "context": "로봇이 보이는 범위",
+      "contradicts_condition_id": "day-03-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-5aae355f9b05ccd4",
+      "label": "화면 오른쪽",
+      "context": "로봇의 화면 위치",
+      "contradicts_condition_id": "day-03-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-cdcd4b9cbe0d6f58",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-03-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-b627a9876deb19b8",
+      "label": "수채화",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-03-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-7664c371ddee335b",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-993f1fda5fe3e0a5",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-0078222f52ab5932",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-d1a83b307887e355",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-250a8c5b06811a4b",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-2cfe353d7eb0c68b",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-b505eecb6c24051e",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-17652d90544bc6a8",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-513ecf76c35e5adc",
+      "label": "바나나",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-03-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-f53dd66281a6c246",
+      "label": "수박",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-03-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-0078222f52ab5932",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-12599dd2c1e460d8",
+      "label": "금속",
+      "context": "로봇의 표면 표현"
+    },
+    {
+      "id": "k-14be973cda708ebc",
+      "label": "두 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-17652d90544bc6a8",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-250a8c5b06811a4b",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-2cfe353d7eb0c68b",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-4142f34ad6d226af",
+      "label": "사막",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-4ae08975c34bcc6f",
+      "label": "흰색 하늘",
+      "context": "하늘"
+    },
+    {
+      "id": "k-4dafee7ed0d16917",
+      "label": "서 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-5091c1c8b4ef392d",
+      "label": "나뭇결",
+      "context": "로봇의 표면 표현"
+    },
+    {
+      "id": "k-513ecf76c35e5adc",
+      "label": "바나나",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-5aae355f9b05ccd4",
+      "label": "화면 오른쪽",
+      "context": "로봇의 화면 위치"
+    },
+    {
+      "id": "k-7646dc539f232e51",
+      "label": "코끼리",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-7664c371ddee335b",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-76953c3ace24cf9f",
+      "label": "세 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-87bc675e928de61f",
+      "label": "교실",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-88f7b2799034de36",
+      "label": "자전거",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-8b0fd3925d0cb821",
+      "label": "노란색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-8c5d73fd578b35de",
+      "label": "종이",
+      "context": "로봇의 표면 표현"
+    },
+    {
+      "id": "k-8e89d1ed74e2998c",
+      "label": "해변",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-90d6a2e27a2d834e",
+      "label": "물속에서 헤엄치고 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-97560a2ceba2b49e",
+      "label": "한 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-993f1fda5fe3e0a5",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-9bd3b90c227e81df",
+      "label": "파란색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-a791d915dc065841",
+      "label": "빨간색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-b505eecb6c24051e",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-b627a9876deb19b8",
+      "label": "수채화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-b9a97fef298b1e01",
+      "label": "전신",
+      "context": "로봇이 보이는 범위"
+    },
+    {
+      "id": "k-b9d9cdd69a5eae48",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-bf8ef81f07ae0e30",
+      "label": "양손을 내리고 있다",
+      "context": "로봇 손 동작"
+    },
+    {
+      "id": "k-c5d23575cf621b30",
+      "label": "화면 왼쪽",
+      "context": "로봇의 화면 위치"
+    },
+    {
+      "id": "k-cdcd4b9cbe0d6f58",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-d1a83b307887e355",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-d4a5924a2c68eae1",
+      "label": "로봇",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-dc0ebeddc7fafe86",
+      "label": "검은 하늘",
+      "context": "하늘"
+    },
+    {
+      "id": "k-dd5027a9f222e63c",
+      "label": "누워 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-ddeb73c35f52e819",
+      "label": "한쪽 손을 들고 있다",
+      "context": "로봇 손 동작"
+    },
+    {
+      "id": "k-f53dd66281a6c246",
+      "label": "수박",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-f6ca799c47d54e91",
+      "label": "얼굴만 확대",
+      "context": "로봇이 보이는 범위"
+    },
+    {
+      "id": "k-fb7544ed9fd1e6c6",
+      "label": "분홍 하늘",
+      "context": "하늘"
+    }
+  ],
+  "total_candidate_count": 40,
+  "answer_ratio": 0.275,
+  "highlights": [
+    {
+      "keyword_id": "k-d4a5924a2c68eae1",
+      "condition_id": "day-03-c01",
+      "matched_text": "로봇",
+      "start_utf16": 7,
+      "end_utf16": 9
+    },
+    {
+      "keyword_id": "k-97560a2ceba2b49e",
+      "condition_id": "day-03-c02",
+      "matched_text": "한 대",
+      "start_utf16": 10,
+      "end_utf16": 13
+    },
+    {
+      "keyword_id": "k-9bd3b90c227e81df",
+      "condition_id": "day-03-c03",
+      "matched_text": "파란색",
+      "start_utf16": 0,
+      "end_utf16": 3
+    },
+    {
+      "keyword_id": "k-12599dd2c1e460d8",
+      "condition_id": "day-03-c04",
+      "matched_text": "금속",
+      "start_utf16": 4,
+      "end_utf16": 6
+    },
+    {
+      "keyword_id": "k-4dafee7ed0d16917",
+      "condition_id": "day-03-c05",
+      "matched_text": "서 있다",
+      "start_utf16": 19,
+      "end_utf16": 23
+    },
+    {
+      "keyword_id": "k-ddeb73c35f52e819",
+      "condition_id": "day-03-c06",
+      "matched_text": "한쪽 손을 들고 있다",
+      "start_utf16": 29,
+      "end_utf16": 40
+    },
+    {
+      "keyword_id": "k-8e89d1ed74e2998c",
+      "condition_id": "day-03-c07",
+      "matched_text": "해변",
+      "start_utf16": 15,
+      "end_utf16": 17
+    },
+    {
+      "keyword_id": "k-dc0ebeddc7fafe86",
+      "condition_id": "day-03-c08",
+      "matched_text": "검은 하늘",
+      "start_utf16": 54,
+      "end_utf16": 59
+    },
+    {
+      "keyword_id": "k-b9a97fef298b1e01",
+      "condition_id": "day-03-c09",
+      "matched_text": "전신",
+      "start_utf16": 71,
+      "end_utf16": 73
+    },
+    {
+      "keyword_id": "k-c5d23575cf621b30",
+      "condition_id": "day-03-c10",
+      "matched_text": "화면 왼쪽",
+      "start_utf16": 75,
+      "end_utf16": 80
+    },
+    {
+      "keyword_id": "k-b9d9cdd69a5eae48",
+      "condition_id": "day-03-c11",
+      "matched_text": "픽셀아트",
+      "start_utf16": 92,
+      "end_utf16": 96
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-03-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T08",
+      "title": "무엇을 바꾸고 유지할지",
+      "text": "편집할 때는 바꿀 부분과 그대로 둘 부분을 함께 적어 보세요. 색을 바꾸면서 개수와 배치를 유지할 수도 있습니다.",
+      "scope": "버전별 명시 가이드",
+      "source_ids": [
+        "model-OPENAI_GUIDE"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "openai/gpt-image-2.5-flare",
+        "openai/gpt-image-2.5-sunburst",
+        "openai/gpt-image-2.6-flare",
+        "openai/gpt-image-2.6-sunburst"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "openai/gpt-image-2.6-sunburst",
+    "actual_model_id": "openai/gpt-image-2.6-sunburst",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "7041a52f4467302180c7efd0fe3830350d3383c16fbdf3ee28591e1a7029792a",
+    "width": 1536,
+    "height": 864,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:31:09.331Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 11,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-12599dd2c1e460d8": "금속",
+    "k-14be973cda708ebc": "두 대",
+    "k-4142f34ad6d226af": "사막",
+    "k-4ae08975c34bcc6f": "흰색 하늘",
+    "k-4dafee7ed0d16917": "서 있다",
+    "k-5091c1c8b4ef392d": "나뭇결",
+    "k-5aae355f9b05ccd4": "화면 오른쪽",
+    "k-7646dc539f232e51": "코끼리",
+    "k-76953c3ace24cf9f": "세 대",
+    "k-87bc675e928de61f": "교실",
+    "k-88f7b2799034de36": "자전거",
+    "k-8b0fd3925d0cb821": "노란색",
+    "k-8c5d73fd578b35de": "종이",
+    "k-8e89d1ed74e2998c": "해변",
+    "k-90d6a2e27a2d834e": "물속에서 헤엄치고 있다",
+    "k-97560a2ceba2b49e": "한 대",
+    "k-9bd3b90c227e81df": "파란색",
+    "k-a791d915dc065841": "빨간색",
+    "k-b627a9876deb19b8": "수채화",
+    "k-b9a97fef298b1e01": "전신",
+    "k-b9d9cdd69a5eae48": "픽셀아트",
+    "k-bf8ef81f07ae0e30": "양손을 내리고 있다",
+    "k-c5d23575cf621b30": "화면 왼쪽",
+    "k-cdcd4b9cbe0d6f58": "사진풍",
+    "k-d4a5924a2c68eae1": "로봇",
+    "k-dc0ebeddc7fafe86": "검은 하늘",
+    "k-dd5027a9f222e63c": "누워 있다",
+    "k-ddeb73c35f52e819": "한쪽 손을 들고 있다",
+    "k-f6ca799c47d54e91": "얼굴만 확대",
+    "k-fb7544ed9fd1e6c6": "분홍 하늘",
+    "k-7664c371ddee335b": "배경에 번개가 친다",
+    "k-993f1fda5fe3e0a5": "배경에 무지개가 있다",
+    "k-0078222f52ab5932": "천장에 샹들리에가 있다",
+    "k-d1a83b307887e355": "바닥에 체스판 무늬가 있다",
+    "k-250a8c5b06811a4b": "화면에 눈사람이 있다",
+    "k-2cfe353d7eb0c68b": "물속에 산호초가 보인다",
+    "k-b505eecb6c24051e": "옆에 드럼 세트가 있다",
+    "k-17652d90544bc6a8": "배경에 풍차가 있다",
+    "k-513ecf76c35e5adc": "바나나",
+    "k-f53dd66281a6c246": "수박"
+  }
+}

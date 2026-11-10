@@ -1,0 +1,102 @@
+[
+  {
+    "aaId": "094ea3e3-ce41-419e-8bd1-723389663158",
+    "aaSlug": "step-5",
+    "aaName": "Step 5 Preview",
+    "openrouterId": "stepfun/step-5-preview",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "127de816-57d3-4037-8484-480a613cd413",
+    "aaSlug": "mimo-v2-6-flash",
+    "aaName": "MiMo-V2.6-Flash",
+    "openrouterId": "xiaomi/mimo-v2.6-flash",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
+    "aaSlug": "mimo-v2-6-pro",
+    "aaName": "MiMo-V2.6-Pro",
+    "openrouterId": "xiaomi/mimo-v2.6-pro",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "277f939a-985b-4b37-859d-b3eabc7c0b26",
+    "aaSlug": "minimax-m3",
+    "aaName": "MiniMax-M3",
+    "openrouterId": "minimax/minimax-m3",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "29976311-665a-4b2f-ac72-557c33e0758e",
+    "aaSlug": "nemotron-3-5-lightning",
+    "aaName": "Nemotron 3.5 Lightning",
+    "openrouterId": "nvidia/nemotron-3.5-lightning",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "2e9ff877-fd2c-4ce7-b631-7ca1bdb6d13e",
+    "aaSlug": "command-a-plus",
+    "aaName": "Command A+",
+    "openrouterId": "cohere/command-a-plus",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "adfae555-f489-4f3e-9064-c6b7fcdd0783",
+    "aaSlug": "granite-4-2-8b",
+    "aaName": "Granite 4.2 8B",
+    "openrouterId": "ibm-granite/granite-4.2-8b",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "7261504e-503c-4a66-a9d3-a3272cdf9ad6",
+    "aaSlug": "inkling-small",
+    "aaName": "Inkling Small",
+    "openrouterId": "thinkingmachines/inkling-small",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "dd059b25-d82a-4ead-82a4-4adceaaec48b",
+    "aaSlug": "mistral-medium-3-5",
+    "aaName": "Mistral Medium 3.5",
+    "openrouterId": "mistralai/mistral-medium-3-5",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  },
+  {
+    "aaId": "e2c0623e-c855-4a61-bb66-be1f1ed43234",
+    "aaSlug": "nemotron-3-5-super-vl",
+    "aaName": "Nemotron 3.5 Super VL",
+    "openrouterId": "nvidia/nemotron-3.5-super-vl",
+    "indexVersion": "5",
+    "reviewed": true,
+    "reviewedAt": "2026-11-08",
+    "scope": "Exact base model identity; excludes differently named reasoning-effort variants and batch/free endpoints. Benchmark is indirect evidence."
+  }
+]

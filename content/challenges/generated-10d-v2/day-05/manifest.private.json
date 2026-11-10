@@ -1,0 +1,775 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-05",
+  "title": "달 표면의 우주 여우",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "장면과 세부 조건 문단",
+  "prompt_lines": [
+    "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다.",
+    "여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다.",
+    "검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다."
+  ],
+  "authored_prompt": "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다.\n여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다.\n검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다.",
+  "alternate_prompt": "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다. 여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다. 검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다.",
+  "conditions": [
+    {
+      "id": "day-05-c01",
+      "variable": "subject",
+      "entity": "fox",
+      "context": "동물",
+      "requested_value": "여우",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c02",
+      "variable": "count",
+      "entity": "fox",
+      "context": "여우 수",
+      "requested_value": "한 마리",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c03",
+      "variable": "color",
+      "entity": "fox",
+      "context": "여우 털 색",
+      "requested_value": "주황색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c04",
+      "variable": "accessory",
+      "entity": "fox",
+      "context": "여우의 소품",
+      "requested_value": "우주 헬멧",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c05",
+      "variable": "interaction",
+      "entity": "fox->helmet",
+      "context": "여우와 헬멧",
+      "requested_value": "쓰고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c06",
+      "variable": "location",
+      "entity": "scene",
+      "context": "여우가 있는 장소",
+      "requested_value": "달 표면",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c07",
+      "variable": "action_pose",
+      "entity": "fox",
+      "context": "여우 동작",
+      "requested_value": "점프하고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘",
+      "requested_value": "검은 하늘",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c09",
+      "variable": "subject",
+      "entity": "earth",
+      "context": "하늘의 천체",
+      "requested_value": "지구",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-05-c10",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "평면 만화",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-f733ade13790d1f9",
+      "label": "여우",
+      "context": "동물",
+      "condition_id": "day-05-c01"
+    },
+    {
+      "id": "k-32c36bf8353d9d93",
+      "label": "한 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02"
+    },
+    {
+      "id": "k-186bb41cbfb4c9a5",
+      "label": "주황색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03"
+    },
+    {
+      "id": "k-59397305e82bf308",
+      "label": "우주 헬멧",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04"
+    },
+    {
+      "id": "k-4d12876d21353f71",
+      "label": "쓰고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05"
+    },
+    {
+      "id": "k-b54bdf357e58a853",
+      "label": "달 표면",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06"
+    },
+    {
+      "id": "k-761e78bce456aa81",
+      "label": "점프하고 있다",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07"
+    },
+    {
+      "id": "k-406c4ee33c473c23",
+      "label": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08"
+    },
+    {
+      "id": "k-833aabc28c99a9bc",
+      "label": "지구",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09"
+    },
+    {
+      "id": "k-5630aafe16d316e6",
+      "label": "평면 만화",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-db2106f0e27ec3e3",
+      "label": "코끼리",
+      "context": "동물",
+      "contradicts_condition_id": "day-05-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-78866ecd301ead58",
+      "label": "고양이",
+      "context": "동물",
+      "contradicts_condition_id": "day-05-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-d82ab184dac33999",
+      "label": "두 마리",
+      "context": "여우 수",
+      "contradicts_condition_id": "day-05-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-7c2e9cc2c345d26e",
+      "label": "세 마리",
+      "context": "여우 수",
+      "contradicts_condition_id": "day-05-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-913cf8025db88d94",
+      "label": "파란색",
+      "context": "여우 털 색",
+      "contradicts_condition_id": "day-05-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bd5239559ed2432d",
+      "label": "초록색",
+      "context": "여우 털 색",
+      "contradicts_condition_id": "day-05-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-6a4c6a781c0bba37",
+      "label": "밀짚모자",
+      "context": "여우의 소품",
+      "contradicts_condition_id": "day-05-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-c9cfdcc88f8aa1aa",
+      "label": "왕관",
+      "context": "여우의 소품",
+      "contradicts_condition_id": "day-05-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-40942a155d7d6943",
+      "label": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧",
+      "contradicts_condition_id": "day-05-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-06aaf72c29505171",
+      "label": "설원",
+      "context": "여우가 있는 장소",
+      "contradicts_condition_id": "day-05-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-75634fe50100d898",
+      "label": "교실",
+      "context": "여우가 있는 장소",
+      "contradicts_condition_id": "day-05-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-74702ccc8492b0bf",
+      "label": "누워 자고 있다",
+      "context": "여우 동작",
+      "contradicts_condition_id": "day-05-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-78de9723a66aea29",
+      "label": "물속에서 헤엄치고 있다",
+      "context": "여우 동작",
+      "contradicts_condition_id": "day-05-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e273043287c18367",
+      "label": "분홍 하늘",
+      "context": "하늘",
+      "contradicts_condition_id": "day-05-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-89112b908904d895",
+      "label": "토성",
+      "context": "하늘의 천체",
+      "contradicts_condition_id": "day-05-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-c2f3baf3a922272b",
+      "label": "태양",
+      "context": "하늘의 천체",
+      "contradicts_condition_id": "day-05-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-0f157e5730d4ec8e",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-05-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-36564023b5fbe39d",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-05-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-6ae6d1496f94a642",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-45dbd66e9f5b265a",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-297c7a157ed540a6",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-da9be71c18b0a00a",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-c833158d50fc9d9b",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-3c818f96032dbd5a",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-f102b9ed2ff53e27",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-06aaf72c29505171",
+      "label": "설원",
+      "context": "여우가 있는 장소"
+    },
+    {
+      "id": "k-0f157e5730d4ec8e",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-186bb41cbfb4c9a5",
+      "label": "주황색",
+      "context": "여우 털 색"
+    },
+    {
+      "id": "k-297c7a157ed540a6",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-32c36bf8353d9d93",
+      "label": "한 마리",
+      "context": "여우 수"
+    },
+    {
+      "id": "k-36564023b5fbe39d",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-3c818f96032dbd5a",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-406c4ee33c473c23",
+      "label": "검은 하늘",
+      "context": "하늘"
+    },
+    {
+      "id": "k-40942a155d7d6943",
+      "label": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧"
+    },
+    {
+      "id": "k-45dbd66e9f5b265a",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-4d12876d21353f71",
+      "label": "쓰고 있다",
+      "context": "여우와 헬멧"
+    },
+    {
+      "id": "k-5630aafe16d316e6",
+      "label": "평면 만화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-59397305e82bf308",
+      "label": "우주 헬멧",
+      "context": "여우의 소품"
+    },
+    {
+      "id": "k-6a4c6a781c0bba37",
+      "label": "밀짚모자",
+      "context": "여우의 소품"
+    },
+    {
+      "id": "k-6ae6d1496f94a642",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-74702ccc8492b0bf",
+      "label": "누워 자고 있다",
+      "context": "여우 동작"
+    },
+    {
+      "id": "k-75634fe50100d898",
+      "label": "교실",
+      "context": "여우가 있는 장소"
+    },
+    {
+      "id": "k-761e78bce456aa81",
+      "label": "점프하고 있다",
+      "context": "여우 동작"
+    },
+    {
+      "id": "k-78866ecd301ead58",
+      "label": "고양이",
+      "context": "동물"
+    },
+    {
+      "id": "k-78de9723a66aea29",
+      "label": "물속에서 헤엄치고 있다",
+      "context": "여우 동작"
+    },
+    {
+      "id": "k-7c2e9cc2c345d26e",
+      "label": "세 마리",
+      "context": "여우 수"
+    },
+    {
+      "id": "k-833aabc28c99a9bc",
+      "label": "지구",
+      "context": "하늘의 천체"
+    },
+    {
+      "id": "k-89112b908904d895",
+      "label": "토성",
+      "context": "하늘의 천체"
+    },
+    {
+      "id": "k-913cf8025db88d94",
+      "label": "파란색",
+      "context": "여우 털 색"
+    },
+    {
+      "id": "k-b54bdf357e58a853",
+      "label": "달 표면",
+      "context": "여우가 있는 장소"
+    },
+    {
+      "id": "k-bd5239559ed2432d",
+      "label": "초록색",
+      "context": "여우 털 색"
+    },
+    {
+      "id": "k-c2f3baf3a922272b",
+      "label": "태양",
+      "context": "하늘의 천체"
+    },
+    {
+      "id": "k-c833158d50fc9d9b",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-c9cfdcc88f8aa1aa",
+      "label": "왕관",
+      "context": "여우의 소품"
+    },
+    {
+      "id": "k-d82ab184dac33999",
+      "label": "두 마리",
+      "context": "여우 수"
+    },
+    {
+      "id": "k-da9be71c18b0a00a",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-db2106f0e27ec3e3",
+      "label": "코끼리",
+      "context": "동물"
+    },
+    {
+      "id": "k-e273043287c18367",
+      "label": "분홍 하늘",
+      "context": "하늘"
+    },
+    {
+      "id": "k-f102b9ed2ff53e27",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-f733ade13790d1f9",
+      "label": "여우",
+      "context": "동물"
+    }
+  ],
+  "total_candidate_count": 35,
+  "answer_ratio": 0.2857142857142857,
+  "highlights": [
+    {
+      "keyword_id": "k-f733ade13790d1f9",
+      "condition_id": "day-05-c01",
+      "matched_text": "여우",
+      "start_utf16": 10,
+      "end_utf16": 12
+    },
+    {
+      "keyword_id": "k-32c36bf8353d9d93",
+      "condition_id": "day-05-c02",
+      "matched_text": "한 마리",
+      "start_utf16": 13,
+      "end_utf16": 17
+    },
+    {
+      "keyword_id": "k-186bb41cbfb4c9a5",
+      "condition_id": "day-05-c03",
+      "matched_text": "주황색",
+      "start_utf16": 6,
+      "end_utf16": 9
+    },
+    {
+      "keyword_id": "k-59397305e82bf308",
+      "condition_id": "day-05-c04",
+      "matched_text": "우주 헬멧",
+      "start_utf16": 29,
+      "end_utf16": 34
+    },
+    {
+      "keyword_id": "k-4d12876d21353f71",
+      "condition_id": "day-05-c05",
+      "matched_text": "쓰고 있다",
+      "start_utf16": 36,
+      "end_utf16": 41
+    },
+    {
+      "keyword_id": "k-b54bdf357e58a853",
+      "condition_id": "day-05-c06",
+      "matched_text": "달 표면",
+      "start_utf16": 0,
+      "end_utf16": 4
+    },
+    {
+      "keyword_id": "k-761e78bce456aa81",
+      "condition_id": "day-05-c07",
+      "matched_text": "점프하고 있다",
+      "start_utf16": 65,
+      "end_utf16": 72
+    },
+    {
+      "keyword_id": "k-406c4ee33c473c23",
+      "condition_id": "day-05-c08",
+      "matched_text": "검은 하늘",
+      "start_utf16": 74,
+      "end_utf16": 79
+    },
+    {
+      "keyword_id": "k-833aabc28c99a9bc",
+      "condition_id": "day-05-c09",
+      "matched_text": "지구",
+      "start_utf16": 81,
+      "end_utf16": 83
+    },
+    {
+      "keyword_id": "k-5630aafe16d316e6",
+      "condition_id": "day-05-c10",
+      "matched_text": "평면 만화",
+      "start_utf16": 89,
+      "end_utf16": 94
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-05-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "day-05-tip-example",
+      "title": "이 제작 예시의 조건 읽기",
+      "text": "이 문장은 대상과 행동, 배경과 표현 방식을 나누어 설명한 예시입니다. 이 모델만의 최적 작성법을 뜻하지 않습니다.",
+      "scope": "AIMI_example_explanation",
+      "source_ids": [
+        "legacy-conceptmix"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "bytedance-seed/seedream-5-0-pro",
+    "actual_model_id": "bytedance-seed/seedream-5-0-pro",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "2018c1573233afd96929471ce61d8c46e2827e506305cea6aa35630eb6678568",
+    "width": 1280,
+    "height": 720,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:40:26.226Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 10,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-06aaf72c29505171": "설원",
+    "k-0f157e5730d4ec8e": "사진풍",
+    "k-186bb41cbfb4c9a5": "여우 털 색 · 주황색",
+    "k-32c36bf8353d9d93": "여우 수 · 한 마리",
+    "k-36564023b5fbe39d": "픽셀아트",
+    "k-406c4ee33c473c23": "검은 하늘",
+    "k-40942a155d7d6943": "여우와 헬멧 · 벗어서 손에 들고 있다",
+    "k-4d12876d21353f71": "여우와 헬멧 · 쓰고 있다",
+    "k-5630aafe16d316e6": "평면 만화",
+    "k-59397305e82bf308": "우주 헬멧",
+    "k-6a4c6a781c0bba37": "밀짚모자",
+    "k-74702ccc8492b0bf": "여우 동작 · 누워 자고 있다",
+    "k-75634fe50100d898": "교실",
+    "k-761e78bce456aa81": "여우 동작 · 점프하고 있다",
+    "k-78866ecd301ead58": "고양이",
+    "k-78de9723a66aea29": "여우 동작 · 물속에서 헤엄치고 있다",
+    "k-7c2e9cc2c345d26e": "여우 수 · 세 마리",
+    "k-833aabc28c99a9bc": "지구",
+    "k-89112b908904d895": "토성",
+    "k-913cf8025db88d94": "여우 털 색 · 파란색",
+    "k-b54bdf357e58a853": "달 표면",
+    "k-bd5239559ed2432d": "여우 털 색 · 초록색",
+    "k-c2f3baf3a922272b": "태양",
+    "k-c9cfdcc88f8aa1aa": "왕관",
+    "k-d82ab184dac33999": "여우 수 · 두 마리",
+    "k-db2106f0e27ec3e3": "코끼리",
+    "k-e273043287c18367": "분홍 하늘",
+    "k-f733ade13790d1f9": "여우",
+    "k-6ae6d1496f94a642": "배경에 번개가 친다",
+    "k-45dbd66e9f5b265a": "배경에 무지개가 있다",
+    "k-297c7a157ed540a6": "천장에 샹들리에가 있다",
+    "k-da9be71c18b0a00a": "바닥에 체스판 무늬가 있다",
+    "k-c833158d50fc9d9b": "화면에 눈사람이 있다",
+    "k-3c818f96032dbd5a": "물속에 산호초가 보인다",
+    "k-f102b9ed2ff53e27": "옆에 드럼 세트가 있다"
+  }
+}

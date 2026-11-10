@@ -1,6 +1,22 @@
+@font-face {
+  font-family: "AIMI UX";
+  src: url("/fonts/AIMI-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: block;
+}
+@font-face {
+  font-family: "AIMI UX";
+  src: url("/fonts/AIMI-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: block;
+}
 :root {
-  /* PDF/Figma logical px. Runtime font inherits the host when available. */
-  --font-ui: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  /* Same Regular/Bold font binaries as tools/ux_pdf, losslessly encoded as WOFF2. */
+  --font-ui:
+    "AIMI UX", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    sans-serif;
   --color-background: #f8faf0;
   --color-background-top: #c3d9aa;
   --color-background-bottom: #d7e7c4;

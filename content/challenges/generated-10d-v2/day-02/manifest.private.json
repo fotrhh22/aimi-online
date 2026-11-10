@@ -1,0 +1,825 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-02",
+  "title": "설원의 목도리 토끼",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-BFL3_GUIDE"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "관계가 드러나는 서사",
+  "prompt_lines": [
+    "밝은 설원에서 흰색 토끼 한 마리가 노란색 목도리를 두르고 있다.",
+    "토끼의 전신을 보여주는 3D 렌더로 표현한다."
+  ],
+  "authored_prompt": "밝은 설원에서 흰색 토끼 한 마리가 노란색 목도리를 두르고 있다.\n토끼의 전신을 보여주는 3D 렌더로 표현한다.",
+  "alternate_prompt": "밝은 설원에서 흰색 토끼 한 마리가 노란색 목도리를 두르고 있다. 토끼의 전신을 보여주는 3D 렌더로 표현한다.",
+  "conditions": [
+    {
+      "id": "day-02-c01",
+      "variable": "subject",
+      "entity": "rabbit",
+      "context": "동물",
+      "requested_value": "토끼",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c02",
+      "variable": "count",
+      "entity": "rabbit",
+      "context": "토끼 수",
+      "requested_value": "한 마리",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c03",
+      "variable": "color",
+      "entity": "rabbit",
+      "context": "토끼 털 색",
+      "requested_value": "흰색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c04",
+      "variable": "accessory",
+      "entity": "rabbit",
+      "context": "토끼의 소품",
+      "requested_value": "목도리",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c05",
+      "variable": "color",
+      "entity": "scarf",
+      "context": "목도리 색",
+      "requested_value": "노란색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c06",
+      "variable": "interaction",
+      "entity": "rabbit->scarf",
+      "context": "토끼와 목도리",
+      "requested_value": "두르고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c07",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "설원",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c08",
+      "variable": "framing",
+      "entity": "rabbit",
+      "context": "토끼가 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-02-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "3D 렌더",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-4c3ee3f7ca75a8af",
+      "label": "토끼",
+      "context": "동물",
+      "condition_id": "day-02-c01"
+    },
+    {
+      "id": "k-72cb63590f6eb854",
+      "label": "한 마리",
+      "context": "토끼 수",
+      "condition_id": "day-02-c02"
+    },
+    {
+      "id": "k-6298422f5969853c",
+      "label": "흰색",
+      "context": "토끼 털 색",
+      "condition_id": "day-02-c03"
+    },
+    {
+      "id": "k-ee0590ee8007475b",
+      "label": "목도리",
+      "context": "토끼의 소품",
+      "condition_id": "day-02-c04"
+    },
+    {
+      "id": "k-1cad290cc164778d",
+      "label": "노란색",
+      "context": "목도리 색",
+      "condition_id": "day-02-c05"
+    },
+    {
+      "id": "k-31e237b72606c220",
+      "label": "두르고 있다",
+      "context": "토끼와 목도리",
+      "condition_id": "day-02-c06"
+    },
+    {
+      "id": "k-164f9e567832e298",
+      "label": "설원",
+      "context": "배경 장소",
+      "condition_id": "day-02-c07"
+    },
+    {
+      "id": "k-a1828f950fc7defa",
+      "label": "전신",
+      "context": "토끼가 보이는 범위",
+      "condition_id": "day-02-c08"
+    },
+    {
+      "id": "k-d8a82f2467b6caf9",
+      "label": "3D 렌더",
+      "context": "표현 방식",
+      "condition_id": "day-02-c09"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-ea906aed1dcc954f",
+      "label": "기린",
+      "context": "동물",
+      "contradicts_condition_id": "day-02-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f7d366fb8246ab1c",
+      "label": "고양이",
+      "context": "동물",
+      "contradicts_condition_id": "day-02-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-c93a338ab89797fb",
+      "label": "두 마리",
+      "context": "토끼 수",
+      "contradicts_condition_id": "day-02-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e94b4cf532d74b6d",
+      "label": "네 마리",
+      "context": "토끼 수",
+      "contradicts_condition_id": "day-02-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-2b45571943ebf7b7",
+      "label": "검은색",
+      "context": "토끼 털 색",
+      "contradicts_condition_id": "day-02-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a7ddbd352d89b558",
+      "label": "주황색",
+      "context": "토끼 털 색",
+      "contradicts_condition_id": "day-02-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-12ac7bc36227c3bf",
+      "label": "왕관",
+      "context": "토끼의 소품",
+      "contradicts_condition_id": "day-02-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-085317668326ca23",
+      "label": "우산",
+      "context": "토끼의 소품",
+      "contradicts_condition_id": "day-02-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-fb5b00e7625c9401",
+      "label": "보라색",
+      "context": "목도리 색",
+      "contradicts_condition_id": "day-02-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-0fb628b2bfe18ec2",
+      "label": "빨간색",
+      "context": "목도리 색",
+      "contradicts_condition_id": "day-02-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-b6b78eff61351d02",
+      "label": "발로 밟고 있다",
+      "context": "토끼와 목도리",
+      "contradicts_condition_id": "day-02-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8afb698ef16987d9",
+      "label": "손에 들고 있다",
+      "context": "토끼와 목도리",
+      "contradicts_condition_id": "day-02-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-4ebb8f77b5fa3f99",
+      "label": "해변",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-02-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-81fa7083143ef8fb",
+      "label": "교실",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-02-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-3df05cd724994ba1",
+      "label": "얼굴만 확대",
+      "context": "토끼가 보이는 범위",
+      "contradicts_condition_id": "day-02-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9a64bce0f4c33212",
+      "label": "연필화",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-02-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f3b09744b9ea6288",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-02-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8de9661b4530591d",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-2ac0124f14226623",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-38ad53fba0f0d652",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-505631f39902f9b6",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-6e29e09452b40fc6",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-a67484d92627d495",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-1fec3da5cbbf46fa",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-cccc98950a47a351",
+      "label": "바나나",
+      "context": "동물",
+      "contradicts_condition_id": "day-02-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-af5459aa048a3c63",
+      "label": "빨간색",
+      "context": "토끼 털 색",
+      "contradicts_condition_id": "day-02-c03",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-add0f9161ed21770",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-02-c09",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-74e28fb9f1afc4be",
+      "label": "수박",
+      "context": "동물",
+      "contradicts_condition_id": "day-02-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-a58d744728fc76f0",
+      "label": "주황색",
+      "context": "목도리 색",
+      "contradicts_condition_id": "day-02-c05",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-bacddbd3b42f2ac1",
+      "label": "사막",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-02-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-085317668326ca23",
+      "label": "우산",
+      "context": "토끼의 소품"
+    },
+    {
+      "id": "k-0fb628b2bfe18ec2",
+      "label": "빨간색",
+      "context": "목도리 색"
+    },
+    {
+      "id": "k-12ac7bc36227c3bf",
+      "label": "왕관",
+      "context": "토끼의 소품"
+    },
+    {
+      "id": "k-164f9e567832e298",
+      "label": "설원",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-1cad290cc164778d",
+      "label": "노란색",
+      "context": "목도리 색"
+    },
+    {
+      "id": "k-1fec3da5cbbf46fa",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-2ac0124f14226623",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-2b45571943ebf7b7",
+      "label": "검은색",
+      "context": "토끼 털 색"
+    },
+    {
+      "id": "k-31e237b72606c220",
+      "label": "두르고 있다",
+      "context": "토끼와 목도리"
+    },
+    {
+      "id": "k-38ad53fba0f0d652",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-3df05cd724994ba1",
+      "label": "얼굴만 확대",
+      "context": "토끼가 보이는 범위"
+    },
+    {
+      "id": "k-4c3ee3f7ca75a8af",
+      "label": "토끼",
+      "context": "동물"
+    },
+    {
+      "id": "k-4ebb8f77b5fa3f99",
+      "label": "해변",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-505631f39902f9b6",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-6298422f5969853c",
+      "label": "흰색",
+      "context": "토끼 털 색"
+    },
+    {
+      "id": "k-6e29e09452b40fc6",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-72cb63590f6eb854",
+      "label": "한 마리",
+      "context": "토끼 수"
+    },
+    {
+      "id": "k-74e28fb9f1afc4be",
+      "label": "수박",
+      "context": "동물"
+    },
+    {
+      "id": "k-81fa7083143ef8fb",
+      "label": "교실",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-8afb698ef16987d9",
+      "label": "손에 들고 있다",
+      "context": "토끼와 목도리"
+    },
+    {
+      "id": "k-8de9661b4530591d",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-9a64bce0f4c33212",
+      "label": "연필화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-a1828f950fc7defa",
+      "label": "전신",
+      "context": "토끼가 보이는 범위"
+    },
+    {
+      "id": "k-a58d744728fc76f0",
+      "label": "주황색",
+      "context": "목도리 색"
+    },
+    {
+      "id": "k-a67484d92627d495",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-a7ddbd352d89b558",
+      "label": "주황색",
+      "context": "토끼 털 색"
+    },
+    {
+      "id": "k-add0f9161ed21770",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-af5459aa048a3c63",
+      "label": "빨간색",
+      "context": "토끼 털 색"
+    },
+    {
+      "id": "k-b6b78eff61351d02",
+      "label": "발로 밟고 있다",
+      "context": "토끼와 목도리"
+    },
+    {
+      "id": "k-bacddbd3b42f2ac1",
+      "label": "사막",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-c93a338ab89797fb",
+      "label": "두 마리",
+      "context": "토끼 수"
+    },
+    {
+      "id": "k-cccc98950a47a351",
+      "label": "바나나",
+      "context": "동물"
+    },
+    {
+      "id": "k-d8a82f2467b6caf9",
+      "label": "3D 렌더",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-e94b4cf532d74b6d",
+      "label": "네 마리",
+      "context": "토끼 수"
+    },
+    {
+      "id": "k-ea906aed1dcc954f",
+      "label": "기린",
+      "context": "동물"
+    },
+    {
+      "id": "k-ee0590ee8007475b",
+      "label": "목도리",
+      "context": "토끼의 소품"
+    },
+    {
+      "id": "k-f3b09744b9ea6288",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-f7d366fb8246ab1c",
+      "label": "고양이",
+      "context": "동물"
+    },
+    {
+      "id": "k-fb5b00e7625c9401",
+      "label": "보라색",
+      "context": "목도리 색"
+    }
+  ],
+  "total_candidate_count": 39,
+  "answer_ratio": 0.23076923076923078,
+  "highlights": [
+    {
+      "keyword_id": "k-4c3ee3f7ca75a8af",
+      "condition_id": "day-02-c01",
+      "matched_text": "토끼",
+      "start_utf16": 11,
+      "end_utf16": 13
+    },
+    {
+      "keyword_id": "k-72cb63590f6eb854",
+      "condition_id": "day-02-c02",
+      "matched_text": "한 마리",
+      "start_utf16": 14,
+      "end_utf16": 18
+    },
+    {
+      "keyword_id": "k-6298422f5969853c",
+      "condition_id": "day-02-c03",
+      "matched_text": "흰색",
+      "start_utf16": 8,
+      "end_utf16": 10
+    },
+    {
+      "keyword_id": "k-ee0590ee8007475b",
+      "condition_id": "day-02-c04",
+      "matched_text": "목도리",
+      "start_utf16": 24,
+      "end_utf16": 27
+    },
+    {
+      "keyword_id": "k-1cad290cc164778d",
+      "condition_id": "day-02-c05",
+      "matched_text": "노란색",
+      "start_utf16": 20,
+      "end_utf16": 23
+    },
+    {
+      "keyword_id": "k-31e237b72606c220",
+      "condition_id": "day-02-c06",
+      "matched_text": "두르고 있다",
+      "start_utf16": 29,
+      "end_utf16": 35
+    },
+    {
+      "keyword_id": "k-164f9e567832e298",
+      "condition_id": "day-02-c07",
+      "matched_text": "설원",
+      "start_utf16": 3,
+      "end_utf16": 5
+    },
+    {
+      "keyword_id": "k-a1828f950fc7defa",
+      "condition_id": "day-02-c08",
+      "matched_text": "전신",
+      "start_utf16": 41,
+      "end_utf16": 43
+    },
+    {
+      "keyword_id": "k-d8a82f2467b6caf9",
+      "condition_id": "day-02-c09",
+      "matched_text": "3D 렌더",
+      "start_utf16": 50,
+      "end_utf16": 55
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-02-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T01",
+      "title": "정해진 줄 수보다 보이는 조건",
+      "text": "주요 대상과 위치·빛·표현을 설명하세요. 4줄이라는 고정 형식은 필요하지 않습니다.",
+      "scope": "공식 작성 가이드",
+      "source_ids": [
+        "model-BFL3_GUIDE"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "black-forest-labs/flux-3-image"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "black-forest-labs/flux-3-image",
+    "actual_model_id": "black-forest-labs/flux-3-image",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "f5c39458141e2bd5bc1748f145abdba2f50f1f4e1ae704478d17c46816c60208",
+    "width": 1360,
+    "height": 768,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:30:43.205Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 9,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-085317668326ca23": "우산",
+    "k-0fb628b2bfe18ec2": "목도리 색 · 빨간색",
+    "k-12ac7bc36227c3bf": "왕관",
+    "k-164f9e567832e298": "설원",
+    "k-1cad290cc164778d": "노란색",
+    "k-2b45571943ebf7b7": "검은색",
+    "k-31e237b72606c220": "두르고 있다",
+    "k-3df05cd724994ba1": "얼굴만 확대",
+    "k-4c3ee3f7ca75a8af": "토끼",
+    "k-4ebb8f77b5fa3f99": "해변",
+    "k-6298422f5969853c": "흰색",
+    "k-72cb63590f6eb854": "한 마리",
+    "k-81fa7083143ef8fb": "교실",
+    "k-8afb698ef16987d9": "손에 들고 있다",
+    "k-9a64bce0f4c33212": "연필화",
+    "k-a1828f950fc7defa": "전신",
+    "k-a7ddbd352d89b558": "토끼 털 색 · 주황색",
+    "k-b6b78eff61351d02": "발로 밟고 있다",
+    "k-c93a338ab89797fb": "두 마리",
+    "k-d8a82f2467b6caf9": "3D 렌더",
+    "k-e94b4cf532d74b6d": "네 마리",
+    "k-ea906aed1dcc954f": "기린",
+    "k-ee0590ee8007475b": "목도리",
+    "k-f3b09744b9ea6288": "픽셀아트",
+    "k-f7d366fb8246ab1c": "고양이",
+    "k-fb5b00e7625c9401": "보라색",
+    "k-8de9661b4530591d": "배경에 번개가 친다",
+    "k-2ac0124f14226623": "배경에 무지개가 있다",
+    "k-38ad53fba0f0d652": "천장에 샹들리에가 있다",
+    "k-505631f39902f9b6": "바닥에 체스판 무늬가 있다",
+    "k-6e29e09452b40fc6": "화면에 눈사람이 있다",
+    "k-a67484d92627d495": "물속에 산호초가 보인다",
+    "k-1fec3da5cbbf46fa": "옆에 드럼 세트가 있다",
+    "k-cccc98950a47a351": "바나나",
+    "k-af5459aa048a3c63": "빨간색",
+    "k-add0f9161ed21770": "사진풍",
+    "k-74e28fb9f1afc4be": "수박",
+    "k-a58d744728fc76f0": "주황색",
+    "k-bacddbd3b42f2ac1": "사막"
+  }
+}

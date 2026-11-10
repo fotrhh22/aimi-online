@@ -11,3 +11,6 @@ secrets/
 *.key
 *.pem
 *.p12
+
+# Temporary PDF review renders
+tmp/

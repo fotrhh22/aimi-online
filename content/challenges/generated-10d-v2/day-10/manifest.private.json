@@ -1,0 +1,1637 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-10",
+  "title": "온실의 로봇과 화분",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-XAI"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "대상부터 시작하는 상세 묘사",
+  "prompt_lines": [
+    "초록색 로봇 한 대가 온실 안에서 서 있다.",
+    "로봇은 노란색 물뿌리개를 들고 있다.",
+    "로봇의 오른쪽에는 보라색 화분 두 개가 가로로 나란히 놓여 있다.",
+    "각 화분 안에는 선인장이 한 개씩 있다.",
+    "로봇은 화분 쪽으로 물을 붓고 있다.",
+    "물뿌리개에서 화분으로 떨어지는 물줄기가 보인다.",
+    "온실의 지붕은 투명한 유리로 표현한다.",
+    "로봇과 두 화분의 전체 모습이 화면 중앙에 들어오게 한다.",
+    "눈높이에서 본 종이 콜라주로 표현한다."
+  ],
+  "authored_prompt": "초록색 로봇 한 대가 온실 안에서 서 있다.\n로봇은 노란색 물뿌리개를 들고 있다.\n로봇의 오른쪽에는 보라색 화분 두 개가 가로로 나란히 놓여 있다.\n각 화분 안에는 선인장이 한 개씩 있다.\n로봇은 화분 쪽으로 물을 붓고 있다.\n물뿌리개에서 화분으로 떨어지는 물줄기가 보인다.\n온실의 지붕은 투명한 유리로 표현한다.\n로봇과 두 화분의 전체 모습이 화면 중앙에 들어오게 한다.\n눈높이에서 본 종이 콜라주로 표현한다.",
+  "alternate_prompt": "초록색 로봇 한 대가 온실 안에서 서 있다. 로봇은 노란색 물뿌리개를 들고 있다. 로봇의 오른쪽에는 보라색 화분 두 개가 가로로 나란히 놓여 있다. 각 화분 안에는 선인장이 한 개씩 있다. 로봇은 화분 쪽으로 물을 붓고 있다. 물뿌리개에서 화분으로 떨어지는 물줄기가 보인다. 온실의 지붕은 투명한 유리로 표현한다. 로봇과 두 화분의 전체 모습이 화면 중앙에 들어오게 한다. 눈높이에서 본 종이 콜라주로 표현한다.",
+  "conditions": [
+    {
+      "id": "day-10-c01",
+      "variable": "subject",
+      "entity": "robot",
+      "context": "주요 대상",
+      "requested_value": "로봇",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c02",
+      "variable": "count",
+      "entity": "robot",
+      "context": "로봇 수",
+      "requested_value": "한 대",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c03",
+      "variable": "color",
+      "entity": "robot",
+      "context": "로봇 몸 색",
+      "requested_value": "초록색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c04",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "온실",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c05",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 자세",
+      "requested_value": "서 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c06",
+      "variable": "accessory",
+      "entity": "robot",
+      "context": "로봇의 도구",
+      "requested_value": "물뿌리개",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c07",
+      "variable": "color",
+      "entity": "watering_can",
+      "context": "물뿌리개 색",
+      "requested_value": "노란색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c08",
+      "variable": "interaction",
+      "entity": "robot->watering_can",
+      "context": "로봇과 도구",
+      "requested_value": "들고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c09",
+      "variable": "color",
+      "entity": "pot",
+      "context": "화분 색",
+      "requested_value": "보라색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c10",
+      "variable": "subject",
+      "entity": "pot",
+      "context": "식물 용기",
+      "requested_value": "화분",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c11",
+      "variable": "count",
+      "entity": "pot",
+      "context": "화분 수",
+      "requested_value": "두 개",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c12",
+      "variable": "horizontal_relation",
+      "entity": "pot->robot",
+      "context": "로봇 기준 화분 위치",
+      "requested_value": "오른쪽",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c13",
+      "variable": "arrangement",
+      "entity": "pot",
+      "context": "화분 배치",
+      "requested_value": "가로로 나란히",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c14",
+      "variable": "subject",
+      "entity": "cactus",
+      "context": "화분 안의 식물",
+      "requested_value": "선인장",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c15",
+      "variable": "interaction",
+      "entity": "robot->pot",
+      "context": "로봇의 작업",
+      "requested_value": "물을 붓고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c16",
+      "variable": "material",
+      "entity": "roof",
+      "context": "온실 지붕 표면",
+      "requested_value": "투명한 유리",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c17",
+      "variable": "screen_position",
+      "entity": "group",
+      "context": "대상들의 화면 위치",
+      "requested_value": "화면 중앙",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c18",
+      "variable": "camera_elevation",
+      "entity": "scene",
+      "context": "시점",
+      "requested_value": "눈높이",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-10-c19",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "종이 콜라주",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-0c864475a1d89aed",
+      "label": "로봇",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01"
+    },
+    {
+      "id": "k-8b8d30f2e9c212a2",
+      "label": "한 대",
+      "context": "로봇 수",
+      "condition_id": "day-10-c02"
+    },
+    {
+      "id": "k-a1329cad7f54cbb7",
+      "label": "초록색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-10-c03"
+    },
+    {
+      "id": "k-2d847585f7f1c3a1",
+      "label": "온실",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04"
+    },
+    {
+      "id": "k-57af90ea35e82878",
+      "label": "서 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-10-c05"
+    },
+    {
+      "id": "k-49f05869cb8803da",
+      "label": "물뿌리개",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06"
+    },
+    {
+      "id": "k-afa729ec41f39ba4",
+      "label": "노란색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07"
+    },
+    {
+      "id": "k-1df53e792d765b87",
+      "label": "들고 있다",
+      "context": "로봇과 도구",
+      "condition_id": "day-10-c08"
+    },
+    {
+      "id": "k-731d2043bde6037d",
+      "label": "보라색",
+      "context": "화분 색",
+      "condition_id": "day-10-c09"
+    },
+    {
+      "id": "k-a48824ac82ebac79",
+      "label": "화분",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10"
+    },
+    {
+      "id": "k-781399bf402a01e7",
+      "label": "두 개",
+      "context": "화분 수",
+      "condition_id": "day-10-c11"
+    },
+    {
+      "id": "k-044b80e3dfcafa40",
+      "label": "오른쪽",
+      "context": "로봇 기준 화분 위치",
+      "condition_id": "day-10-c12"
+    },
+    {
+      "id": "k-6b9df66f7913ea58",
+      "label": "가로로 나란히",
+      "context": "화분 배치",
+      "condition_id": "day-10-c13"
+    },
+    {
+      "id": "k-627de39ddcd6990d",
+      "label": "선인장",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14"
+    },
+    {
+      "id": "k-ee254c163207a9f2",
+      "label": "물을 붓고 있다",
+      "context": "로봇의 작업",
+      "condition_id": "day-10-c15"
+    },
+    {
+      "id": "k-45b6a35e3a8ca50c",
+      "label": "투명한 유리",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16"
+    },
+    {
+      "id": "k-0299899ce6697bd3",
+      "label": "화면 중앙",
+      "context": "대상들의 화면 위치",
+      "condition_id": "day-10-c17"
+    },
+    {
+      "id": "k-f13222c5a50a5722",
+      "label": "눈높이",
+      "context": "시점",
+      "condition_id": "day-10-c18"
+    },
+    {
+      "id": "k-1b53368baed8bc6e",
+      "label": "종이 콜라주",
+      "context": "표현 방식",
+      "condition_id": "day-10-c19"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-7f61dfdc71b7b9f5",
+      "label": "사람",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-10-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-80c2c8d07a12ed34",
+      "label": "곰",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-10-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-aead206b006e44f8",
+      "label": "두 대",
+      "context": "로봇 수",
+      "contradicts_condition_id": "day-10-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-1da5d7cdb1402f94",
+      "label": "네 대",
+      "context": "로봇 수",
+      "contradicts_condition_id": "day-10-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a45eb2dbab80c5a6",
+      "label": "빨간색",
+      "context": "로봇 몸 색",
+      "contradicts_condition_id": "day-10-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-643b324d299b94a1",
+      "label": "검은색",
+      "context": "로봇 몸 색",
+      "contradicts_condition_id": "day-10-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-5769bf662a5bdf7c",
+      "label": "바닷속",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-10-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-34ef4d0e26e5ba0f",
+      "label": "사막",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-10-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-0a75dc95073afbc0",
+      "label": "누워 있다",
+      "context": "로봇 자세",
+      "contradicts_condition_id": "day-10-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-7d0be42b1adff86d",
+      "label": "공중에 떠 있다",
+      "context": "로봇 자세",
+      "contradicts_condition_id": "day-10-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-2746ce75bf8ff16b",
+      "label": "망원경",
+      "context": "로봇의 도구",
+      "contradicts_condition_id": "day-10-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a1e1041ef6ddbe5e",
+      "label": "붓",
+      "context": "로봇의 도구",
+      "contradicts_condition_id": "day-10-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f88a4bfc1e2d792f",
+      "label": "파란색",
+      "context": "물뿌리개 색",
+      "contradicts_condition_id": "day-10-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f429775f01352f50",
+      "label": "흰색",
+      "context": "물뿌리개 색",
+      "contradicts_condition_id": "day-10-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-30be21331e282565",
+      "label": "발로 밟고 있다",
+      "context": "로봇과 도구",
+      "contradicts_condition_id": "day-10-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-699bf160e3406588",
+      "label": "주황색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-10-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9a2019090ef25bbf",
+      "label": "분홍색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-10-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-05dbae81458f30c2",
+      "label": "접시",
+      "context": "식물 용기",
+      "contradicts_condition_id": "day-10-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-3744a51ed158de52",
+      "label": "컵",
+      "context": "식물 용기",
+      "contradicts_condition_id": "day-10-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f4106f7cc5fc1461",
+      "label": "한 개",
+      "context": "화분 수",
+      "contradicts_condition_id": "day-10-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-398f198397d21ba3",
+      "label": "네 개",
+      "context": "화분 수",
+      "contradicts_condition_id": "day-10-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f43b4cbf18020ec3",
+      "label": "왼쪽",
+      "context": "로봇 기준 화분 위치",
+      "contradicts_condition_id": "day-10-c12",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-402ffd0999a531a6",
+      "label": "세로로 쌓인",
+      "context": "화분 배치",
+      "contradicts_condition_id": "day-10-c13",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-379a32e3d1d8ce4a",
+      "label": "원형 배치",
+      "context": "화분 배치",
+      "contradicts_condition_id": "day-10-c13",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e0b2b6b5901f3504",
+      "label": "해바라기",
+      "context": "화분 안의 식물",
+      "contradicts_condition_id": "day-10-c14",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bd412e5d54228999",
+      "label": "장미",
+      "context": "화분 안의 식물",
+      "contradicts_condition_id": "day-10-c14",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-bdf4a3ce7a2e6c94",
+      "label": "흙을 파고 있다",
+      "context": "로봇의 작업",
+      "contradicts_condition_id": "day-10-c15",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-411cc1394c0423a7",
+      "label": "책을 읽고 있다",
+      "context": "로봇의 작업",
+      "contradicts_condition_id": "day-10-c15",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a1b5d3b67b2d1e4a",
+      "label": "짚으로 엮은 질감",
+      "context": "온실 지붕 표면",
+      "contradicts_condition_id": "day-10-c16",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-7c2bd8c88844aea4",
+      "label": "불투명 금속",
+      "context": "온실 지붕 표면",
+      "contradicts_condition_id": "day-10-c16",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8fcf131fab7437fe",
+      "label": "화면 왼쪽 아래",
+      "context": "대상들의 화면 위치",
+      "contradicts_condition_id": "day-10-c17",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8f21c0148c77236b",
+      "label": "수직으로 내려다본",
+      "context": "시점",
+      "contradicts_condition_id": "day-10-c18",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a2265dab26c1d46a",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-10-c19",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-efc5129d2a635910",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-10-c19",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f04ab42e77d0b34b",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-63e61911ffe3216d",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-415ed5b7f0abf8db",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-313efb78c2d6037b",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-75143ebc6e923250",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-c986e3fa61861c0e",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-5c4389ab1c346581",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-3308faca8c4ae23f",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-d6bc1676f8385a3f",
+      "label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-a3f67777c784c477",
+      "label": "대상이 빨간 리본을 달고 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-f0573f9e9c400e7f",
+      "label": "바나나",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-10-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-b9d350300912eb7e",
+      "label": "해변",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-10-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-5051c0fd57fbd7f7",
+      "label": "왕관",
+      "context": "로봇의 도구",
+      "contradicts_condition_id": "day-10-c06",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-18795133d0831803",
+      "label": "빨간색",
+      "context": "물뿌리개 색",
+      "contradicts_condition_id": "day-10-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-8c7275b1a66844c2",
+      "label": "빨간색",
+      "context": "화분 색",
+      "contradicts_condition_id": "day-10-c09",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-94c6036b611c2428",
+      "label": "바나나",
+      "context": "식물 용기",
+      "contradicts_condition_id": "day-10-c10",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-78a8f4a23d898a2e",
+      "label": "바나나",
+      "context": "화분 안의 식물",
+      "contradicts_condition_id": "day-10-c14",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-21fcc58cb676b9cc",
+      "label": "금속",
+      "context": "온실 지붕 표면",
+      "contradicts_condition_id": "day-10-c16",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-5fe72268ddb5d8af",
+      "label": "수박",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-10-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-66439590fcb56f6e",
+      "label": "주황색",
+      "context": "로봇 몸 색",
+      "contradicts_condition_id": "day-10-c03",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-de921b9fdae4d118",
+      "label": "우산",
+      "context": "로봇의 도구",
+      "contradicts_condition_id": "day-10-c06",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-26ce6f3936612ddc",
+      "label": "주황색",
+      "context": "물뿌리개 색",
+      "contradicts_condition_id": "day-10-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-52193aa2b7061c4e",
+      "label": "수박",
+      "context": "식물 용기",
+      "contradicts_condition_id": "day-10-c10",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-27ddea0bc8439ff5",
+      "label": "수박",
+      "context": "화분 안의 식물",
+      "contradicts_condition_id": "day-10-c14",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-3a6ccd11d17281f8",
+      "label": "나뭇결",
+      "context": "온실 지붕 표면",
+      "contradicts_condition_id": "day-10-c16",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-8be2de449d6bf3c0",
+      "label": "수채화",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-10-c19",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-b76a9d73875d3e9e",
+      "label": "포도",
+      "context": "주요 대상",
+      "contradicts_condition_id": "day-10-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-176a97c851c13e69",
+      "label": "세 대",
+      "context": "로봇 수",
+      "contradicts_condition_id": "day-10-c02",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-4715544e3f5717cd",
+      "label": "설원",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-10-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-9301b79788cf7925",
+      "label": "포도",
+      "context": "식물 용기",
+      "contradicts_condition_id": "day-10-c10",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-95e55963528c1c35",
+      "label": "세 개",
+      "context": "화분 수",
+      "contradicts_condition_id": "day-10-c11",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-0299899ce6697bd3",
+      "label": "화면 중앙",
+      "context": "대상들의 화면 위치"
+    },
+    {
+      "id": "k-044b80e3dfcafa40",
+      "label": "오른쪽",
+      "context": "로봇 기준 화분 위치"
+    },
+    {
+      "id": "k-05dbae81458f30c2",
+      "label": "접시",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-0a75dc95073afbc0",
+      "label": "누워 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-0c864475a1d89aed",
+      "label": "로봇",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-176a97c851c13e69",
+      "label": "세 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-18795133d0831803",
+      "label": "빨간색",
+      "context": "물뿌리개 색"
+    },
+    {
+      "id": "k-1b53368baed8bc6e",
+      "label": "종이 콜라주",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-1da5d7cdb1402f94",
+      "label": "네 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-1df53e792d765b87",
+      "label": "들고 있다",
+      "context": "로봇과 도구"
+    },
+    {
+      "id": "k-21fcc58cb676b9cc",
+      "label": "금속",
+      "context": "온실 지붕 표면"
+    },
+    {
+      "id": "k-26ce6f3936612ddc",
+      "label": "주황색",
+      "context": "물뿌리개 색"
+    },
+    {
+      "id": "k-2746ce75bf8ff16b",
+      "label": "망원경",
+      "context": "로봇의 도구"
+    },
+    {
+      "id": "k-27ddea0bc8439ff5",
+      "label": "수박",
+      "context": "화분 안의 식물"
+    },
+    {
+      "id": "k-2d847585f7f1c3a1",
+      "label": "온실",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-30be21331e282565",
+      "label": "발로 밟고 있다",
+      "context": "로봇과 도구"
+    },
+    {
+      "id": "k-313efb78c2d6037b",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-3308faca8c4ae23f",
+      "label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-34ef4d0e26e5ba0f",
+      "label": "사막",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-3744a51ed158de52",
+      "label": "컵",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-379a32e3d1d8ce4a",
+      "label": "원형 배치",
+      "context": "화분 배치"
+    },
+    {
+      "id": "k-398f198397d21ba3",
+      "label": "네 개",
+      "context": "화분 수"
+    },
+    {
+      "id": "k-3a6ccd11d17281f8",
+      "label": "나뭇결",
+      "context": "온실 지붕 표면"
+    },
+    {
+      "id": "k-402ffd0999a531a6",
+      "label": "세로로 쌓인",
+      "context": "화분 배치"
+    },
+    {
+      "id": "k-411cc1394c0423a7",
+      "label": "책을 읽고 있다",
+      "context": "로봇의 작업"
+    },
+    {
+      "id": "k-415ed5b7f0abf8db",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-45b6a35e3a8ca50c",
+      "label": "투명한 유리",
+      "context": "온실 지붕 표면"
+    },
+    {
+      "id": "k-4715544e3f5717cd",
+      "label": "설원",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-49f05869cb8803da",
+      "label": "물뿌리개",
+      "context": "로봇의 도구"
+    },
+    {
+      "id": "k-5051c0fd57fbd7f7",
+      "label": "왕관",
+      "context": "로봇의 도구"
+    },
+    {
+      "id": "k-52193aa2b7061c4e",
+      "label": "수박",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-5769bf662a5bdf7c",
+      "label": "바닷속",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-57af90ea35e82878",
+      "label": "서 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-5c4389ab1c346581",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-5fe72268ddb5d8af",
+      "label": "수박",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-627de39ddcd6990d",
+      "label": "선인장",
+      "context": "화분 안의 식물"
+    },
+    {
+      "id": "k-63e61911ffe3216d",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-643b324d299b94a1",
+      "label": "검은색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-66439590fcb56f6e",
+      "label": "주황색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-699bf160e3406588",
+      "label": "주황색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-6b9df66f7913ea58",
+      "label": "가로로 나란히",
+      "context": "화분 배치"
+    },
+    {
+      "id": "k-731d2043bde6037d",
+      "label": "보라색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-75143ebc6e923250",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-781399bf402a01e7",
+      "label": "두 개",
+      "context": "화분 수"
+    },
+    {
+      "id": "k-78a8f4a23d898a2e",
+      "label": "바나나",
+      "context": "화분 안의 식물"
+    },
+    {
+      "id": "k-7c2bd8c88844aea4",
+      "label": "불투명 금속",
+      "context": "온실 지붕 표면"
+    },
+    {
+      "id": "k-7d0be42b1adff86d",
+      "label": "공중에 떠 있다",
+      "context": "로봇 자세"
+    },
+    {
+      "id": "k-7f61dfdc71b7b9f5",
+      "label": "사람",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-80c2c8d07a12ed34",
+      "label": "곰",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-8b8d30f2e9c212a2",
+      "label": "한 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-8be2de449d6bf3c0",
+      "label": "수채화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-8c7275b1a66844c2",
+      "label": "빨간색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-8f21c0148c77236b",
+      "label": "수직으로 내려다본",
+      "context": "시점"
+    },
+    {
+      "id": "k-8fcf131fab7437fe",
+      "label": "화면 왼쪽 아래",
+      "context": "대상들의 화면 위치"
+    },
+    {
+      "id": "k-9301b79788cf7925",
+      "label": "포도",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-94c6036b611c2428",
+      "label": "바나나",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-95e55963528c1c35",
+      "label": "세 개",
+      "context": "화분 수"
+    },
+    {
+      "id": "k-9a2019090ef25bbf",
+      "label": "분홍색",
+      "context": "화분 색"
+    },
+    {
+      "id": "k-a1329cad7f54cbb7",
+      "label": "초록색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-a1b5d3b67b2d1e4a",
+      "label": "짚으로 엮은 질감",
+      "context": "온실 지붕 표면"
+    },
+    {
+      "id": "k-a1e1041ef6ddbe5e",
+      "label": "붓",
+      "context": "로봇의 도구"
+    },
+    {
+      "id": "k-a2265dab26c1d46a",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-a3f67777c784c477",
+      "label": "대상이 빨간 리본을 달고 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-a45eb2dbab80c5a6",
+      "label": "빨간색",
+      "context": "로봇 몸 색"
+    },
+    {
+      "id": "k-a48824ac82ebac79",
+      "label": "화분",
+      "context": "식물 용기"
+    },
+    {
+      "id": "k-aead206b006e44f8",
+      "label": "두 대",
+      "context": "로봇 수"
+    },
+    {
+      "id": "k-afa729ec41f39ba4",
+      "label": "노란색",
+      "context": "물뿌리개 색"
+    },
+    {
+      "id": "k-b76a9d73875d3e9e",
+      "label": "포도",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-b9d350300912eb7e",
+      "label": "해변",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-bd412e5d54228999",
+      "label": "장미",
+      "context": "화분 안의 식물"
+    },
+    {
+      "id": "k-bdf4a3ce7a2e6c94",
+      "label": "흙을 파고 있다",
+      "context": "로봇의 작업"
+    },
+    {
+      "id": "k-c986e3fa61861c0e",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-d6bc1676f8385a3f",
+      "label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-de921b9fdae4d118",
+      "label": "우산",
+      "context": "로봇의 도구"
+    },
+    {
+      "id": "k-e0b2b6b5901f3504",
+      "label": "해바라기",
+      "context": "화분 안의 식물"
+    },
+    {
+      "id": "k-ee254c163207a9f2",
+      "label": "물을 붓고 있다",
+      "context": "로봇의 작업"
+    },
+    {
+      "id": "k-efc5129d2a635910",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-f04ab42e77d0b34b",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-f0573f9e9c400e7f",
+      "label": "바나나",
+      "context": "주요 대상"
+    },
+    {
+      "id": "k-f13222c5a50a5722",
+      "label": "눈높이",
+      "context": "시점"
+    },
+    {
+      "id": "k-f4106f7cc5fc1461",
+      "label": "한 개",
+      "context": "화분 수"
+    },
+    {
+      "id": "k-f429775f01352f50",
+      "label": "흰색",
+      "context": "물뿌리개 색"
+    },
+    {
+      "id": "k-f43b4cbf18020ec3",
+      "label": "왼쪽",
+      "context": "로봇 기준 화분 위치"
+    },
+    {
+      "id": "k-f88a4bfc1e2d792f",
+      "label": "파란색",
+      "context": "물뿌리개 색"
+    }
+  ],
+  "total_candidate_count": 84,
+  "answer_ratio": 0.2261904761904762,
+  "highlights": [
+    {
+      "keyword_id": "k-0c864475a1d89aed",
+      "condition_id": "day-10-c01",
+      "matched_text": "로봇",
+      "start_utf16": 4,
+      "end_utf16": 6
+    },
+    {
+      "keyword_id": "k-8b8d30f2e9c212a2",
+      "condition_id": "day-10-c02",
+      "matched_text": "한 대",
+      "start_utf16": 7,
+      "end_utf16": 10
+    },
+    {
+      "keyword_id": "k-a1329cad7f54cbb7",
+      "condition_id": "day-10-c03",
+      "matched_text": "초록색",
+      "start_utf16": 0,
+      "end_utf16": 3
+    },
+    {
+      "keyword_id": "k-2d847585f7f1c3a1",
+      "condition_id": "day-10-c04",
+      "matched_text": "온실",
+      "start_utf16": 12,
+      "end_utf16": 14
+    },
+    {
+      "keyword_id": "k-57af90ea35e82878",
+      "condition_id": "day-10-c05",
+      "matched_text": "서 있다",
+      "start_utf16": 19,
+      "end_utf16": 23
+    },
+    {
+      "keyword_id": "k-49f05869cb8803da",
+      "condition_id": "day-10-c06",
+      "matched_text": "물뿌리개",
+      "start_utf16": 33,
+      "end_utf16": 37
+    },
+    {
+      "keyword_id": "k-afa729ec41f39ba4",
+      "condition_id": "day-10-c07",
+      "matched_text": "노란색",
+      "start_utf16": 29,
+      "end_utf16": 32
+    },
+    {
+      "keyword_id": "k-1df53e792d765b87",
+      "condition_id": "day-10-c08",
+      "matched_text": "들고 있다",
+      "start_utf16": 39,
+      "end_utf16": 44
+    },
+    {
+      "keyword_id": "k-731d2043bde6037d",
+      "condition_id": "day-10-c09",
+      "matched_text": "보라색",
+      "start_utf16": 56,
+      "end_utf16": 59
+    },
+    {
+      "keyword_id": "k-a48824ac82ebac79",
+      "condition_id": "day-10-c10",
+      "matched_text": "화분",
+      "start_utf16": 60,
+      "end_utf16": 62
+    },
+    {
+      "keyword_id": "k-781399bf402a01e7",
+      "condition_id": "day-10-c11",
+      "matched_text": "두 개",
+      "start_utf16": 63,
+      "end_utf16": 66
+    },
+    {
+      "keyword_id": "k-044b80e3dfcafa40",
+      "condition_id": "day-10-c12",
+      "matched_text": "오른쪽",
+      "start_utf16": 50,
+      "end_utf16": 53
+    },
+    {
+      "keyword_id": "k-6b9df66f7913ea58",
+      "condition_id": "day-10-c13",
+      "matched_text": "가로로 나란히",
+      "start_utf16": 68,
+      "end_utf16": 75
+    },
+    {
+      "keyword_id": "k-627de39ddcd6990d",
+      "condition_id": "day-10-c14",
+      "matched_text": "선인장",
+      "start_utf16": 92,
+      "end_utf16": 95
+    },
+    {
+      "keyword_id": "k-ee254c163207a9f2",
+      "condition_id": "day-10-c15",
+      "matched_text": "물을 붓고 있다",
+      "start_utf16": 117,
+      "end_utf16": 125
+    },
+    {
+      "keyword_id": "k-45b6a35e3a8ca50c",
+      "condition_id": "day-10-c16",
+      "matched_text": "투명한 유리",
+      "start_utf16": 162,
+      "end_utf16": 168
+    },
+    {
+      "keyword_id": "k-0299899ce6697bd3",
+      "condition_id": "day-10-c17",
+      "matched_text": "화면 중앙",
+      "start_utf16": 193,
+      "end_utf16": 198
+    },
+    {
+      "keyword_id": "k-f13222c5a50a5722",
+      "condition_id": "day-10-c18",
+      "matched_text": "눈높이",
+      "start_utf16": 209,
+      "end_utf16": 212
+    },
+    {
+      "keyword_id": "k-1b53368baed8bc6e",
+      "condition_id": "day-10-c19",
+      "matched_text": "종이 콜라주",
+      "start_utf16": 217,
+      "end_utf16": 223
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-10-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T14",
+      "title": "분위기보다 대상부터 확인",
+      "text": "주요 대상과 상태를 먼저 분명하게 쓰고, 개수·위치·관점을 구체적으로 덧붙여 보세요.",
+      "scope": "해당 모델 명시 가이드",
+      "source_ids": [
+        "model-XAI"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "x-ai/grok-imagine-image-2.0"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "x-ai/grok-imagine-image-2.0",
+    "actual_model_id": "x-ai/grok-imagine-image-2.0",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "24159d7efe61a1ed1a573ddff66ec5ac3c52ddfdd6e10b507de225ef67e5145e",
+    "width": 1280,
+    "height": 720,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:39:15.470Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 19,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-0299899ce6697bd3": "대상들의 화면 위치 · 화면 중앙",
+    "k-044b80e3dfcafa40": "로봇 기준 화분 위치 · 오른쪽",
+    "k-05dbae81458f30c2": "접시",
+    "k-0a75dc95073afbc0": "로봇 자세 · 누워 있다",
+    "k-0c864475a1d89aed": "로봇",
+    "k-1b53368baed8bc6e": "종이 콜라주",
+    "k-1da5d7cdb1402f94": "로봇 수 · 네 대",
+    "k-1df53e792d765b87": "로봇과 도구 · 들고 있다",
+    "k-2746ce75bf8ff16b": "망원경",
+    "k-2d847585f7f1c3a1": "온실",
+    "k-30be21331e282565": "로봇과 도구 · 발로 밟고 있다",
+    "k-34ef4d0e26e5ba0f": "사막",
+    "k-3744a51ed158de52": "컵",
+    "k-379a32e3d1d8ce4a": "원형 배치",
+    "k-398f198397d21ba3": "화분 수 · 네 개",
+    "k-402ffd0999a531a6": "세로로 쌓인",
+    "k-411cc1394c0423a7": "로봇의 작업 · 책을 읽고 있다",
+    "k-45b6a35e3a8ca50c": "온실 지붕 표면 · 투명한 유리",
+    "k-49f05869cb8803da": "물뿌리개",
+    "k-5769bf662a5bdf7c": "바닷속",
+    "k-57af90ea35e82878": "로봇 자세 · 서 있다",
+    "k-627de39ddcd6990d": "선인장",
+    "k-643b324d299b94a1": "로봇 몸 색 · 검은색",
+    "k-699bf160e3406588": "화분 색 · 주황색",
+    "k-6b9df66f7913ea58": "가로로 나란히",
+    "k-731d2043bde6037d": "화분 색 · 보라색",
+    "k-781399bf402a01e7": "화분 수 · 두 개",
+    "k-7c2bd8c88844aea4": "온실 지붕 표면 · 불투명 금속",
+    "k-7d0be42b1adff86d": "로봇 자세 · 공중에 떠 있다",
+    "k-7f61dfdc71b7b9f5": "사람",
+    "k-80c2c8d07a12ed34": "곰",
+    "k-8b8d30f2e9c212a2": "로봇 수 · 한 대",
+    "k-8f21c0148c77236b": "수직으로 내려다본",
+    "k-8fcf131fab7437fe": "대상들의 화면 위치 · 화면 왼쪽 아래",
+    "k-9a2019090ef25bbf": "화분 색 · 분홍색",
+    "k-a1329cad7f54cbb7": "로봇 몸 색 · 초록색",
+    "k-a1b5d3b67b2d1e4a": "온실 지붕 표면 · 짚으로 엮은 질감",
+    "k-a1e1041ef6ddbe5e": "붓",
+    "k-a2265dab26c1d46a": "사진풍",
+    "k-a45eb2dbab80c5a6": "로봇 몸 색 · 빨간색",
+    "k-a48824ac82ebac79": "화분",
+    "k-aead206b006e44f8": "로봇 수 · 두 대",
+    "k-afa729ec41f39ba4": "물뿌리개 색 · 노란색",
+    "k-bd412e5d54228999": "장미",
+    "k-bdf4a3ce7a2e6c94": "로봇의 작업 · 흙을 파고 있다",
+    "k-e0b2b6b5901f3504": "해바라기",
+    "k-ee254c163207a9f2": "로봇의 작업 · 물을 붓고 있다",
+    "k-efc5129d2a635910": "픽셀아트",
+    "k-f13222c5a50a5722": "눈높이",
+    "k-f4106f7cc5fc1461": "화분 수 · 한 개",
+    "k-f429775f01352f50": "물뿌리개 색 · 흰색",
+    "k-f43b4cbf18020ec3": "로봇 기준 화분 위치 · 왼쪽",
+    "k-f88a4bfc1e2d792f": "물뿌리개 색 · 파란색",
+    "k-f04ab42e77d0b34b": "배경에 번개가 친다",
+    "k-63e61911ffe3216d": "배경에 무지개가 있다",
+    "k-415ed5b7f0abf8db": "천장에 샹들리에가 있다",
+    "k-313efb78c2d6037b": "바닥에 체스판 무늬가 있다",
+    "k-75143ebc6e923250": "화면에 눈사람이 있다",
+    "k-c986e3fa61861c0e": "물속에 산호초가 보인다",
+    "k-5c4389ab1c346581": "옆에 드럼 세트가 있다",
+    "k-3308faca8c4ae23f": "배경에 풍차가 있다",
+    "k-d6bc1676f8385a3f": "화면에 커다란 모닥불이 있다",
+    "k-a3f67777c784c477": "대상이 빨간 리본을 달고 있다",
+    "k-f0573f9e9c400e7f": "주요 대상 · 바나나",
+    "k-b9d350300912eb7e": "해변",
+    "k-5051c0fd57fbd7f7": "왕관",
+    "k-18795133d0831803": "물뿌리개 색 · 빨간색",
+    "k-8c7275b1a66844c2": "화분 색 · 빨간색",
+    "k-94c6036b611c2428": "식물 용기 · 바나나",
+    "k-78a8f4a23d898a2e": "바나나",
+    "k-21fcc58cb676b9cc": "온실 지붕 표면 · 금속",
+    "k-5fe72268ddb5d8af": "주요 대상 · 수박",
+    "k-66439590fcb56f6e": "로봇 몸 색 · 주황색",
+    "k-de921b9fdae4d118": "우산",
+    "k-26ce6f3936612ddc": "물뿌리개 색 · 주황색",
+    "k-52193aa2b7061c4e": "식물 용기 · 수박",
+    "k-27ddea0bc8439ff5": "수박",
+    "k-3a6ccd11d17281f8": "온실 지붕 표면 · 나뭇결",
+    "k-8be2de449d6bf3c0": "수채화",
+    "k-b76a9d73875d3e9e": "주요 대상 · 포도",
+    "k-176a97c851c13e69": "로봇 수 · 세 대",
+    "k-4715544e3f5717cd": "설원",
+    "k-9301b79788cf7925": "포도",
+    "k-95e55963528c1c35": "화분 수 · 세 개"
+  }
+}

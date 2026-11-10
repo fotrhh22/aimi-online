@@ -1,0 +1,1169 @@
+{
+  "version": "aimi-puzzle-pack-v2",
+  "id": "day-07",
+  "title": "우산을 든 곰과 자전거",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-RECRAFT_GUIDE"
+  ],
+  "authored_by": "Codex_editorial_draft_no_separate_generation_batch",
+  "prompt_format": "상세 디자인 브리프",
+  "prompt_lines": [
+    "공원을 배경으로 한 수채화 장면이다.",
+    "주요 동물은 갈색 곰 한 마리다.",
+    "곰의 소품은 우산이다.",
+    "우산은 노란색이다.",
+    "곰은 그 우산을 들고 있다.",
+    "곰 옆에는 빨간색 자전거가 있다.",
+    "곰은 자전거 왼쪽에 서 있다.",
+    "곰의 전신이 보이는 눈높이 구도로 구성한다."
+  ],
+  "authored_prompt": "공원을 배경으로 한 수채화 장면이다.\n주요 동물은 갈색 곰 한 마리다.\n곰의 소품은 우산이다.\n우산은 노란색이다.\n곰은 그 우산을 들고 있다.\n곰 옆에는 빨간색 자전거가 있다.\n곰은 자전거 왼쪽에 서 있다.\n곰의 전신이 보이는 눈높이 구도로 구성한다.",
+  "alternate_prompt": "공원을 배경으로 한 수채화 장면이다. 주요 동물은 갈색 곰 한 마리다. 곰의 소품은 우산이다. 우산은 노란색이다. 곰은 그 우산을 들고 있다. 곰 옆에는 빨간색 자전거가 있다. 곰은 자전거 왼쪽에 서 있다. 곰의 전신이 보이는 눈높이 구도로 구성한다.",
+  "conditions": [
+    {
+      "id": "day-07-c01",
+      "variable": "subject",
+      "entity": "bear",
+      "context": "동물",
+      "requested_value": "곰",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c02",
+      "variable": "count",
+      "entity": "bear",
+      "context": "곰 수",
+      "requested_value": "한 마리",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c03",
+      "variable": "color",
+      "entity": "bear",
+      "context": "곰 털 색",
+      "requested_value": "갈색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c04",
+      "variable": "accessory",
+      "entity": "bear",
+      "context": "곰의 소품",
+      "requested_value": "우산",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c05",
+      "variable": "color",
+      "entity": "umbrella",
+      "context": "우산 색",
+      "requested_value": "노란색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c06",
+      "variable": "interaction",
+      "entity": "bear->umbrella",
+      "context": "곰과 우산",
+      "requested_value": "들고 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c07",
+      "variable": "subject",
+      "entity": "bike",
+      "context": "곰 옆의 이동수단",
+      "requested_value": "자전거",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c08",
+      "variable": "color",
+      "entity": "bike",
+      "context": "자전거 색",
+      "requested_value": "빨간색",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c09",
+      "variable": "horizontal_relation",
+      "entity": "bear->bike",
+      "context": "자전거 기준 곰 위치",
+      "requested_value": "왼쪽에",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c10",
+      "variable": "action_pose",
+      "entity": "bear",
+      "context": "곰 자세",
+      "requested_value": "서 있다",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c11",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "공원",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c12",
+      "variable": "framing",
+      "entity": "bear",
+      "context": "곰이 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c13",
+      "variable": "camera_elevation",
+      "entity": "scene",
+      "context": "시점",
+      "requested_value": "눈높이",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "day-07-c14",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "수채화",
+      "observed_value": null,
+      "review_status": "unreviewed"
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-6243e0c7866d3ed1",
+      "label": "곰",
+      "context": "동물",
+      "condition_id": "day-07-c01"
+    },
+    {
+      "id": "k-550b853b8a5d5a9a",
+      "label": "한 마리",
+      "context": "곰 수",
+      "condition_id": "day-07-c02"
+    },
+    {
+      "id": "k-f76fa2e031a090f7",
+      "label": "갈색",
+      "context": "곰 털 색",
+      "condition_id": "day-07-c03"
+    },
+    {
+      "id": "k-8f3cbe016801da3b",
+      "label": "우산",
+      "context": "곰의 소품",
+      "condition_id": "day-07-c04"
+    },
+    {
+      "id": "k-2512ac9c0a8f1eda",
+      "label": "노란색",
+      "context": "우산 색",
+      "condition_id": "day-07-c05"
+    },
+    {
+      "id": "k-9ee3887ee1ca87f5",
+      "label": "들고 있다",
+      "context": "곰과 우산",
+      "condition_id": "day-07-c06"
+    },
+    {
+      "id": "k-731a3c6b73dba64b",
+      "label": "자전거",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07"
+    },
+    {
+      "id": "k-ca69d2254d7b7e60",
+      "label": "빨간색",
+      "context": "자전거 색",
+      "condition_id": "day-07-c08"
+    },
+    {
+      "id": "k-5a1250e5254b50a0",
+      "label": "왼쪽에",
+      "context": "자전거 기준 곰 위치",
+      "condition_id": "day-07-c09"
+    },
+    {
+      "id": "k-4ad3a4952f12ed7e",
+      "label": "서 있다",
+      "context": "곰 자세",
+      "condition_id": "day-07-c10"
+    },
+    {
+      "id": "k-f8a16883d210e468",
+      "label": "공원",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11"
+    },
+    {
+      "id": "k-c507cf48eab086a9",
+      "label": "전신",
+      "context": "곰이 보이는 범위",
+      "condition_id": "day-07-c12"
+    },
+    {
+      "id": "k-2af696b52780f412",
+      "label": "눈높이",
+      "context": "시점",
+      "condition_id": "day-07-c13"
+    },
+    {
+      "id": "k-62938a3c83122243",
+      "label": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-07-c14"
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-e7a0eabe6c3005d8",
+      "label": "고양이",
+      "context": "동물",
+      "contradicts_condition_id": "day-07-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-a4b10b9c51c08fe4",
+      "label": "코끼리",
+      "context": "동물",
+      "contradicts_condition_id": "day-07-c01",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-4d8da19645d43a93",
+      "label": "두 마리",
+      "context": "곰 수",
+      "contradicts_condition_id": "day-07-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-eb0da659641b6f61",
+      "label": "세 마리",
+      "context": "곰 수",
+      "contradicts_condition_id": "day-07-c02",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-99d7cf660582c170",
+      "label": "파란색",
+      "context": "곰 털 색",
+      "contradicts_condition_id": "day-07-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-c2c7f4f88d720e78",
+      "label": "보라색",
+      "context": "곰 털 색",
+      "contradicts_condition_id": "day-07-c03",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ee6fd257e2068290",
+      "label": "장화",
+      "context": "곰의 소품",
+      "contradicts_condition_id": "day-07-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ad99faf9bcb8eb91",
+      "label": "망원경",
+      "context": "곰의 소품",
+      "contradicts_condition_id": "day-07-c04",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-cb81f5d5d2dd4e8c",
+      "label": "검은색",
+      "context": "우산 색",
+      "contradicts_condition_id": "day-07-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-af98d62ca32d0587",
+      "label": "흰색",
+      "context": "우산 색",
+      "contradicts_condition_id": "day-07-c05",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-583754fe2bf1dfee",
+      "label": "발로 밟고 있다",
+      "context": "곰과 우산",
+      "contradicts_condition_id": "day-07-c06",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-9bbb6bd7dba73ba2",
+      "label": "자동차",
+      "context": "곰 옆의 이동수단",
+      "contradicts_condition_id": "day-07-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-21ad9caeabdca2e2",
+      "label": "기차",
+      "context": "곰 옆의 이동수단",
+      "contradicts_condition_id": "day-07-c07",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-6c22d359ea1664de",
+      "label": "분홍색",
+      "context": "자전거 색",
+      "contradicts_condition_id": "day-07-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e0d8c3af66faf886",
+      "label": "초록색",
+      "context": "자전거 색",
+      "contradicts_condition_id": "day-07-c08",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-08635687525cac87",
+      "label": "오른쪽에",
+      "context": "자전거 기준 곰 위치",
+      "contradicts_condition_id": "day-07-c09",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-ab36ea59c363b407",
+      "label": "누워 자고 있다",
+      "context": "곰 자세",
+      "contradicts_condition_id": "day-07-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f9ec801e36f0f499",
+      "label": "기어가고 있다",
+      "context": "곰 자세",
+      "contradicts_condition_id": "day-07-c10",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8332533505ebcd26",
+      "label": "바닷속",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-07-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-726d2d9eb63fd0f7",
+      "label": "교실",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-07-c11",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-8560b8db1e07f98c",
+      "label": "얼굴만 확대",
+      "context": "곰이 보이는 범위",
+      "contradicts_condition_id": "day-07-c12",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-e05999a2768e1f31",
+      "label": "수직으로 내려다본",
+      "context": "시점",
+      "contradicts_condition_id": "day-07-c13",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f298cb16d69474d6",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-07-c14",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-f129cfaa023ee2b7",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "contradicts_condition_id": "day-07-c14",
+      "review_status": "needs_visual_review",
+      "reason": "대상과 조건을 같은 범위에서 비교하고, 생성 이미지에 실제로 보이지 않는지 검수해야 한다.",
+      "distractor_kind": "contradiction_candidate"
+    },
+    {
+      "id": "k-3da4da3e923f6df1",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-80a42f1161299128",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-e99ec949dad4e727",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-fc696d761326546c",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-19d4bc3e78d93534",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-0b1131184c089a4e",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-5f2f5b643a9de039",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "contradicts_condition_id": null,
+      "distractor_kind": "absent_detail_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-07e3c9a9c1780661",
+      "label": "바나나",
+      "context": "동물",
+      "contradicts_condition_id": "day-07-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-bdd580ad9a22e53b",
+      "label": "왕관",
+      "context": "곰의 소품",
+      "contradicts_condition_id": "day-07-c04",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-0dbe87775f13aeb1",
+      "label": "바나나",
+      "context": "곰 옆의 이동수단",
+      "contradicts_condition_id": "day-07-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-aea23a296ef563aa",
+      "label": "해변",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-07-c11",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-fdb5f8d84add9f3f",
+      "label": "수박",
+      "context": "동물",
+      "contradicts_condition_id": "day-07-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-0e67bd10ef7bce1e",
+      "label": "주황색",
+      "context": "곰 털 색",
+      "contradicts_condition_id": "day-07-c03",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-bfd445d34cee8a0c",
+      "label": "주황색",
+      "context": "우산 색",
+      "contradicts_condition_id": "day-07-c05",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-eb014e052f778095",
+      "label": "수박",
+      "context": "곰 옆의 이동수단",
+      "contradicts_condition_id": "day-07-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-bfaa2eb3e5b7a491",
+      "label": "사막",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-07-c11",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-1b76f94959fcfae5",
+      "label": "포도",
+      "context": "동물",
+      "contradicts_condition_id": "day-07-c01",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-f165425825c0a5b5",
+      "label": "포도",
+      "context": "곰 옆의 이동수단",
+      "contradicts_condition_id": "day-07-c07",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    },
+    {
+      "id": "k-0b444e128909a49a",
+      "label": "설원",
+      "context": "배경 장소",
+      "contradicts_condition_id": "day-07-c11",
+      "distractor_kind": "contradiction_candidate",
+      "review_status": "needs_visual_review",
+      "reason": "생성 이미지에서 해당 묘사가 실제로 성립하지 않는지 확인해야 한다."
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-07e3c9a9c1780661",
+      "label": "바나나",
+      "context": "동물"
+    },
+    {
+      "id": "k-08635687525cac87",
+      "label": "오른쪽에",
+      "context": "자전거 기준 곰 위치"
+    },
+    {
+      "id": "k-0b1131184c089a4e",
+      "label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-0b444e128909a49a",
+      "label": "설원",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-0dbe87775f13aeb1",
+      "label": "바나나",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-0e67bd10ef7bce1e",
+      "label": "주황색",
+      "context": "곰 털 색"
+    },
+    {
+      "id": "k-19d4bc3e78d93534",
+      "label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-1b76f94959fcfae5",
+      "label": "포도",
+      "context": "동물"
+    },
+    {
+      "id": "k-21ad9caeabdca2e2",
+      "label": "기차",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-2512ac9c0a8f1eda",
+      "label": "노란색",
+      "context": "우산 색"
+    },
+    {
+      "id": "k-2af696b52780f412",
+      "label": "눈높이",
+      "context": "시점"
+    },
+    {
+      "id": "k-3da4da3e923f6df1",
+      "label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-4ad3a4952f12ed7e",
+      "label": "서 있다",
+      "context": "곰 자세"
+    },
+    {
+      "id": "k-4d8da19645d43a93",
+      "label": "두 마리",
+      "context": "곰 수"
+    },
+    {
+      "id": "k-550b853b8a5d5a9a",
+      "label": "한 마리",
+      "context": "곰 수"
+    },
+    {
+      "id": "k-583754fe2bf1dfee",
+      "label": "발로 밟고 있다",
+      "context": "곰과 우산"
+    },
+    {
+      "id": "k-5a1250e5254b50a0",
+      "label": "왼쪽에",
+      "context": "자전거 기준 곰 위치"
+    },
+    {
+      "id": "k-5f2f5b643a9de039",
+      "label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-6243e0c7866d3ed1",
+      "label": "곰",
+      "context": "동물"
+    },
+    {
+      "id": "k-62938a3c83122243",
+      "label": "수채화",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-6c22d359ea1664de",
+      "label": "분홍색",
+      "context": "자전거 색"
+    },
+    {
+      "id": "k-726d2d9eb63fd0f7",
+      "label": "교실",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-731a3c6b73dba64b",
+      "label": "자전거",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-80a42f1161299128",
+      "label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-8332533505ebcd26",
+      "label": "바닷속",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-8560b8db1e07f98c",
+      "label": "얼굴만 확대",
+      "context": "곰이 보이는 범위"
+    },
+    {
+      "id": "k-8f3cbe016801da3b",
+      "label": "우산",
+      "context": "곰의 소품"
+    },
+    {
+      "id": "k-99d7cf660582c170",
+      "label": "파란색",
+      "context": "곰 털 색"
+    },
+    {
+      "id": "k-9bbb6bd7dba73ba2",
+      "label": "자동차",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-9ee3887ee1ca87f5",
+      "label": "들고 있다",
+      "context": "곰과 우산"
+    },
+    {
+      "id": "k-a4b10b9c51c08fe4",
+      "label": "코끼리",
+      "context": "동물"
+    },
+    {
+      "id": "k-ab36ea59c363b407",
+      "label": "누워 자고 있다",
+      "context": "곰 자세"
+    },
+    {
+      "id": "k-ad99faf9bcb8eb91",
+      "label": "망원경",
+      "context": "곰의 소품"
+    },
+    {
+      "id": "k-aea23a296ef563aa",
+      "label": "해변",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-af98d62ca32d0587",
+      "label": "흰색",
+      "context": "우산 색"
+    },
+    {
+      "id": "k-bdd580ad9a22e53b",
+      "label": "왕관",
+      "context": "곰의 소품"
+    },
+    {
+      "id": "k-bfaa2eb3e5b7a491",
+      "label": "사막",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-bfd445d34cee8a0c",
+      "label": "주황색",
+      "context": "우산 색"
+    },
+    {
+      "id": "k-c2c7f4f88d720e78",
+      "label": "보라색",
+      "context": "곰 털 색"
+    },
+    {
+      "id": "k-c507cf48eab086a9",
+      "label": "전신",
+      "context": "곰이 보이는 범위"
+    },
+    {
+      "id": "k-ca69d2254d7b7e60",
+      "label": "빨간색",
+      "context": "자전거 색"
+    },
+    {
+      "id": "k-cb81f5d5d2dd4e8c",
+      "label": "검은색",
+      "context": "우산 색"
+    },
+    {
+      "id": "k-e05999a2768e1f31",
+      "label": "수직으로 내려다본",
+      "context": "시점"
+    },
+    {
+      "id": "k-e0d8c3af66faf886",
+      "label": "초록색",
+      "context": "자전거 색"
+    },
+    {
+      "id": "k-e7a0eabe6c3005d8",
+      "label": "고양이",
+      "context": "동물"
+    },
+    {
+      "id": "k-e99ec949dad4e727",
+      "label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-eb014e052f778095",
+      "label": "수박",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-eb0da659641b6f61",
+      "label": "세 마리",
+      "context": "곰 수"
+    },
+    {
+      "id": "k-ee6fd257e2068290",
+      "label": "장화",
+      "context": "곰의 소품"
+    },
+    {
+      "id": "k-f129cfaa023ee2b7",
+      "label": "사진풍",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-f165425825c0a5b5",
+      "label": "포도",
+      "context": "곰 옆의 이동수단"
+    },
+    {
+      "id": "k-f298cb16d69474d6",
+      "label": "픽셀아트",
+      "context": "표현 방식"
+    },
+    {
+      "id": "k-f76fa2e031a090f7",
+      "label": "갈색",
+      "context": "곰 털 색"
+    },
+    {
+      "id": "k-f8a16883d210e468",
+      "label": "공원",
+      "context": "배경 장소"
+    },
+    {
+      "id": "k-f9ec801e36f0f499",
+      "label": "기어가고 있다",
+      "context": "곰 자세"
+    },
+    {
+      "id": "k-fc696d761326546c",
+      "label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사"
+    },
+    {
+      "id": "k-fdb5f8d84add9f3f",
+      "label": "수박",
+      "context": "동물"
+    }
+  ],
+  "total_candidate_count": 57,
+  "answer_ratio": 0.24561403508771928,
+  "highlights": [
+    {
+      "keyword_id": "k-6243e0c7866d3ed1",
+      "condition_id": "day-07-c01",
+      "matched_text": "곰",
+      "start_utf16": 31,
+      "end_utf16": 32
+    },
+    {
+      "keyword_id": "k-550b853b8a5d5a9a",
+      "condition_id": "day-07-c02",
+      "matched_text": "한 마리",
+      "start_utf16": 33,
+      "end_utf16": 37
+    },
+    {
+      "keyword_id": "k-f76fa2e031a090f7",
+      "condition_id": "day-07-c03",
+      "matched_text": "갈색",
+      "start_utf16": 28,
+      "end_utf16": 30
+    },
+    {
+      "keyword_id": "k-8f3cbe016801da3b",
+      "condition_id": "day-07-c04",
+      "matched_text": "우산",
+      "start_utf16": 47,
+      "end_utf16": 49
+    },
+    {
+      "keyword_id": "k-2512ac9c0a8f1eda",
+      "condition_id": "day-07-c05",
+      "matched_text": "노란색",
+      "start_utf16": 57,
+      "end_utf16": 60
+    },
+    {
+      "keyword_id": "k-9ee3887ee1ca87f5",
+      "condition_id": "day-07-c06",
+      "matched_text": "들고 있다",
+      "start_utf16": 73,
+      "end_utf16": 78
+    },
+    {
+      "keyword_id": "k-731a3c6b73dba64b",
+      "condition_id": "day-07-c07",
+      "matched_text": "자전거",
+      "start_utf16": 90,
+      "end_utf16": 93
+    },
+    {
+      "keyword_id": "k-ca69d2254d7b7e60",
+      "condition_id": "day-07-c08",
+      "matched_text": "빨간색",
+      "start_utf16": 86,
+      "end_utf16": 89
+    },
+    {
+      "keyword_id": "k-5a1250e5254b50a0",
+      "condition_id": "day-07-c09",
+      "matched_text": "왼쪽에",
+      "start_utf16": 106,
+      "end_utf16": 109
+    },
+    {
+      "keyword_id": "k-4ad3a4952f12ed7e",
+      "condition_id": "day-07-c10",
+      "matched_text": "서 있다",
+      "start_utf16": 110,
+      "end_utf16": 114
+    },
+    {
+      "keyword_id": "k-f8a16883d210e468",
+      "condition_id": "day-07-c11",
+      "matched_text": "공원",
+      "start_utf16": 0,
+      "end_utf16": 2
+    },
+    {
+      "keyword_id": "k-c507cf48eab086a9",
+      "condition_id": "day-07-c12",
+      "matched_text": "전신",
+      "start_utf16": 119,
+      "end_utf16": 121
+    },
+    {
+      "keyword_id": "k-2af696b52780f412",
+      "condition_id": "day-07-c13",
+      "matched_text": "눈높이",
+      "start_utf16": 127,
+      "end_utf16": 130
+    },
+    {
+      "keyword_id": "k-62938a3c83122243",
+      "condition_id": "day-07-c14",
+      "matched_text": "수채화",
+      "start_utf16": 11,
+      "end_utf16": 14
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-07-tip-general",
+      "title": "단어를 장면과 연결하기",
+      "text": "선택한 단어가 어느 대상의 색·개수·행동을 설명하는지 문장에서 확인해 보세요. 공개된 문장은 같은 장면을 표현할 수 있는 여러 예시 중 하나입니다.",
+      "scope": "general",
+      "source_ids": [
+        "legacy-google-image"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "model-T10",
+      "title": "모호한 칭찬보다 시각 요구",
+      "text": "원하는 대상·배치·표현을 구체적으로 써 보세요. 아름답게라는 말만으로는 어떤 배치인지 전달하기 어렵습니다.",
+      "scope": "V4 계열 가이드",
+      "source_ids": [
+        "model-RECRAFT_GUIDE"
+      ],
+      "approval": "editorial_draft",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "recraft/recraft-v4",
+        "recraft/recraft-v4-pro",
+        "recraft/recraft-v4-vector",
+        "recraft/recraft-v4-pro-vector"
+      ]
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "recraft/recraft-v4",
+    "actual_model_id": "recraft/recraft-v4",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": false
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "f48c0702407208095d520ced4495a087d9730408e542a2c02ff778280e230860",
+    "width": 1344,
+    "height": 768,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_until_crop_visually_approved"
+  },
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "approved_at": null,
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:37:08.556Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v2",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": false,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty"
+  },
+  "economy": {
+    "policy_version": null,
+    "status": "requires_shared_app_policy_binding_no_prices_in_content"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": [
+      "image_not_generated",
+      "asset_metadata_missing",
+      "actual_model_missing",
+      "condition_visual_review_missing",
+      "distractor_visual_review_missing",
+      "pack_review_missing",
+      "tip_approval_missing",
+      "economy_binding_missing"
+    ]
+  },
+  "answer_count": 14,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_after_first_failure": true,
+    "incorrect_selected_cards_from_attempt": 3,
+    "missing_answer_ids_revealed": false
+  },
+  "display_labels": {
+    "k-08635687525cac87": "자전거 기준 곰 위치 · 오른쪽에",
+    "k-21ad9caeabdca2e2": "기차",
+    "k-2512ac9c0a8f1eda": "우산 색 · 노란색",
+    "k-2af696b52780f412": "눈높이",
+    "k-4ad3a4952f12ed7e": "곰 자세 · 서 있다",
+    "k-4d8da19645d43a93": "곰 수 · 두 마리",
+    "k-550b853b8a5d5a9a": "곰 수 · 한 마리",
+    "k-583754fe2bf1dfee": "곰과 우산 · 발로 밟고 있다",
+    "k-5a1250e5254b50a0": "자전거 기준 곰 위치 · 왼쪽에",
+    "k-6243e0c7866d3ed1": "곰",
+    "k-62938a3c83122243": "수채화",
+    "k-6c22d359ea1664de": "자전거 색 · 분홍색",
+    "k-726d2d9eb63fd0f7": "교실",
+    "k-731a3c6b73dba64b": "자전거",
+    "k-8332533505ebcd26": "바닷속",
+    "k-8560b8db1e07f98c": "얼굴만 확대",
+    "k-8f3cbe016801da3b": "우산",
+    "k-99d7cf660582c170": "곰 털 색 · 파란색",
+    "k-9bbb6bd7dba73ba2": "자동차",
+    "k-9ee3887ee1ca87f5": "곰과 우산 · 들고 있다",
+    "k-a4b10b9c51c08fe4": "코끼리",
+    "k-ab36ea59c363b407": "곰 자세 · 누워 자고 있다",
+    "k-ad99faf9bcb8eb91": "망원경",
+    "k-af98d62ca32d0587": "우산 색 · 흰색",
+    "k-c2c7f4f88d720e78": "곰 털 색 · 보라색",
+    "k-c507cf48eab086a9": "전신",
+    "k-ca69d2254d7b7e60": "자전거 색 · 빨간색",
+    "k-cb81f5d5d2dd4e8c": "우산 색 · 검은색",
+    "k-e05999a2768e1f31": "수직으로 내려다본",
+    "k-e0d8c3af66faf886": "자전거 색 · 초록색",
+    "k-e7a0eabe6c3005d8": "고양이",
+    "k-eb0da659641b6f61": "곰 수 · 세 마리",
+    "k-ee6fd257e2068290": "장화",
+    "k-f129cfaa023ee2b7": "사진풍",
+    "k-f298cb16d69474d6": "픽셀아트",
+    "k-f76fa2e031a090f7": "곰 털 색 · 갈색",
+    "k-f8a16883d210e468": "공원",
+    "k-f9ec801e36f0f499": "곰 자세 · 기어가고 있다",
+    "k-3da4da3e923f6df1": "배경에 번개가 친다",
+    "k-80a42f1161299128": "배경에 무지개가 있다",
+    "k-e99ec949dad4e727": "천장에 샹들리에가 있다",
+    "k-fc696d761326546c": "바닥에 체스판 무늬가 있다",
+    "k-19d4bc3e78d93534": "화면에 눈사람이 있다",
+    "k-0b1131184c089a4e": "물속에 산호초가 보인다",
+    "k-5f2f5b643a9de039": "옆에 드럼 세트가 있다",
+    "k-07e3c9a9c1780661": "동물 · 바나나",
+    "k-bdd580ad9a22e53b": "왕관",
+    "k-0dbe87775f13aeb1": "바나나",
+    "k-aea23a296ef563aa": "해변",
+    "k-fdb5f8d84add9f3f": "동물 · 수박",
+    "k-0e67bd10ef7bce1e": "곰 털 색 · 주황색",
+    "k-bfd445d34cee8a0c": "우산 색 · 주황색",
+    "k-eb014e052f778095": "수박",
+    "k-bfaa2eb3e5b7a491": "사막",
+    "k-1b76f94959fcfae5": "동물 · 포도",
+    "k-f165425825c0a5b5": "포도",
+    "k-0b444e128909a49a": "설원"
+  }
+}
