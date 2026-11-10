@@ -2,9 +2,23 @@ export const localRuntime = ["localhost", "127.0.0.1"].includes(
   location.hostname,
 );
 const configured = import.meta.env.VITE_API_BASE_URL as string | undefined;
-const base =
-  configured ||
-  (localRuntime ? "/api" : "https://aimi-online-api.onrender.com");
+const remoteBase = "https://aimi-online-api.onrender.com";
+// Local .env.local settings must never route an installed miniapp to loopback.
+const productionBase = (() => {
+  if (!configured) return remoteBase;
+  try {
+    const url = new URL(configured);
+    return url.protocol === "https:" &&
+      !["localhost", "127.0.0.1", "::1", "[::1]"].includes(url.hostname)
+      ? configured
+      : remoteBase;
+  } catch {
+    return remoteBase;
+  }
+})();
+const base = import.meta.env.PROD
+  ? productionBase
+  : configured || (localRuntime ? "/api" : remoteBase);
 const inviteCode = new URLSearchParams(location.search).get("invite");
 if (inviteCode && /^[A-F0-9]{8}$/.test(inviteCode))
   sessionStorage.setItem("aimi.pending-invite", inviteCode);
