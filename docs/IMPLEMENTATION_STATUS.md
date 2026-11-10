@@ -1,3 +1,13 @@
+## 원격 DB·Render 반영 완료 (2026-11-11)
+
+- Render aimi-online-api 최종 커밋 c58ae4d, 배포 dep-dbplsioae00c738et1u0 live 확인. /health/ready에서 source=supabase, daily-program-v2, 콘텐츠10개, preview=true와 배포 커밋을 확인했다.
+- 기존 Supabase에 migration4/5/6 적용. Storage aimi-challenge-images 버킷에 이미지10개 해시 검증 후 업로드. 서버 전용 content_releases/daily_programs에 팁10개·월목일 길 건너기/화금Dino/수토Temple Run·키워드 퍼즐v3를 등록했다. 일반 클라이언트 역할의 정답 테이블 SELECT 권한 없음.
+- 기존 Render 환경변수는 유지하며 AIMI_CONTENT_SOURCE=supabase, AIMI_CONTENT_PREVIEW=true, AIMI_RELEASE_VERSION=prototype-v1-preview를 병합했다. 실제 키/인증서/개발 인증은 공개하지 않았다. 콘텐츠는 미검수 미리보기로 유지하고 검수 승인으로 바꾸지 않았다.
+- GitHub main에 코드 반영, CI verify 전체 성공(빌드/타입/테스트82개/migration2회/DB 통합). 초기 CI의 누락 스크립트·출처123개를 보완했고 해시 일치 확인. 관련 없는 디자인/PDF 수정은 이번 배포 커밋에서 제외했다.
+- 미니앱 production 빌드가 로컬 .env 주소를 따르지 않게 보완했다. 새 apps/miniapp/aimi.ait 생성, Render API URL 포함 확인. 실제 토스 업로드/심사/로그인 실기기 검증은 미수행.
+- 원격 인증 경로 확인용 임시 세션은 로컬/Render 서명값 차이로401이었다. 우회·키 교체 없이 임시 사용자/세션 삭제 완료. 실제 토스 세션의 전체 플레이 인수는 아직 미확인이다. DB 제한 역할의 콘텐츠 읽기·RLS 및 readiness 정상은 별도 확인했다.
+- 상세 결과/번들 해시: output/releases/DEPLOYMENT_20261111.json. 브라우저 검증은 기존 요청에 따라 생략했다.
+
 ## 오늘의 팁10개 문구 확정 저장 (2026-11-11)
 
 - 사용자 제공10개 제목/예시/본문을 daily-program-v1.json의 tips에 문구 그대로 저장했다. 데이터 버전 daily-program-v2. 기존 시작일2026-11-11·10일 순환·요일별 게임 편성 유지. 파일명은 런타임 경로 호환을 위해 유지한다.
