@@ -1,3 +1,7 @@
+## Vercel 웹 데모 준비 원격 검증 (2026-11-12)
+
+f261701 push,CI43052821106 전체 성공(웹 전용 빌드/프록시4검사 포함). Render dep-dbq8uso473hc73ae4le0 live로 테스트 출석/팁 API 반영. Vercel 프로젝트/공개 URL은 계정 미연결로 아직 생성하지 않음. VERCEL_WEB_DEMO.md의 저장소루트 Import/Other/Deploy 절차와 vercel.json으로 추가env/SQL없이 배포 가능하도록 준비.
+
 ## Vercel 웹 공유 테스트 모드 구현 (2026-11-12)
 
 명시적web-demo 런타임/빌드,자동 테스트 세션,웹 내비게이션·클립보드·공유,별도 웹 세션 키,초기화 후 재인증/storage 갱신을 구현했다. api/demo.js는고정Render·허용데모경로만 전달하고 vercel.json이루트npmci/웹빌드/dist/API·SPA rewrite/sin1을설정한다. 정식ait와웹빌드를혼용하지않도록가드. 테스트출석/팁API누락도보완해데모원자적상태에만지급한다.

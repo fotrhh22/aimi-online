@@ -51,3 +51,11 @@ Gemini 키/DB URL/서명키를 Vercel이나 VITE 변수에 복사하지 않는�
 로컬 웹 빌드·타입·기존108테스트·프록시4테스트·임시 PostgreSQL5테스트, 실제 built-web 브라우저 자동세션/웹메뉴/친구방문/새로고침/입력16px 검사. AI/EP/게임/챌린지의 기존 데이터를 원격 초기화하지 않았다. Vercel 프로젝트 연결·실제 URL 배포/플랫폼 rewrite 인수는 계정에서 Import 후 최종 확인해야 한다. 현재 Vercel 연결 도구/CLI 로그인은 제공되어 있지 않다.
 
 파일: `vercel.json`, `api/demo.js`, `tools/build-web-demo.mjs`, `apps/miniapp/src/lib/runtime.ts`, `tools/qa/web-demo.test.mjs`, `tools/qa/web-demo-browser.mjs`.
+
+
+## 원격 확인
+
+- 구현 커밋 f2617016657bbd54caa8abbd397fadc134cb063f push 완료.
+- CI43052821106 전체 성공: 기본 빌드/타입/108테스트/프록시4테스트/격리 웹빌드/migration2회/DB5테스트.
+- Render dep-dbq8uso473hc73ae4le0 live. 테스트 출석·팁 보상 API 반영 완료.
+- Vercel 프로젝트/실제 공개 URL은 아직 생성하지 않았다. 위 Import 절차로 계정 연결 후 배포한다.
