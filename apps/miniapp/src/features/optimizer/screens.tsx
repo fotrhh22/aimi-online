@@ -1,4 +1,5 @@
 import { ModelFacts, modelPriceLabel } from "./model-facts";
+import { sourceName } from "./model-copy";
 import {
   recommend,
   catalogClassifications,
@@ -46,6 +47,17 @@ export function Optimizer() {
       alive.current = false;
     };
   }, []);
+  useEffect(
+    () =>
+      a.registerBackHandler("/optimizer", () => {
+        if (editing) {
+          setEditing(false);
+          return true;
+        }
+        return false;
+      }),
+    [editing, a.registerBackHandler],
+  );
   const apply = (j: AIJob) => {
     setJob(j);
     if (j.result) {
@@ -284,15 +296,6 @@ export function Optimizer() {
             </small>
           )}
           <div className="optimizer-result-actions">
-            <button
-              className="optimizer-restart-button"
-              onClick={() => {
-                setJob(null);
-                sessionStorage.removeItem("aimi.optimizer.job");
-              }}
-            >
-              다른 질문 다듬기
-            </button>
             <div className="fixed-cta">
               <Button
                 disabled={editing}
@@ -304,6 +307,16 @@ export function Optimizer() {
                 모델 추천받기
               </Button>
             </div>
+            <Button
+              weak
+              className="optimizer-restart-button"
+              onClick={() => {
+                setJob(null);
+                sessionStorage.removeItem("aimi.optimizer.job");
+              }}
+            >
+              다른 질문 다듬기
+            </Button>
           </div>
         </div>
       )}
@@ -353,7 +366,17 @@ export function Recommendations() {
     pending = useRef(false),
     alive = useRef(true);
   useEffect(() => {
-    sessionStorage.removeItem("aimi.recommendation.input");
+    if (a.path !== "/recommendations") return;
+    const handed = sessionStorage.getItem("aimi.recommendation.input");
+    if (handed !== null) {
+      setText(handed);
+      setResult(null);
+      setResultText("");
+      setOpenTier(null);
+      sessionStorage.removeItem("aimi.recommendation.input");
+    }
+  }, [a.path]);
+  useEffect(() => {
     alive.current = true;
     return () => {
       alive.current = false;
@@ -805,8 +828,8 @@ export function ModelDetails() {
             다시 불러오기
           </Button>
         )}
-        <Button weak onClick={() => a.navigate("/recommendations")}>
-          모델 목록으로
+        <Button weak onClick={a.back}>
+          이전 화면으로
         </Button>
       </>
     );
@@ -835,9 +858,9 @@ export function ModelDetails() {
             <span>분류 근거 보강 중</span>
           )}
           {group.sourceUrl && (
-            <a href={group.sourceUrl} target="_blank" rel="noreferrer">
-              분류 근거
-            </a>
+            <span className="caption">
+              분류 출처: {sourceName(group.sourceUrl)}
+            </span>
           )}
         </div>
       )}

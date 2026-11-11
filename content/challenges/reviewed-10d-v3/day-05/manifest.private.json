@@ -1,0 +1,1071 @@
+{
+  "version": "aimi-puzzle-pack-v3-reviewed-2c1c3bc85a78",
+  "id": "day-05",
+  "title": "달 표면의 우주 여우",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa"
+  ],
+  "authored_by": "Codex_AI_visual_and_editorial_review_2026-11-11",
+  "prompt_format": "장면과 세부 조건 문단",
+  "prompt_lines": [
+    "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다.",
+    "여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다.",
+    "검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다."
+  ],
+  "authored_prompt": "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다.\n여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다.\n검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다.",
+  "alternate_prompt": "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다. 여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다. 검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다.",
+  "conditions": [
+    {
+      "id": "day-05-c01",
+      "variable": "subject",
+      "entity": "fox",
+      "context": "동물",
+      "requested_value": "여우",
+      "observed_value": "여우",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "여우",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c02",
+      "variable": "count",
+      "entity": "fox",
+      "context": "여우 수",
+      "requested_value": "한 마리",
+      "observed_value": "한 마리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "한 마리",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c03",
+      "variable": "color",
+      "entity": "fox",
+      "context": "여우 털 색",
+      "requested_value": "주황색",
+      "observed_value": "주황색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "주황색",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c04",
+      "variable": "accessory",
+      "entity": "fox",
+      "context": "여우의 소품",
+      "requested_value": "우주 헬멧",
+      "observed_value": "우주 헬멧",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "우주 헬멧",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c05",
+      "variable": "interaction",
+      "entity": "fox->helmet",
+      "context": "여우와 헬멧",
+      "requested_value": "쓰고 있다",
+      "observed_value": "쓰고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "쓰고 있다",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c06",
+      "variable": "location",
+      "entity": "scene",
+      "context": "여우가 있는 장소",
+      "requested_value": "달 표면",
+      "observed_value": "달 표면",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "달 표면",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c07",
+      "variable": "action_pose",
+      "entity": "fox",
+      "context": "여우 동작",
+      "requested_value": "점프하고 있다",
+      "observed_value": "발이 지면에서 떨어진",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "발이 지면에서 떨어진",
+      "score_enabled": true,
+      "review_note": "그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+    },
+    {
+      "id": "day-05-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘",
+      "requested_value": "검은 하늘",
+      "observed_value": "검은 하늘",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "검은 하늘",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c09",
+      "variable": "subject",
+      "entity": "earth",
+      "context": "하늘의 천체",
+      "requested_value": "지구",
+      "observed_value": "지구",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "지구",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c10",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "평면 만화",
+      "observed_value": "픽셀아트",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "픽셀아트",
+      "score_enabled": true,
+      "review_note": "외곽선·별·지표가 계단형 픽셀로 표현되어 평면 만화보다 픽셀아트가 명확하다."
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-f733ade13790d1f9",
+      "label": "여우",
+      "value": "여우",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "여우를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-32c36bf8353d9d93",
+      "label": "여우 한 마리",
+      "value": "한 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 한 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-186bb41cbfb4c9a5",
+      "label": "여우 털 색: 주황색",
+      "value": "주황색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 주황색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-59397305e82bf308",
+      "label": "우주 헬멧",
+      "value": "우주 헬멧",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "우주 헬멧을 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-4d12876d21353f71",
+      "label": "여우와 헬멧: 쓰고 있다",
+      "value": "쓰고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "sentence_fragment": "쓰고 있다를 장면에 포함해줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-b54bdf357e58a853",
+      "label": "달 표면",
+      "value": "달 표면",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "달 표면을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-230ec83390ea0010",
+      "label": "발이 지면에서 떨어진",
+      "value": "발이 지면에서 떨어진",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 발이 지면에서 떨어진 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-406c4ee33c473c23",
+      "label": "검은 하늘",
+      "value": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "sentence_fragment": "검은 하늘을 배경으로 그려줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-833aabc28c99a9bc",
+      "label": "지구",
+      "value": "지구",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "지구를 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-36564023b5fbe39d",
+      "label": "픽셀아트",
+      "value": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-db2106f0e27ec3e3",
+      "label": "코끼리",
+      "value": "코끼리",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "코끼리를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c01",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-78866ecd301ead58",
+      "label": "고양이",
+      "value": "고양이",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "고양이를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c01",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-d82ab184dac33999",
+      "label": "여우 두 마리",
+      "value": "두 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 두 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c02",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-7c2e9cc2c345d26e",
+      "label": "여우 세 마리",
+      "value": "세 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 세 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c02",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-913cf8025db88d94",
+      "label": "여우 털 색: 파란색",
+      "value": "파란색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 파란색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c03",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-bd5239559ed2432d",
+      "label": "여우 털 색: 초록색",
+      "value": "초록색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 초록색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c03",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-6a4c6a781c0bba37",
+      "label": "밀짚모자",
+      "value": "밀짚모자",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "밀짚모자를 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c04",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-c9cfdcc88f8aa1aa",
+      "label": "왕관",
+      "value": "왕관",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "왕관을 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c04",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-40942a155d7d6943",
+      "label": "벗어서 손에 들고 있다",
+      "value": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "sentence_fragment": "벗어서 손에 들고 있다를 장면에 포함해줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 쓰고 있다와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c05",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-06aaf72c29505171",
+      "label": "설원",
+      "value": "설원",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "설원을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c06",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-75634fe50100d898",
+      "label": "교실",
+      "value": "교실",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "교실을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c06",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-14fb3a7f0503fe59",
+      "label": "네 발이 지면에 닿은",
+      "value": "네 발이 지면에 닿은",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 네 발이 지면에 닿은 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 발이 지면에서 떨어진와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c07",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-6f7e6afca83902b9",
+      "label": "누워 있는",
+      "value": "누워 있는",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 누워 있는 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 발이 지면에서 떨어진와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c07",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-e273043287c18367",
+      "label": "분홍 하늘",
+      "value": "분홍 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "sentence_fragment": "분홍 하늘을 배경으로 그려줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 검은 하늘와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c08",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-89112b908904d895",
+      "label": "토성",
+      "value": "토성",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "토성을 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c09",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-c2f3baf3a922272b",
+      "label": "태양",
+      "value": "태양",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "태양을 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c09",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-57f9b7d505a4ffc2",
+      "label": "수채화",
+      "value": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c10",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-0f157e5730d4ec8e",
+      "label": "사진풍",
+      "value": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+      "contradicts_condition_id": "day-05-c10",
+      "distractor_kind": "reviewed_contrast"
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-06aaf72c29505171",
+      "label": "설원",
+      "value": "설원",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "설원을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-0f157e5730d4ec8e",
+      "label": "사진풍",
+      "value": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-14fb3a7f0503fe59",
+      "label": "네 발이 지면에 닿은",
+      "value": "네 발이 지면에 닿은",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 네 발이 지면에 닿은 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 발이 지면에서 떨어진와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-186bb41cbfb4c9a5",
+      "label": "여우 털 색: 주황색",
+      "value": "주황색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 주황색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-230ec83390ea0010",
+      "label": "발이 지면에서 떨어진",
+      "value": "발이 지면에서 떨어진",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 발이 지면에서 떨어진 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-32c36bf8353d9d93",
+      "label": "여우 한 마리",
+      "value": "한 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 한 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-36564023b5fbe39d",
+      "label": "픽셀아트",
+      "value": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-406c4ee33c473c23",
+      "label": "검은 하늘",
+      "value": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "sentence_fragment": "검은 하늘을 배경으로 그려줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-40942a155d7d6943",
+      "label": "벗어서 손에 들고 있다",
+      "value": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "sentence_fragment": "벗어서 손에 들고 있다를 장면에 포함해줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 쓰고 있다와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-4d12876d21353f71",
+      "label": "여우와 헬멧: 쓰고 있다",
+      "value": "쓰고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "sentence_fragment": "쓰고 있다를 장면에 포함해줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-57f9b7d505a4ffc2",
+      "label": "수채화",
+      "value": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 9,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-59397305e82bf308",
+      "label": "우주 헬멧",
+      "value": "우주 헬멧",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "우주 헬멧을 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-6a4c6a781c0bba37",
+      "label": "밀짚모자",
+      "value": "밀짚모자",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "밀짚모자를 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-6f7e6afca83902b9",
+      "label": "누워 있는",
+      "value": "누워 있는",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "sentence_fragment": "여우은 누워 있는 모습으로 그려줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 발이 지면에서 떨어진와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-75634fe50100d898",
+      "label": "교실",
+      "value": "교실",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "교실을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-78866ecd301ead58",
+      "label": "고양이",
+      "value": "고양이",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "고양이를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-7c2e9cc2c345d26e",
+      "label": "여우 세 마리",
+      "value": "세 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 세 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-833aabc28c99a9bc",
+      "label": "지구",
+      "value": "지구",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "지구를 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-89112b908904d895",
+      "label": "토성",
+      "value": "토성",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "토성을 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-913cf8025db88d94",
+      "label": "여우 털 색: 파란색",
+      "value": "파란색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 파란색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-b54bdf357e58a853",
+      "label": "달 표면",
+      "value": "달 표면",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "sentence_fragment": "달 표면을 배경으로 그려줘.",
+      "sentence_order": 5,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-bd5239559ed2432d",
+      "label": "여우 털 색: 초록색",
+      "value": "초록색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "sentence_fragment": "여우 털은 초록색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-c2f3baf3a922272b",
+      "label": "태양",
+      "value": "태양",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "sentence_fragment": "태양을 하늘에 포함해줘.",
+      "sentence_order": 8,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-c9cfdcc88f8aa1aa",
+      "label": "왕관",
+      "value": "왕관",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "sentence_fragment": "왕관을 장면에 포함해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-d82ab184dac33999",
+      "label": "여우 두 마리",
+      "value": "두 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "sentence_fragment": "여우는 두 마리만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-db2106f0e27ec3e3",
+      "label": "코끼리",
+      "value": "코끼리",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "코끼리를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-e273043287c18367",
+      "label": "분홍 하늘",
+      "value": "분홍 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "sentence_fragment": "분홍 하늘을 배경으로 그려줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 검은 하늘와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "k-f733ade13790d1f9",
+      "label": "여우",
+      "value": "여우",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "sentence_fragment": "여우를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    }
+  ],
+  "total_candidate_count": 28,
+  "answer_ratio": 0.35714285714285715,
+  "highlights": [
+    {
+      "keyword_id": "k-f733ade13790d1f9",
+      "condition_id": "day-05-c01",
+      "matched_text": "여우",
+      "start_utf16": 13,
+      "end_utf16": 15
+    },
+    {
+      "keyword_id": "k-32c36bf8353d9d93",
+      "condition_id": "day-05-c02",
+      "matched_text": "한 마리",
+      "start_utf16": 16,
+      "end_utf16": 20
+    },
+    {
+      "keyword_id": "k-186bb41cbfb4c9a5",
+      "condition_id": "day-05-c03",
+      "matched_text": "주황색",
+      "start_utf16": 9,
+      "end_utf16": 12
+    },
+    {
+      "keyword_id": "k-59397305e82bf308",
+      "condition_id": "day-05-c04",
+      "matched_text": "우주 헬멧",
+      "start_utf16": 22,
+      "end_utf16": 27
+    },
+    {
+      "keyword_id": "k-b54bdf357e58a853",
+      "condition_id": "day-05-c06",
+      "matched_text": "달 표면",
+      "start_utf16": 0,
+      "end_utf16": 4
+    },
+    {
+      "keyword_id": "k-230ec83390ea0010",
+      "condition_id": "day-05-c07",
+      "matched_text": "발이 지면에서 떨어진",
+      "start_utf16": 32,
+      "end_utf16": 43
+    },
+    {
+      "keyword_id": "k-406c4ee33c473c23",
+      "condition_id": "day-05-c08",
+      "matched_text": "검은 하늘",
+      "start_utf16": 54,
+      "end_utf16": 59
+    },
+    {
+      "keyword_id": "k-833aabc28c99a9bc",
+      "condition_id": "day-05-c09",
+      "matched_text": "지구",
+      "start_utf16": 61,
+      "end_utf16": 63
+    },
+    {
+      "keyword_id": "k-36564023b5fbe39d",
+      "condition_id": "day-05-c10",
+      "matched_text": "픽셀아트",
+      "start_utf16": 69,
+      "end_utf16": 73
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-05-writing-1",
+      "title": "동작은 눈으로 확인되는 모습까지 써요",
+      "text": "요청은 ‘점프’였고 결과에는 발이 지면에서 떨어진 순간이 보여요. 그 모습을 설명하면 달리는 중인지 서 있는지보다 자세를 구체적으로 전달할 수 있어요.",
+      "scope": "daily_editorial",
+      "source_ids": [
+        "visual-review-day-05"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "day-05-writing-2",
+      "title": "스타일도 결과와 대조해요",
+      "text": "실제 요청의 ‘평면 만화’와 달리 결과에는 계단형 윤곽이 뚜렷해요. 이번 정답은 픽셀아트로 바꿨어요. 생성 원문은 당시 요청 기록이므로 그대로 남겨두었어요.",
+      "scope": "daily_editorial",
+      "source_ids": [
+        "visual-review-day-05"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "day-05-model-reviewed",
+      "title": "Seedream 5.0 Pro 제작 사례 · 표현 방식 확인",
+      "text": "이 모델로 만든 오늘의 결과에서는 요청한 스타일과 관찰되는 스타일이 달랐어요. 모델 소개가 장면 일치를 보장하는 것은 아니므로, 공개된 요청 원문과 실제 결과를 대조해보세요. 이 설명은 이번 제작 사례에 대한 관찰이에요.",
+      "scope": "generation_observation_not_model_specific_rule",
+      "source_ids": [
+        "seedream-observation",
+        "visual-review-day-05"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "bytedance-seed/seedream-5-0-pro"
+      ],
+      "source_label": "Seedream 5.0 Pro product introduction + this generation observation"
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "bytedance-seed/seedream-5-0-pro",
+    "actual_model_id": "bytedance-seed/seedream-5-0-pro",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": true
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+    "width": 1280,
+    "height": 720,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_preserve_entire_reviewed_image",
+    "app_target": "/content/challenges/generated-10d-v2/day-05.png"
+  },
+  "review": {
+    "status": "approved",
+    "reviewer": "Codex AI",
+    "reviewer_kind": "ai",
+    "reviewed_at": "2026-11-11",
+    "approved_at": "2026-11-11",
+    "review_basis": "user_requested_ai_visual_editorial_review",
+    "asset_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+    "condition_count": 10,
+    "candidate_count_reviewed": 35,
+    "notes": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:40:26.226Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      },
+      {
+        "event": "visual_and_editorial_review",
+        "at": "2026-11-11",
+        "reviewer_kind": "ai"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v4",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": true,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty",
+    "content_revision": "reviewed-10d-v3"
+  },
+  "economy": {
+    "policy_version": "aimi-economy-v3",
+    "status": "bound_to_shared_app_policy"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": []
+  },
+  "answer_count": 10,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_hint_cost": 15,
+    "attempt_cost": 30,
+    "incorrect_selected_cards_from_attempt": 1,
+    "missing_answer_ids_revealed": false,
+    "reveal_after_terminal": true
+  },
+  "display_labels": {
+    "k-f733ade13790d1f9": "여우",
+    "k-db2106f0e27ec3e3": "코끼리",
+    "k-78866ecd301ead58": "고양이",
+    "k-32c36bf8353d9d93": "여우 한 마리",
+    "k-d82ab184dac33999": "여우 두 마리",
+    "k-7c2e9cc2c345d26e": "여우 세 마리",
+    "k-186bb41cbfb4c9a5": "여우 털 색: 주황색",
+    "k-913cf8025db88d94": "여우 털 색: 파란색",
+    "k-bd5239559ed2432d": "여우 털 색: 초록색",
+    "k-59397305e82bf308": "우주 헬멧",
+    "k-6a4c6a781c0bba37": "밀짚모자",
+    "k-c9cfdcc88f8aa1aa": "왕관",
+    "k-4d12876d21353f71": "여우와 헬멧: 쓰고 있다",
+    "k-40942a155d7d6943": "벗어서 손에 들고 있다",
+    "k-b54bdf357e58a853": "달 표면",
+    "k-06aaf72c29505171": "설원",
+    "k-75634fe50100d898": "교실",
+    "k-230ec83390ea0010": "발이 지면에서 떨어진",
+    "k-14fb3a7f0503fe59": "네 발이 지면에 닿은",
+    "k-6f7e6afca83902b9": "누워 있는",
+    "k-406c4ee33c473c23": "검은 하늘",
+    "k-e273043287c18367": "분홍 하늘",
+    "k-833aabc28c99a9bc": "지구",
+    "k-89112b908904d895": "토성",
+    "k-c2f3baf3a922272b": "태양",
+    "k-36564023b5fbe39d": "픽셀아트",
+    "k-57f9b7d505a4ffc2": "수채화",
+    "k-0f157e5730d4ec8e": "사진풍"
+  },
+  "answer_prompt": "달 표면 위에서 주황색 여우 한 마리가 우주 헬멧을 쓰고 발이 지면에서 떨어진 채 공중에 있다. 검은 하늘에 지구가 보이는 픽셀아트 장면.",
+  "original_generation": {
+    "authored_prompt": "달 표면에 주황색 여우 한 마리가 등장한다. 여우는 우주 헬멧을 쓰고 있다.\n여우는 두 발이 땅에서 떨어진 모습으로 점프하고 있다.\n검은 하늘에 지구가 보이는 평면 만화 장면으로 표현한다.",
+    "prompt_format": "장면과 세부 조건 문단",
+    "model_plan": {
+      "planned_model_id": "bytedance-seed/seedream-5-0-pro",
+      "actual_model_id": "bytedance-seed/seedream-5-0-pro",
+      "actual_model_version": null,
+      "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+      "model_tips_enabled": false
+    },
+    "original_asset_sha256": "2018c1573233afd96929471ce61d8c46e2827e506305cea6aa35630eb6678568",
+    "source_manifest": "content/challenges/generated-10d-v2/day-05/manifest.private.json",
+    "source_manifest_sha256": "c4327cc305a6882700deaa8d93df3fe5af6a44246bab721a7f5da8672f016be5"
+  },
+  "learning_feedback": {
+    "prompt_format": "장면과 세부 조건 문단",
+    "scene_explanation": "달 표면 위에서 주황색 여우 한 마리가 우주 헬멧을 쓰고 발이 지면에서 떨어진 채 공중에 있다. 검은 하늘에 지구가 보이는 픽셀아트 장면.",
+    "visual_notes": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+    "writing_point_ids": [
+      "day-05-writing-1",
+      "day-05-writing-2"
+    ],
+    "model_note_id": "day-05-model-reviewed",
+    "source_ids": [
+      "seedream-observation"
+    ],
+    "source_tip_id": null,
+    "sources_checked_at": "2026-11-11",
+    "reviewer_kind": "ai"
+  },
+  "content_sha256": "2c1c3bc85a784235238b857db4b25a2f9d6920bc6f9a4197f6d738c8afad19b1"
+}

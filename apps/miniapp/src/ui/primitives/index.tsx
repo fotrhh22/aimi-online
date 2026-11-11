@@ -1,5 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import { Button as TDSButton } from "@toss/tds-mobile";
+export function BrandLogo() {
+  return (
+    <svg
+      className="brand-logo"
+      viewBox="294 92 1368 634"
+      role="img"
+      aria-label="AIMI"
+      focusable="false"
+    >
+      <image
+        href="/content/brand/aimi-logo-dark-transparent.png"
+        width="1960"
+        height="802"
+      />
+    </svg>
+  );
+}
 export function Button({
   children,
   onClick,
@@ -15,10 +32,23 @@ export function Button({
   loading?: boolean;
   className?: string;
 }) {
+  if (weak) {
+    return (
+      <button
+        type="button"
+        className={"aimi-button weak " + className}
+        onClick={onClick}
+        disabled={disabled || loading}
+        aria-busy={loading || undefined}
+      >
+        {loading ? "처리 중…" : children}
+      </button>
+    );
+  }
   return (
     <TDSButton
       className={"aimi-button " + (weak ? "weak " : "") + className}
-      variant={weak ? "weak" : "fill"}
+      variant="fill"
       size="xlarge"
       display="block"
       onClick={onClick}
@@ -74,7 +104,13 @@ export function ChallengeArt({
 }
 export function Icon({ name }: { name: string }) {
   const paths: Record<string, React.ReactNode> = {
-    more: <><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></>,
+    more: (
+      <>
+        <circle cx="5" cy="12" r="1.5" fill="currentColor" />
+        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+        <circle cx="19" cy="12" r="1.5" fill="currentColor" />
+      </>
+    ),
     home: <path d="m3 10 9-7 9 7v10h-6v-7H9v7H3Z" />,
     mission: (
       <>
@@ -105,6 +141,12 @@ export function Icon({ name }: { name: string }) {
     down: <path d="m5 9 7 7 7-7" />,
     back: <path d="m15 5-7 7 7 7" />,
     pause: <path d="M8 5v14M16 5v14" />,
+    hint: (
+      <>
+        <path d="M9 18h6m-5 3h4M8 13a6 6 0 1 1 8 0c-1 1-1 2-1 2H9s0-1-1-2Z" />
+        <path d="M12 1V0M3 4l1 1m16-1-1 1M1 10h1m20 0h1" />
+      </>
+    ),
   };
   return (
     <svg
@@ -128,12 +170,14 @@ export function Modal({
   onClose,
   sheet = false,
   className = "",
+  dismissible = true,
 }: {
   title: string;
   children: React.ReactNode;
   onClose: () => void;
   sheet?: boolean;
   className?: string;
+  dismissible?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -151,17 +195,19 @@ export function Modal({
       aria-label={title}
       onCancel={(e) => {
         e.preventDefault();
-        onClose();
+        if (dismissible) onClose();
       }}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (dismissible && e.target === e.currentTarget) onClose();
       }}
     >
       <div className="dialog-heading">
         <h2>{title}</h2>
-        <button className="icon-button" aria-label="닫기" onClick={onClose}>
-          <Icon name="close" />
-        </button>
+        {dismissible && (
+          <button className="icon-button" aria-label="닫기" onClick={onClose}>
+            <Icon name="close" />
+          </button>
+        )}
       </div>
       <div className="dialog-body">{children}</div>
     </dialog>

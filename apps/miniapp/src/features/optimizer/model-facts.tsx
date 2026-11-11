@@ -1,6 +1,13 @@
+import {
+  compactNumbers,
+  imageRateCopy,
+  mediaIntroduction,
+  parameterCopy,
+  videoRateCopy,
+} from "./model-copy";
 import { AAScoreChart } from "./aa-score-chart";
 import React from "react";
-import { estimateMedia } from "@aimi/recommender";
+import { estimateMedia, comparisonSummary } from "@aimi/recommender";
 import {
   type AAProfile,
   type ModelRecord,
@@ -30,121 +37,152 @@ export function modelPriceLabel(
     return `입력 ${pricePerMillion(model.inputPrice)} · 출력 ${pricePerMillion(model.outputPrice)} / 100만 토큰`;
   const estimate = estimateMedia(model, model.media.kind, options);
   return estimate.usd !== null
-    ? `$${estimate.usd.toLocaleString("en-US", { maximumFractionDigits: 6 })} / ${model.media.kind === "image" ? "1장" : "설정한 영상 1개"} (비교 가정)`
+    ? `$${estimate.usd.toLocaleString("en-US", { maximumFractionDigits: 6 })} / ${model.media.kind === "image" ? "1장" : "설정한 영상 1개"} (예시 조건)`
     : "제작 조건별 과금 · 상세에서 확인";
 }
 function MediaFacts({ model }: { model: ModelRecord }) {
   const media = model.media!;
   const estimate = estimateMedia(model, media.kind);
   const v = media.video;
+  const support = Object.keys(media.parameters).length
+    ? media.parameters
+    : ((
+        media.imageEndpoints.find(
+          (e) => e.provider_name === estimate.provider,
+        ) ?? media.imageEndpoints[0]
+      )?.supported_parameters ?? {});
+  const parameters = Object.entries(support)
+    .map(([key, p]) => parameterCopy(key, p))
+    .filter((p) => p !== null);
   return (
     <div className="model-detail-facts">
       <section className="notice model-fact-section">
-        <h3>지원 출력·작업</h3>
-        <p>
-          {model.outputModalities?.join(" · ")} ·{" "}
+        <h3>어떤 작업에 쓰나요?</h3>
+        <p>{mediaIntroduction(model)}</p>
+        <p className="caption">
+          만드는 결과: {media.kind === "video" ? "영상" : "이미지"} ·{" "}
           {media.operation === "edit"
-            ? "편집 전용"
+            ? "기존 결과 수정"
             : media.operation === "upscale"
-              ? "업스케일 전용"
-              : "생성"}
+              ? "해상도 높이기"
+              : "새로 만들기"}
         </p>
-        <p className="caption">{model.description}</p>
-        <ul className="model-feature-tags">
-          {featureLabels(model).map((label) => (
-            <li key={label}>{label}</li>
-          ))}
-        </ul>
       </section>
       <section className="notice model-fact-section">
         <h3>제작 비용</h3>
-        <p>{modelPriceLabel(model)}</p>
-        <p className="caption">
-          {estimate.usd !== null ? estimate.basis : estimate.reason}
+        <p className="model-estimated-price">
+          {estimate.usd !== null
+            ? modelPriceLabel(model)
+            : "제작 조건에 따라 비용이 달라요"}
         </p>
-        {media.imageEndpoints.map((e, i) => (
-          <div className="media-endpoint" key={i}>
-            <h4>{e.provider_name}</h4>
-            <dl className="model-fact-rows">
-              {e.pricing.map((p, j) => (
-                <div key={j}>
-                  <dt>
-                    {(
-                      {
-                        output_image: "이미지 출력",
-                        input_image: "이미지 입력",
-                        input_text: "텍스트 입력",
-                        input_reference: "참조 이미지",
-                      } as Record<string, string>
-                    )[p.billable] ?? p.billable}
-                    {p.variant ? ` · ${p.variant}` : ""}
-                  </dt>
-                  <dd>
-                    ${p.cost_usd} / {p.unit}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        ))}
-        {v?.pricing_skus && (
-          <dl className="model-fact-rows">
-            {Object.entries(v.pricing_skus).map(([key, price]) => (
-              <div key={key}>
-                <dt>{key}</dt>
-                <dd>
-                  {key.startsWith("cents_") ? `${price} US¢` : `$${price}`}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        )}
-        {!media.imageEndpoints.length && !v && (
-          <dl className="model-fact-rows">
-            {Object.entries(media.rawPricing).map(([key, price]) => (
-              <div key={key}>
-                <dt>{key} (API 원본 단가)</dt>
-                <dd>${price}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
         <p className="caption">
-          USD · 단위·설정에 따라 달라요. 토큰 단가를 장당·영상당 가격으로 바꾸지
-          않아요. 예상비용을 계산하지 못한 항목은 무료가 아니에요.
+          {estimate.usd !== null
+            ? `예시 조건: ${comparisonSummary(media.kind)}${media.kind === "video" ? " · 소리 생성 미요청" : ""}`
+            : "공개된 단가만으로 이 조건의 총비용을 계산하기 어려워요."}
+        </p>
+        <details className="model-price-details">
+          <summary>세부 요금 보기</summary>
+          {media.imageEndpoints.map((e, i) => (
+            <div className="media-endpoint" key={i}>
+              <h4>{e.provider_name} 제공 요금</h4>
+              <dl className="model-fact-rows">
+                {e.pricing.map((p, j) => {
+                  const row = imageRateCopy(p);
+                  return (
+                    <div key={j}>
+                      <dt>{row.label}</dt>
+                      <dd>{row.value}</dd>
+                    </div>
+                  );
+                })}
+              </dl>
+            </div>
+          ))}
+          {v?.pricing_skus && (
+            <dl className="model-fact-rows">
+              {Object.entries(v.pricing_skus).map(([key, price]) => {
+                const row = videoRateCopy(key, price);
+                return row ? (
+                  <div key={key}>
+                    <dt>{row.label}</dt>
+                    <dd>{row.value}</dd>
+                  </div>
+                ) : null;
+              })}
+            </dl>
+          )}
+          {!media.imageEndpoints.length && !v && (
+            <p className="caption">확인된 제작 단가가 아직 없어요.</p>
+          )}
+        </details>
+        <p className="caption">
+          미국 달러 기준의 참고 가격이에요. 제작 조건·제공사에 따라 실제 비용은
+          달라질 수 있어요.
         </p>
       </section>
       <section className="notice model-fact-section">
-        <h3>제작 지원 조건</h3>
-        {Object.entries(media.parameters).map(([key, p]) => (
-          <p key={key}>
-            {key}: {p.values?.join(" · ") ?? `${p.min ?? ""} ~ ${p.max ?? ""}`}
-          </p>
-        ))}
-        {v && (
-          <>
-            <p>해상도: {v.supported_resolutions?.join(" · ") ?? "미확인"}</p>
-            <p>
-              길이: {v.supported_durations?.join(" · ") ?? "작업별 확인 필요"}초
-            </p>
-            <p>
-              화면 비율: {v.supported_aspect_ratios?.join(" · ") ?? "미확인"}
-            </p>
-            <p>
-              오디오 동시 생성: {v.generate_audio ? "지원" : "미확인·미지원"}
-            </p>
-          </>
-        )}
+        <h3>만들 수 있는 조건</h3>
+        <dl className="model-fact-rows">
+          {parameters.map((p) => (
+            <div
+              key={p.label}
+              className={
+                media.kind === "image" && p.label === "화면 비율"
+                  ? "model-aspect-ratios"
+                  : undefined
+              }
+            >
+              <dt>{p.label}</dt>
+              <dd
+                tabIndex={
+                  media.kind === "image" && p.label === "화면 비율"
+                    ? 0
+                    : undefined
+                }
+              >
+                {p.value}
+              </dd>
+            </div>
+          ))}
+          {v && (
+            <>
+              <div>
+                <dt>해상도</dt>
+                <dd>{v.supported_resolutions?.join(" · ") || "정보 없음"}</dd>
+              </div>
+              <div>
+                <dt>영상 길이</dt>
+                <dd>{compactNumbers(v.supported_durations, "초")}</dd>
+              </div>
+              <div>
+                <dt>화면 비율</dt>
+                <dd>{v.supported_aspect_ratios?.join(" · ") || "정보 없음"}</dd>
+              </div>
+              <div>
+                <dt>소리 함께 만들기</dt>
+                <dd>
+                  {v.generate_audio === true
+                    ? "지원"
+                    : v.generate_audio === false
+                      ? "지원하지 않음"
+                      : "확인된 정보 없음"}
+                </dd>
+              </div>
+            </>
+          )}
+          {!v && !parameters.length && (
+            <div>
+              <dt>제작 설정</dt>
+              <dd>제공사별 확인 필요</dd>
+            </div>
+          )}
+        </dl>
         <p className="caption">
-          엔드포인트마다 실제 허용 조건이 다를 수 있어요. AA 텍스트 종합
-          점수·토큰 출력 속도를 생성 품질 지표로 사용하지 않아요.
+          제공사에 따라 선택 가능한 조건이 다를 수 있어요.
         </p>
       </section>
       <p className="source-note">
-        <a href={media.sourceUrl} target="_blank" rel="noreferrer">
-          OpenRouter 모델·엔드포인트 자료
-        </a>{" "}
-        · {model.asOf.slice(0, 10)}
+        출처: OpenRouter 모델·제공사 자료 · {model.asOf.slice(0, 10)}
       </p>
     </div>
   );
@@ -214,66 +252,55 @@ export function ModelFacts({
         </dl>
         <p className="caption">입력·출력 합계 한도예요. 글자 수와는 달라요.</p>
       </section>
-      <section
-        className="notice model-fact-section"
-        aria-labelledby="aa-profile-title"
-      >
-        <h3 id="aa-profile-title">AA 측정 조건</h3>
-        {model.aaProfiles && model.aaProfiles.length > 1 ? (
-          <label className="model-profile-label">
-            측정 모델·설정
-            <select
-              value={profile?.id ?? ""}
-              onChange={(event) => onProfileChange?.(event.target.value)}
-            >
-              {model.aaProfiles.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : (
-          <p className="model-measurement-name">
-            {profile?.name ?? "측정 조건 미확인"}
+      {profile && (
+        <section
+          className="notice model-fact-section"
+          aria-labelledby="aa-profile-title"
+        >
+          <h3 id="aa-profile-title">AA 측정 조건</h3>
+          {model.aaProfiles && model.aaProfiles.length > 1 ? (
+            <label className="model-profile-label">
+              측정 모델·설정
+              <select
+                value={profile?.id ?? ""}
+                onChange={(event) => onProfileChange?.(event.target.value)}
+              >
+                {model.aaProfiles.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : (
+            <p className="model-measurement-name">
+              {profile?.name ?? "측정 조건 미확인"}
+            </p>
+          )}
+          <p className="caption">
+            {profile?.mappingStatus === "reviewed"
+              ? "이 모델과 연결을 확인한 측정 자료예요."
+              : "관련 모델의 참고 측정값이에요. 현재 제공 설정과의 연결은 검수 중이에요."}
           </p>
-        )}
-        <p className="caption">
-          {profile?.mappingStatus === "reviewed"
-            ? "이 모델과 연결을 확인한 측정 자료예요."
-            : "관련 모델의 참고 측정값이에요. 현재 제공 설정과의 연결은 검수 중이에요."}
-        </p>
-        <dl className="model-fact-rows">
-          <div>
-            <dt>출력 속도</dt>
-            <dd>{valueOrMissing(profile?.speed, " 토큰/초")}</dd>
-          </div>
-        </dl>
-        <p className="caption">
-          선택한 측정 조건의 중앙값이에요. 실제 속도는 달라질 수 있어요.
-        </p>
-      </section>
+          <dl className="model-fact-rows">
+            <div>
+              <dt>출력 속도</dt>
+              <dd>{valueOrMissing(profile?.speed, " 토큰/초")}</dd>
+            </div>
+          </dl>
+          <p className="caption">
+            선택한 측정 조건의 중앙값이에요. 실제 속도는 달라질 수 있어요.
+          </p>
+        </section>
+      )}
       <AAScoreChart profile={profile} />
       <p className="source-note">
-        가격·지원 정보:{" "}
-        <a href="https://openrouter.ai/models" target="_blank" rel="noreferrer">
-          OpenRouter
-        </a>
-        {" · "}
-        {model.asOf.slice(0, 10)}
-        <br />
-        성능·속도:{" "}
-        <a
-          href="https://artificialanalysis.ai"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Artificial Analysis
-        </a>
+        출처: OpenRouter 가격·지원 정보 · {model.asOf.slice(0, 10)}
         {profile && (
           <>
-            {" "}
-            · {profile.asOf.slice(0, 10)} · 종합 지표 v{profile.indexVersion}
+            <br />
+            출처: Artificial Analysis 성능·속도 · {profile.asOf.slice(0, 10)} ·
+            종합 지표 v{profile.indexVersion}
           </>
         )}
       </p>

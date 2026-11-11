@@ -1,0 +1,253 @@
+{
+  "id": "day-09",
+  "title": "눈 덮인 산장과 열기구",
+  "version": "aimi-puzzle-pack-v3-reviewed-1e2435c82dbf",
+  "target": "/content/challenges/generated-10d-v2/day-09.png",
+  "candidate_keywords": [
+    {
+      "id": "k-e913d0dc6339bbd9",
+      "label": "산장",
+      "context": "건물",
+      "sentence_fragment": "산장을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-5cef75692859362c",
+      "label": "등대",
+      "context": "건물",
+      "sentence_fragment": "등대를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-653122b166212bd3",
+      "label": "고층 빌딩",
+      "context": "건물",
+      "sentence_fragment": "고층 빌딩을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-de33557f8b9f8b95",
+      "label": "주요 산장 한 채",
+      "context": "산장 수",
+      "sentence_fragment": "주요 산장 한 채를 주요 대상으로 그려줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-68bafe7b08632ad3",
+      "label": "산장 두 채",
+      "context": "산장 수",
+      "sentence_fragment": "산장은 두 채만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-6342bf646893a634",
+      "label": "산장 세 채",
+      "context": "산장 수",
+      "sentence_fragment": "산장은 세 채만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-502c935f2291b0d0",
+      "label": "산장 지붕 색: 빨간색",
+      "context": "산장 지붕 색",
+      "sentence_fragment": "산장 지붕은 빨간색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-e12f01c827f2a524",
+      "label": "산장 지붕 색: 보라색",
+      "context": "산장 지붕 색",
+      "sentence_fragment": "산장 지붕은 보라색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-6451ddbae9c73597",
+      "label": "산장 지붕 색: 초록색",
+      "context": "산장 지붕 색",
+      "sentence_fragment": "산장 지붕은 초록색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-95abec777caef6f2",
+      "label": "눈 덮인",
+      "context": "땅과 지붕의 표현",
+      "sentence_fragment": "땅과 지붕은 눈 덮인 모습으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-2cd6f4334ee161f3",
+      "label": "모래로 덮인",
+      "context": "땅과 지붕의 표현",
+      "sentence_fragment": "땅과 지붕은 모래로 덮인 모습으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-516ceab8bd879d84",
+      "label": "푸른 잔디로 덮인",
+      "context": "땅과 지붕의 표현",
+      "sentence_fragment": "땅과 지붕은 푸른 잔디로 덮인 모습으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-d17ad57543c18a26",
+      "label": "노란빛",
+      "context": "창문에서 보이는 빛",
+      "sentence_fragment": "창문에서 노란빛이 나오게 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-c33f8fdb5ef43ec5",
+      "label": "보랏빛",
+      "context": "창문에서 보이는 빛",
+      "sentence_fragment": "창문에서 보랏빛이 나오게 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-e5db33c841fd510f",
+      "label": "초록빛",
+      "context": "창문에서 보이는 빛",
+      "sentence_fragment": "창문에서 초록빛이 나오게 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-a47955d18d491ab7",
+      "label": "소나무",
+      "context": "산장 뒤의 나무",
+      "sentence_fragment": "소나무를 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-ea32144350fe9c87",
+      "label": "야자수",
+      "context": "산장 뒤의 나무",
+      "sentence_fragment": "야자수를 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-5a69a87e7a869933",
+      "label": "대나무",
+      "context": "산장 뒤의 나무",
+      "sentence_fragment": "대나무를 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-da90024ab343c423",
+      "label": "산장 뒤",
+      "context": "나무의 위치",
+      "sentence_fragment": "나무를 산장 뒤에 배치해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-62e320f896715338",
+      "label": "산장 앞",
+      "context": "나무의 위치",
+      "sentence_fragment": "나무를 산장 앞에 배치해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-73e8237971e70265",
+      "label": "파란 하늘",
+      "context": "하늘 색",
+      "sentence_fragment": "파란 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-5007f365d4aea1ed",
+      "label": "검은 하늘",
+      "context": "하늘 색",
+      "sentence_fragment": "검은 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-4c8b3e53f893ac75",
+      "label": "분홍 하늘",
+      "context": "하늘 색",
+      "sentence_fragment": "분홍 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-c65eeb9cebab972a",
+      "label": "열기구",
+      "context": "하늘의 이동수단",
+      "sentence_fragment": "열기구를 장면에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-9b06bfe814c164fb",
+      "label": "헬리콥터",
+      "context": "하늘의 이동수단",
+      "sentence_fragment": "헬리콥터를 장면에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-cf3e9422cf6fc8b5",
+      "label": "비행기",
+      "context": "하늘의 이동수단",
+      "sentence_fragment": "비행기를 장면에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-ba1c98a48664509a",
+      "label": "열기구 두 대",
+      "context": "열기구 수",
+      "sentence_fragment": "열기구는 두 대만 보여줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-618ea46268b49ac3",
+      "label": "열기구 한 대",
+      "context": "열기구 수",
+      "sentence_fragment": "열기구는 한 대만 보여줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-7b907ff4501b41f1",
+      "label": "열기구 네 대",
+      "context": "열기구 수",
+      "sentence_fragment": "열기구는 네 대만 보여줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-a95589d30aafc3e4",
+      "label": "열기구 풍선 색: 주황색",
+      "context": "열기구 풍선 색",
+      "sentence_fragment": "열기구 풍선은 주황색으로 표현해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-b3d74f6d487690cb",
+      "label": "열기구 풍선 색: 갈색",
+      "context": "열기구 풍선 색",
+      "sentence_fragment": "열기구 풍선은 갈색으로 표현해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-461d6707684b72d4",
+      "label": "열기구 풍선 색: 흰색",
+      "context": "열기구 풍선 색",
+      "sentence_fragment": "열기구 풍선은 흰색으로 표현해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-4c0f86a31c770f68",
+      "label": "유화",
+      "context": "표현 방식",
+      "sentence_fragment": "유화 스타일로 표현해줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-40ff23c565513bc2",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-282d11685a465e60",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 11
+    }
+  ]
+}

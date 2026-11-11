@@ -470,7 +470,7 @@ test("generation detail UI exposes actual units/settings and never shows text AA
     React.createElement(ModelFacts, { model: video }),
   );
   assert.ok(
-    html.includes("720p") && html.includes("duration_seconds_without_audio"),
+    html.includes("720p") && html.includes("소리 미포함 영상"),
   );
   assert.ok(!html.includes("입력 100만 토큰당"));
   assert.ok(!html.includes("AA 측정 조건"));
@@ -762,4 +762,34 @@ test("media comparison defaults stay compact and edits assume one reference only
     }),
     "새로 생성 · 10초 · 720p · 16:9 · 참조 2장 · 오디오 포함",
   );
+});
+
+test("model detail copy preserves currency units and sparse duration choices without API jargon", async () => {
+  const { videoRateCopy, imageRateCopy, compactNumbers, parameterCopy } = await import("../../miniapp/src/features/optimizer/model-copy.js");
+  assert.deepEqual(videoRateCopy("cents_per_video_output_second_720p", "3"), {label:"영상 제작 · 720p",value:"$0.03 · 1초당"});
+  assert.deepEqual(videoRateCopy("cents_per_image_input", "1"), {label:"참고 이미지",value:"$0.01 · 1장당"});
+  assert.equal(imageRateCopy({billable:"input_text",unit:"token",cost_usd:0.000005}).value, "$5 · 100만 토큰당");
+  assert.equal(compactNumbers(Array.from({length:15},(_,i)=>i+1),"초"),"1~15초");
+  assert.equal(compactNumbers([8,4,6],"초"),"4 · 6 · 8초");
+  assert.equal(compactNumbers([0,1,2,4],"초"),"0~2 · 4초");
+  assert.equal(parameterCopy("input_references",{min:0,max:4})?.value,"0~4장");
+  assert.equal(parameterCopy("seed",{min:0,max:100}), null);
+  assert.equal(videoRateCopy("video_tokens", "0.00002")?.value,"$0.00002 · 토큰 과금 단위 확인 필요");
+});
+
+test("every stored text, image and video detail renders plain attribution and readable conditions", async () => {
+  const text=(await read("content/fixtures/models.json")).models as ModelRecord[];
+  const media=(await read("content/fixtures/models-media.json")).models as ModelRecord[];
+  for(const model of [...text,...media]) {
+    const html=renderToStaticMarkup(React.createElement(ModelFacts,{model}));
+    assert.ok(!/<a\b|href=/.test(html),model.id+" has an external link");
+    assert.ok(!/cents_per_|duration_seconds|input_references|output_compression/.test(html),model.id+" exposes API labels");
+    assert.ok(!/NaN|Infinity/.test(html),model.id+" has an invalid value");
+    assert.ok(html.includes("출처:"),model.id+" is missing attribution");
+    if(model.media) {
+      assert.ok(html.includes("어떤 작업에 쓰나요?"));
+      assert.ok(!html.includes("supports text-to-video"));
+      assert.ok(!html.includes("Grok Imagine Video 1.5 Lite is"));
+    }
+  }
 });

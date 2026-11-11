@@ -1,0 +1,606 @@
+{
+  "day": "day-08",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-08.png",
+  "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-08-c01",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "사진풍",
+      "observed_value": "사진풍",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "사진풍",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c02",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "흰색 배경",
+      "observed_value": "흰색 배경",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "흰색 배경",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c03",
+      "variable": "material",
+      "entity": "table",
+      "context": "탁자 표면",
+      "requested_value": "나무",
+      "observed_value": "나무",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "나무",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c04",
+      "variable": "material",
+      "entity": "vase",
+      "context": "꽃병 표면",
+      "requested_value": "투명한 유리",
+      "observed_value": "투명한 유리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "투명한 유리",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c05",
+      "variable": "subject",
+      "entity": "vase",
+      "context": "꽃이 담긴 용기",
+      "requested_value": "꽃병",
+      "observed_value": "꽃병",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "꽃병",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c06",
+      "variable": "count",
+      "entity": "vase",
+      "context": "꽃병 수",
+      "requested_value": "한 개",
+      "observed_value": "한 개",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "한 개",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c07",
+      "variable": "subject",
+      "entity": "flower",
+      "context": "꽃 종류",
+      "requested_value": "해바라기",
+      "observed_value": "해바라기",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "해바라기",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c08",
+      "variable": "count",
+      "entity": "flower",
+      "context": "해바라기 수",
+      "requested_value": "세 송이",
+      "observed_value": "세 송이",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "세 송이",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c09",
+      "variable": "color",
+      "entity": "petal",
+      "context": "해바라기 꽃잎 색",
+      "requested_value": "노란색",
+      "observed_value": "노란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "노란색",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c10",
+      "variable": "color",
+      "entity": "stem",
+      "context": "해바라기 줄기 색",
+      "requested_value": "초록색",
+      "observed_value": "초록색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "초록색",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c11",
+      "variable": "subject",
+      "entity": "book",
+      "context": "꽃병 옆의 물건",
+      "requested_value": "책",
+      "observed_value": "책",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "책",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c12",
+      "variable": "color",
+      "entity": "book",
+      "context": "책 표지 색",
+      "requested_value": "파란색",
+      "observed_value": "파란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "파란색",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "id": "day-08-c13",
+      "variable": "horizontal_relation",
+      "entity": "book->vase",
+      "context": "꽃병 기준 책 위치",
+      "requested_value": "왼쪽",
+      "observed_value": "왼쪽",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "fb3f82ce969d1d713e0f57e34944e4774d86f2ee5d3933f82ab5ed2516529f3f",
+      "scored_value": "왼쪽",
+      "score_enabled": true,
+      "review_note": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-01c9039dd39a3568",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-01dc3b92bb7a13d5",
+      "old_label": "금속",
+      "context": "꽃병 표면",
+      "condition_id": "day-08-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-03d61a8ef4f84ff9",
+      "old_label": "책",
+      "context": "꽃병 옆의 물건",
+      "condition_id": "day-08-c11",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-06e43ececb20be98",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-098617fc479f184f",
+      "old_label": "카메라",
+      "context": "꽃병 옆의 물건",
+      "condition_id": "day-08-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 책와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-12562527a77c6970",
+      "old_label": "파란색",
+      "context": "책 표지 색",
+      "condition_id": "day-08-c12",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-14742673df400c85",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-16a240cabe339fa2",
+      "old_label": "빨간색 배경",
+      "context": "배경",
+      "condition_id": "day-08-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-24ad58e903eb1f03",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-2c3cdea1ecbec922",
+      "old_label": "해바라기",
+      "context": "꽃 종류",
+      "condition_id": "day-08-c07",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-2df01034948eaf6c",
+      "old_label": "금속",
+      "context": "탁자 표면",
+      "condition_id": "day-08-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 나무와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-3151e368b940f286",
+      "old_label": "나무",
+      "context": "탁자 표면",
+      "condition_id": "day-08-c03",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-3a1dbdb26d253999",
+      "old_label": "얼음",
+      "context": "탁자 표면",
+      "condition_id": "day-08-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 나무와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-4039a919e078138f",
+      "old_label": "한 송이",
+      "context": "해바라기 수",
+      "condition_id": "day-08-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 세 송이와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-40f1f4191887f280",
+      "old_label": "튤립",
+      "context": "꽃 종류",
+      "condition_id": "day-08-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 해바라기와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-425571306f629e1d",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-4476b768733d6456",
+      "old_label": "한 개",
+      "context": "꽃병 수",
+      "condition_id": "day-08-c06",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-47cc138c76bbd864",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-08-c01",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-50e19c372341e954",
+      "old_label": "꽃병",
+      "context": "꽃이 담긴 용기",
+      "condition_id": "day-08-c05",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-57befd49e4595956",
+      "old_label": "짚으로 엮은 질감",
+      "context": "꽃병 표면",
+      "condition_id": "day-08-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 투명한 유리와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-584d98bca354ee2d",
+      "old_label": "불투명 금속",
+      "context": "꽃병 표면",
+      "condition_id": "day-08-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 투명한 유리와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-5ac12f17de434c6a",
+      "old_label": "흰색",
+      "context": "해바라기 줄기 색",
+      "condition_id": "day-08-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-5b73262d21f1bc97",
+      "old_label": "연필화",
+      "context": "표현 방식",
+      "condition_id": "day-08-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 사진풍와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-5ebb0acd9be8e8aa",
+      "old_label": "왼쪽",
+      "context": "꽃병 기준 책 위치",
+      "condition_id": "day-08-c13",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-62171734726fcfa7",
+      "old_label": "초록색",
+      "context": "해바라기 줄기 색",
+      "condition_id": "day-08-c10",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-65c21c63fcc6d506",
+      "old_label": "분홍색",
+      "context": "해바라기 줄기 색",
+      "condition_id": "day-08-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-67f61aa84997251f",
+      "old_label": "프라이팬",
+      "context": "꽃이 담긴 용기",
+      "condition_id": "day-08-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 꽃병와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-68c8594de72b17ea",
+      "old_label": "바나나",
+      "context": "꽃이 담긴 용기",
+      "condition_id": "day-08-c05",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-6f4b82eff7693d93",
+      "old_label": "네 개",
+      "context": "꽃병 수",
+      "condition_id": "day-08-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-8400719b5b2816c2",
+      "old_label": "노란색",
+      "context": "해바라기 꽃잎 색",
+      "condition_id": "day-08-c09",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-914aefd89c506508",
+      "old_label": "다섯 송이",
+      "context": "해바라기 수",
+      "condition_id": "day-08-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 세 송이와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-94b3928432869814",
+      "old_label": "오른쪽",
+      "context": "꽃병 기준 책 위치",
+      "condition_id": "day-08-c13",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 왼쪽와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-a743b69a9b8ed654",
+      "old_label": "두 개",
+      "context": "꽃병 수",
+      "condition_id": "day-08-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-a7615af472605abd",
+      "old_label": "투명한 유리",
+      "context": "꽃병 표면",
+      "condition_id": "day-08-c04",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-a9f8287f439dccef",
+      "old_label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-aaf017e67303a0b0",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-08-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 사진풍와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-ab2c8068bb9ede1d",
+      "old_label": "바나나",
+      "context": "꽃 종류",
+      "condition_id": "day-08-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-b4b24139b2876ba2",
+      "old_label": "파란색",
+      "context": "해바라기 꽃잎 색",
+      "condition_id": "day-08-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-bb10adc4ea0aa8ea",
+      "old_label": "공",
+      "context": "꽃병 옆의 물건",
+      "condition_id": "day-08-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 책와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-bc6c82b8d5285720",
+      "old_label": "갈색",
+      "context": "책 표지 색",
+      "condition_id": "day-08-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-bcfb906ac2c29f1a",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-c7ab54526c435d63",
+      "old_label": "흰색 배경",
+      "context": "배경",
+      "condition_id": "day-08-c02",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-ca305d6fd7d77bee",
+      "old_label": "보라색",
+      "context": "해바라기 꽃잎 색",
+      "condition_id": "day-08-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-cd8caab2428b4086",
+      "old_label": "빨간색",
+      "context": "해바라기 꽃잎 색",
+      "condition_id": "day-08-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-d8fe192845ea4297",
+      "old_label": "검정 배경",
+      "context": "배경",
+      "condition_id": "day-08-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-e0d3138030aaa2d0",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-e303095641df676a",
+      "old_label": "주황색",
+      "context": "책 표지 색",
+      "condition_id": "day-08-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-f51264b38bd71ebb",
+      "old_label": "접시",
+      "context": "꽃이 담긴 용기",
+      "condition_id": "day-08-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 꽃병와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-f64fbd2ed6072279",
+      "old_label": "세 송이",
+      "context": "해바라기 수",
+      "condition_id": "day-08-c08",
+      "disposition": "retained_correct",
+      "reason": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    },
+    {
+      "old_id": "k-fe3a00549c786b24",
+      "old_label": "장미",
+      "context": "꽃 종류",
+      "condition_id": "day-08-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 해바라기와 대비되는 선택지. 해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+    }
+  ],
+  "notes": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다."
+}

@@ -1,0 +1,218 @@
+{
+  "id": "day-03",
+  "title": "해변에서 인사하는 로봇",
+  "version": "aimi-puzzle-pack-v3-reviewed-72699a09c3c8",
+  "target": "/content/challenges/generated-10d-v2/day-03.png",
+  "candidate_keywords": [
+    {
+      "id": "k-d4a5924a2c68eae1",
+      "label": "로봇",
+      "context": "주요 대상",
+      "sentence_fragment": "로봇을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-7646dc539f232e51",
+      "label": "코끼리",
+      "context": "주요 대상",
+      "sentence_fragment": "코끼리를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-88f7b2799034de36",
+      "label": "자전거",
+      "context": "주요 대상",
+      "sentence_fragment": "자전거를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-97560a2ceba2b49e",
+      "label": "로봇 한 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 한 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-14be973cda708ebc",
+      "label": "로봇 두 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 두 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-76953c3ace24cf9f",
+      "label": "로봇 세 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 세 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-9bd3b90c227e81df",
+      "label": "로봇 몸 색: 파란색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 파란색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-a791d915dc065841",
+      "label": "로봇 몸 색: 빨간색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 빨간색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-8b0fd3925d0cb821",
+      "label": "로봇 몸 색: 노란색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 노란색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-0792154dd2141b0f",
+      "label": "금속 느낌",
+      "context": "로봇의 표면 표현",
+      "sentence_fragment": "로봇은 금속 느낌 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-5091c1c8b4ef392d",
+      "label": "나뭇결",
+      "context": "로봇의 표면 표현",
+      "sentence_fragment": "로봇은 나뭇결 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-8c5d73fd578b35de",
+      "label": "종이",
+      "context": "로봇의 표면 표현",
+      "sentence_fragment": "로봇은 종이 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-4dafee7ed0d16917",
+      "label": "서 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 서 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-dd5027a9f222e63c",
+      "label": "누워 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 누워 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-90d6a2e27a2d834e",
+      "label": "물속에서 헤엄치고 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 물속에서 헤엄치고 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-ddeb73c35f52e819",
+      "label": "한쪽 손을 들고 있다",
+      "context": "로봇 손 동작",
+      "sentence_fragment": "로봇이 한쪽 손을 들고 있게 해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-bf8ef81f07ae0e30",
+      "label": "양손을 내리고 있다",
+      "context": "로봇 손 동작",
+      "sentence_fragment": "로봇이 양손을 내리고 있게 해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-8e89d1ed74e2998c",
+      "label": "해변",
+      "context": "배경 장소",
+      "sentence_fragment": "해변을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-4142f34ad6d226af",
+      "label": "사막",
+      "context": "배경 장소",
+      "sentence_fragment": "사막을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-87bc675e928de61f",
+      "label": "교실",
+      "context": "배경 장소",
+      "sentence_fragment": "교실을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-dc0ebeddc7fafe86",
+      "label": "검은 하늘",
+      "context": "하늘",
+      "sentence_fragment": "검은 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-fb7544ed9fd1e6c6",
+      "label": "분홍 하늘",
+      "context": "하늘",
+      "sentence_fragment": "분홍 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-4ae08975c34bcc6f",
+      "label": "흰색 하늘",
+      "context": "하늘",
+      "sentence_fragment": "흰색 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-b9a97fef298b1e01",
+      "label": "전신",
+      "context": "로봇이 보이는 범위",
+      "sentence_fragment": "로봇이 보이는 범위의 전신이 보이게 그려줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-f6ca799c47d54e91",
+      "label": "얼굴만 확대",
+      "context": "로봇이 보이는 범위",
+      "sentence_fragment": "로봇이 보이는 범위의 얼굴만 확대이 보이게 그려줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-c5d23575cf621b30",
+      "label": "화면 왼쪽",
+      "context": "로봇의 화면 위치",
+      "sentence_fragment": "로봇을 화면 왼쪽에 배치해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-5aae355f9b05ccd4",
+      "label": "화면 오른쪽",
+      "context": "로봇의 화면 위치",
+      "sentence_fragment": "로봇을 화면 오른쪽에 배치해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-b9d9cdd69a5eae48",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-cdcd4b9cbe0d6f58",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-b627a9876deb19b8",
+      "label": "수채화",
+      "context": "표현 방식",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 10
+    }
+  ]
+}

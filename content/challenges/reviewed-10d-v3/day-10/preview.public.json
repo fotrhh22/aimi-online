@@ -1,0 +1,344 @@
+{
+  "id": "day-10",
+  "title": "온실의 로봇과 화분",
+  "version": "aimi-puzzle-pack-v3-reviewed-80d638e5ac7f",
+  "target": "/content/challenges/generated-10d-v2/day-10.png",
+  "candidate_keywords": [
+    {
+      "id": "k-0c864475a1d89aed",
+      "label": "로봇",
+      "context": "주요 대상",
+      "sentence_fragment": "로봇을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-7f61dfdc71b7b9f5",
+      "label": "사람",
+      "context": "주요 대상",
+      "sentence_fragment": "사람을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-80c2c8d07a12ed34",
+      "label": "곰",
+      "context": "주요 대상",
+      "sentence_fragment": "곰을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-8b8d30f2e9c212a2",
+      "label": "로봇 한 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 한 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-aead206b006e44f8",
+      "label": "로봇 두 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 두 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-1da5d7cdb1402f94",
+      "label": "로봇 네 대",
+      "context": "로봇 수",
+      "sentence_fragment": "로봇은 네 대만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-a1329cad7f54cbb7",
+      "label": "로봇 몸 색: 초록색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 초록색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-a45eb2dbab80c5a6",
+      "label": "로봇 몸 색: 빨간색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 빨간색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-643b324d299b94a1",
+      "label": "로봇 몸 색: 검은색",
+      "context": "로봇 몸 색",
+      "sentence_fragment": "로봇 몸은 검은색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-2d847585f7f1c3a1",
+      "label": "온실",
+      "context": "배경 장소",
+      "sentence_fragment": "온실을 배경으로 그려줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-5769bf662a5bdf7c",
+      "label": "바닷속",
+      "context": "배경 장소",
+      "sentence_fragment": "바닷속을 배경으로 그려줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-34ef4d0e26e5ba0f",
+      "label": "사막",
+      "context": "배경 장소",
+      "sentence_fragment": "사막을 배경으로 그려줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-57af90ea35e82878",
+      "label": "서 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 서 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-0a75dc95073afbc0",
+      "label": "누워 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 누워 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-7d0be42b1adff86d",
+      "label": "공중에 떠 있다",
+      "context": "로봇 자세",
+      "sentence_fragment": "로봇이 공중에 떠 있게 해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-49f05869cb8803da",
+      "label": "물뿌리개",
+      "context": "로봇의 도구",
+      "sentence_fragment": "물뿌리개를 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-2746ce75bf8ff16b",
+      "label": "망원경",
+      "context": "로봇의 도구",
+      "sentence_fragment": "망원경을 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-a1e1041ef6ddbe5e",
+      "label": "붓",
+      "context": "로봇의 도구",
+      "sentence_fragment": "붓을 장면에 포함해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-afa729ec41f39ba4",
+      "label": "물뿌리개 색: 노란색",
+      "context": "물뿌리개 색",
+      "sentence_fragment": "물뿌리개는 노란색으로 표현해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-f88a4bfc1e2d792f",
+      "label": "물뿌리개 색: 파란색",
+      "context": "물뿌리개 색",
+      "sentence_fragment": "물뿌리개는 파란색으로 표현해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-f429775f01352f50",
+      "label": "물뿌리개 색: 흰색",
+      "context": "물뿌리개 색",
+      "sentence_fragment": "물뿌리개는 흰색으로 표현해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-1df53e792d765b87",
+      "label": "로봇과 도구: 들고 있다",
+      "context": "로봇과 도구",
+      "sentence_fragment": "로봇이 물뿌리개를 들고 있게 해줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-30be21331e282565",
+      "label": "로봇과 도구: 발로 밟고 있다",
+      "context": "로봇과 도구",
+      "sentence_fragment": "로봇이 물뿌리개를 발로 밟고 있게 해줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-731d2043bde6037d",
+      "label": "화분 색: 보라색",
+      "context": "화분 색",
+      "sentence_fragment": "화분은 보라색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-699bf160e3406588",
+      "label": "화분 색: 주황색",
+      "context": "화분 색",
+      "sentence_fragment": "화분은 주황색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-9a2019090ef25bbf",
+      "label": "화분 색: 분홍색",
+      "context": "화분 색",
+      "sentence_fragment": "화분은 분홍색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-a48824ac82ebac79",
+      "label": "화분",
+      "context": "식물 용기",
+      "sentence_fragment": "화분을 장면에 포함해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-05dbae81458f30c2",
+      "label": "접시",
+      "context": "식물 용기",
+      "sentence_fragment": "접시를 장면에 포함해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-3744a51ed158de52",
+      "label": "컵",
+      "context": "식물 용기",
+      "sentence_fragment": "컵을 장면에 포함해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-781399bf402a01e7",
+      "label": "화분 두 개",
+      "context": "화분 수",
+      "sentence_fragment": "화분은 두 개만 보여줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-f4106f7cc5fc1461",
+      "label": "화분 한 개",
+      "context": "화분 수",
+      "sentence_fragment": "화분은 한 개만 보여줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-398f198397d21ba3",
+      "label": "화분 네 개",
+      "context": "화분 수",
+      "sentence_fragment": "화분은 네 개만 보여줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-2f5005c09f00b828",
+      "label": "화분 위치: 로봇의 화면 오른쪽",
+      "context": "로봇 기준 화분 위치",
+      "sentence_fragment": "화분을 로봇의 화면 오른쪽에 놓아줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-f43b4cbf18020ec3",
+      "label": "화분 위치: 왼쪽",
+      "context": "로봇 기준 화분 위치",
+      "sentence_fragment": "화분을 로봇의 화면 왼쪽에 놓아줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-6b9df66f7913ea58",
+      "label": "가로로 나란히",
+      "context": "화분 배치",
+      "sentence_fragment": "화분을 가로로 나란히 배치해줘.",
+      "sentence_order": 12
+    },
+    {
+      "id": "k-402ffd0999a531a6",
+      "label": "세로로 쌓인",
+      "context": "화분 배치",
+      "sentence_fragment": "화분을 세로로 쌓인 배치해줘.",
+      "sentence_order": 12
+    },
+    {
+      "id": "k-379a32e3d1d8ce4a",
+      "label": "원형 배치",
+      "context": "화분 배치",
+      "sentence_fragment": "화분을 원형 배치 배치해줘.",
+      "sentence_order": 12
+    },
+    {
+      "id": "k-627de39ddcd6990d",
+      "label": "선인장",
+      "context": "화분 안의 식물",
+      "sentence_fragment": "선인장을 장면에 포함해줘.",
+      "sentence_order": 13
+    },
+    {
+      "id": "k-e0b2b6b5901f3504",
+      "label": "해바라기",
+      "context": "화분 안의 식물",
+      "sentence_fragment": "해바라기를 장면에 포함해줘.",
+      "sentence_order": 13
+    },
+    {
+      "id": "k-bd412e5d54228999",
+      "label": "장미",
+      "context": "화분 안의 식물",
+      "sentence_fragment": "장미를 장면에 포함해줘.",
+      "sentence_order": 13
+    },
+    {
+      "id": "k-97d2e3875dad1ed4",
+      "label": "물을 뿌리고 있다",
+      "context": "로봇의 작업",
+      "sentence_fragment": "로봇의이 물을 뿌리고 있게 해줘.",
+      "sentence_order": 14
+    },
+    {
+      "id": "k-411cc1394c0423a7",
+      "label": "책을 읽고 있다",
+      "context": "로봇의 작업",
+      "sentence_fragment": "로봇의이 책을 읽고 있게 해줘.",
+      "sentence_order": 14
+    },
+    {
+      "id": "k-bdf4a3ce7a2e6c94",
+      "label": "흙을 파고 있다",
+      "context": "로봇의 작업",
+      "sentence_fragment": "로봇의이 흙을 파고 있게 해줘.",
+      "sentence_order": 14
+    },
+    {
+      "id": "k-0299899ce6697bd3",
+      "label": "화면 중앙",
+      "context": "대상들의 화면 위치",
+      "sentence_fragment": "대상들을 화면 중앙에 배치해줘.",
+      "sentence_order": 16
+    },
+    {
+      "id": "k-8fcf131fab7437fe",
+      "label": "화면 왼쪽 아래",
+      "context": "대상들의 화면 위치",
+      "sentence_fragment": "대상들을 화면 왼쪽 아래에 배치해줘.",
+      "sentence_order": 16
+    },
+    {
+      "id": "k-1b53368baed8bc6e",
+      "label": "종이 콜라주",
+      "context": "표현 방식",
+      "sentence_fragment": "종이 콜라주 스타일로 표현해줘.",
+      "sentence_order": 18
+    },
+    {
+      "id": "k-a2265dab26c1d46a",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 18
+    },
+    {
+      "id": "k-efc5129d2a635910",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 18
+    }
+  ]
+}

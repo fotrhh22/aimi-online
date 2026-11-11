@@ -1,0 +1,551 @@
+{
+  "day": "day-09",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-09.png",
+  "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-09-c01",
+      "variable": "subject",
+      "entity": "cabin",
+      "context": "건물",
+      "requested_value": "산장",
+      "observed_value": "산장",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "산장",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c02",
+      "variable": "count",
+      "entity": "cabin",
+      "context": "산장 수",
+      "requested_value": "한 채",
+      "observed_value": "주요 산장 한 채",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "주요 산장 한 채",
+      "score_enabled": true,
+      "review_note": "멀리 호숫가에 작은 건물들이 더 보인다. 그림 전체의 건물 총수가 아니라 전경의 주요 산장 수로 범위를 한정한다."
+    },
+    {
+      "id": "day-09-c03",
+      "variable": "color",
+      "entity": "roof",
+      "context": "산장 지붕 색",
+      "requested_value": "빨간색",
+      "observed_value": "빨간색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "빨간색",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c04",
+      "variable": "weather",
+      "entity": "scene",
+      "context": "땅과 지붕의 표현",
+      "requested_value": "눈 덮인",
+      "observed_value": "눈 덮인",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "눈 덮인",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c05",
+      "variable": "color",
+      "entity": "window_light",
+      "context": "창문에서 보이는 빛",
+      "requested_value": "노란빛",
+      "observed_value": "노란빛",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "노란빛",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c06",
+      "variable": "subject",
+      "entity": "tree",
+      "context": "산장 뒤의 나무",
+      "requested_value": "소나무",
+      "observed_value": "소나무",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "소나무",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c07",
+      "variable": "depth_relation",
+      "entity": "tree->cabin",
+      "context": "나무의 위치",
+      "requested_value": "산장 뒤",
+      "observed_value": "산장 뒤",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "산장 뒤",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘 색",
+      "requested_value": "파란 하늘",
+      "observed_value": "파란 하늘",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "파란 하늘",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c09",
+      "variable": "subject",
+      "entity": "balloon",
+      "context": "하늘의 이동수단",
+      "requested_value": "열기구",
+      "observed_value": "열기구",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "열기구",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c10",
+      "variable": "count",
+      "entity": "balloon",
+      "context": "열기구 수",
+      "requested_value": "두 대",
+      "observed_value": "두 대",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "두 대",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c11",
+      "variable": "color",
+      "entity": "balloon",
+      "context": "열기구 풍선 색",
+      "requested_value": "주황색",
+      "observed_value": "주황색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "주황색",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "id": "day-09-c12",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "유화",
+      "observed_value": "유화",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "860713a4351d48e6dec635b66eed17eee76d20051fb91d46000fc1236be26ee3",
+      "scored_value": "유화",
+      "score_enabled": true,
+      "review_note": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-05a87e13c3640011",
+      "old_label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-0a256c50c1b14cc9",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-282d11685a465e60",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-09-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 유화와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-2cd6f4334ee161f3",
+      "old_label": "모래로 덮인",
+      "context": "땅과 지붕의 표현",
+      "condition_id": "day-09-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 눈 덮인와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-33aa23396afe6662",
+      "old_label": "바나나",
+      "context": "건물",
+      "condition_id": "day-09-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-40ff23c565513bc2",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-09-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 유화와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-461d6707684b72d4",
+      "old_label": "흰색",
+      "context": "열기구 풍선 색",
+      "condition_id": "day-09-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-4c0f86a31c770f68",
+      "old_label": "유화",
+      "context": "표현 방식",
+      "condition_id": "day-09-c12",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-4c6ead2077236935",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-4c8b3e53f893ac75",
+      "old_label": "분홍 하늘",
+      "context": "하늘 색",
+      "condition_id": "day-09-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란 하늘와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-5007f365d4aea1ed",
+      "old_label": "검은 하늘",
+      "context": "하늘 색",
+      "condition_id": "day-09-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란 하늘와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-502c935f2291b0d0",
+      "old_label": "빨간색",
+      "context": "산장 지붕 색",
+      "condition_id": "day-09-c03",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-516ceab8bd879d84",
+      "old_label": "푸른 잔디로 덮인",
+      "context": "땅과 지붕의 표현",
+      "condition_id": "day-09-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 눈 덮인와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-5a69a87e7a869933",
+      "old_label": "대나무",
+      "context": "산장 뒤의 나무",
+      "condition_id": "day-09-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 소나무와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-5cef75692859362c",
+      "old_label": "등대",
+      "context": "건물",
+      "condition_id": "day-09-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 산장와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-618ea46268b49ac3",
+      "old_label": "한 대",
+      "context": "열기구 수",
+      "condition_id": "day-09-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 대와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-62e320f896715338",
+      "old_label": "산장 앞",
+      "context": "나무의 위치",
+      "condition_id": "day-09-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 산장 뒤와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-6342bf646893a634",
+      "old_label": "세 채",
+      "context": "산장 수",
+      "condition_id": "day-09-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주요 산장 한 채와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-6451ddbae9c73597",
+      "old_label": "초록색",
+      "context": "산장 지붕 색",
+      "condition_id": "day-09-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-653122b166212bd3",
+      "old_label": "고층 빌딩",
+      "context": "건물",
+      "condition_id": "day-09-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 산장와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-68bafe7b08632ad3",
+      "old_label": "두 채",
+      "context": "산장 수",
+      "condition_id": "day-09-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주요 산장 한 채와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-73e8237971e70265",
+      "old_label": "파란 하늘",
+      "context": "하늘 색",
+      "condition_id": "day-09-c08",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-7b907ff4501b41f1",
+      "old_label": "네 대",
+      "context": "열기구 수",
+      "condition_id": "day-09-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 대와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-909d3a00d5bc81fe",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-95abec777caef6f2",
+      "old_label": "눈 덮인",
+      "context": "땅과 지붕의 표현",
+      "condition_id": "day-09-c04",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-989a2300fbdb5e9d",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-9b06bfe814c164fb",
+      "old_label": "헬리콥터",
+      "context": "하늘의 이동수단",
+      "condition_id": "day-09-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 열기구와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-a47955d18d491ab7",
+      "old_label": "소나무",
+      "context": "산장 뒤의 나무",
+      "condition_id": "day-09-c06",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-a95589d30aafc3e4",
+      "old_label": "주황색",
+      "context": "열기구 풍선 색",
+      "condition_id": "day-09-c11",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-b3d74f6d487690cb",
+      "old_label": "갈색",
+      "context": "열기구 풍선 색",
+      "condition_id": "day-09-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-ba1c98a48664509a",
+      "old_label": "두 대",
+      "context": "열기구 수",
+      "condition_id": "day-09-c10",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-c0d473145c565d06",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-c33f8fdb5ef43ec5",
+      "old_label": "보랏빛",
+      "context": "창문에서 보이는 빛",
+      "condition_id": "day-09-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란빛와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-c65eeb9cebab972a",
+      "old_label": "열기구",
+      "context": "하늘의 이동수단",
+      "condition_id": "day-09-c09",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-cf3e9422cf6fc8b5",
+      "old_label": "비행기",
+      "context": "하늘의 이동수단",
+      "condition_id": "day-09-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 열기구와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-d0823470e44fa353",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-d17ad57543c18a26",
+      "old_label": "노란빛",
+      "context": "창문에서 보이는 빛",
+      "condition_id": "day-09-c05",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-d3004e3638b3cbad",
+      "old_label": "한 채",
+      "context": "산장 수",
+      "condition_id": "day-09-c02",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 멀리 호숫가에 작은 건물들이 더 보인다. 그림 전체의 건물 총수가 아니라 전경의 주요 산장 수로 범위를 한정한다."
+    },
+    {
+      "old_id": "k-da90024ab343c423",
+      "old_label": "산장 뒤",
+      "context": "나무의 위치",
+      "condition_id": "day-09-c07",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-e12f01c827f2a524",
+      "old_label": "보라색",
+      "context": "산장 지붕 색",
+      "condition_id": "day-09-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-e5db33c841fd510f",
+      "old_label": "초록빛",
+      "context": "창문에서 보이는 빛",
+      "condition_id": "day-09-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란빛와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-e913d0dc6339bbd9",
+      "old_label": "산장",
+      "context": "건물",
+      "condition_id": "day-09-c01",
+      "disposition": "retained_correct",
+      "reason": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-ea32144350fe9c87",
+      "old_label": "야자수",
+      "context": "산장 뒤의 나무",
+      "condition_id": "day-09-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 소나무와 대비되는 선택지. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-eafe2d57d29f9086",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    },
+    {
+      "old_id": "k-fbca90227299939a",
+      "old_label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+    }
+  ],
+  "notes": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다."
+}

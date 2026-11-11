@@ -55,6 +55,7 @@ export async function request<T>(
     keys.set(signature, crypto.randomUUID());
   const controller = new AbortController(),
     timer = setTimeout(() => controller.abort(), 35000);
+  if (mutation) window.dispatchEvent(new Event("aimi-write-start"));
   try {
     const response = await fetch(base + path, {
       method,
@@ -84,6 +85,7 @@ export async function request<T>(
     if (e instanceof RequestError) throw e;
     throw new RequestError("NETWORK_ERROR", 0);
   } finally {
+    if (mutation) window.dispatchEvent(new Event("aimi-write-end"));
     clearTimeout(timer);
   }
 }
@@ -91,6 +93,8 @@ const messages: Record<string, string> = {
   NETWORK_ERROR: "연결을 확인한 뒤 다시 시도해주세요.",
   UNAUTHENTICATED: "다시 로그인해주세요.",
   GAME_DAILY_LIMIT: "오늘 게임은 모두 마쳤어요.",
+  GAME_CHALLENGE_STARTED: "챌린지를 시작한 뒤에는 게임을 할 수 없어요.",
+  GAME_CHALLENGE_FINISHED: "오늘 챌린지가 끝났어요. 내일 새 게임으로 만나요.",
   CHALLENGE_DAILY_LIMIT: "오늘 챌린지 도전을 모두 마쳤어요.",
   GAME_REQUIRED: "게임을 먼저 플레이해주세요.",
   INSUFFICIENT_EP: "EP를 더 모으면 구매할 수 있어요.",

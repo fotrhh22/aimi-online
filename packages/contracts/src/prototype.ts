@@ -62,6 +62,8 @@ export type TaskProfile = {
 };
 export type Keyword = {
   sentenceClause?: string;
+  sentenceFragment?: string;
+  sentenceOrder?: number;
   id: string;
   label: string;
   group: string;
@@ -111,6 +113,9 @@ export type Play = {
   ticks?: number;
 };
 export type Attempt = {
+  rewardStatus?: "pending" | "claimed";
+  rewardClaimedAt?: number;
+  rewardPolicyVersion?: string;
   matchedKeywordIds?: string[];
   feedbackStatus?: "complete" | "partial" | "mixed" | "none";
   ruleVersion?: string;
@@ -120,13 +125,20 @@ export type Attempt = {
   missingKeywordCount?: number;
   reveal?: {
     prompt: string;
+    generationPrompt?: string;
+    generationPromptFormat?: string;
     answerKeywordIds: string[];
     highlights: {
       start_utf16: number;
       end_utf16: number;
       matched_text: string;
     }[];
-    tips: { title: string; text: string }[];
+    tips: {
+      title: string;
+      text: string;
+      kind?: "writing" | "model";
+      sourceLabel?: string;
+    }[];
     modelId: string;
   };
 

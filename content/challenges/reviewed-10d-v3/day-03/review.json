@@ -1,0 +1,496 @@
+{
+  "day": "day-03",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-03.png",
+  "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-03-c01",
+      "variable": "subject",
+      "entity": "robot",
+      "context": "주요 대상",
+      "requested_value": "로봇",
+      "observed_value": "로봇",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "로봇",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c02",
+      "variable": "count",
+      "entity": "robot",
+      "context": "로봇 수",
+      "requested_value": "한 대",
+      "observed_value": "한 대",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "한 대",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c03",
+      "variable": "color",
+      "entity": "robot",
+      "context": "로봇 몸 색",
+      "requested_value": "파란색",
+      "observed_value": "파란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "파란색",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c04",
+      "variable": "material",
+      "entity": "robot",
+      "context": "로봇의 표면 표현",
+      "requested_value": "금속",
+      "observed_value": "금속 느낌",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "금속 느낌",
+      "score_enabled": true,
+      "review_note": "빛나는 판넬·관절의 금속성 표현을 말하며 실제 재료가 금속임을 단정하지 않는다."
+    },
+    {
+      "id": "day-03-c05",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 자세",
+      "requested_value": "서 있다",
+      "observed_value": "서 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "서 있다",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c06",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 손 동작",
+      "requested_value": "한쪽 손을 들고 있다",
+      "observed_value": "한쪽 손을 들고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "한쪽 손을 들고 있다",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c07",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "해변",
+      "observed_value": "해변",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "해변",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘",
+      "requested_value": "검은 하늘",
+      "observed_value": "검은 하늘",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "검은 하늘",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c09",
+      "variable": "framing",
+      "entity": "robot",
+      "context": "로봇이 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": "전신",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "전신",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c10",
+      "variable": "screen_position",
+      "entity": "robot",
+      "context": "로봇의 화면 위치",
+      "requested_value": "화면 왼쪽",
+      "observed_value": "화면 왼쪽",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "화면 왼쪽",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "id": "day-03-c11",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "픽셀아트",
+      "observed_value": "픽셀아트",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a2d8ab44b18d96668f7c1e263b63429fe38d97b52b300ba040e95e1e77ce4e35",
+      "scored_value": "픽셀아트",
+      "score_enabled": true,
+      "review_note": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-0078222f52ab5932",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-12599dd2c1e460d8",
+      "old_label": "금속",
+      "context": "로봇의 표면 표현",
+      "condition_id": "day-03-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 빛나는 판넬·관절의 금속성 표현을 말하며 실제 재료가 금속임을 단정하지 않는다."
+    },
+    {
+      "old_id": "k-14be973cda708ebc",
+      "old_label": "두 대",
+      "context": "로봇 수",
+      "condition_id": "day-03-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 대와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-17652d90544bc6a8",
+      "old_label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-250a8c5b06811a4b",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-2cfe353d7eb0c68b",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-4142f34ad6d226af",
+      "old_label": "사막",
+      "context": "배경 장소",
+      "condition_id": "day-03-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 해변와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-4ae08975c34bcc6f",
+      "old_label": "흰색 하늘",
+      "context": "하늘",
+      "condition_id": "day-03-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 검은 하늘와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-4dafee7ed0d16917",
+      "old_label": "서 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-03-c05",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-5091c1c8b4ef392d",
+      "old_label": "나뭇결",
+      "context": "로봇의 표면 표현",
+      "condition_id": "day-03-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 금속 느낌와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-513ecf76c35e5adc",
+      "old_label": "바나나",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-5aae355f9b05ccd4",
+      "old_label": "화면 오른쪽",
+      "context": "로봇의 화면 위치",
+      "condition_id": "day-03-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 왼쪽와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-7646dc539f232e51",
+      "old_label": "코끼리",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 로봇와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-7664c371ddee335b",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-76953c3ace24cf9f",
+      "old_label": "세 대",
+      "context": "로봇 수",
+      "condition_id": "day-03-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 대와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-87bc675e928de61f",
+      "old_label": "교실",
+      "context": "배경 장소",
+      "condition_id": "day-03-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 해변와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-88f7b2799034de36",
+      "old_label": "자전거",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 로봇와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-8b0fd3925d0cb821",
+      "old_label": "노란색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-03-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-8c5d73fd578b35de",
+      "old_label": "종이",
+      "context": "로봇의 표면 표현",
+      "condition_id": "day-03-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 금속 느낌와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-8e89d1ed74e2998c",
+      "old_label": "해변",
+      "context": "배경 장소",
+      "condition_id": "day-03-c07",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-90d6a2e27a2d834e",
+      "old_label": "물속에서 헤엄치고 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-03-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-97560a2ceba2b49e",
+      "old_label": "한 대",
+      "context": "로봇 수",
+      "condition_id": "day-03-c02",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-993f1fda5fe3e0a5",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-9bd3b90c227e81df",
+      "old_label": "파란색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-03-c03",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-a791d915dc065841",
+      "old_label": "빨간색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-03-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-b505eecb6c24051e",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-b627a9876deb19b8",
+      "old_label": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-03-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-b9a97fef298b1e01",
+      "old_label": "전신",
+      "context": "로봇이 보이는 범위",
+      "condition_id": "day-03-c09",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-b9d9cdd69a5eae48",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-03-c11",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-bf8ef81f07ae0e30",
+      "old_label": "양손을 내리고 있다",
+      "context": "로봇 손 동작",
+      "condition_id": "day-03-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한쪽 손을 들고 있다와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-c5d23575cf621b30",
+      "old_label": "화면 왼쪽",
+      "context": "로봇의 화면 위치",
+      "condition_id": "day-03-c10",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-cdcd4b9cbe0d6f58",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-03-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-d1a83b307887e355",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-d4a5924a2c68eae1",
+      "old_label": "로봇",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-dc0ebeddc7fafe86",
+      "old_label": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-03-c08",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-dd5027a9f222e63c",
+      "old_label": "누워 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-03-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-ddeb73c35f52e819",
+      "old_label": "한쪽 손을 들고 있다",
+      "context": "로봇 손 동작",
+      "condition_id": "day-03-c06",
+      "disposition": "retained_correct",
+      "reason": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-f53dd66281a6c246",
+      "old_label": "수박",
+      "context": "주요 대상",
+      "condition_id": "day-03-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-f6ca799c47d54e91",
+      "old_label": "얼굴만 확대",
+      "context": "로봇이 보이는 범위",
+      "condition_id": "day-03-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 전신와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    },
+    {
+      "old_id": "k-fb7544ed9fd1e6c6",
+      "old_label": "분홍 하늘",
+      "context": "하늘",
+      "condition_id": "day-03-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 검은 하늘와 대비되는 선택지. 왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+    }
+  ],
+  "notes": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다."
+}

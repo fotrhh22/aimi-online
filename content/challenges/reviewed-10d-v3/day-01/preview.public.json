@@ -1,0 +1,155 @@
+{
+  "id": "day-01",
+  "title": "빨간 사과 두 개",
+  "version": "aimi-puzzle-pack-v3-reviewed-1dc61a70ac9c",
+  "target": "/content/challenges/generated-10d-v2/day-01.png",
+  "candidate_keywords": [
+    {
+      "id": "k-59dcde78e25b0506",
+      "label": "사과",
+      "context": "과일의 종류",
+      "sentence_fragment": "사과를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-9d2ee31b22a89d10",
+      "label": "바나나",
+      "context": "과일의 종류",
+      "sentence_fragment": "바나나를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-2587ddee3db8f135",
+      "label": "수박",
+      "context": "과일의 종류",
+      "sentence_fragment": "수박을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-1027623848713392",
+      "label": "사과 두 개",
+      "context": "사과 개수",
+      "sentence_fragment": "사과는 두 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-368b6b5fd18e11a0",
+      "label": "사과 한 개",
+      "context": "사과 개수",
+      "sentence_fragment": "사과는 한 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-280225e0e8409a36",
+      "label": "사과 세 개",
+      "context": "사과 개수",
+      "sentence_fragment": "사과는 세 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-cbc1e4aae116caa9",
+      "label": "사과 색: 빨간색",
+      "context": "사과 색",
+      "sentence_fragment": "사과는 빨간색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-6e4eead389561d1c",
+      "label": "사과 색: 보라색",
+      "context": "사과 색",
+      "sentence_fragment": "사과는 보라색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-9df38701ba767bf2",
+      "label": "사과 색: 초록색",
+      "context": "사과 색",
+      "sentence_fragment": "사과는 초록색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-663da2451d7863d9",
+      "label": "가로로 나란히",
+      "context": "사과 배치",
+      "sentence_fragment": "사과를 가로로 나란히 배치해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-2aa9657fc2ef4a48",
+      "label": "세로로 나란히",
+      "context": "사과 배치",
+      "sentence_fragment": "사과를 세로로 나란히 배치해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-3f8118b0518c110d",
+      "label": "원형 배치",
+      "context": "사과 배치",
+      "sentence_fragment": "사과를 원형 배치 배치해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-4c7e0d040e836d15",
+      "label": "흰색 배경",
+      "context": "배경",
+      "sentence_fragment": "흰색 배경을 배경으로 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-b6e5dbc279b3dcb3",
+      "label": "검정 배경",
+      "context": "배경",
+      "sentence_fragment": "검정 배경을 배경으로 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-1686885374e626a2",
+      "label": "분홍 배경",
+      "context": "배경",
+      "sentence_fragment": "분홍 배경을 배경으로 그려줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-db4711d7fcdc237d",
+      "label": "화면 중앙",
+      "context": "사과의 화면 위치",
+      "sentence_fragment": "사과를 화면 중앙에 배치해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-8526e057c630aa4c",
+      "label": "화면 오른쪽",
+      "context": "사과의 화면 위치",
+      "sentence_fragment": "사과를 화면 오른쪽에 배치해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-9f40f82ec8b8e6df",
+      "label": "화면 왼쪽",
+      "context": "사과의 화면 위치",
+      "sentence_fragment": "사과를 화면 왼쪽에 배치해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-a1bb6ab2a551741d",
+      "label": "수채화",
+      "context": "표현 방식",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-75464d23a373c12c",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-af62f247c1146bec",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 7
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import {
   type PuzzlePack,
 } from "../services/content/generated.js";
 import {
+  ECONOMY_POLICY,
   PUZZLE_ATTEMPT_COST,
   PUZZLE_COUNT_HINT_COST,
   PUZZLE_RULE_VERSION,
@@ -80,6 +81,10 @@ export function view(s: UserState, date = seoulDate()) {
     activePlay:
       Object.values(s.plays).find((p) => p.status === "running") ?? null,
     latestAttempt: d.lastAttempt ? s.attempts[d.lastAttempt] : null,
+    pendingChallengeReward:
+      Object.values(s.attempts)
+        .filter((a) => a.passed && a.rewardStatus === "pending")
+        .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null,
     challengeAttempts: Object.values(s.attempts)
       .filter(
         (a) =>
@@ -120,6 +125,9 @@ export function startPlay(s: UserState, override?: GameKind, now = Date.now()) {
   const date = seoulDate(new Date(now)),
     d = daily(s, date),
     active = Object.values(s.plays).find((p) => p.status === "running");
+  if (d.success || d.challengeClosed || (!d.challengeVersion && d.attemptsUsed >= 5))
+    throw new ApiError("GAME_CHALLENGE_FINISHED", 409);
+  if (d.attemptsUsed > 0) throw new ApiError("GAME_CHALLENGE_STARTED", 409);
   if (active && now - active.startedAt < RULES.pauseGraceMs) return active;
   if (active) active.status = "expired";
   if (d.playsUsed >= 5) throw new ApiError("GAME_DAILY_LIMIT", 429);
@@ -147,6 +155,10 @@ export function completePlay(
   if (!p) throw new ApiError("PLAY_NOT_FOUND", 404);
   if (p.result) return p.result;
   if (p.status !== "running") throw new ApiError("PLAY_EXPIRED", 409);
+  const challengeDay = daily(s, p.date);
+  if (challengeDay.success || challengeDay.challengeClosed || (!challengeDay.challengeVersion && challengeDay.attemptsUsed >= 5))
+    throw new ApiError("GAME_CHALLENGE_FINISHED", 409);
+  if (challengeDay.attemptsUsed > 0) throw new ApiError("GAME_CHALLENGE_STARTED", 409);
   if (now - p.startedAt > RULES.pauseGraceMs)
     throw new ApiError("PLAY_EXPIRED", 409);
   if ((body.ticks / RULES.tickRate) * 1000 > now - p.startedAt + 1500)
@@ -231,7 +243,7 @@ export function submitAttempt(
   const ep = e.passed ? challengeRewardEP(budget, e.cost) : 0;
   if (e.passed) {
     d.success = true;
-    s.balance += ep;
+    if (!puzzle) s.balance += ep;
   }
   const a = {
     id: randomUUID(),
@@ -242,6 +254,12 @@ export function submitAttempt(
     score: e.score,
     threshold: e.threshold,
     passed: e.passed,
+    ...(puzzle && e.passed
+      ? {
+          rewardStatus: "pending" as const,
+          rewardPolicyVersion: ECONOMY_POLICY.version,
+        }
+      : {}),
     ep,
     cost: e.cost,
     budget,
@@ -266,6 +284,30 @@ export function submitAttempt(
   d.lastAttempt = a.id;
   return a;
 }
+/** Atomic in the repository transaction. Undefined status means a legacy reward already paid. */
+export function claimChallengeReward(
+  s: UserState,
+  id: string,
+  now = Date.now(),
+) {
+  const attempt = s.attempts[id];
+  if (!attempt) throw new ApiError("ATTEMPT_NOT_FOUND", 404);
+  if (!attempt.passed) throw new ApiError("CHALLENGE_NOT_SUCCEEDED", 409);
+  if (attempt.rewardStatus !== "pending")
+    return { attempt, credited: 0, balance: s.balance, alreadyClaimed: true };
+  if (!Number.isSafeInteger(attempt.ep) || attempt.ep < 10 || attempt.ep > 15)
+    throw new ApiError("INVALID_CHALLENGE_REWARD", 409);
+  s.balance += attempt.ep;
+  attempt.rewardStatus = "claimed";
+  attempt.rewardClaimedAt = now;
+  return {
+    attempt,
+    credited: attempt.ep,
+    balance: s.balance,
+    alreadyClaimed: false,
+  };
+}
+
 export function purchase(s: UserState, id: string, quantity = 1) {
   if (!Number.isInteger(quantity) || quantity < 1 || quantity > 99)
     throw new ApiError("INVALID_QUANTITY");

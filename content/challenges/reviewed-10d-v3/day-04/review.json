@@ -1,0 +1,442 @@
+{
+  "day": "day-04",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-04.png",
+  "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-04-c01",
+      "variable": "subject",
+      "entity": "cactus",
+      "context": "식물",
+      "requested_value": "선인장",
+      "observed_value": "선인장",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "선인장",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c02",
+      "variable": "count",
+      "entity": "cactus",
+      "context": "선인장 수",
+      "requested_value": "한 개",
+      "observed_value": "한 개",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "한 개",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c03",
+      "variable": "color",
+      "entity": "cactus",
+      "context": "선인장 색",
+      "requested_value": "초록색",
+      "observed_value": "초록색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "초록색",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c04",
+      "variable": "color",
+      "entity": "pot",
+      "context": "화분 색",
+      "requested_value": "보라색",
+      "observed_value": "보라색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "보라색",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c05",
+      "variable": "subject",
+      "entity": "pot",
+      "context": "식물이 담긴 용기",
+      "requested_value": "화분",
+      "observed_value": "화분",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "화분",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c06",
+      "variable": "containment",
+      "entity": "cactus->pot",
+      "context": "선인장 위치",
+      "requested_value": "안에",
+      "observed_value": "안에",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "안에",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c07",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "노란색 배경",
+      "observed_value": "노란색 배경",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "노란색 배경",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c08",
+      "variable": "screen_position",
+      "entity": "pot",
+      "context": "화분의 화면 위치",
+      "requested_value": "화면 중앙",
+      "observed_value": "화면 중앙",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "화면 중앙",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "id": "day-04-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "사진풍",
+      "observed_value": "사진풍",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "d9d7bbdc02b9a7627d9fd69bffb0591b9c4ea89210297f3205fca1bb78f9ee5b",
+      "scored_value": "사진풍",
+      "score_enabled": true,
+      "review_note": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-07d8249f58d76434",
+      "old_label": "검은색",
+      "context": "화분 색",
+      "condition_id": "day-04-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 보라색와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-0c5862d65739d319",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-04-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 사진풍와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-1011a75fa4780926",
+      "old_label": "흰색 배경",
+      "context": "배경",
+      "condition_id": "day-04-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색 배경와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-16a047125967aca3",
+      "old_label": "먹그림",
+      "context": "표현 방식",
+      "condition_id": "day-04-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 사진풍와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-2134ca920e3b1b94",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-3488d01801fe9436",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-3718cabdf4bbfc45",
+      "old_label": "바나나",
+      "context": "식물이 담긴 용기",
+      "condition_id": "day-04-c05",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-3e9cbe7cc34803fa",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-5df3e41c919f75e5",
+      "old_label": "빨간색",
+      "context": "선인장 색",
+      "condition_id": "day-04-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-637ec14e6f3e0b21",
+      "old_label": "노란색 배경",
+      "context": "배경",
+      "condition_id": "day-04-c07",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-68c6285b96286a77",
+      "old_label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-69d5be07d7b19105",
+      "old_label": "해바라기",
+      "context": "식물",
+      "condition_id": "day-04-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 선인장와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-6fca881040835633",
+      "old_label": "파란색",
+      "context": "선인장 색",
+      "condition_id": "day-04-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-8307842150af0546",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-04-c09",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-83540729e6b6daa5",
+      "old_label": "검정 배경",
+      "context": "배경",
+      "condition_id": "day-04-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색 배경와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-8a510ea2fb7ab3d8",
+      "old_label": "화면 중앙",
+      "context": "화분의 화면 위치",
+      "condition_id": "day-04-c08",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-8a57af967cf0d5a3",
+      "old_label": "보라색",
+      "context": "화분 색",
+      "condition_id": "day-04-c04",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-8dc4447668b73e42",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-8dea3b4fe0d8086a",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-98a4f0ef03825e52",
+      "old_label": "바나나",
+      "context": "식물",
+      "condition_id": "day-04-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-9e4216418fb8f0b4",
+      "old_label": "한 개",
+      "context": "선인장 수",
+      "condition_id": "day-04-c02",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-9f2260abca62047b",
+      "old_label": "선인장",
+      "context": "식물",
+      "condition_id": "day-04-c01",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-9fc863663b88a6ff",
+      "old_label": "안에",
+      "context": "선인장 위치",
+      "condition_id": "day-04-c06",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-aef07d8682d3180d",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-b848126f95b04511",
+      "old_label": "빨간색",
+      "context": "화분 색",
+      "condition_id": "day-04-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-bc6aa57172969723",
+      "old_label": "화면 오른쪽",
+      "context": "화분의 화면 위치",
+      "condition_id": "day-04-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-bdcb5649d2ac37ab",
+      "old_label": "흰색",
+      "context": "화분 색",
+      "condition_id": "day-04-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 보라색와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-c387c13fe9f5bb74",
+      "old_label": "초록색",
+      "context": "선인장 색",
+      "condition_id": "day-04-c03",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-c5d165b90520da5a",
+      "old_label": "화분",
+      "context": "식물이 담긴 용기",
+      "condition_id": "day-04-c05",
+      "disposition": "retained_correct",
+      "reason": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-ec26edc399adee8f",
+      "old_label": "두 개",
+      "context": "선인장 수",
+      "condition_id": "day-04-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-ece4575d227703b1",
+      "old_label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-f5bd966f453f1f28",
+      "old_label": "주전자",
+      "context": "식물이 담긴 용기",
+      "condition_id": "day-04-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화분와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-f60a7e97f2bbf1fc",
+      "old_label": "밖에",
+      "context": "선인장 위치",
+      "condition_id": "day-04-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 안에와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-fa652ce89756bab1",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-fcd716d737221bb7",
+      "old_label": "소나무",
+      "context": "식물",
+      "condition_id": "day-04-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 선인장와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-fe5cc4d93802258a",
+      "old_label": "네 개",
+      "context": "선인장 수",
+      "condition_id": "day-04-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    },
+    {
+      "old_id": "k-ff6cae6f5a474a6a",
+      "old_label": "접시",
+      "context": "식물이 담긴 용기",
+      "condition_id": "day-04-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화분와 대비되는 선택지. 중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+    }
+  ],
+  "notes": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다."
+}

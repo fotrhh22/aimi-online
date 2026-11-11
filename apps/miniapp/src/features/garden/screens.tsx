@@ -287,6 +287,7 @@ export function Garden() {
     );
   };
   const save = async (target = "/garden") => {
+    const origin = a.path;
     const r = await a.perform(
       () =>
         request("/v1/garden", "PUT", {
@@ -296,7 +297,7 @@ export function Garden() {
         }),
       "정원에 적용했어요.",
     );
-    if (r) {
+    if (r && a.isCurrentPath(origin)) {
       setUnsaved(false);
       setPicker(false);
       setSelectedId(null);
@@ -481,9 +482,6 @@ export function Garden() {
           ) && <p>다른 캐릭터를 구매하면 선택할 수 있어요.</p>}
           <p className="caption">선택한 뒤 정원 편집에서 저장해주세요.</p>
           <div className="dialog-actions button-row">
-            <Button weak onClick={() => setPicker(false)}>
-              닫기
-            </Button>
             <Button
               disabled={choice === character}
               onClick={() => {
@@ -493,11 +491,19 @@ export function Garden() {
             >
               {choice === character ? "캐릭터 선택" : name(choice) + " 선택"}
             </Button>
+            <Button weak onClick={() => setPicker(false)}>
+              취소
+            </Button>
           </div>
         </Modal>
       )}
       {unsaved && (
-        <Modal title="변경사항을 저장할까요?" onClose={() => setUnsaved(false)}>
+        <Modal
+          title="변경사항을 저장할까요?"
+          onClose={() => {
+            if (!a.busy) setUnsaved(false);
+          }}
+        >
           <p>
             아이템 배치와 캐릭터 변경이 아직 저장되지 않았어요.
             <br />
@@ -507,8 +513,12 @@ export function Garden() {
             <Button loading={a.busy} onClick={() => void save(leaveTarget)}>
               저장하고 나가기
             </Button>
-            <Button
-              weak
+            <Button weak disabled={a.busy} onClick={() => setUnsaved(false)}>
+              취소
+            </Button>
+            <button
+              className="text-link"
+              disabled={a.busy}
               onClick={() => {
                 setCharacter(s.character);
                 setPlacements(gardenPlacements(s.garden));
@@ -519,9 +529,6 @@ export function Garden() {
               }}
             >
               저장하지 않고 나가기
-            </Button>
-            <button className="text-link" onClick={() => setUnsaved(false)}>
-              계속 편집하기
             </button>
           </div>
         </Modal>
@@ -538,8 +545,12 @@ export function Shop() {
       null,
     ),
     [quantity, setQuantity] = useState(1);
+  const ownedCharacter = Boolean(
+    characters && selected && s.inventory.includes(selected.id),
+  );
   const buy = async () => {
     if (!selected) return;
+    const origin = a.path;
     const item = selected;
     const r = await a.perform(() =>
       request("/v1/purchases", "POST", {
@@ -547,7 +558,7 @@ export function Shop() {
         quantity: characters ? 1 : quantity,
       }),
     );
-    if (r) {
+    if (r && a.isCurrentPath(origin)) {
       setSelected(null);
       setDone({ item, quantity: characters ? 1 : quantity });
     }
@@ -594,9 +605,15 @@ export function Shop() {
       {selected && (
         <Modal
           title={
-            characters ? "이 캐릭터를 구매할까요?" : "이 아이템을 구매할까요?"
+            ownedCharacter
+              ? "보유 중이에요"
+              : characters
+                ? "이 캐릭터를 구매할까요?"
+                : "이 아이템을 구매할까요?"
           }
-          onClose={() => setSelected(null)}
+          onClose={() => {
+            if (!a.busy) setSelected(null);
+          }}
         >
           <div className="product-preview">
             <Asset id={selected.id} size={100} />
@@ -637,42 +654,58 @@ export function Shop() {
               </div>
             </div>
           )}
-          <Stats
-            rows={[
-              ["가격", selected.price + " EP" + (!characters ? " / 개" : "")],
-              ["합계", selected.price * quantity + " EP"],
-              [
-                "구매 후 보유 EP",
-                s.balance >= selected.price * quantity
-                  ? s.balance - selected.price * quantity + " EP"
-                  : "EP가 부족해요",
-              ],
-            ]}
-          />
-          <p className="caption">구매 후 정원 편집에서 직접 적용해주세요.</p>
-          <div className="dialog-actions button-row">
-            <Button weak onClick={() => setSelected(null)}>
-              닫기
-            </Button>
-            <Button
-              loading={a.busy}
-              disabled={
-                !(characters && s.inventory.includes(selected.id)) &&
-                (s.balance < selected.price * quantity ||
-                  ownedItemCount(s.inventory, selected.id) + quantity > 99)
-              }
-              onClick={() => {
-                if (characters && s.inventory.includes(selected.id)) {
+          {ownedCharacter ? (
+            <div className="dialog-actions">
+              <Button
+                onClick={() => {
                   setSelected(null);
                   a.navigate("/garden/edit");
-                } else void buy();
-              }}
-            >
-              {characters && s.inventory.includes(selected.id)
-                ? "정원 편집으로"
-                : selected.price * quantity + " EP로 구매"}
-            </Button>
-          </div>
+                }}
+              >
+                정원 편집으로
+              </Button>
+            </div>
+          ) : (
+            <>
+              <Stats
+                rows={[
+                  [
+                    "가격",
+                    selected.price + " EP" + (!characters ? " / 개" : ""),
+                  ],
+                  ["합계", selected.price * quantity + " EP"],
+                  [
+                    "구매 후 보유 EP",
+                    s.balance >= selected.price * quantity
+                      ? s.balance - selected.price * quantity + " EP"
+                      : "EP가 부족해요",
+                  ],
+                ]}
+              />
+              <p className="caption">
+                구매 후 정원 편집에서 직접 적용해주세요.
+              </p>
+              <div className="dialog-actions">
+                <Button
+                  loading={a.busy}
+                  disabled={
+                    s.balance < selected.price * quantity ||
+                    ownedItemCount(s.inventory, selected.id) + quantity > 99
+                  }
+                  onClick={() => void buy()}
+                >
+                  {selected.price * quantity} EP로 구매
+                </Button>
+                <Button
+                  weak
+                  disabled={a.busy}
+                  onClick={() => setSelected(null)}
+                >
+                  취소
+                </Button>
+              </div>
+            </>
+          )}
         </Modal>
       )}
       {done && (
@@ -714,6 +747,95 @@ type Person = {
   status: string;
   challengeSuccessCount: number;
 };
+function FriendVisitButton({
+  person: p,
+  disabled,
+  onVisit,
+  onDelete,
+}: {
+  person: Person;
+  disabled: boolean;
+  onVisit: () => void;
+  onDelete: () => void;
+}) {
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const gesture = useRef({ x: 0, y: 0, consumed: false });
+  const clearHold = () => {
+    if (timer.current !== null) clearTimeout(timer.current);
+    timer.current = null;
+  };
+  useEffect(() => () => clearHold(), []);
+  return (
+    <button
+      className="friend-visit"
+      disabled={disabled}
+      aria-describedby={!p.request ? "friend-long-press-help" : undefined}
+      onPointerDown={(e) => {
+        clearHold();
+        gesture.current = { x: e.clientX, y: e.clientY, consumed: false };
+        if (p.request || disabled || !e.isPrimary || e.button !== 0) return;
+        const target = e.currentTarget;
+        timer.current = setTimeout(() => {
+          timer.current = null;
+          gesture.current.consumed = true;
+          target.focus({ preventScroll: true });
+          onDelete();
+        }, 550);
+      }}
+      onPointerMove={(e) => {
+        if (
+          Math.hypot(
+            e.clientX - gesture.current.x,
+            e.clientY - gesture.current.y,
+          ) > 10
+        ) {
+          clearHold();
+          gesture.current.consumed = true;
+        }
+      }}
+      onPointerUp={clearHold}
+      onPointerLeave={clearHold}
+      onPointerCancel={() => {
+        clearHold();
+        gesture.current.consumed = true;
+      }}
+      onContextMenu={(e) => {
+        if (p.request) return;
+        e.preventDefault();
+        clearHold();
+        gesture.current.consumed = true;
+        onDelete();
+      }}
+      onKeyDown={(e) => {
+        if (
+          !p.request &&
+          (e.key === "Delete" || (e.shiftKey && e.key === "F10"))
+        ) {
+          e.preventDefault();
+          clearHold();
+          onDelete();
+        }
+      }}
+      onClick={(e) => {
+        clearHold();
+        if (gesture.current.consumed && e.detail !== 0) {
+          e.preventDefault();
+          return;
+        }
+        onVisit();
+      }}
+    >
+      <Asset id={p.character} size={64} />
+      <span>
+        <strong>{p.name}</strong>
+        <small>{p.request ? "친구 요청이 도착했어요" : p.status}</small>
+        <small className="green">
+          {p.request ? "친구 요청 수락 ›" : "정원 방문 ›"}
+        </small>
+      </span>
+    </button>
+  );
+}
 type FriendGarden = {
   name: string;
   character: string;
@@ -724,9 +846,7 @@ type FriendGarden = {
 export function Social() {
   const a = useApp(),
     [people, setPeople] = useState<Person[]>([]),
-    [menuOpen, setMenuOpen] = useState<string | null>(null),
     [deleting, setDeleting] = useState<Person | null>(null),
-    menuTrigger = useRef<HTMLButtonElement | null>(null),
     [friendError, setFriendError] = useState(false),
     [adding, setAdding] = useState(false),
     [code, setCode] = useState(
@@ -735,28 +855,6 @@ export function Social() {
         "",
     ),
     [friend, setFriend] = useState<FriendGarden | null>(null);
-  useEffect(() => {
-    if (!menuOpen) return;
-    const outside = (event: PointerEvent) => {
-      if (
-        !(event.target instanceof Element) ||
-        !event.target.closest("[data-friend-actions]")
-      )
-        setMenuOpen(null);
-    };
-    const escape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(null);
-        menuTrigger.current?.focus();
-      }
-    };
-    document.addEventListener("pointerdown", outside);
-    document.addEventListener("keydown", escape);
-    return () => {
-      document.removeEventListener("pointerdown", outside);
-      document.removeEventListener("keydown", escape);
-    };
-  }, [menuOpen]);
   useEffect(() => {
     if (sessionStorage.getItem("aimi.pending-invite")) {
       setAdding(true);
@@ -772,7 +870,6 @@ export function Social() {
   }, [a.data]);
   useEffect(() => {
     let cancelled = false;
-    setMenuOpen(null);
     setFriend(null);
     setFriendError(false);
     if (a.path.startsWith("/friends/"))
@@ -799,7 +896,6 @@ export function Social() {
       .then((result) => {
         if (result) {
           setDeleting(null);
-          setMenuOpen(null);
           void reload();
         }
       });
@@ -871,70 +967,21 @@ export function Social() {
           </button>
         </span>
       </Notice>
+      <p className="caption" id="friend-long-press-help">
+        친구를 꾹 누르면 삭제할 수 있어요.
+      </p>
       <div className="friend-list section">
         {people.map((p) => (
-          <article
-            className={
-              "friend-card" + (menuOpen === p.id ? " is-menu-open" : "")
-            }
-            key={p.id}
-          >
-            <button
-              className="friend-visit"
-              onClick={() => {
-                setMenuOpen(null);
+          <article className="friend-card" key={p.id}>
+            <FriendVisitButton
+              person={p}
+              disabled={a.busy}
+              onVisit={() => {
                 if (p.request) void action("accept", p);
                 else a.navigate("/friends/" + p.id);
               }}
-            >
-              <Asset id={p.character} size={64} />
-              <span>
-                <strong>{p.name}</strong>
-                <small>{p.request ? "친구 요청이 도착했어요" : p.status}</small>
-                <small className="green">
-                  {p.request ? "친구 요청 수락 ›" : "정원 방문 ›"}
-                </small>
-              </span>
-            </button>
-            {!p.request && (
-              <div className="friend-actions" data-friend-actions>
-                <button
-                  className="friend-more icon-button"
-                  aria-label={p.name + " 친구 메뉴"}
-                  aria-haspopup="menu"
-                  aria-expanded={menuOpen === p.id}
-                  aria-controls={
-                    menuOpen === p.id ? "friend-menu-" + p.id : undefined
-                  }
-                  onClick={(event) => {
-                    menuTrigger.current = event.currentTarget;
-                    setMenuOpen((current) => (current === p.id ? null : p.id));
-                  }}
-                >
-                  <Icon name="more" />
-                </button>
-                {menuOpen === p.id && (
-                  <div
-                    className="friend-card-menu"
-                    role="menu"
-                    id={"friend-menu-" + p.id}
-                    aria-label={p.name + " 관리"}
-                  >
-                    <button
-                      role="menuitem"
-                      disabled={a.busy}
-                      autoFocus
-                      onClick={() => {
-                        setMenuOpen(null);
-                        setDeleting(p);
-                      }}
-                    >
-                      삭제
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
+              onDelete={() => setDeleting(p)}
+            />
           </article>
         ))}
       </div>
@@ -967,17 +1014,13 @@ export function Social() {
           <p>{deleting.name}님을 친구 목록에서 삭제해요.</p>
           <div className="dialog-actions">
             <Button
-              weak
-              disabled={a.busy}
-              onClick={() => setDeleting(null)}
-            >
-              취소
-            </Button>
-            <Button
               loading={a.busy}
               onClick={() => void action("remove", deleting)}
             >
               삭제
+            </Button>
+            <Button weak disabled={a.busy} onClick={() => setDeleting(null)}>
+              취소
             </Button>
           </div>
         </Modal>
@@ -988,7 +1031,12 @@ export function Social() {
         </p>
       )}
       {adding && (
-        <Modal title="코드로 친구 추가" onClose={() => setAdding(false)}>
+        <Modal
+          title="코드로 친구 추가"
+          onClose={() => {
+            if (!a.busy) setAdding(false);
+          }}
+        >
           <label>
             친구 코드
             <input
@@ -1063,16 +1111,15 @@ export function Account() {
       {confirm && (
         <Modal
           title="계정 연결을 해제할까요?"
-          onClose={() => setConfirm(false)}
+          onClose={() => {
+            if (!a.busy) setConfirm(false);
+          }}
         >
           <p>
             정원과 보유품, 기록을 삭제해요.
             <br />이 작업은 되돌릴 수 없어요.
           </p>
           <div className="dialog-actions">
-            <Button weak onClick={() => setConfirm(false)}>
-              닫기
-            </Button>
             <Button
               onClick={() =>
                 void a
@@ -1086,6 +1133,9 @@ export function Account() {
               }
             >
               삭제하고 연결 해제
+            </Button>
+            <Button weak disabled={a.busy} onClick={() => setConfirm(false)}>
+              취소
             </Button>
           </div>
         </Modal>

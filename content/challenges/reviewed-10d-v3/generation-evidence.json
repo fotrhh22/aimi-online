@@ -1,0 +1,122 @@
+[
+  {
+    "day": "day-01",
+    "request_model": "google/gemini-3.1-flash-image",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1376,
+    "height": 768
+  },
+  {
+    "day": "day-02",
+    "request_model": "black-forest-labs/flux-3-image",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1360,
+    "height": 768
+  },
+  {
+    "day": "day-03",
+    "request_model": "openai/gpt-image-2.6-sunburst",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "day": "day-04",
+    "request_model": "krea/krea-2-medium",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1376,
+    "height": 768
+  },
+  {
+    "day": "day-05",
+    "request_model": "bytedance-seed/seedream-5-0-pro",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "day": "day-06",
+    "request_model": "black-forest-labs/flux.2-pro",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1824,
+    "height": 1024
+  },
+  {
+    "day": "day-07",
+    "request_model": "recraft/recraft-v4",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "day": "day-08",
+    "request_model": "google/gemini-nano-banana-2.1",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1376,
+    "height": 768
+  },
+  {
+    "day": "day-09",
+    "request_model": "openai/gpt-image-2.5-flare",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "day": "day-10",
+    "request_model": "x-ai/grok-imagine-image-2.0",
+    "response_model": null,
+    "identity_basis": "request_and_generation_metadata; response model not returned",
+    "request_model_matches_manifest": true,
+    "request_prompt_matches_preserved_original": true,
+    "original_file_hash_matches_generation_metadata": true,
+    "app_pixels_equal_generation_original": true,
+    "width": 1280,
+    "height": 720
+  }
+]

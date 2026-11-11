@@ -1,0 +1,204 @@
+{
+  "id": "day-05",
+  "title": "달 표면의 우주 여우",
+  "version": "aimi-puzzle-pack-v3-reviewed-2c1c3bc85a78",
+  "target": "/content/challenges/generated-10d-v2/day-05.png",
+  "candidate_keywords": [
+    {
+      "id": "k-f733ade13790d1f9",
+      "label": "여우",
+      "context": "동물",
+      "sentence_fragment": "여우를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-db2106f0e27ec3e3",
+      "label": "코끼리",
+      "context": "동물",
+      "sentence_fragment": "코끼리를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-78866ecd301ead58",
+      "label": "고양이",
+      "context": "동물",
+      "sentence_fragment": "고양이를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-32c36bf8353d9d93",
+      "label": "여우 한 마리",
+      "context": "여우 수",
+      "sentence_fragment": "여우는 한 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-d82ab184dac33999",
+      "label": "여우 두 마리",
+      "context": "여우 수",
+      "sentence_fragment": "여우는 두 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-7c2e9cc2c345d26e",
+      "label": "여우 세 마리",
+      "context": "여우 수",
+      "sentence_fragment": "여우는 세 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-186bb41cbfb4c9a5",
+      "label": "여우 털 색: 주황색",
+      "context": "여우 털 색",
+      "sentence_fragment": "여우 털은 주황색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-913cf8025db88d94",
+      "label": "여우 털 색: 파란색",
+      "context": "여우 털 색",
+      "sentence_fragment": "여우 털은 파란색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-bd5239559ed2432d",
+      "label": "여우 털 색: 초록색",
+      "context": "여우 털 색",
+      "sentence_fragment": "여우 털은 초록색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-59397305e82bf308",
+      "label": "우주 헬멧",
+      "context": "여우의 소품",
+      "sentence_fragment": "우주 헬멧을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-6a4c6a781c0bba37",
+      "label": "밀짚모자",
+      "context": "여우의 소품",
+      "sentence_fragment": "밀짚모자를 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-c9cfdcc88f8aa1aa",
+      "label": "왕관",
+      "context": "여우의 소품",
+      "sentence_fragment": "왕관을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-4d12876d21353f71",
+      "label": "여우와 헬멧: 쓰고 있다",
+      "context": "여우와 헬멧",
+      "sentence_fragment": "쓰고 있다를 장면에 포함해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-40942a155d7d6943",
+      "label": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧",
+      "sentence_fragment": "벗어서 손에 들고 있다를 장면에 포함해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-b54bdf357e58a853",
+      "label": "달 표면",
+      "context": "여우가 있는 장소",
+      "sentence_fragment": "달 표면을 배경으로 그려줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-06aaf72c29505171",
+      "label": "설원",
+      "context": "여우가 있는 장소",
+      "sentence_fragment": "설원을 배경으로 그려줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-75634fe50100d898",
+      "label": "교실",
+      "context": "여우가 있는 장소",
+      "sentence_fragment": "교실을 배경으로 그려줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-230ec83390ea0010",
+      "label": "발이 지면에서 떨어진",
+      "context": "여우 동작",
+      "sentence_fragment": "여우은 발이 지면에서 떨어진 모습으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-14fb3a7f0503fe59",
+      "label": "네 발이 지면에 닿은",
+      "context": "여우 동작",
+      "sentence_fragment": "여우은 네 발이 지면에 닿은 모습으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-6f7e6afca83902b9",
+      "label": "누워 있는",
+      "context": "여우 동작",
+      "sentence_fragment": "여우은 누워 있는 모습으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-406c4ee33c473c23",
+      "label": "검은 하늘",
+      "context": "하늘",
+      "sentence_fragment": "검은 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-e273043287c18367",
+      "label": "분홍 하늘",
+      "context": "하늘",
+      "sentence_fragment": "분홍 하늘을 배경으로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-833aabc28c99a9bc",
+      "label": "지구",
+      "context": "하늘의 천체",
+      "sentence_fragment": "지구를 하늘에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-89112b908904d895",
+      "label": "토성",
+      "context": "하늘의 천체",
+      "sentence_fragment": "토성을 하늘에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-c2f3baf3a922272b",
+      "label": "태양",
+      "context": "하늘의 천체",
+      "sentence_fragment": "태양을 하늘에 포함해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-36564023b5fbe39d",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-57f9b7d505a4ffc2",
+      "label": "수채화",
+      "context": "표현 방식",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-0f157e5730d4ec8e",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 9
+    }
+  ]
+}

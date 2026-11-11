@@ -42,6 +42,7 @@ import {
   startPlay,
   completePlay,
   submitAttempt,
+  claimChallengeReward,
   purchase,
   saveGarden,
   CATALOG,
@@ -238,6 +239,15 @@ export function registerPrototype(
           : undefined;
       return submitAttempt(s, b, Date.now(), pack);
     });
+  });
+  app.post<{ Params: { id: string } }>("/v1/attempts/:id/reward", async (r) => {
+    z.object({})
+      .strict()
+      .parse(r.body ?? {});
+    const body = { attemptId: r.params.id };
+    return mutate(r, "challenge-reward-claim", body, (s) =>
+      claimChallengeReward(s, body.attemptId),
+    );
   });
   app.get<{ Params: { id: string } }>("/v1/attempts/:id", async (r) => {
     const s = await repo.read(await auth(r)),

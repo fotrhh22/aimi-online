@@ -13,33 +13,56 @@ export type PuzzlePack = {
   title: string;
   published: boolean;
   authored_prompt: string;
+  answer_prompt?: string;
+  learning_feedback?: { prompt_format: string };
+  review?: { status: string };
   correct_keywords: { id: string }[];
   display_labels: Record<string, string>;
-  candidate_keywords: { id: string; context?: string }[];
-  tips: { title: string; text: string; requires_actual_model_match: boolean }[];
+  candidate_keywords: {
+    id: string;
+    context?: string;
+    sentence_fragment?: string;
+    sentence_order?: number;
+  }[];
+  tips: {
+    title: string;
+    text: string;
+    requires_actual_model_match: boolean;
+    approval?: string;
+    applicable_model_ids?: string[];
+    scope?: string;
+    source_label?: string;
+  }[];
   highlights: {
     start_utf16: number;
     end_utf16: number;
     matched_text: string;
   }[];
-  assets: { generated: boolean; sha256: string };
-  model_plan: { actual_model_id: string };
+  assets: { generated: boolean; sha256: string; app_target?: string };
+  model_plan: { actual_model_id: string; model_tips_enabled?: boolean };
 };
-let packs = Array.from({ length: 10 }, (_, i) => {
-  const day = `day-${String(i + 1).padStart(2, "0")}`;
-  const p = JSON.parse(
-    readFileSync(
-      new URL(
-        `../../../../../content/challenges/generated-10d-v2/${day}/manifest.private.json`,
-        import.meta.url,
+function loadBundled(directory: string): PuzzlePack[] {
+  return Array.from({ length: 10 }, (_, i) => {
+    const day = `day-${String(i + 1).padStart(2, "0")}`;
+    const p = JSON.parse(
+      readFileSync(
+        new URL(
+          `../../../../../content/challenges/${directory}/${day}/manifest.private.json`,
+          import.meta.url,
+        ),
+        "utf8",
       ),
-      "utf8",
-    ),
-  ) as PuzzlePack;
-  if (!p.assets.generated || !p.assets.sha256)
-    throw Error("GENERATED_CONTENT_MISSING");
-  return p;
-});
+    ) as PuzzlePack;
+    if (!p.assets.generated || !p.assets.sha256)
+      throw Error("GENERATED_CONTENT_MISSING");
+    return p;
+  });
+}
+const legacyPacks = loadBundled("generated-10d-v2");
+let packs = loadBundled("reviewed-10d-v3");
+const archivedPacks = new Map(
+  [...legacyPacks, ...packs].map((p) => [packVersion(p), p]),
+);
 let remoteEnabled = false;
 const urls = new Map<string, string>();
 const reviews = new Map<string, string>();
@@ -68,21 +91,26 @@ export function configureGeneratedContent(
       )
     )
       throw Error("INVALID_REMOTE_ANSWER_KEY");
-    urls.set(p.id, r.target_url);
-    reviews.set(p.id, r.review_status);
+    urls.set(packVersion(p), r.target_url);
+    reviews.set(packVersion(p), r.review_status);
+    archivedPacks.set(packVersion(p), p);
   }
   packs = rows.map((r) => r.manifest);
   remoteEnabled = true;
 }
 function targetFor(p: PuzzlePack) {
-  return urls.get(p.id) ?? `/content/challenges/generated-10d-v2/${p.id}.png`;
+  return (
+    urls.get(packVersion(p)) ??
+    p.assets.app_target ??
+    `/content/challenges/generated-10d-v2/${p.id}.png`
+  );
 }
 export function packVersion(p: PuzzlePack) {
   return `${p.id}:${p.version}:${p.assets.sha256.slice(0, 12)}`;
 }
 export function generatedPack(date: string, version?: string) {
   if (version) {
-    const p = packs.find((p) => packVersion(p) === version);
+    const p = archivedPacks.get(version);
     if (!p) throw new ApiError("CONTENT_VERSION_UNAVAILABLE", 503);
     return p;
   }
@@ -104,6 +132,12 @@ export function puzzleContent(
     value: "",
     cost: 0,
     sentenceClause: keywordClause(p.display_labels[k.id]!, k.context ?? ""),
+    ...(k.sentence_fragment
+      ? {
+          sentenceFragment: k.sentence_fragment,
+          sentenceOrder: k.sentence_order,
+        }
+      : {}),
   }));
   keywords.sort((a, b) =>
     createHash("sha256")
@@ -121,8 +155,12 @@ export function puzzleContent(
     title: "이미지 챌린지 · " + p.id.replace("day-", "Day "),
     target: targetFor(p),
     keywords,
-    developmentSample: reviews.get(p.id) !== "approved",
-    reviewStatus: reviews.get(p.id) === "approved" ? "approved" : "unreviewed",
+    developmentSample:
+      (reviews.get(packVersion(p)) ?? p.review?.status) !== "approved",
+    reviewStatus:
+      (reviews.get(packVersion(p)) ?? p.review?.status) === "approved"
+        ? "approved"
+        : "unreviewed",
     generationModel: p.model_plan.actual_model_id,
     ...(countVisible ? { answerCount: p.correct_keywords.length } : {}),
   };
@@ -159,6 +197,10 @@ export function evaluatePuzzle(
           p.display_labels[id],
           p.candidate_keywords.find((k) => k.id === id)?.context ?? "",
         ),
+        sentenceFragment: p.candidate_keywords.find((k) => k.id === id)
+          ?.sentence_fragment,
+        sentenceOrder: p.candidate_keywords.find((k) => k.id === id)
+          ?.sentence_order,
       })),
     ),
     feedback: [] as string[],
@@ -190,12 +232,33 @@ export function puzzleFeedback(
     ...(closed
       ? {
           reveal: {
-            prompt: p.authored_prompt,
+            prompt: p.answer_prompt ?? p.authored_prompt,
+            ...(p.answer_prompt
+              ? {
+                  generationPrompt: p.authored_prompt,
+                  generationPromptFormat: p.learning_feedback?.prompt_format,
+                }
+              : {}),
             answerKeywordIds: [...answers],
             highlights: p.highlights,
             tips: p.tips
-              .filter((t) => !t.requires_actual_model_match)
-              .map((t) => ({ title: t.title, text: t.text })),
+              .filter(
+                (t) =>
+                  !t.requires_actual_model_match ||
+                  (p.model_plan.model_tips_enabled === true &&
+                    t.approval === "approved" &&
+                    t.applicable_model_ids?.includes(
+                      p.model_plan.actual_model_id,
+                    )),
+              )
+              .map((t) => ({
+                title: t.title,
+                text: t.text,
+                kind: t.requires_actual_model_match
+                  ? ("model" as const)
+                  : ("writing" as const),
+                ...(t.source_label ? { sourceLabel: t.source_label } : {}),
+              })),
             modelId: p.model_plan.actual_model_id,
           },
         }

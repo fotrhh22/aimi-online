@@ -1,0 +1,849 @@
+{
+  "version": "aimi-puzzle-pack-v3-reviewed-1dc61a70ac9c",
+  "id": "day-01",
+  "title": "빨간 사과 두 개",
+  "status": "generated",
+  "published": false,
+  "sources": [
+    "legacy-conceptmix",
+    "legacy-google-image",
+    "legacy-tifa",
+    "model-GOOGLE_GUIDE"
+  ],
+  "authored_by": "Codex_AI_visual_and_editorial_review_2026-11-11",
+  "prompt_format": "짧은 묘사 문단",
+  "prompt_lines": [
+    "빨간색 사과 두 개를 흰색 배경 위에 가로로 나란히 놓은 수채화. 위에서 내려다본 장면이며 사과는 화면 중앙에 배치한다."
+  ],
+  "authored_prompt": "빨간색 사과 두 개를 흰색 배경 위에 가로로 나란히 놓은 수채화. 위에서 내려다본 장면이며 사과는 화면 중앙에 배치한다.",
+  "alternate_prompt": "빨간색 사과 두 개를 흰색 배경 위에 가로로 나란히 놓은 수채화. 위에서 내려다본 장면이며 사과는 화면 중앙에 배치한다.",
+  "conditions": [
+    {
+      "id": "day-01-c01",
+      "variable": "subject",
+      "entity": "fruit",
+      "context": "과일의 종류",
+      "requested_value": "사과",
+      "observed_value": "사과",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "사과",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c02",
+      "variable": "count",
+      "entity": "fruit",
+      "context": "사과 개수",
+      "requested_value": "두 개",
+      "observed_value": "두 개",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "두 개",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c03",
+      "variable": "color",
+      "entity": "fruit",
+      "context": "사과 색",
+      "requested_value": "빨간색",
+      "observed_value": "빨간색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "빨간색",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c04",
+      "variable": "arrangement",
+      "entity": "fruit",
+      "context": "사과 배치",
+      "requested_value": "가로로 나란히",
+      "observed_value": "가로로 나란히",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "가로로 나란히",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c05",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "흰색 배경",
+      "observed_value": "흰색 배경",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "흰색 배경",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c06",
+      "variable": "camera_elevation",
+      "entity": "scene",
+      "context": "시점",
+      "requested_value": "위에서 내려다본",
+      "observed_value": null,
+      "review_status": "excluded_ambiguous",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "score_enabled": false,
+      "review_note": "옆면과 꼭지가 크게 보이는 정면에 가까운 시점이다. 탑뷰/눈높이 중 하나로 단정하지 않고 시점 조건 전체를 제외한다."
+    },
+    {
+      "id": "day-01-c07",
+      "variable": "screen_position",
+      "entity": "fruit",
+      "context": "사과의 화면 위치",
+      "requested_value": "화면 중앙",
+      "observed_value": "화면 중앙",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "화면 중앙",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "day-01-c08",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "수채화",
+      "observed_value": "수채화",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+      "scored_value": "수채화",
+      "score_enabled": true,
+      "review_note": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    }
+  ],
+  "correct_keywords": [
+    {
+      "id": "k-59dcde78e25b0506",
+      "label": "사과",
+      "value": "사과",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "사과를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-1027623848713392",
+      "label": "사과 두 개",
+      "value": "두 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 두 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-cbc1e4aae116caa9",
+      "label": "사과 색: 빨간색",
+      "value": "빨간색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 빨간색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-663da2451d7863d9",
+      "label": "가로로 나란히",
+      "value": "가로로 나란히",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 가로로 나란히 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-4c7e0d040e836d15",
+      "label": "흰색 배경",
+      "value": "흰색 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "흰색 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-db4711d7fcdc237d",
+      "label": "화면 중앙",
+      "value": "화면 중앙",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 중앙에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-a1bb6ab2a551741d",
+      "label": "수채화",
+      "value": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    }
+  ],
+  "distractor_keywords": [
+    {
+      "id": "k-9d2ee31b22a89d10",
+      "label": "바나나",
+      "value": "바나나",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "바나나를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 사과와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c01",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-2587ddee3db8f135",
+      "label": "수박",
+      "value": "수박",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "수박을 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 사과와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c01",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-368b6b5fd18e11a0",
+      "label": "사과 한 개",
+      "value": "한 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 한 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c02",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-280225e0e8409a36",
+      "label": "사과 세 개",
+      "value": "세 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 세 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c02",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-6e4eead389561d1c",
+      "label": "사과 색: 보라색",
+      "value": "보라색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 보라색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c03",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-9df38701ba767bf2",
+      "label": "사과 색: 초록색",
+      "value": "초록색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 초록색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c03",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-2aa9657fc2ef4a48",
+      "label": "세로로 나란히",
+      "value": "세로로 나란히",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 세로로 나란히 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c04",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-3f8118b0518c110d",
+      "label": "원형 배치",
+      "value": "원형 배치",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 원형 배치 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c04",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-b6e5dbc279b3dcb3",
+      "label": "검정 배경",
+      "value": "검정 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "검정 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c05",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-1686885374e626a2",
+      "label": "분홍 배경",
+      "value": "분홍 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "분홍 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c05",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-8526e057c630aa4c",
+      "label": "화면 오른쪽",
+      "value": "화면 오른쪽",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 오른쪽에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c07",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-9f40f82ec8b8e6df",
+      "label": "화면 왼쪽",
+      "value": "화면 왼쪽",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 왼쪽에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c07",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-75464d23a373c12c",
+      "label": "사진풍",
+      "value": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c08",
+      "distractor_kind": "reviewed_contrast"
+    },
+    {
+      "id": "k-af62f247c1146bec",
+      "label": "픽셀아트",
+      "value": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+      "contradicts_condition_id": "day-01-c08",
+      "distractor_kind": "reviewed_contrast"
+    }
+  ],
+  "candidate_keywords": [
+    {
+      "id": "k-1027623848713392",
+      "label": "사과 두 개",
+      "value": "두 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 두 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-1686885374e626a2",
+      "label": "분홍 배경",
+      "value": "분홍 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "분홍 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-2587ddee3db8f135",
+      "label": "수박",
+      "value": "수박",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "수박을 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 사과와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-280225e0e8409a36",
+      "label": "사과 세 개",
+      "value": "세 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 세 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-2aa9657fc2ef4a48",
+      "label": "세로로 나란히",
+      "value": "세로로 나란히",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 세로로 나란히 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-368b6b5fd18e11a0",
+      "label": "사과 한 개",
+      "value": "한 개",
+      "context": "사과 개수",
+      "condition_id": "day-01-c02",
+      "sentence_fragment": "사과는 한 개만 보여줘.",
+      "sentence_order": 1,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-3f8118b0518c110d",
+      "label": "원형 배치",
+      "value": "원형 배치",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 원형 배치 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-4c7e0d040e836d15",
+      "label": "흰색 배경",
+      "value": "흰색 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "흰색 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-59dcde78e25b0506",
+      "label": "사과",
+      "value": "사과",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "사과를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-663da2451d7863d9",
+      "label": "가로로 나란히",
+      "value": "가로로 나란히",
+      "context": "사과 배치",
+      "condition_id": "day-01-c04",
+      "sentence_fragment": "사과를 가로로 나란히 배치해줘.",
+      "sentence_order": 3,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-6e4eead389561d1c",
+      "label": "사과 색: 보라색",
+      "value": "보라색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 보라색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-75464d23a373c12c",
+      "label": "사진풍",
+      "value": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-8526e057c630aa4c",
+      "label": "화면 오른쪽",
+      "value": "화면 오른쪽",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 오른쪽에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-9d2ee31b22a89d10",
+      "label": "바나나",
+      "value": "바나나",
+      "context": "과일의 종류",
+      "condition_id": "day-01-c01",
+      "sentence_fragment": "바나나를 장면에 포함해줘.",
+      "sentence_order": 0,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 사과와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-9df38701ba767bf2",
+      "label": "사과 색: 초록색",
+      "value": "초록색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 초록색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-9f40f82ec8b8e6df",
+      "label": "화면 왼쪽",
+      "value": "화면 왼쪽",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 왼쪽에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-a1bb6ab2a551741d",
+      "label": "수채화",
+      "value": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-af62f247c1146bec",
+      "label": "픽셀아트",
+      "value": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-01-c08",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 7,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-b6e5dbc279b3dcb3",
+      "label": "검정 배경",
+      "value": "검정 배경",
+      "context": "배경",
+      "condition_id": "day-01-c05",
+      "sentence_fragment": "검정 배경을 배경으로 그려줘.",
+      "sentence_order": 4,
+      "review_status": "ai_reviewed",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색 배경와 대비되는 선택지. 붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-cbc1e4aae116caa9",
+      "label": "사과 색: 빨간색",
+      "value": "빨간색",
+      "context": "사과 색",
+      "condition_id": "day-01-c03",
+      "sentence_fragment": "사과는 빨간색으로 표현해줘.",
+      "sentence_order": 2,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    },
+    {
+      "id": "k-db4711d7fcdc237d",
+      "label": "화면 중앙",
+      "value": "화면 중앙",
+      "context": "사과의 화면 위치",
+      "condition_id": "day-01-c07",
+      "sentence_fragment": "사과를 화면 중앙에 배치해줘.",
+      "sentence_order": 6,
+      "review_status": "ai_reviewed",
+      "reason": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다."
+    }
+  ],
+  "total_candidate_count": 21,
+  "answer_ratio": 0.3333333333333333,
+  "highlights": [
+    {
+      "keyword_id": "k-59dcde78e25b0506",
+      "condition_id": "day-01-c01",
+      "matched_text": "사과",
+      "start_utf16": 17,
+      "end_utf16": 19
+    },
+    {
+      "keyword_id": "k-1027623848713392",
+      "condition_id": "day-01-c02",
+      "matched_text": "두 개",
+      "start_utf16": 20,
+      "end_utf16": 23
+    },
+    {
+      "keyword_id": "k-663da2451d7863d9",
+      "condition_id": "day-01-c04",
+      "matched_text": "가로로 나란히",
+      "start_utf16": 25,
+      "end_utf16": 32
+    },
+    {
+      "keyword_id": "k-4c7e0d040e836d15",
+      "condition_id": "day-01-c05",
+      "matched_text": "흰색 배경",
+      "start_utf16": 0,
+      "end_utf16": 5
+    },
+    {
+      "keyword_id": "k-db4711d7fcdc237d",
+      "condition_id": "day-01-c07",
+      "matched_text": "화면 중앙",
+      "start_utf16": 7,
+      "end_utf16": 12
+    },
+    {
+      "keyword_id": "k-a1bb6ab2a551741d",
+      "condition_id": "day-01-c08",
+      "matched_text": "수채화",
+      "start_utf16": 36,
+      "end_utf16": 39
+    }
+  ],
+  "tips": [
+    {
+      "id": "day-01-writing-1",
+      "title": "짧은 문장에도 대상을 연결해요",
+      "text": "‘빨간 사과 두 개’처럼 종류·색·개수를 한 대상에 연결했어요. 잎이 초록색이라는 이유로 사과의 주색까지 초록색으로 고르지 않도록 살펴보세요.",
+      "scope": "daily_editorial",
+      "source_ids": [
+        "visual-review-day-01"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "day-01-writing-2",
+      "title": "요청한 시점과 실제 그림은 달라질 수 있어요",
+      "text": "생성 요청에는 ‘위에서 내려다본’이 있었지만 이 그림은 측면이 크게 보여요. 이번 정답에서는 시점을 제외했어요. 프롬프트에 적힌 조건이 결과에도 보이는지 확인하는 것이 중요해요.",
+      "scope": "daily_editorial",
+      "source_ids": [
+        "visual-review-day-01"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": false
+    },
+    {
+      "id": "day-01-model-reviewed",
+      "title": "Gemini Image 계열 · 장면 요소를 연결하기",
+      "text": "계열 가이드는 대상·행동·배경·구도를 구체적으로 설명하도록 안내해요. 오늘은 사과의 색·개수·배치를 연결했어요. 이 지침이 모든 조건의 재현을 보장하지는 않아요.",
+      "scope": "family",
+      "source_ids": [
+        "google-family",
+        "visual-review-day-01"
+      ],
+      "approval": "approved",
+      "reviewer_kind": "ai",
+      "requires_actual_model_match": true,
+      "applicable_model_ids": [
+        "google/gemini-3.1-flash-image"
+      ],
+      "source_label": "Google DeepMind Gemini Image prompt guide"
+    }
+  ],
+  "model_plan": {
+    "planned_model_id": "google/gemini-3.1-flash-image",
+    "actual_model_id": "google/gemini-3.1-flash-image",
+    "actual_model_version": null,
+    "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+    "model_tips_enabled": true
+  },
+  "assets": {
+    "generated": true,
+    "target_storage_key": null,
+    "sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+    "width": 1376,
+    "height": 768,
+    "preferred_display_ratio": "330:145",
+    "render_policy": "contain_preserve_entire_reviewed_image",
+    "app_target": "/content/challenges/generated-10d-v2/day-01.png"
+  },
+  "review": {
+    "status": "approved",
+    "reviewer": "Codex AI",
+    "reviewer_kind": "ai",
+    "reviewed_at": "2026-11-11",
+    "approved_at": "2026-11-11",
+    "review_basis": "user_requested_ai_visual_editorial_review",
+    "asset_sha256": "a1601d16ebaa55cc04d7e426dcb582600b98117596d840ca3c8ee98b17544805",
+    "condition_count": 8,
+    "candidate_count_reviewed": 32,
+    "notes": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+    "events": [
+      {
+        "event": "image_generated",
+        "at": "2026-11-10T17:30:14.905Z",
+        "run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb"
+      },
+      {
+        "event": "visual_and_editorial_review",
+        "at": "2026-11-11",
+        "reviewer_kind": "ai"
+      }
+    ]
+  },
+  "scoring": {
+    "rule_version": "aimi-keyword-set-v4",
+    "mode": "unordered_exact_keyword_set",
+    "runtime_ai_calls": 0,
+    "assesses_relational_understanding": false,
+    "release_ready": true,
+    "formula": "100 * |selected intersect answers| / |selected union answers|",
+    "selection_count_mode": "variable_nonempty",
+    "content_revision": "reviewed-10d-v3"
+  },
+  "economy": {
+    "policy_version": "aimi-economy-v3",
+    "status": "bound_to_shared_app_policy"
+  },
+  "delivery": {
+    "reveal_phase": "after_challenge_closed",
+    "release_blockers": []
+  },
+  "answer_count": 7,
+  "feedback_policy": {
+    "initial_answer_count_visible": false,
+    "answer_count_hint_cost": 15,
+    "attempt_cost": 30,
+    "incorrect_selected_cards_from_attempt": 1,
+    "missing_answer_ids_revealed": false,
+    "reveal_after_terminal": true
+  },
+  "display_labels": {
+    "k-59dcde78e25b0506": "사과",
+    "k-9d2ee31b22a89d10": "바나나",
+    "k-2587ddee3db8f135": "수박",
+    "k-1027623848713392": "사과 두 개",
+    "k-368b6b5fd18e11a0": "사과 한 개",
+    "k-280225e0e8409a36": "사과 세 개",
+    "k-cbc1e4aae116caa9": "사과 색: 빨간색",
+    "k-6e4eead389561d1c": "사과 색: 보라색",
+    "k-9df38701ba767bf2": "사과 색: 초록색",
+    "k-663da2451d7863d9": "가로로 나란히",
+    "k-2aa9657fc2ef4a48": "세로로 나란히",
+    "k-3f8118b0518c110d": "원형 배치",
+    "k-4c7e0d040e836d15": "흰색 배경",
+    "k-b6e5dbc279b3dcb3": "검정 배경",
+    "k-1686885374e626a2": "분홍 배경",
+    "k-db4711d7fcdc237d": "화면 중앙",
+    "k-8526e057c630aa4c": "화면 오른쪽",
+    "k-9f40f82ec8b8e6df": "화면 왼쪽",
+    "k-a1bb6ab2a551741d": "수채화",
+    "k-75464d23a373c12c": "사진풍",
+    "k-af62f247c1146bec": "픽셀아트"
+  },
+  "answer_prompt": "흰색 배경의 화면 중앙에 빨간 사과 두 개를 가로로 나란히 놓은 수채화.",
+  "original_generation": {
+    "authored_prompt": "빨간색 사과 두 개를 흰색 배경 위에 가로로 나란히 놓은 수채화. 위에서 내려다본 장면이며 사과는 화면 중앙에 배치한다.",
+    "prompt_format": "짧은 묘사 문단",
+    "model_plan": {
+      "planned_model_id": "google/gemini-3.1-flash-image",
+      "actual_model_id": "google/gemini-3.1-flash-image",
+      "actual_model_version": null,
+      "generation_run_id": "0133ed16-66cd-4b2a-9d12-de0d01fbb3bb",
+      "model_tips_enabled": false
+    },
+    "original_asset_sha256": "2c61aeb8de18872b6b8208c2f3d5a6c41cdecc0b3954df21ba74fe31fc9f8514",
+    "source_manifest": "content/challenges/generated-10d-v2/day-01/manifest.private.json",
+    "source_manifest_sha256": "9f8775839a7ae4ad858b4d0ac7b5d920567f8a459a99b08fd8cede98e8e6f59f"
+  },
+  "learning_feedback": {
+    "prompt_format": "짧은 묘사 문단",
+    "scene_explanation": "흰색 배경의 화면 중앙에 빨간 사과 두 개를 가로로 나란히 놓은 수채화.",
+    "visual_notes": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+    "writing_point_ids": [
+      "day-01-writing-1",
+      "day-01-writing-2"
+    ],
+    "model_note_id": "day-01-model-reviewed",
+    "source_ids": [
+      "google-family"
+    ],
+    "source_tip_id": "T05",
+    "sources_checked_at": "2026-11-11",
+    "reviewer_kind": "ai"
+  },
+  "content_sha256": "1dc61a70ac9c0a6e78fd1e1c0df650712c7875299e8ef5684e872d01098259a0"
+}

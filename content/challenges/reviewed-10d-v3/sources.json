@@ -1,0 +1,83 @@
+{
+  "google-family": {
+    "title": "Google DeepMind Gemini Image prompt guide",
+    "url": "https://deepmind.google/models/gemini-image/prompt-guide/",
+    "scope": "family",
+    "legacy_tip_id": "T05",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "flux3": {
+    "title": "BFL FLUX 3 Image Prompting Basics",
+    "url": "https://docs.bfl.ml/guides/prompting_unified_basics",
+    "scope": "exact_model",
+    "legacy_tip_id": "T01",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "flux2": {
+    "title": "BFL FLUX.2 Pro & Max Prompting Guide",
+    "url": "https://docs.bfl.ai/guides/prompting_guide_flux2",
+    "scope": "explicit_variants",
+    "legacy_tip_id": "T03",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "openai26": {
+    "title": "OpenAI GPT Image 2.6 prompting",
+    "url": "https://developers.openai.com/api/docs/guides/image-prompting",
+    "scope": "explicit_version",
+    "legacy_tip_id": "T09",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "openai25": {
+    "title": "OpenAI GPT Image 2.5 prompting",
+    "url": "https://developers.openai.com/api/docs/guides/image-prompting?model=gpt-image-2.5",
+    "scope": "explicit_version",
+    "legacy_tip_id": "T09",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "krea-family": {
+    "title": "Krea 2 prompting guidelines (Turbo examples)",
+    "url": "https://github.com/krea-ai/krea-2/blob/main/docs/prompting.md",
+    "scope": "family_with_turbo_examples",
+    "legacy_tip_id": "T06",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "recraft4": {
+    "title": "Recraft V4 prompt engineering guide",
+    "url": "https://www.recraft.ai/blog/prompt-engineering-guide",
+    "scope": "explicit_version",
+    "legacy_tip_id": "T10",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "grok-image": {
+    "title": "Grok Image Prompting Guide",
+    "url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide",
+    "scope": "image_family",
+    "legacy_tip_id": "T14",
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  },
+  "seedream-observation": {
+    "title": "Seedream 5.0 Pro product introduction + this generation observation",
+    "url": "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
+    "scope": "generation_observation_not_model_specific_rule",
+    "legacy_tip_id": null,
+    "checked_at": "2026-11-11",
+    "reviewer": "Codex AI",
+    "quoted_verbatim": false
+  }
+}

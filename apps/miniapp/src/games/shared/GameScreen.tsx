@@ -22,7 +22,7 @@ import {
 } from "@aimi/game-core";
 import { drawGameScene, type SceneView } from "./renderer";
 import { useApp } from "../../app/context";
-import { Button, Icon, Modal, Stats } from "../../ui/primitives";
+import { Button, Icon, Modal } from "../../ui/primitives";
 import { request } from "../../lib/api/client";
 export function GameScreen() {
   const a = useApp(),
@@ -65,6 +65,7 @@ export function GameScreen() {
     setPaused(value);
   };
   async function finish(abandon = false) {
+    const origin = a.path;
     const p = playRef.current,
       s = simulation.current;
     if (!p || !s || submitted.current) return;
@@ -89,9 +90,17 @@ export function GameScreen() {
     );
     setSaving(false);
     if (r) {
-      setResult(r);
+      if (!a.isCurrentPath(origin)) return;
       sessionStorage.removeItem("aimi.game." + p.id);
       setSaveError(false);
+      if (abandon) {
+        a.navigate("/mission", { replace: true });
+      } else {
+        setResult(r);
+        a.navigate("/results/game/" + encodeURIComponent(p.id), {
+          replace: true,
+        });
+      }
     } else {
       submitted.current = false;
       pausedRef.current = true;
@@ -106,6 +115,16 @@ export function GameScreen() {
     };
     const params = new URLSearchParams(location.search);
     if (params.has("practice") || params.has("kind")) {
+      returnToMission();
+      return;
+    }
+    if (
+      a.data &&
+      (a.data.daily.attemptsUsed > 0 ||
+        a.data.daily.success ||
+        a.data.daily.challengeClosed ||
+        (!a.data.daily.challengeVersion && a.data.daily.attemptsUsed >= 5))
+    ) {
       returnToMission();
       return;
     }
@@ -200,7 +219,8 @@ export function GameScreen() {
         s.version === "aimi-game-v7" ||
         s.version === "aimi-game-v8" ||
         s.version === "aimi-game-v9" ||
-        s.version === "aimi-game-v10"
+        s.version === "aimi-game-v10" ||
+        s.version === "aimi-game-v11"
       ) {
         drawGameScene(c, s, w, h, sprites[play.character], sceneView);
         return;
@@ -691,24 +711,25 @@ export function GameScreen() {
           </div>
         </Modal>
       )}
-      {paused && !result && (
-        <Modal title="잠시 쉬어가요" onClose={() => syncPause(false)}>
+      {paused && !result && !saving && !saveError && (
+        <Modal title="게임을 나갈까요?" onClose={() => syncPause(false)}>
           <p>
             게임이 일시정지됐어요.
             <br />
-            계속하면 같은 플레이를 이어가요.
+            취소를 누르면 이어서 플레이할 수 있어요.
           </p>
+          <p className="caption">나가면 게임 횟수 1회가 차감돼요.</p>
           <div className="dialog-actions">
-            <Button onClick={() => syncPause(false)}>계속하기</Button>
             <Button
-              weak
               loading={saving}
               onClick={() => {
-                syncPause(false);
                 void finish(true);
               }}
             >
-              게임 나가기
+              나가기
+            </Button>
+            <Button weak disabled={saving} onClick={() => syncPause(false)}>
+              취소
             </Button>
           </div>
         </Modal>
@@ -716,12 +737,14 @@ export function GameScreen() {
       {(saving || saveError) && !result && (
         <Modal
           title={saving ? "기록을 확인하고 있어요" : "기록을 다시 확인해주세요"}
-          onClose={() => {}}
+          onClose={() => {
+            if (saveError) a.navigate("/mission", { replace: true });
+          }}
         >
           <p>
             {saving
               ? "잠시만 기다려주세요."
-              : "같은 플레이 결과를 다시 요청해요. 보상은 중복 지급하지 않아요."}
+              : "같은 플레이 결과를 다시 요청해요. 보상은 중복 지급하지 않아요. 취소하면 미션으로 돌아가요."}
           </p>
           {saveError && (
             <div className="dialog-actions">
@@ -733,64 +756,10 @@ export function GameScreen() {
                 결과 다시 확인
               </Button>
               <Button weak onClick={() => a.navigate("/mission")}>
-                미션으로
+                취소
               </Button>
             </div>
           )}
-        </Modal>
-      )}
-      {result && (
-        <Modal
-          className={
-            "result-modal " +
-            (result.status === "cleared" ? "cleared-modal" : "game-result")
-          }
-          title={
-            result.status === "cleared" ? "최고 점수 달성!" : "이번 게임 결과"
-          }
-          onClose={() => a.navigate("/mission")}
-        >
-          {result.status === "cleared" && <p>만점으로 완주했어요!</p>}
-          {result.status === "failed" && (
-            <p className="caption">{simulation.current?.deathReason}</p>
-          )}
-          <Stats
-            rows={
-              result.status === "cleared"
-                ? [
-                    ["게임 스코어 · BEST", result.score + " / 100점"],
-                    ["모은 EP", "+" + result.ep + " EP"],
-                    ["남은 플레이 횟수", result.remaining + " / 5회"],
-                  ]
-                : [
-                    ["남은 플레이 횟수", result.remaining + " / 5회"],
-                    ["모은 EP", "+" + result.ep + " EP"],
-                    ["게임 스코어", result.score + "점"],
-                    ["현재까지 BEST", result.best + "점"],
-                  ]
-            }
-          />
-          {result.status === "cleared" && (
-            <p className="caption green">오늘의 최대 예산에 도달했어요.</p>
-          )}
-          <div className="dialog-actions">
-            {result.status !== "cleared" && (
-              <Button
-                weak
-                disabled={!result.remaining}
-                onClick={() => {
-                  location.href = "/game";
-                }}
-              >
-                바로 재시도하기
-              </Button>
-            )}
-            <Button onClick={() => a.navigate("/challenge")}>
-              {result.status === "cleared"
-                ? "챌린지 도전하러 가기"
-                : "이미지 챌린지 도전하기"}
-            </Button>
-          </div>
         </Modal>
       )}
     </div>

@@ -1,0 +1,458 @@
+{
+  "day": "day-02",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-02.png",
+  "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-02-c01",
+      "variable": "subject",
+      "entity": "rabbit",
+      "context": "동물",
+      "requested_value": "토끼",
+      "observed_value": "토끼",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "토끼",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c02",
+      "variable": "count",
+      "entity": "rabbit",
+      "context": "토끼 수",
+      "requested_value": "한 마리",
+      "observed_value": "한 마리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "한 마리",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c03",
+      "variable": "color",
+      "entity": "rabbit",
+      "context": "토끼 털 색",
+      "requested_value": "흰색",
+      "observed_value": "흰색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "흰색",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c04",
+      "variable": "accessory",
+      "entity": "rabbit",
+      "context": "토끼의 소품",
+      "requested_value": "목도리",
+      "observed_value": "목도리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "목도리",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c05",
+      "variable": "color",
+      "entity": "scarf",
+      "context": "목도리 색",
+      "requested_value": "노란색",
+      "observed_value": "노란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "노란색",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c06",
+      "variable": "interaction",
+      "entity": "rabbit->scarf",
+      "context": "토끼와 목도리",
+      "requested_value": "두르고 있다",
+      "observed_value": "두르고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "두르고 있다",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c07",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "설원",
+      "observed_value": "설원",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "설원",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c08",
+      "variable": "framing",
+      "entity": "rabbit",
+      "context": "토끼가 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": "전신",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "전신",
+      "score_enabled": true,
+      "review_note": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "id": "day-02-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "3D 렌더",
+      "observed_value": "3D 캐릭터풍",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "4c5b3ff98c191bda17cb2621af35544a32fdad2d649753963244a95b74abaae1",
+      "scored_value": "3D 캐릭터풍",
+      "score_enabled": true,
+      "review_note": "실제 제작 기법은 이미지로 증명할 수 없다. 둥근 형태·큰 눈·부드러운 입체 음영이 보이는 표현 양식으로 한정한다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-085317668326ca23",
+      "old_label": "우산",
+      "context": "토끼의 소품",
+      "condition_id": "day-02-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 목도리와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-0fb628b2bfe18ec2",
+      "old_label": "빨간색",
+      "context": "목도리 색",
+      "condition_id": "day-02-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-12ac7bc36227c3bf",
+      "old_label": "왕관",
+      "context": "토끼의 소품",
+      "condition_id": "day-02-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 목도리와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-164f9e567832e298",
+      "old_label": "설원",
+      "context": "배경 장소",
+      "condition_id": "day-02-c07",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-1cad290cc164778d",
+      "old_label": "노란색",
+      "context": "목도리 색",
+      "condition_id": "day-02-c05",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-1fec3da5cbbf46fa",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-2ac0124f14226623",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-2b45571943ebf7b7",
+      "old_label": "검은색",
+      "context": "토끼 털 색",
+      "condition_id": "day-02-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-31e237b72606c220",
+      "old_label": "두르고 있다",
+      "context": "토끼와 목도리",
+      "condition_id": "day-02-c06",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-38ad53fba0f0d652",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-3df05cd724994ba1",
+      "old_label": "얼굴만 확대",
+      "context": "토끼가 보이는 범위",
+      "condition_id": "day-02-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 전신와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-4c3ee3f7ca75a8af",
+      "old_label": "토끼",
+      "context": "동물",
+      "condition_id": "day-02-c01",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-4ebb8f77b5fa3f99",
+      "old_label": "해변",
+      "context": "배경 장소",
+      "condition_id": "day-02-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 설원와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-505631f39902f9b6",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-6298422f5969853c",
+      "old_label": "흰색",
+      "context": "토끼 털 색",
+      "condition_id": "day-02-c03",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-6e29e09452b40fc6",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-72cb63590f6eb854",
+      "old_label": "한 마리",
+      "context": "토끼 수",
+      "condition_id": "day-02-c02",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-74e28fb9f1afc4be",
+      "old_label": "수박",
+      "context": "동물",
+      "condition_id": "day-02-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-81fa7083143ef8fb",
+      "old_label": "교실",
+      "context": "배경 장소",
+      "condition_id": "day-02-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 설원와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-8afb698ef16987d9",
+      "old_label": "손에 들고 있다",
+      "context": "토끼와 목도리",
+      "condition_id": "day-02-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두르고 있다와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-8de9661b4530591d",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-9a64bce0f4c33212",
+      "old_label": "연필화",
+      "context": "표현 방식",
+      "condition_id": "day-02-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 실제 제작 기법은 이미지로 증명할 수 없다. 둥근 형태·큰 눈·부드러운 입체 음영이 보이는 표현 양식으로 한정한다."
+    },
+    {
+      "old_id": "k-a1828f950fc7defa",
+      "old_label": "전신",
+      "context": "토끼가 보이는 범위",
+      "condition_id": "day-02-c08",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-a58d744728fc76f0",
+      "old_label": "주황색",
+      "context": "목도리 색",
+      "condition_id": "day-02-c05",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-a67484d92627d495",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-a7ddbd352d89b558",
+      "old_label": "주황색",
+      "context": "토끼 털 색",
+      "condition_id": "day-02-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 흰색와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-add0f9161ed21770",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-02-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 실제 제작 기법은 이미지로 증명할 수 없다. 둥근 형태·큰 눈·부드러운 입체 음영이 보이는 표현 양식으로 한정한다."
+    },
+    {
+      "old_id": "k-af5459aa048a3c63",
+      "old_label": "빨간색",
+      "context": "토끼 털 색",
+      "condition_id": "day-02-c03",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-b6b78eff61351d02",
+      "old_label": "발로 밟고 있다",
+      "context": "토끼와 목도리",
+      "condition_id": "day-02-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두르고 있다와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-bacddbd3b42f2ac1",
+      "old_label": "사막",
+      "context": "배경 장소",
+      "condition_id": "day-02-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-c93a338ab89797fb",
+      "old_label": "두 마리",
+      "context": "토끼 수",
+      "condition_id": "day-02-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-cccc98950a47a351",
+      "old_label": "바나나",
+      "context": "동물",
+      "condition_id": "day-02-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-d8a82f2467b6caf9",
+      "old_label": "3D 렌더",
+      "context": "표현 방식",
+      "condition_id": "day-02-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 실제 제작 기법은 이미지로 증명할 수 없다. 둥근 형태·큰 눈·부드러운 입체 음영이 보이는 표현 양식으로 한정한다."
+    },
+    {
+      "old_id": "k-e94b4cf532d74b6d",
+      "old_label": "네 마리",
+      "context": "토끼 수",
+      "condition_id": "day-02-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-ea906aed1dcc954f",
+      "old_label": "기린",
+      "context": "동물",
+      "condition_id": "day-02-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 토끼와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-ee0590ee8007475b",
+      "old_label": "목도리",
+      "context": "토끼의 소품",
+      "condition_id": "day-02-c04",
+      "disposition": "retained_correct",
+      "reason": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-f3b09744b9ea6288",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-02-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 3D 캐릭터풍와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-f7d366fb8246ab1c",
+      "old_label": "고양이",
+      "context": "동물",
+      "condition_id": "day-02-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 토끼와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    },
+    {
+      "old_id": "k-fb5b00e7625c9401",
+      "old_label": "보라색",
+      "context": "목도리 색",
+      "condition_id": "day-02-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+    }
+  ],
+  "notes": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다."
+}

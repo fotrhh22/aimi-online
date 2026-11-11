@@ -1,0 +1,676 @@
+{
+  "day": "day-07",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-07.png",
+  "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-07-c01",
+      "variable": "subject",
+      "entity": "bear",
+      "context": "동물",
+      "requested_value": "곰",
+      "observed_value": "곰",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "곰",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c02",
+      "variable": "count",
+      "entity": "bear",
+      "context": "곰 수",
+      "requested_value": "한 마리",
+      "observed_value": "한 마리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "한 마리",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c03",
+      "variable": "color",
+      "entity": "bear",
+      "context": "곰 털 색",
+      "requested_value": "갈색",
+      "observed_value": "갈색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "갈색",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c04",
+      "variable": "accessory",
+      "entity": "bear",
+      "context": "곰의 소품",
+      "requested_value": "우산",
+      "observed_value": "우산",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "우산",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c05",
+      "variable": "color",
+      "entity": "umbrella",
+      "context": "우산 색",
+      "requested_value": "노란색",
+      "observed_value": "노란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "노란색",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c06",
+      "variable": "interaction",
+      "entity": "bear->umbrella",
+      "context": "곰과 우산",
+      "requested_value": "들고 있다",
+      "observed_value": "들고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "들고 있다",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c07",
+      "variable": "subject",
+      "entity": "bike",
+      "context": "곰 옆의 이동수단",
+      "requested_value": "자전거",
+      "observed_value": "자전거",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "자전거",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c08",
+      "variable": "color",
+      "entity": "bike",
+      "context": "자전거 색",
+      "requested_value": "빨간색",
+      "observed_value": "빨간색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "빨간색",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c09",
+      "variable": "horizontal_relation",
+      "entity": "bear->bike",
+      "context": "자전거 기준 곰 위치",
+      "requested_value": "왼쪽에",
+      "observed_value": "왼쪽에",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "왼쪽에",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c10",
+      "variable": "action_pose",
+      "entity": "bear",
+      "context": "곰 자세",
+      "requested_value": "서 있다",
+      "observed_value": "서 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "서 있다",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c11",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "공원",
+      "observed_value": "공원",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "공원",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c12",
+      "variable": "framing",
+      "entity": "bear",
+      "context": "곰이 보이는 범위",
+      "requested_value": "전신",
+      "observed_value": "전신",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "전신",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-07-c13",
+      "variable": "camera_elevation",
+      "entity": "scene",
+      "context": "시점",
+      "requested_value": "눈높이",
+      "observed_value": null,
+      "review_status": "excluded_ambiguous",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "score_enabled": false,
+      "review_note": "정면·약간 내려다보기의 경계가 주관적이며 수채화의 단순화된 원근만으로 눈높이를 엄격히 확정하기 어려워 시점 후보 전체를 제외한다."
+    },
+    {
+      "id": "day-07-c14",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "수채화",
+      "observed_value": "수채화",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "cb91f70d8b00e87db59d14a684b592e096b3b84c23176322b79afb292085520b",
+      "scored_value": "수채화",
+      "score_enabled": true,
+      "review_note": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-07e3c9a9c1780661",
+      "old_label": "바나나",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-08635687525cac87",
+      "old_label": "오른쪽에",
+      "context": "자전거 기준 곰 위치",
+      "condition_id": "day-07-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 왼쪽에와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0b1131184c089a4e",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0b444e128909a49a",
+      "old_label": "설원",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0dbe87775f13aeb1",
+      "old_label": "바나나",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0e67bd10ef7bce1e",
+      "old_label": "주황색",
+      "context": "곰 털 색",
+      "condition_id": "day-07-c03",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-19d4bc3e78d93534",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-1b76f94959fcfae5",
+      "old_label": "포도",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-21ad9caeabdca2e2",
+      "old_label": "기차",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 자전거와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-2512ac9c0a8f1eda",
+      "old_label": "노란색",
+      "context": "우산 색",
+      "condition_id": "day-07-c05",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-2af696b52780f412",
+      "old_label": "눈높이",
+      "context": "시점",
+      "condition_id": "day-07-c13",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "정면·약간 내려다보기의 경계가 주관적이며 수채화의 단순화된 원근만으로 눈높이를 엄격히 확정하기 어려워 시점 후보 전체를 제외한다."
+    },
+    {
+      "old_id": "k-3da4da3e923f6df1",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-4ad3a4952f12ed7e",
+      "old_label": "서 있다",
+      "context": "곰 자세",
+      "condition_id": "day-07-c10",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-4d8da19645d43a93",
+      "old_label": "두 마리",
+      "context": "곰 수",
+      "condition_id": "day-07-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-550b853b8a5d5a9a",
+      "old_label": "한 마리",
+      "context": "곰 수",
+      "condition_id": "day-07-c02",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-583754fe2bf1dfee",
+      "old_label": "발로 밟고 있다",
+      "context": "곰과 우산",
+      "condition_id": "day-07-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 들고 있다와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5a1250e5254b50a0",
+      "old_label": "왼쪽에",
+      "context": "자전거 기준 곰 위치",
+      "condition_id": "day-07-c09",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5f2f5b643a9de039",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-6243e0c7866d3ed1",
+      "old_label": "곰",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-62938a3c83122243",
+      "old_label": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-07-c14",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-6c22d359ea1664de",
+      "old_label": "분홍색",
+      "context": "자전거 색",
+      "condition_id": "day-07-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-726d2d9eb63fd0f7",
+      "old_label": "교실",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 공원와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-731a3c6b73dba64b",
+      "old_label": "자전거",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-80a42f1161299128",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8332533505ebcd26",
+      "old_label": "바닷속",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 공원와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8560b8db1e07f98c",
+      "old_label": "얼굴만 확대",
+      "context": "곰이 보이는 범위",
+      "condition_id": "day-07-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 전신와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8f3cbe016801da3b",
+      "old_label": "우산",
+      "context": "곰의 소품",
+      "condition_id": "day-07-c04",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-99d7cf660582c170",
+      "old_label": "파란색",
+      "context": "곰 털 색",
+      "condition_id": "day-07-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 갈색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-9bbb6bd7dba73ba2",
+      "old_label": "자동차",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 자전거와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-9ee3887ee1ca87f5",
+      "old_label": "들고 있다",
+      "context": "곰과 우산",
+      "condition_id": "day-07-c06",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a4b10b9c51c08fe4",
+      "old_label": "코끼리",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 곰와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-ab36ea59c363b407",
+      "old_label": "누워 자고 있다",
+      "context": "곰 자세",
+      "condition_id": "day-07-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-ad99faf9bcb8eb91",
+      "old_label": "망원경",
+      "context": "곰의 소품",
+      "condition_id": "day-07-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 우산와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-aea23a296ef563aa",
+      "old_label": "해변",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-af98d62ca32d0587",
+      "old_label": "흰색",
+      "context": "우산 색",
+      "condition_id": "day-07-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-bdd580ad9a22e53b",
+      "old_label": "왕관",
+      "context": "곰의 소품",
+      "condition_id": "day-07-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-bfaa2eb3e5b7a491",
+      "old_label": "사막",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-bfd445d34cee8a0c",
+      "old_label": "주황색",
+      "context": "우산 색",
+      "condition_id": "day-07-c05",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-c2c7f4f88d720e78",
+      "old_label": "보라색",
+      "context": "곰 털 색",
+      "condition_id": "day-07-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 갈색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-c507cf48eab086a9",
+      "old_label": "전신",
+      "context": "곰이 보이는 범위",
+      "condition_id": "day-07-c12",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-ca69d2254d7b7e60",
+      "old_label": "빨간색",
+      "context": "자전거 색",
+      "condition_id": "day-07-c08",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-cb81f5d5d2dd4e8c",
+      "old_label": "검은색",
+      "context": "우산 색",
+      "condition_id": "day-07-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-e05999a2768e1f31",
+      "old_label": "수직으로 내려다본",
+      "context": "시점",
+      "condition_id": "day-07-c13",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "정면·약간 내려다보기의 경계가 주관적이며 수채화의 단순화된 원근만으로 눈높이를 엄격히 확정하기 어려워 시점 후보 전체를 제외한다."
+    },
+    {
+      "old_id": "k-e0d8c3af66faf886",
+      "old_label": "초록색",
+      "context": "자전거 색",
+      "condition_id": "day-07-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-e7a0eabe6c3005d8",
+      "old_label": "고양이",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 곰와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-e99ec949dad4e727",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-eb014e052f778095",
+      "old_label": "수박",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-eb0da659641b6f61",
+      "old_label": "세 마리",
+      "context": "곰 수",
+      "condition_id": "day-07-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-ee6fd257e2068290",
+      "old_label": "장화",
+      "context": "곰의 소품",
+      "condition_id": "day-07-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 우산와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f129cfaa023ee2b7",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-07-c14",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f165425825c0a5b5",
+      "old_label": "포도",
+      "context": "곰 옆의 이동수단",
+      "condition_id": "day-07-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f298cb16d69474d6",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-07-c14",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 수채화와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f76fa2e031a090f7",
+      "old_label": "갈색",
+      "context": "곰 털 색",
+      "condition_id": "day-07-c03",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f8a16883d210e468",
+      "old_label": "공원",
+      "context": "배경 장소",
+      "condition_id": "day-07-c11",
+      "disposition": "retained_correct",
+      "reason": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f9ec801e36f0f499",
+      "old_label": "기어가고 있다",
+      "context": "곰 자세",
+      "condition_id": "day-07-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-fc696d761326546c",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-fdb5f8d84add9f3f",
+      "old_label": "수박",
+      "context": "동물",
+      "condition_id": "day-07-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+    }
+  ],
+  "notes": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다."
+}

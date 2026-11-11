@@ -7,12 +7,13 @@ import * as v7 from "./legacy-v7.js";
 import * as v8 from "./legacy-v8.js";
 import * as v9 from "./legacy-v9.js";
 import * as v10 from "./legacy-v10.js";
+import * as v11 from "./legacy-v11.js";
 import { ECONOMY_POLICY } from "@aimi/contracts";
 export type { GameKind, GameAction, GameInput } from "./legacy-v2.js";
 import type { GameKind, GameAction, GameInput } from "./legacy-v2.js";
-export const GAME_VERSION = "aimi-game-v11";
+export const GAME_VERSION = "aimi-game-v12";
 export const RULES = Object.freeze({ ...v2.RULES, epCapPerPlay: ECONOMY_POLICY.epCapPerPlay, epCapPerDay: ECONOMY_POLICY.epCapPerDay });
-export function gameRulesFor(version: string) { return version === GAME_VERSION ? RULES : version === v10.GAME_VERSION ? v10.RULES : v9.RULES; }
+export function gameRulesFor(version: string) { return version === GAME_VERSION ? RULES : version === v11.GAME_VERSION ? v11.RULES : version === v10.GAME_VERSION ? v10.RULES : v9.RULES; }
 /** v2 timing exports remain available to old clients/tests; v3 uses world distances. */
 export const TIMING = v2.TIMING;
 export const hash = v2.hash;
@@ -76,6 +77,7 @@ export function initialGame(
   seed: number,
   version = GAME_VERSION,
 ): GameState {
+  if (version === v11.GAME_VERSION) return v11.initialGame(kind, seed, version);
   if (version === v10.GAME_VERSION) return v10.initialGame(kind, seed, version);
   if (version === v9.GAME_VERSION) return v9.initialGame(kind, seed, version);
   if (version === v8.GAME_VERSION) return v8.initialGame(kind, seed, version);
@@ -106,13 +108,14 @@ export function initialGame(
     positionX: kind === "crossing" ? 4 : 1,
     positionRow: 0,
     obstacles: [],
-    nextAt: kind === "dino" ? 570 : 52,
+    nextAt: kind === "dino" ? 550 + hash(seed, 7101) % 81 : 46 + hash(seed, 7102) % 13,
     spawnIndex: 0,
     safeLane: 1,
     passed: 0,
   };
 }
 export function jumpHeight(s: GameState) {
+  if (s.version === v11.GAME_VERSION) return v11.jumpHeight(s);
   if (s.version === v10.GAME_VERSION) return v10.jumpHeight(s);
   if (s.version === v9.GAME_VERSION) return v9.jumpHeight(s);
   if (s.version === v8.GAME_VERSION) return v8.jumpHeight(s);
@@ -137,6 +140,7 @@ export function crossingTraffic(seed: number, row: number) {
   return crossingRow(seed,row)==="road" && hash(seed,row)%3===0 ? "fast" : "normal";
 }
 export function crossingVelocity(seed: number, row: number, version=GAME_VERSION) {
+  if(version===v11.GAME_VERSION) return v11.crossingVelocity(seed,row,version);
   if(version!==GAME_VERSION) return v10.crossingVelocity(seed,row);
   const h = hash(seed, row),
     dir = h % 2 ? -1 : 1;
@@ -148,6 +152,7 @@ export function crossingVelocity(seed: number, row: number, version=GAME_VERSION
   );
 }
 export function crossingEntities(seed: number, row: number, tick: number, version=GAME_VERSION) {
+  if(version===v11.GAME_VERSION) return v11.crossingEntities(seed,row,tick,version);
   if(version!==GAME_VERSION) return v10.crossingEntities(seed,row,tick);
   const type = crossingRow(seed, row),
     h = hash(seed, row);
@@ -381,6 +386,7 @@ export function stepGame(
   actions: GameAction[] = [],
 ): GameState {
   if (previous.status !== "running") return previous;
+  if (previous.version === v11.GAME_VERSION) return v11.stepGame(previous, actions);
   if (previous.version === v10.GAME_VERSION)
     return v10.stepGame(previous, actions);
   if (previous.version === v9.GAME_VERSION)
@@ -415,6 +421,7 @@ export function replayGame(
   ticks: number,
   version = GAME_VERSION,
 ): GameState {
+  if (version === v11.GAME_VERSION) return v11.replayGame(kind, seed, inputs, ticks, version);
   if (version === v10.GAME_VERSION)
     return v10.replayGame(kind, seed, inputs, ticks, version);
   if (version === v9.GAME_VERSION)
@@ -500,7 +507,7 @@ function spawnRunnerCoins(s: GameState) {
   if(added.length) s.coins=[...coins,...added];
 }
 export function gameCoins(s: GameState): GameCoin[] {
-  return s.version===GAME_VERSION?(s.coins??[]).filter(c=>!s.collectedCoins?.includes(c.id)):[];
+  return s.version===v11.GAME_VERSION?v11.gameCoins(s):s.version===GAME_VERSION?(s.coins??[]).filter(c=>!s.collectedCoins?.includes(c.id)):[];
 }
 function collectGameCoins(s:GameState,before:GameState) {
   for(const coin of gameCoins(s)) {
@@ -557,7 +564,7 @@ export function runnerPattern(
   seed: number,
   index: number,
 ): { name: string; safe: number; phase: number } {
-  if (index < 3) return { name: "warmup", safe: 1, phase: index };
+  if (index < 3) return { name: "warmup", safe: (hash(seed, 7103) + index) % 3, phase: index };
   const pack = Math.floor((index - 3) / 6),
     phase = (index - 3) % 6;
   const patterns = [
@@ -565,11 +572,16 @@ export function runnerPattern(
     { name: "cross", lanes: [0, 2, 0, 1, 2, 1] },
     { name: "syncopated", lanes: [1, 0, 1, 2, 1, 0] },
   ];
-  const pattern = patterns[((hash(seed, 991) % 3) + pack) % 3];
-  const mirror = (hash(seed, 999) % 2) ^ (pack % 2);
+  // Shuffle each cycle while retaining coverage of every authored path.
+  const cycle = Math.floor(pack / 3);
+  const orders = [[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
+  const order = orders[hash(seed, 990 + cycle) % orders.length];
+  const pattern = patterns[order[pack % 3]];
+  const mirror = hash(seed, 1999 + pack) % 2;
+  const offset = hash(seed, 2999 + pack) % 6;
   return {
     name: pattern.name,
-    safe: mirror ? 2 - pattern.lanes[phase] : pattern.lanes[phase],
+    safe: mirror ? 2 - pattern.lanes[(phase + offset) % 6] : pattern.lanes[(phase + offset) % 6],
     phase,
   };
 }

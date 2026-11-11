@@ -1,0 +1,441 @@
+{
+  "day": "day-05",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-05.png",
+  "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-05-c01",
+      "variable": "subject",
+      "entity": "fox",
+      "context": "동물",
+      "requested_value": "여우",
+      "observed_value": "여우",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "여우",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c02",
+      "variable": "count",
+      "entity": "fox",
+      "context": "여우 수",
+      "requested_value": "한 마리",
+      "observed_value": "한 마리",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "한 마리",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c03",
+      "variable": "color",
+      "entity": "fox",
+      "context": "여우 털 색",
+      "requested_value": "주황색",
+      "observed_value": "주황색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "주황색",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c04",
+      "variable": "accessory",
+      "entity": "fox",
+      "context": "여우의 소품",
+      "requested_value": "우주 헬멧",
+      "observed_value": "우주 헬멧",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "우주 헬멧",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c05",
+      "variable": "interaction",
+      "entity": "fox->helmet",
+      "context": "여우와 헬멧",
+      "requested_value": "쓰고 있다",
+      "observed_value": "쓰고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "쓰고 있다",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c06",
+      "variable": "location",
+      "entity": "scene",
+      "context": "여우가 있는 장소",
+      "requested_value": "달 표면",
+      "observed_value": "달 표면",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "달 표면",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c07",
+      "variable": "action_pose",
+      "entity": "fox",
+      "context": "여우 동작",
+      "requested_value": "점프하고 있다",
+      "observed_value": "발이 지면에서 떨어진",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "발이 지면에서 떨어진",
+      "score_enabled": true,
+      "review_note": "그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+    },
+    {
+      "id": "day-05-c08",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "하늘",
+      "requested_value": "검은 하늘",
+      "observed_value": "검은 하늘",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "검은 하늘",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c09",
+      "variable": "subject",
+      "entity": "earth",
+      "context": "하늘의 천체",
+      "requested_value": "지구",
+      "observed_value": "지구",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "지구",
+      "score_enabled": true,
+      "review_note": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "id": "day-05-c10",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "평면 만화",
+      "observed_value": "픽셀아트",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "126430657c33f3952659e996e1bd7b2a479d226add20e63c81dccd5bd464dd50",
+      "scored_value": "픽셀아트",
+      "score_enabled": true,
+      "review_note": "외곽선·별·지표가 계단형 픽셀로 표현되어 평면 만화보다 픽셀아트가 명확하다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-06aaf72c29505171",
+      "old_label": "설원",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-0f157e5730d4ec8e",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 픽셀아트와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-186bb41cbfb4c9a5",
+      "old_label": "주황색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-297c7a157ed540a6",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-32c36bf8353d9d93",
+      "old_label": "한 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-36564023b5fbe39d",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-3c818f96032dbd5a",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-406c4ee33c473c23",
+      "old_label": "검은 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-40942a155d7d6943",
+      "old_label": "벗어서 손에 들고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 쓰고 있다와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-45dbd66e9f5b265a",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-4d12876d21353f71",
+      "old_label": "쓰고 있다",
+      "context": "여우와 헬멧",
+      "condition_id": "day-05-c05",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-5630aafe16d316e6",
+      "old_label": "평면 만화",
+      "context": "표현 방식",
+      "condition_id": "day-05-c10",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 외곽선·별·지표가 계단형 픽셀로 표현되어 평면 만화보다 픽셀아트가 명확하다."
+    },
+    {
+      "old_id": "k-59397305e82bf308",
+      "old_label": "우주 헬멧",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-6a4c6a781c0bba37",
+      "old_label": "밀짚모자",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-6ae6d1496f94a642",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-74702ccc8492b0bf",
+      "old_label": "누워 자고 있다",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+    },
+    {
+      "old_id": "k-75634fe50100d898",
+      "old_label": "교실",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 달 표면와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-761e78bce456aa81",
+      "old_label": "점프하고 있다",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+    },
+    {
+      "old_id": "k-78866ecd301ead58",
+      "old_label": "고양이",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-78de9723a66aea29",
+      "old_label": "물속에서 헤엄치고 있다",
+      "context": "여우 동작",
+      "condition_id": "day-05-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+    },
+    {
+      "old_id": "k-7c2e9cc2c345d26e",
+      "old_label": "세 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-833aabc28c99a9bc",
+      "old_label": "지구",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-89112b908904d895",
+      "old_label": "토성",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-913cf8025db88d94",
+      "old_label": "파란색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-b54bdf357e58a853",
+      "old_label": "달 표면",
+      "context": "여우가 있는 장소",
+      "condition_id": "day-05-c06",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-bd5239559ed2432d",
+      "old_label": "초록색",
+      "context": "여우 털 색",
+      "condition_id": "day-05-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 주황색와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-c2f3baf3a922272b",
+      "old_label": "태양",
+      "context": "하늘의 천체",
+      "condition_id": "day-05-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 지구와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-c833158d50fc9d9b",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-c9cfdcc88f8aa1aa",
+      "old_label": "왕관",
+      "context": "여우의 소품",
+      "condition_id": "day-05-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 우주 헬멧와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-d82ab184dac33999",
+      "old_label": "두 마리",
+      "context": "여우 수",
+      "condition_id": "day-05-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 마리와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-da9be71c18b0a00a",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-db2106f0e27ec3e3",
+      "old_label": "코끼리",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 여우와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-e273043287c18367",
+      "old_label": "분홍 하늘",
+      "context": "하늘",
+      "condition_id": "day-05-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 검은 하늘와 대비되는 선택지. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-f102b9ed2ff53e27",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    },
+    {
+      "old_id": "k-f733ade13790d1f9",
+      "old_label": "여우",
+      "context": "동물",
+      "condition_id": "day-05-c01",
+      "disposition": "retained_correct",
+      "reason": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+    }
+  ],
+  "notes": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다."
+}

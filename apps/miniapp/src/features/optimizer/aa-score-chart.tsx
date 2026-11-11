@@ -85,14 +85,7 @@ export function AAScoreChart({ profile }: { profile?: AAProfile }) {
         같은 지표·버전·측정 설정의 모델끼리 비교하세요. 분야별 지표는 평가
         구성과 가중치가 달라요. 자료 없음은 0점이 아니에요.
       </p>
-      <a
-        className="aa-methodology-link"
-        href="https://artificialanalysis.ai/methodology/capability-indices"
-        target="_blank"
-        rel="noreferrer"
-      >
-        AA 지표 설명
-      </a>
+      <p className="caption">출처: Artificial Analysis 평가 방법</p>
     </section>
   );
 }

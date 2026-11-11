@@ -1,0 +1,966 @@
+{
+  "day": "day-10",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-10.png",
+  "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-10-c01",
+      "variable": "subject",
+      "entity": "robot",
+      "context": "주요 대상",
+      "requested_value": "로봇",
+      "observed_value": "로봇",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "로봇",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c02",
+      "variable": "count",
+      "entity": "robot",
+      "context": "로봇 수",
+      "requested_value": "한 대",
+      "observed_value": "한 대",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "한 대",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c03",
+      "variable": "color",
+      "entity": "robot",
+      "context": "로봇 몸 색",
+      "requested_value": "초록색",
+      "observed_value": "초록색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "초록색",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c04",
+      "variable": "location",
+      "entity": "scene",
+      "context": "배경 장소",
+      "requested_value": "온실",
+      "observed_value": "온실",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "온실",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c05",
+      "variable": "action_pose",
+      "entity": "robot",
+      "context": "로봇 자세",
+      "requested_value": "서 있다",
+      "observed_value": "서 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "서 있다",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c06",
+      "variable": "accessory",
+      "entity": "robot",
+      "context": "로봇의 도구",
+      "requested_value": "물뿌리개",
+      "observed_value": "물뿌리개",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "물뿌리개",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c07",
+      "variable": "color",
+      "entity": "watering_can",
+      "context": "물뿌리개 색",
+      "requested_value": "노란색",
+      "observed_value": "노란색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "노란색",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c08",
+      "variable": "interaction",
+      "entity": "robot->watering_can",
+      "context": "로봇과 도구",
+      "requested_value": "들고 있다",
+      "observed_value": "들고 있다",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "들고 있다",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c09",
+      "variable": "color",
+      "entity": "pot",
+      "context": "화분 색",
+      "requested_value": "보라색",
+      "observed_value": "보라색",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "보라색",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c10",
+      "variable": "subject",
+      "entity": "pot",
+      "context": "식물 용기",
+      "requested_value": "화분",
+      "observed_value": "화분",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "화분",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c11",
+      "variable": "count",
+      "entity": "pot",
+      "context": "화분 수",
+      "requested_value": "두 개",
+      "observed_value": "두 개",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "두 개",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c12",
+      "variable": "horizontal_relation",
+      "entity": "pot->robot",
+      "context": "로봇 기준 화분 위치",
+      "requested_value": "오른쪽",
+      "observed_value": "로봇의 화면 오른쪽",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "로봇의 화면 오른쪽",
+      "score_enabled": true,
+      "review_note": "로봇 신체의 해부학적 오른손 방향이 아니라 보는 사람의 화면 기준으로 화분 위치를 명시한다."
+    },
+    {
+      "id": "day-10-c13",
+      "variable": "arrangement",
+      "entity": "pot",
+      "context": "화분 배치",
+      "requested_value": "가로로 나란히",
+      "observed_value": "가로로 나란히",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "가로로 나란히",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c14",
+      "variable": "subject",
+      "entity": "cactus",
+      "context": "화분 안의 식물",
+      "requested_value": "선인장",
+      "observed_value": "선인장",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "선인장",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c15",
+      "variable": "interaction",
+      "entity": "robot->pot",
+      "context": "로봇의 작업",
+      "requested_value": "물을 붓고 있다",
+      "observed_value": "물을 뿌리고 있다",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "물을 뿌리고 있다",
+      "score_enabled": true,
+      "review_note": "물뿌리개에서 물줄기와 물방울이 나오는 모습은 분명하지만 화분 흙에 정확히 떨어지는지는 불명확하다. 물 도착점은 채점하지 않는다."
+    },
+    {
+      "id": "day-10-c16",
+      "variable": "material",
+      "entity": "roof",
+      "context": "온실 지붕 표면",
+      "requested_value": "투명한 유리",
+      "observed_value": null,
+      "review_status": "excluded_ambiguous",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "score_enabled": false,
+      "review_note": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "id": "day-10-c17",
+      "variable": "screen_position",
+      "entity": "group",
+      "context": "대상들의 화면 위치",
+      "requested_value": "화면 중앙",
+      "observed_value": "화면 중앙",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "화면 중앙",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "id": "day-10-c18",
+      "variable": "camera_elevation",
+      "entity": "scene",
+      "context": "시점",
+      "requested_value": "눈높이",
+      "observed_value": null,
+      "review_status": "excluded_ambiguous",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "score_enabled": false,
+      "review_note": "정면에 가까운 구도지만 카메라 높이를 엄격하게 구분할 근거가 부족하다."
+    },
+    {
+      "id": "day-10-c19",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "종이 콜라주",
+      "observed_value": "종이 콜라주",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "33dcd104ef5fee87158cffde64935c6590c79b36eade3d0bce9e294dd36c95ee",
+      "scored_value": "종이 콜라주",
+      "score_enabled": true,
+      "review_note": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-0299899ce6697bd3",
+      "old_label": "화면 중앙",
+      "context": "대상들의 화면 위치",
+      "condition_id": "day-10-c17",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-044b80e3dfcafa40",
+      "old_label": "오른쪽",
+      "context": "로봇 기준 화분 위치",
+      "condition_id": "day-10-c12",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 로봇 신체의 해부학적 오른손 방향이 아니라 보는 사람의 화면 기준으로 화분 위치를 명시한다."
+    },
+    {
+      "old_id": "k-05dbae81458f30c2",
+      "old_label": "접시",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화분와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0a75dc95073afbc0",
+      "old_label": "누워 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-10-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-0c864475a1d89aed",
+      "old_label": "로봇",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-176a97c851c13e69",
+      "old_label": "세 대",
+      "context": "로봇 수",
+      "condition_id": "day-10-c02",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-18795133d0831803",
+      "old_label": "빨간색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-1b53368baed8bc6e",
+      "old_label": "종이 콜라주",
+      "context": "표현 방식",
+      "condition_id": "day-10-c19",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-1da5d7cdb1402f94",
+      "old_label": "네 대",
+      "context": "로봇 수",
+      "condition_id": "day-10-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 대와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-1df53e792d765b87",
+      "old_label": "들고 있다",
+      "context": "로봇과 도구",
+      "condition_id": "day-10-c08",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-21fcc58cb676b9cc",
+      "old_label": "금속",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "old_id": "k-26ce6f3936612ddc",
+      "old_label": "주황색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-2746ce75bf8ff16b",
+      "old_label": "망원경",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 물뿌리개와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-27ddea0bc8439ff5",
+      "old_label": "수박",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-2d847585f7f1c3a1",
+      "old_label": "온실",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-30be21331e282565",
+      "old_label": "발로 밟고 있다",
+      "context": "로봇과 도구",
+      "condition_id": "day-10-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 들고 있다와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-313efb78c2d6037b",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-3308faca8c4ae23f",
+      "old_label": "배경에 풍차가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-34ef4d0e26e5ba0f",
+      "old_label": "사막",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 온실와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-3744a51ed158de52",
+      "old_label": "컵",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화분와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-379a32e3d1d8ce4a",
+      "old_label": "원형 배치",
+      "context": "화분 배치",
+      "condition_id": "day-10-c13",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-398f198397d21ba3",
+      "old_label": "네 개",
+      "context": "화분 수",
+      "condition_id": "day-10-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-3a6ccd11d17281f8",
+      "old_label": "나뭇결",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "old_id": "k-402ffd0999a531a6",
+      "old_label": "세로로 쌓인",
+      "context": "화분 배치",
+      "condition_id": "day-10-c13",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 가로로 나란히와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-411cc1394c0423a7",
+      "old_label": "책을 읽고 있다",
+      "context": "로봇의 작업",
+      "condition_id": "day-10-c15",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 물을 뿌리고 있다와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-415ed5b7f0abf8db",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-45b6a35e3a8ca50c",
+      "old_label": "투명한 유리",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "old_id": "k-4715544e3f5717cd",
+      "old_label": "설원",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-49f05869cb8803da",
+      "old_label": "물뿌리개",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5051c0fd57fbd7f7",
+      "old_label": "왕관",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-52193aa2b7061c4e",
+      "old_label": "수박",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5769bf662a5bdf7c",
+      "old_label": "바닷속",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 온실와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-57af90ea35e82878",
+      "old_label": "서 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-10-c05",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5c4389ab1c346581",
+      "old_label": "옆에 드럼 세트가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-5fe72268ddb5d8af",
+      "old_label": "수박",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-627de39ddcd6990d",
+      "old_label": "선인장",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-63e61911ffe3216d",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-643b324d299b94a1",
+      "old_label": "검은색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-10-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-66439590fcb56f6e",
+      "old_label": "주황색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-10-c03",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-699bf160e3406588",
+      "old_label": "주황색",
+      "context": "화분 색",
+      "condition_id": "day-10-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 보라색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-6b9df66f7913ea58",
+      "old_label": "가로로 나란히",
+      "context": "화분 배치",
+      "condition_id": "day-10-c13",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-731d2043bde6037d",
+      "old_label": "보라색",
+      "context": "화분 색",
+      "condition_id": "day-10-c09",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-75143ebc6e923250",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-781399bf402a01e7",
+      "old_label": "두 개",
+      "context": "화분 수",
+      "condition_id": "day-10-c11",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-78a8f4a23d898a2e",
+      "old_label": "바나나",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-7c2bd8c88844aea4",
+      "old_label": "불투명 금속",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "old_id": "k-7d0be42b1adff86d",
+      "old_label": "공중에 떠 있다",
+      "context": "로봇 자세",
+      "condition_id": "day-10-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 서 있다와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-7f61dfdc71b7b9f5",
+      "old_label": "사람",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 로봇와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-80c2c8d07a12ed34",
+      "old_label": "곰",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 로봇와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8b8d30f2e9c212a2",
+      "old_label": "한 대",
+      "context": "로봇 수",
+      "condition_id": "day-10-c02",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8be2de449d6bf3c0",
+      "old_label": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-10-c19",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8c7275b1a66844c2",
+      "old_label": "빨간색",
+      "context": "화분 색",
+      "condition_id": "day-10-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-8f21c0148c77236b",
+      "old_label": "수직으로 내려다본",
+      "context": "시점",
+      "condition_id": "day-10-c18",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "정면에 가까운 구도지만 카메라 높이를 엄격하게 구분할 근거가 부족하다."
+    },
+    {
+      "old_id": "k-8fcf131fab7437fe",
+      "old_label": "화면 왼쪽 아래",
+      "context": "대상들의 화면 위치",
+      "condition_id": "day-10-c17",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 화면 중앙와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-9301b79788cf7925",
+      "old_label": "포도",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-94c6036b611c2428",
+      "old_label": "바나나",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-95e55963528c1c35",
+      "old_label": "세 개",
+      "context": "화분 수",
+      "condition_id": "day-10-c11",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-9a2019090ef25bbf",
+      "old_label": "분홍색",
+      "context": "화분 색",
+      "condition_id": "day-10-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 보라색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a1329cad7f54cbb7",
+      "old_label": "초록색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-10-c03",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a1b5d3b67b2d1e4a",
+      "old_label": "짚으로 엮은 질감",
+      "context": "온실 지붕 표면",
+      "condition_id": "day-10-c16",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다."
+    },
+    {
+      "old_id": "k-a1e1041ef6ddbe5e",
+      "old_label": "붓",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 물뿌리개와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a2265dab26c1d46a",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-10-c19",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 종이 콜라주와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a3f67777c784c477",
+      "old_label": "대상이 빨간 리본을 달고 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a45eb2dbab80c5a6",
+      "old_label": "빨간색",
+      "context": "로봇 몸 색",
+      "condition_id": "day-10-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 초록색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-a48824ac82ebac79",
+      "old_label": "화분",
+      "context": "식물 용기",
+      "condition_id": "day-10-c10",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-aead206b006e44f8",
+      "old_label": "두 대",
+      "context": "로봇 수",
+      "condition_id": "day-10-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 대와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-afa729ec41f39ba4",
+      "old_label": "노란색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07",
+      "disposition": "retained_correct",
+      "reason": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-b76a9d73875d3e9e",
+      "old_label": "포도",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-b9d350300912eb7e",
+      "old_label": "해변",
+      "context": "배경 장소",
+      "condition_id": "day-10-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-bd412e5d54228999",
+      "old_label": "장미",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 선인장와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-bdf4a3ce7a2e6c94",
+      "old_label": "흙을 파고 있다",
+      "context": "로봇의 작업",
+      "condition_id": "day-10-c15",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 물을 뿌리고 있다와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-c986e3fa61861c0e",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-d6bc1676f8385a3f",
+      "old_label": "화면에 커다란 모닥불이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-de921b9fdae4d118",
+      "old_label": "우산",
+      "context": "로봇의 도구",
+      "condition_id": "day-10-c06",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-e0b2b6b5901f3504",
+      "old_label": "해바라기",
+      "context": "화분 안의 식물",
+      "condition_id": "day-10-c14",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 선인장와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-ee254c163207a9f2",
+      "old_label": "물을 붓고 있다",
+      "context": "로봇의 작업",
+      "condition_id": "day-10-c15",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 물뿌리개에서 물줄기와 물방울이 나오는 모습은 분명하지만 화분 흙에 정확히 떨어지는지는 불명확하다. 물 도착점은 채점하지 않는다."
+    },
+    {
+      "old_id": "k-efc5129d2a635910",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-10-c19",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 종이 콜라주와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f04ab42e77d0b34b",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f0573f9e9c400e7f",
+      "old_label": "바나나",
+      "context": "주요 대상",
+      "condition_id": "day-10-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f13222c5a50a5722",
+      "old_label": "눈높이",
+      "context": "시점",
+      "condition_id": "day-10-c18",
+      "disposition": "removed_ambiguous_condition",
+      "reason": "정면에 가까운 구도지만 카메라 높이를 엄격하게 구분할 근거가 부족하다."
+    },
+    {
+      "old_id": "k-f4106f7cc5fc1461",
+      "old_label": "한 개",
+      "context": "화분 수",
+      "condition_id": "day-10-c11",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 두 개와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f429775f01352f50",
+      "old_label": "흰색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f43b4cbf18020ec3",
+      "old_label": "왼쪽",
+      "context": "로봇 기준 화분 위치",
+      "condition_id": "day-10-c12",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 로봇의 화면 오른쪽와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    },
+    {
+      "old_id": "k-f88a4bfc1e2d792f",
+      "old_label": "파란색",
+      "context": "물뿌리개 색",
+      "condition_id": "day-10-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+    }
+  ],
+  "notes": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다."
+}

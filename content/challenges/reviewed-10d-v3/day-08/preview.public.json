@@ -1,0 +1,274 @@
+{
+  "id": "day-08",
+  "title": "유리 꽃병과 해바라기",
+  "version": "aimi-puzzle-pack-v3-reviewed-af10bc2f6198",
+  "target": "/content/challenges/generated-10d-v2/day-08.png",
+  "candidate_keywords": [
+    {
+      "id": "k-47cc138c76bbd864",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-5b73262d21f1bc97",
+      "label": "연필화",
+      "context": "표현 방식",
+      "sentence_fragment": "연필화 스타일로 표현해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-aaf017e67303a0b0",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-c7ab54526c435d63",
+      "label": "흰색 배경",
+      "context": "배경",
+      "sentence_fragment": "흰색 배경을 배경으로 그려줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-d8fe192845ea4297",
+      "label": "검정 배경",
+      "context": "배경",
+      "sentence_fragment": "검정 배경을 배경으로 그려줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-16a240cabe339fa2",
+      "label": "빨간색 배경",
+      "context": "배경",
+      "sentence_fragment": "빨간색 배경을 배경으로 그려줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-3151e368b940f286",
+      "label": "나무",
+      "context": "탁자 표면",
+      "sentence_fragment": "탁자는 나무 느낌으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-2df01034948eaf6c",
+      "label": "금속",
+      "context": "탁자 표면",
+      "sentence_fragment": "탁자는 금속 느낌으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-3a1dbdb26d253999",
+      "label": "얼음",
+      "context": "탁자 표면",
+      "sentence_fragment": "탁자는 얼음 느낌으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-a7615af472605abd",
+      "label": "투명한 유리",
+      "context": "꽃병 표면",
+      "sentence_fragment": "꽃병은 투명한 유리 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-584d98bca354ee2d",
+      "label": "불투명 금속",
+      "context": "꽃병 표면",
+      "sentence_fragment": "꽃병은 불투명 금속 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-57befd49e4595956",
+      "label": "짚으로 엮은 질감",
+      "context": "꽃병 표면",
+      "sentence_fragment": "꽃병은 짚으로 엮은 질감 느낌으로 표현해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-50e19c372341e954",
+      "label": "꽃병",
+      "context": "꽃이 담긴 용기",
+      "sentence_fragment": "꽃병을 장면에 포함해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-f51264b38bd71ebb",
+      "label": "접시",
+      "context": "꽃이 담긴 용기",
+      "sentence_fragment": "접시를 장면에 포함해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-67f61aa84997251f",
+      "label": "프라이팬",
+      "context": "꽃이 담긴 용기",
+      "sentence_fragment": "프라이팬을 장면에 포함해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-4476b768733d6456",
+      "label": "꽃병 한 개",
+      "context": "꽃병 수",
+      "sentence_fragment": "꽃병은 한 개만 보여줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-a743b69a9b8ed654",
+      "label": "꽃병 두 개",
+      "context": "꽃병 수",
+      "sentence_fragment": "꽃병은 두 개만 보여줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-6f4b82eff7693d93",
+      "label": "꽃병 네 개",
+      "context": "꽃병 수",
+      "sentence_fragment": "꽃병은 네 개만 보여줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-2c3cdea1ecbec922",
+      "label": "해바라기",
+      "context": "꽃 종류",
+      "sentence_fragment": "해바라기를 장면에 포함해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-fe3a00549c786b24",
+      "label": "장미",
+      "context": "꽃 종류",
+      "sentence_fragment": "장미를 장면에 포함해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-40f1f4191887f280",
+      "label": "튤립",
+      "context": "꽃 종류",
+      "sentence_fragment": "튤립을 장면에 포함해줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-f64fbd2ed6072279",
+      "label": "해바라기 세 송이",
+      "context": "해바라기 수",
+      "sentence_fragment": "해바라기는 세 송이만 보여줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-4039a919e078138f",
+      "label": "해바라기 한 송이",
+      "context": "해바라기 수",
+      "sentence_fragment": "해바라기는 한 송이만 보여줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-914aefd89c506508",
+      "label": "해바라기 다섯 송이",
+      "context": "해바라기 수",
+      "sentence_fragment": "해바라기는 다섯 송이만 보여줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-8400719b5b2816c2",
+      "label": "해바라기 꽃잎 색: 노란색",
+      "context": "해바라기 꽃잎 색",
+      "sentence_fragment": "해바라기 꽃잎은 노란색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-ca305d6fd7d77bee",
+      "label": "해바라기 꽃잎 색: 보라색",
+      "context": "해바라기 꽃잎 색",
+      "sentence_fragment": "해바라기 꽃잎은 보라색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-b4b24139b2876ba2",
+      "label": "해바라기 꽃잎 색: 파란색",
+      "context": "해바라기 꽃잎 색",
+      "sentence_fragment": "해바라기 꽃잎은 파란색으로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-62171734726fcfa7",
+      "label": "해바라기 줄기 색: 초록색",
+      "context": "해바라기 줄기 색",
+      "sentence_fragment": "해바라기 줄기는 초록색으로 표현해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-5ac12f17de434c6a",
+      "label": "해바라기 줄기 색: 흰색",
+      "context": "해바라기 줄기 색",
+      "sentence_fragment": "해바라기 줄기는 흰색으로 표현해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-65c21c63fcc6d506",
+      "label": "해바라기 줄기 색: 분홍색",
+      "context": "해바라기 줄기 색",
+      "sentence_fragment": "해바라기 줄기는 분홍색으로 표현해줘.",
+      "sentence_order": 9
+    },
+    {
+      "id": "k-03d61a8ef4f84ff9",
+      "label": "책",
+      "context": "꽃병 옆의 물건",
+      "sentence_fragment": "책을 장면에 포함해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-bb10adc4ea0aa8ea",
+      "label": "공",
+      "context": "꽃병 옆의 물건",
+      "sentence_fragment": "공을 장면에 포함해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-098617fc479f184f",
+      "label": "카메라",
+      "context": "꽃병 옆의 물건",
+      "sentence_fragment": "카메라를 장면에 포함해줘.",
+      "sentence_order": 10
+    },
+    {
+      "id": "k-12562527a77c6970",
+      "label": "책 표지 색: 파란색",
+      "context": "책 표지 색",
+      "sentence_fragment": "책 표지는 파란색으로 표현해줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-bc6c82b8d5285720",
+      "label": "책 표지 색: 갈색",
+      "context": "책 표지 색",
+      "sentence_fragment": "책 표지는 갈색으로 표현해줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-e303095641df676a",
+      "label": "책 표지 색: 주황색",
+      "context": "책 표지 색",
+      "sentence_fragment": "책 표지는 주황색으로 표현해줘.",
+      "sentence_order": 11
+    },
+    {
+      "id": "k-5ebb0acd9be8e8aa",
+      "label": "꽃병 기준 책: 왼쪽",
+      "context": "꽃병 기준 책 위치",
+      "sentence_fragment": "책을 꽃병 왼쪽에 놓아줘.",
+      "sentence_order": 12
+    },
+    {
+      "id": "k-94b3928432869814",
+      "label": "꽃병 기준 책: 오른쪽",
+      "context": "꽃병 기준 책 위치",
+      "sentence_fragment": "책을 꽃병 오른쪽에 놓아줘.",
+      "sentence_order": 12
+    }
+  ]
+}

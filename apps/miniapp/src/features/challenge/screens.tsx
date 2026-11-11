@@ -1,14 +1,22 @@
-import { AttemptResults } from "./attempt-results";
+import { SentenceCard } from "./sentence-card";
+import { ModelAttribution } from "./model-attribution";
+import {
+  challengeStage,
+  selectChallengeResult,
+  matchingChallengeAttempt,
+} from "./view-state";
+import { AttemptResults, PreviousCombinations } from "./attempt-results";
 import React, { useState, useEffect } from "react";
 import {
   ECONOMY_POLICY,
   PUZZLE_ATTEMPT_COST,
   PUZZLE_COUNT_HINT_COST,
   composeKeywordSentence,
+  sortSentenceKeywords,
   type Attempt,
 } from "@aimi/contracts";
 import { useApp } from "../../app/context";
-import { Button, ChallengeArt, Modal, Stats } from "../../ui/primitives";
+import { Button, ChallengeArt, Icon, Modal, Stats } from "../../ui/primitives";
 import { request } from "../../lib/api/client";
 function HighlightedPrompt({
   prompt,
@@ -32,7 +40,7 @@ function HighlightedPrompt({
     cursor = h.end_utf16;
   }
   parts.push(prompt.slice(cursor));
-  return <p>{parts}</p>;
+  return <p className="challenge-highlighted-prompt">{parts}</p>;
 }
 export function Challenge() {
   const a = useApp(),
@@ -50,11 +58,13 @@ export function Challenge() {
     }),
     [model, setModel] = useState<"low" | "high">("low"),
     [zoom, setZoom] = useState(false),
+    [hintConfirm, setHintConfirm] = useState(false),
+    [introOpen, setIntroOpen] = useState(false),
     [gallery, setGallery] = useState<
       { id: string; target: string; model: string }[] | null
     >(null),
     [result, setResult] = useState<Attempt | null>(null),
-    [moving, setMoving] = useState<string | null>(null);
+    [resultError, setResultError] = useState(false);
   useEffect(() => {
     try {
       const saved = JSON.parse(sessionStorage.getItem(draftKey) ?? "[]");
@@ -72,25 +82,43 @@ export function Challenge() {
   useEffect(() => {
     sessionStorage.setItem(draftKey, JSON.stringify(ids));
   }, [ids, draftKey]);
+  const requestedResultId = /^\/challenge\/(result|answer)\//.test(a.path)
+    ? decodeURIComponent(a.path.split("/")[3].split("?")[0])
+    : new URLSearchParams(a.path.split("?")[1] ?? "").get("result");
   useEffect(() => {
-    const id = new URLSearchParams(location.search).get("result");
-    if (id)
-      void a
-        .perform(() =>
-          request<Attempt>("/v1/attempts/" + encodeURIComponent(id)),
-        )
-        .then((r) => {
-          if (r) setResult(r);
-        });
-  }, []);
-  const selected = ids
-    .map((id) => content.keywords.find((k) => k.id === id))
-    .filter((k) => Boolean(k));
+    if (
+      !requestedResultId ||
+      s.challengeAttempts?.some((r) => r.id === requestedResultId)
+    )
+      return;
+    let cancelled = false;
+    setResultError(false);
+    void request<Attempt>(
+      "/v1/attempts/" + encodeURIComponent(requestedResultId),
+    )
+      .then((r) => {
+        if (!cancelled) setResult(r);
+      })
+      .catch(() => {
+        if (!cancelled) setResultError(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [requestedResultId]);
+  const selected = sortSentenceKeywords(
+    ids
+      .map((id) => content.keywords.find((k) => k.id === id))
+      .filter((k): k is NonNullable<typeof k> => Boolean(k)),
+  );
   const cost = puzzle
     ? PUZZLE_ATTEMPT_COST
     : selected.reduce((n, k) => n + k!.cost, 0) + (model === "low" ? 12 : 40);
-  const attemptsLeft =
-    s.challengeRemaining ?? Math.max(0, 5 - s.daily.attemptsUsed);
+  const attemptsLeft = puzzle
+    ? s.daily.success || s.daily.challengeClosed
+      ? 0
+      : Math.floor(s.budget / PUZZLE_ATTEMPT_COST)
+    : (s.challengeRemaining ?? Math.max(0, 5 - s.daily.attemptsUsed));
   const closed =
     s.daily.success ||
     s.daily.challengeClosed === true ||
@@ -103,7 +131,31 @@ export function Challenge() {
       ]),
     ).values(),
   ].sort((a, b) => (a.attemptNumber ?? 0) - (b.attemptNumber ?? 0));
+  const stage = puzzle
+    ? challengeStage(a.path, closed)
+    : combination
+      ? "combination"
+      : "selection";
+  const introKey = draftKey + ".intro-seen";
+  useEffect(() => {
+    if (
+      puzzle &&
+      stage === "selection" &&
+      !closed &&
+      !sessionStorage.getItem(introKey)
+    ) {
+      setIntroOpen(true);
+    }
+  }, [puzzle, stage, closed, introKey]);
+  const dismissIntro = () => {
+    sessionStorage.setItem(introKey, "true");
+    setIntroOpen(false);
+  };
+  const { current: shownAttempt, previous: previousAttempts } =
+    selectChallengeResult(history, requestedResultId);
   const terminalAttempt = [...history].reverse().find((r) => r.reveal);
+  const submittedAttempt = matchingChallengeAttempt(history, ids);
+  const submittedSelection = Boolean(submittedAttempt);
   const buyCountHint = () =>
     a.perform(() =>
       request<{ answerCount: number; cost: number }>(
@@ -112,14 +164,8 @@ export function Challenge() {
         { date: s.daily.date, contentVersion: content.version },
       ),
     );
-  function move(index: number, by: number) {
-    const dest = index + by;
-    if (dest < 0 || dest >= ids.length) return;
-    const next = [...ids];
-    [next[index], next[dest]] = [next[dest], next[index]];
-    setIds(next);
-  }
   const submit = async () => {
+    const origin = a.path;
     const r = await a.perform(() =>
       request<Attempt>("/v1/challenge/attempts", "POST", {
         keywordIds: ids,
@@ -128,17 +174,44 @@ export function Challenge() {
         contentVersion: content.version,
       }),
     );
-    if (r) setResult(r);
+    if (r && a.isCurrentPath(origin)) {
+      setResult(r);
+      if (puzzle)
+        a.navigate("/challenge/result/" + encodeURIComponent(r.id), {
+          replace: true,
+        });
+    }
   };
-  useEffect(() => {
-    if (puzzle && result)
-      document
-        .getElementById("challenge-attempt-" + result.id)
-        ?.scrollIntoView({ block: "center", behavior: "smooth" });
-  }, [result?.id]);
-  const resultHistory =
-    puzzle && history.length > 0 ? (
-      <AttemptResults attempts={history} keywords={content.keywords} />
+  const resultHistory = shownAttempt ? (
+    <AttemptResults
+      attempts={[shownAttempt]}
+      keywords={content.keywords}
+      heading={false}
+    />
+  ) : null;
+  const countHint =
+    puzzle && !closed ? (
+      content.answerCount !== undefined ? (
+        <span className="challenge-count-hint purchased" role="status">
+          정답 키워드<strong>{content.answerCount}개</strong>
+        </span>
+      ) : (
+        <button
+          className="challenge-count-hint"
+          disabled={
+            a.busy || s.budget < PUZZLE_COUNT_HINT_COST + PUZZLE_ATTEMPT_COST
+          }
+          aria-label={`정답 키워드 개수 보기, ${PUZZLE_COUNT_HINT_COST}예산 사용`}
+          title="구매 후 시도할 30예산이 남아야 해요."
+          onClick={() => setHintConfirm(true)}
+        >
+          <span className="challenge-hint-label">
+            <Icon name="hint" />
+            {a.busy ? "처리 중…" : "개수 힌트"}
+          </span>
+          <small>예산 {PUZZLE_COUNT_HINT_COST} 소모</small>
+        </button>
+      )
     ) : null;
   const reset = () => {
     setIds([]);
@@ -148,72 +221,92 @@ export function Challenge() {
   };
   return (
     <>
-      {content.reviewStatus === "unreviewed" && (
-        <p className="caption sample-label">
-          생성 이미지 검수 전 개발 미리보기 · 정답 후보는 확정 전이에요.
-        </p>
-      )}
-      {content.reviewStatus === "unreviewed" && (
-        <button
-          className="text-link"
-          onClick={() =>
-            void a
-              .perform(() =>
-                request<{
-                  images: { id: string; target: string; model: string }[];
-                }>("/v1/content/previews"),
-              )
-              .then((r) => {
-                if (r) setGallery(r.images);
-              })
-          }
-        >
-          10일 이미지 모아보기 ›
-        </button>
-      )}
-      {puzzle && !closed && (
-        <section className="challenge-count-hint">
-          {content.answerCount !== undefined ? (
-            <strong>정답 키워드는 {content.answerCount}개예요.</strong>
-          ) : (
-            <>
-              <div>
-                <strong>정답 키워드 개수가 궁금한가요?</strong>
-                <p className="caption">
-                  힌트 15예산 · 구매하면 도전 가능 횟수가 줄어들 수 있어요.
-                </p>
-              </div>
-              <Button
-                weak
-                loading={a.busy}
-                disabled={
-                  a.busy ||
-                  s.budget < PUZZLE_COUNT_HINT_COST + PUZZLE_ATTEMPT_COST
-                }
-                onClick={() => void buyCountHint()}
-              >
-                개수 보기 · {PUZZLE_COUNT_HINT_COST}예산
-              </Button>
-            </>
-          )}
-        </section>
-      )}
-      {puzzle && closed ? null : !combination ? (
-        <>
-          <div className="target-summary">
-            <ChallengeArt src={content.target} />
-            <div>
-              <strong>{content.title}</strong>
-              <button className="text-link" onClick={() => setZoom(true)}>
-                목표 확대 ›
-              </button>
-            </div>
-          </div>
-          <h2 className="section-heading">필요한 단어를 골라보세요</h2>
+      {introOpen && puzzle && stage === "selection" && !closed && (
+        <Modal title="그림 속 정답 단어를 찾아보세요" onClose={dismissIntro}>
+          <p>그림을 설명하는 단어를 모두 골라 프롬프트를 맞춰보세요.</p>
           <p className="caption">
-            누르면 선택되고, 다시 누르면 해제돼요.
-            {puzzle && " 순서는 채점에 영향을 주지 않아요."}
+            시도 {PUZZLE_ATTEMPT_COST}예산 · 개수 힌트 {PUZZLE_COUNT_HINT_COST}
+            예산 사용
           </p>
+          <div className="dialog-actions">
+            <Button onClick={dismissIntro}>알겠어요</Button>
+          </div>
+        </Modal>
+      )}
+      {hintConfirm && (
+        <Modal
+          title="정답 단어가 몇 개인지 알려드려요"
+          dismissible={!a.busy}
+          onClose={() => setHintConfirm(false)}
+        >
+          <p>
+            어떤 단어를 더 골라야 할지 고민되나요? 예산 {PUZZLE_COUNT_HINT_COST}
+            을 쓰면 정답 단어가 모두 몇 개인지 알려드려요. 한 번 열면 오늘은
+            계속 볼 수 있어요.
+          </p>
+          <p className="caption">
+            구매 후 남을 예산 {Math.max(0, s.budget - PUZZLE_COUNT_HINT_COST)} ·
+            시도 가능{" "}
+            {Math.floor(
+              Math.max(0, s.budget - PUZZLE_COUNT_HINT_COST) /
+                PUZZLE_ATTEMPT_COST,
+            )}
+            회
+          </p>
+          <div className="dialog-actions hint-purchase-actions">
+            <Button
+              loading={a.busy}
+              disabled={
+                a.busy ||
+                closed ||
+                s.budget < PUZZLE_COUNT_HINT_COST + PUZZLE_ATTEMPT_COST
+              }
+              onClick={async () => {
+                const purchased = await buyCountHint();
+                if (purchased) setHintConfirm(false);
+              }}
+            >
+              <span>
+                예산 {PUZZLE_COUNT_HINT_COST} 쓰고
+                <br />
+                힌트 얻기
+              </span>
+            </Button>
+            <Button
+              weak
+              disabled={a.busy}
+              onClick={() => setHintConfirm(false)}
+            >
+              취소
+            </Button>
+          </div>
+        </Modal>
+      )}
+      {puzzle && (stage === "selection" || stage === "combination") && (
+        <div className="challenge-round-meta">
+          <strong>{s.daily.attemptsUsed + 1}차 챌린지</strong>
+          <span>
+            예산 {s.budget} · 남은 시도 {attemptsLeft}회
+          </span>
+        </div>
+      )}
+      {puzzle &&
+      (stage === "result" || stage === "answer") ? null : !combination ? (
+        <>
+          <div className="challenge-selection-target">
+            <ChallengeArt src={content.target} />
+          </div>
+          <p className="challenge-selection-description">
+            목표 이미지를 설명하는 정답 단어를 모두 골라보세요.
+            대상·개수·색상·배경·그림체가 단서예요.
+          </p>
+          <div className="challenge-keyword-heading">
+            <div>
+              <h2>필요한 단어를 골라보세요</h2>
+              <p className="caption">누르면 선택되고, 다시 누르면 해제돼요.</p>
+            </div>
+            {countHint}
+          </div>
           <div className="keywords">
             {content.keywords.map((k) => (
               <button
@@ -232,7 +325,6 @@ export function Challenge() {
             ))}
           </div>
           <p className="caption green">{ids.length}개 선택됨</p>
-          {resultHistory}
           <div className="fixed-cta">
             <Button
               disabled={!ids.length || s.daily.success || closed}
@@ -241,76 +333,35 @@ export function Challenge() {
               {s.daily.success
                 ? "오늘 챌린지 성공"
                 : closed
-                  ? "오늘 도전 종료"
+                  ? "오늘 챌린지 종료"
                   : "조합 확인 ›"}
             </Button>
           </div>
         </>
       ) : (
         <>
-          <div className="between">
-            <strong>예산 {s.budget}</strong>
-            <button className="text-link" onClick={() => setZoom(true)}>
-              목표 다시 보기 ›
-            </button>
+          <div className="challenge-combination-target">
+            <ChallengeArt src={content.target} />
           </div>
-          <div className="selected-keywords">
-            {selected.map((k, i) => (
-              <span
-                key={k!.id}
-                className="keyword-chip"
-                draggable
-                onDragStart={() => setMoving(k!.id)}
-                onDragOver={(e) => e.preventDefault()}
-                onDrop={() => {
-                  if (moving) {
-                    const from = ids.indexOf(moving),
-                      to = i,
-                      next = [...ids];
-                    next.splice(from, 1);
-                    next.splice(to, 0, moving);
-                    setIds(next);
-                    setMoving(null);
-                  }
-                }}
-              >
-                <button
-                  onClick={() => setIds(ids.filter((id) => id !== k!.id))}
-                  aria-label={k!.label + " 해제"}
-                >
-                  {k!.label} ×
-                </button>
-                <span className="reorder-controls">
-                  <button
-                    aria-label={k!.label + " 앞으로"}
-                    disabled={i === 0}
-                    onClick={() => move(i, -1)}
-                  >
-                    ‹
-                  </button>
-                  <button
-                    aria-label={k!.label + " 뒤로"}
-                    disabled={i === selected.length - 1}
-                    onClick={() => move(i, 1)}
-                  >
-                    ›
-                  </button>
-                </span>
-              </span>
-            ))}
-          </div>
-          <p className="caption">선택 {ids.length}개 · 순서 변경 · ×로 해제</p>
-          <div className="notice section">
-            <strong>자동 조합 문장</strong>
-            <p>
-              {puzzle
-                ? composeKeywordSentence(
-                    selected.filter((k): k is NonNullable<typeof k> => !!k),
-                  )
-                : selected.map((k) => k!.label).join(" · ") +
-                  " 조건으로 표현해줘."}
-            </p>
-          </div>
+          <section
+            className="challenge-selected-summary"
+            aria-label="선택한 키워드"
+          >
+            <h2>
+              선택한 키워드 <span className="caption">{selected.length}개</span>
+            </h2>
+            <div className="challenge-selected-labels">
+              {selected.map((k) => (
+                <span key={k.id}>{k.label}</span>
+              ))}
+            </div>
+          </section>
+          <SentenceCard title="조합 문장" className="challenge-prompt">
+            {puzzle
+              ? composeKeywordSentence(selected)
+              : selected.map((k) => k.label).join(" · ") +
+                " 조건으로 표현해줘."}
+          </SentenceCard>
           {!puzzle && (
             <>
               <h2 className="section-heading">모델 선택</h2>
@@ -334,28 +385,25 @@ export function Challenge() {
               </div>
             </>
           )}
-          <h2 className="section-heading">
-            사용 {cost} / 남음 {Math.max(0, s.budget - cost)}
-          </h2>
           <p className="caption">
-            {puzzle
-              ? `제출 1회 ${PUZZLE_ATTEMPT_COST}예산 · 키워드 수와 무관 · 남은 도전 ${attemptsLeft}회`
-              : `키워드 ${cost - (model === "low" ? 12 : 40)} + 모델 ${model === "low" ? 12 : 40}`}
+            {submittedSelection
+              ? "이미 확인한 조합이에요. 아래에서 결과를 펼쳐보거나 단어를 바꿔보세요."
+              : `시도 1회 ${cost}예산 · 시도 후 ${Math.max(0, s.budget - cost)} 남아요`}
           </p>
-          {resultHistory}
+          <PreviousCombinations attempts={history} keywords={content.keywords} />
           <div className="fixed-cta">
             <Button
               loading={a.busy}
               disabled={
                 a.busy ||
-                cost > s.budget ||
-                !ids.length ||
-                s.daily.success ||
-                closed
+                (!submittedAttempt &&
+                  (cost > s.budget || !ids.length || closed))
               }
-              onClick={() => void submit()}
+              onClick={() =>
+                submittedAttempt ? a.navigate("/challenge") : void submit()
+              }
             >
-              {s.daily.success ? "오늘 챌린지 성공" : cost + " 예산으로 도전"}
+              {submittedAttempt ? "키워드 다시 고르기" : "프롬프트 맞추기"}
             </Button>
           </div>
         </>
@@ -380,47 +428,173 @@ export function Challenge() {
         <Modal title="오늘의 목표" onClose={() => setZoom(false)}>
           <ChallengeArt src={content.target} />
           <p>{content.title}</p>
+          {content.reviewStatus === "unreviewed" && (
+            <>
+              <p className="caption">검수 전 미리보기 이미지예요.</p>
+              <button
+                className="text-link"
+                onClick={() => {
+                  setZoom(false);
+                  void request<{
+                    images: { id: string; target: string; model: string }[];
+                  }>("/v1/content/previews")
+                    .then((r) => setGallery(r.images))
+                    .catch(() => a.setToast("이미지를 불러오지 못했어요."));
+                }}
+              >
+                10일 이미지 모아보기 ›
+              </button>
+            </>
+          )}
           <div className="dialog-actions">
             <Button onClick={() => setZoom(false)}>확인</Button>
           </div>
         </Modal>
       )}
-      {puzzle && closed && resultHistory}
-      {puzzle && closed && terminalAttempt?.reveal && (
-        <section className="notice puzzle-reveal puzzle-terminal">
-          <h2>{s.daily.success ? "챌린지 성공!" : "챌린지 실패"}</h2>
+      {puzzle && stage === "result" && (
+        <>
+          {shownAttempt && (
+            <section className="challenge-outcome" role="status">
+              <h2>
+                {shownAttempt.passed
+                  ? "성공했어요!"
+                  : closed
+                    ? "챌린지에 실패"
+                    : "아직 정답이 아니에요"}
+              </h2>
+              <p>
+                {shownAttempt.passed
+                  ? "목표 이미지의 키워드를 모두 맞혔어요."
+                  : closed
+                    ? "이번 챌린지는 끝났어요. 정답과 작성 팁을 확인해보세요."
+                    : "선택한 키워드를 확인하고 다시 시도해보세요."}
+              </p>
+            </section>
+          )}
+          {shownAttempt && (
+            <figure className="challenge-result-image">
+              <ChallengeArt src={shownAttempt.image || content.target} />
+              <figcaption>목표 이미지</figcaption>
+            </figure>
+          )}
+          {shownAttempt ? (
+            resultHistory
+          ) : (
+            <p role="status">
+              {resultError
+                ? "결과를 불러오지 못했어요. 미션에서 다시 확인해주세요."
+                : "결과를 불러오고 있어요."}
+            </p>
+          )}
+          {!closed && shownAttempt && (
+            <p className="caption">
+              남은 예산 {s.budget} · 추가 시도 {attemptsLeft}회
+            </p>
+          )}
+          <PreviousCombinations attempts={previousAttempts} keywords={content.keywords} />
+        </>
+      )}
+      {puzzle && stage === "answer" && closed && shownAttempt?.reveal && (
+        <section className="puzzle-reveal puzzle-terminal challenge-answer-content">
+          <h2>{s.daily.success ? "최종 결과: 성공" : "최종 결과: 실패"}</h2>
+          <figure className="challenge-result-image">
+            <ChallengeArt src={shownAttempt.image || content.target} />
+            <figcaption>목표 이미지</figcaption>
+          </figure>
           <strong>정답</strong>
           <p>
-            {terminalAttempt.reveal.answerKeywordIds
+            {shownAttempt.reveal.answerKeywordIds
               .map(
                 (id) => content.keywords.find((k) => k.id === id)?.label ?? id,
               )
               .join(" · ")}
           </p>
-          <strong>원문</strong>
+          <strong>정답 프롬프트</strong>
           <HighlightedPrompt
-            prompt={terminalAttempt.reveal.prompt}
-            highlights={terminalAttempt.reveal.highlights}
+            prompt={shownAttempt.reveal.prompt}
+            highlights={shownAttempt.reveal.highlights}
           />
-          <strong>작성 팁</strong>
-          {terminalAttempt.reveal.tips.map((t, i) => (
-            <div key={i}>
-              <strong>{t.title}</strong>
-              <p>{t.text}</p>
-            </div>
-          ))}
+          {shownAttempt.reveal.generationPrompt && (
+            <details className="challenge-generation-record">
+              <summary>실제 생성에 사용한 프롬프트</summary>
+              {shownAttempt.reveal.generationPromptFormat && (
+                <p className="caption">
+                  작성 형식 · {shownAttempt.reveal.generationPromptFormat}
+                </p>
+              )}
+              <p>{shownAttempt.reveal.generationPrompt}</p>
+              <p className="caption">
+                정답 프롬프트는 그림에서 확인한 조건으로 정리한 예시예요. 생성
+                요청과 결과가 다른 부분은 작성 포인트에서 설명해요.
+              </p>
+            </details>
+          )}
+          <strong>오늘의 작성 포인트</strong>
+          {shownAttempt.reveal.tips
+            .filter((t) => t.kind !== "model")
+            .map((t, i) => (
+              <section className="challenge-learning-tip" key={i}>
+                <strong>{t.title}</strong>
+                <p>{t.text}</p>
+              </section>
+            ))}
+          {shownAttempt.reveal.tips.some((t) => t.kind === "model") && (
+            <strong>모델 참고 팁</strong>
+          )}
+          {shownAttempt.reveal.tips
+            .filter((t) => t.kind === "model")
+            .map((t, i) => (
+              <section className="challenge-learning-tip" key={i}>
+                <strong>{t.title}</strong>
+                <p>{t.text}</p>
+                {t.sourceLabel && (
+                  <p className="caption challenge-tip-source">출처: {t.sourceLabel}</p>
+                )}
+              </section>
+            ))}
+          {shownAttempt.reveal.modelId && (
+            <ModelAttribution modelId={shownAttempt.reveal.modelId} />
+          )}
         </section>
       )}
-      {puzzle && history.length > 0 && (
-        <div className="dialog-actions puzzle-history-actions">
-          {!closed && (
-            <Button weak onClick={() => a.navigate("/challenge")}>
-              키워드 다시 고르기
+      {puzzle && stage === "answer" && (
+        <>
+          {(!closed || !shownAttempt?.reveal) && (
+            <p role="status">
+              {resultError
+                ? "정답을 불러오지 못했어요."
+                : !closed
+                  ? "정답은 챌린지가 끝난 뒤 확인할 수 있어요."
+                  : shownAttempt
+                    ? "이 챌린지에는 공개된 정답이 없어요."
+                    : "정답을 불러오고 있어요."}
+            </p>
+          )}
+          <div className="fixed-cta">
+            <Button onClick={() => a.navigate("/", { replace: true })}>
+              홈으로 가기
+            </Button>
+          </div>
+        </>
+      )}
+      {puzzle && stage === "result" && (
+        <div className="challenge-result-actions">
+          {closed && terminalAttempt?.reveal && (
+            <Button
+              onClick={() =>
+                a.navigate(
+                  "/challenge/answer/" + encodeURIComponent(terminalAttempt.id),
+                )
+              }
+            >
+              해설 보러가기
             </Button>
           )}
-          <Button onClick={() => a.navigate("/mission", { replace: true })}>
-            나가기
-          </Button>
+          {!closed && shownAttempt && (
+            <Button onClick={() => a.navigate("/mission", { replace: true })}>
+              다시 챌린지하기
+            </Button>
+          )}
         </div>
       )}
       {result && !puzzle && (
@@ -516,7 +690,7 @@ export function Challenge() {
               <p className="caption">
                 재시도하면 키워드·모델 선택이 초기화돼요.
                 <br />
-                예산은 복구돼요. 남은 도전 {result.remaining} / 5회
+                예산은 복구돼요. 남은 시도 {result.remaining} / 5회
               </p>
             )}
           </div>

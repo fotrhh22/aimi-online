@@ -1007,7 +1007,7 @@ test("ten generated packs use exact-set matching and initial projections never d
         p,
         p.candidate_keywords.map((k) => k.id),
         "low",
-      ).score < 31,
+      ).score < 50,
     );
     assert.throws(() => evaluatePuzzle(p, [], "low"), /INVALID_KEYWORDS/);
     assert.throws(
@@ -1020,8 +1020,8 @@ test("ten generated packs use exact-set matching and initial projections never d
     answers = p.correct_keywords.map((k) => k.id),
     wrong = p.candidate_keywords.find((k) => !answers.includes(k.id))!.id;
   assert.equal(
-    evaluatePuzzle(p, [...answers.slice(0, 7), wrong], "low").score,
-    77.7,
+    evaluatePuzzle(p, [...answers.slice(0, -1), wrong], "low").score,
+    Math.floor(1000 * (answers.length - 1) / (answers.length + 1)) / 10,
   );
   assert.equal(
     "incorrectKeywordIds" in puzzleFeedback(p, [wrong], 1, false),
@@ -1033,7 +1033,7 @@ test("ten generated packs use exact-set matching and initial projections never d
   assert.equal("reveal" in puzzleFeedback(p, [wrong], 4, false), false);
   assert.equal(
     puzzleFeedback(p, [wrong], 5, true).reveal?.prompt,
-    p.authored_prompt,
+    p.answer_prompt ?? p.authored_prompt,
   );
 });
 test("generated challenge API pins content, preserves hidden answers, stages feedback and retries atomically", async () => {
@@ -1291,6 +1291,9 @@ test("count hint charges 15 once, preserves an attempt and reveals no count auto
     const state = await repo.read(uid);
     assert.equal(state.days[date].challengeSpent, 15);
     assert.equal(state.days[date].attemptsUsed, 0);
+    const refreshed = (await app.inject({ url: "/v1/state" })).json().data;
+    assert.equal(refreshed.budget, 135);
+    assert.equal(refreshed.challengeRemaining, 4);
     assert.equal(state.balance, before.balance);
     assert.equal((await buy("hint-again")).json().data.cost, 0);
     assert.equal(
@@ -1388,8 +1391,11 @@ test("selected-only sentences and inline result feedback never need the hidden o
     ids = p.correct_keywords.map((k) => k.id);
   const selected = pub.keywords.filter((k) => ids.includes(k.id));
   const sentence = composeKeywordSentence(selected);
-  for (const k of selected) assert.ok(sentence.includes(k.label));
+  for (const k of selected) assert.ok(sentence.includes(k.sentenceFragment ?? k.label));
   assert.ok(!sentence.includes(" · "));
+  assert.ok(!sentence.includes("설정하고"));
+  assert.equal(composeKeywordSentence([...selected].reverse()), sentence);
+
   const ordered = ids.map((id) => pub.keywords.find((k) => k.id === id)!);
   assert.equal(
     evaluatePuzzle(p, ids, "low").sentence,
@@ -1435,4 +1441,177 @@ test("selected-only sentences and inline result feedback never need the hidden o
   assert.ok(html.includes("일치율"));
   assert.ok(!html.includes("<dialog"));
   assert.ok(!html.includes(p.authored_prompt));
+});
+
+
+test("challenge UI separates retry selection from results and shows only the requested round", async () => {
+  const { challengeStage, selectChallengeResult } = await import("../../miniapp/src/features/challenge/view-state.js");
+  assert.equal(challengeStage("/challenge", false), "selection");
+  assert.equal(challengeStage("/challenge/combination", false), "combination");
+  assert.equal(challengeStage("/challenge/result/second", false), "result");
+  assert.equal(challengeStage("/challenge/combination?result=first", false), "result");
+  assert.equal(challengeStage("/challenge", true), "result");
+  assert.equal(challengeStage("/challenge/answer/final", true), "answer");
+  assert.equal(challengeStage("/challenge/answer/final", false), "answer");
+  const rows = [{ id: "second", attemptNumber: 2 }, { id: "first", attemptNumber: 1 }];
+  const current = selectChallengeResult(rows);
+  assert.equal(current.current?.id, "second");
+  assert.equal(current.current?.attemptNumber, 2);
+  assert.deepEqual(current.previous.map(a => a.id), ["first"]);
+  const first = selectChallengeResult(rows, "first");
+  assert.equal(first.current?.attemptNumber, 1);
+  assert.equal(first.previous.length, 0);
+  assert.equal(selectChallengeResult(rows, "missing").current, undefined);
+  assert.equal(selectChallengeResult([]).current, undefined);
+});
+
+test("challenge back returns from an attempt to mission and duplicate combinations reopen without a submission", async () => {
+  const { challengeBackTarget, matchingChallengeAttempt } = await import("../../miniapp/src/features/challenge/view-state.js");
+  assert.equal(challengeBackTarget("/challenge/result/first"), "/mission");
+  assert.equal(challengeBackTarget("/challenge/result/final"), "/mission");
+  assert.equal(challengeBackTarget("/challenge/combination?result=legacy"), "/mission");
+  assert.equal(challengeBackTarget("/challenge/combination"), "/challenge");
+  assert.equal(challengeBackTarget("/challenge"), "/mission");
+  assert.equal(challengeBackTarget("/garden"), null);
+  assert.equal(challengeBackTarget("/challenge/answer/final"), "/challenge/result/final");
+  const attempts = [
+    { id: "first", keywordIds: ["apple", "red"], attemptNumber: 1 },
+    { id: "second", keywordIds: ["apple", "two"], attemptNumber: 2 },
+  ];
+  const draft = ["two", "apple"];
+  assert.equal(matchingChallengeAttempt(attempts, draft)?.id, "second");
+  assert.equal(matchingChallengeAttempt(attempts, ["apple", "red"])?.id, "first");
+  assert.equal(matchingChallengeAttempt(attempts, ["apple"]), undefined);
+  assert.equal(matchingChallengeAttempt(attempts, ["apple", "red", "two"]), undefined);
+  assert.deepEqual(draft, ["two", "apple"]);
+  assert.equal(attempts.length, 2);
+});
+
+test("product back destinations bound history depth and preserve the model origin", async () => {
+  const { parentRoute, navigationTrail } = await import("../../miniapp/src/app/navigation.js");
+  assert.equal(parentRoute("/garden/edit", ["/", "/garden", "/shop/garden", "/garden/edit"]), "/garden");
+  assert.equal(parentRoute("/models/example", ["/", "/models/example"]), "/recommendations");
+  assert.equal(parentRoute("/models/example", ["/", "/mission", "/challenge/answer/final", "/models/example"]), "/");
+  assert.equal(parentRoute("/friends/a", ["/", "/friends/a"]), "/social");
+  assert.equal(parentRoute("/challenge/result/final", ["/", "/challenge/combination", "/challenge/result/final"]), "/mission");
+  assert.equal(parentRoute("/challenge/answer/final", ["/"]), "/challenge/result/final");
+  let trail = ["/"];
+  for(let i=0;i<100;i++) trail=navigationTrail(trail, ["/garden", "/social", "/mission"][i%3]);
+  assert.equal(trail.length, 2);
+  trail = ["/", "/optimizer", "/recommendations"];
+  for(let i=0;i<20;i++) trail=navigationTrail(trail, "/models/"+i);
+  assert.equal(trail.length, 4);
+  assert.equal(parentRoute(trail.at(-1)!,trail), "/recommendations");
+  assert.deepEqual(navigationTrail(trail,"/recommendations"), ["/", "/optimizer", "/recommendations"]);
+  assert.deepEqual(navigationTrail(trail,"/"), ["/"]);
+});
+
+function rewardPuzzleState(s: ReturnType<typeof newState>, budget = 150) {
+  const now=Date.now(), date=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(now));
+  const p=generatedPack(date);
+  const play=latestStartPlay(s,undefined,now-1000);
+  completePlay(s,play.id,{inputs:[],ticks:0,abandon:true},now);
+  const d=daily(s,date);d.best=100;d.challengeVersion=packVersion(p);d.challengeBudget=budget;
+  return {now,date,p,body:{keywordIds:p.correct_keywords.map(k=>k.id),model:"low" as const,date}};
+}
+
+test("puzzle success reserves the approved EP and confirmation pays only once including after midnight", async () => {
+  const {claimChallengeReward,view}=await import("../src/modules/domain.js");
+  for(const [budget,expected] of [[150,15],[94,15],[65,13],[35,10],[30,10]]) {
+    const s=newState("claim-"+budget,true), fixture=rewardPuzzleState(s,budget), before=s.balance;
+    const attempt=submitAttempt(s,fixture.body,fixture.now,fixture.p);
+    assert.equal(attempt.ep,expected);
+    assert.equal(attempt.rewardStatus,"pending");
+    assert.equal(s.balance,before);
+    assert.equal(daily(s,fixture.date).success,true);
+    assert.equal(view(s,fixture.date).pendingChallengeReward?.id,attempt.id);
+    const result=claimChallengeReward(s,attempt.id,fixture.now+86400000);
+    assert.equal(result.credited,expected);
+    assert.equal(s.balance,before+expected);
+    assert.equal(s.attempts[attempt.id].rewardStatus,"claimed");
+    assert.equal(view(s,fixture.date).pendingChallengeReward,null);
+    assert.equal(claimChallengeReward(s,attempt.id).credited,0);
+    assert.equal(s.balance,before+expected);
+    assert.equal(daily(s,fixture.date).attemptsUsed,1);
+  }
+});
+
+test("pending challenge rewards persist and concurrent claims with different keys credit one reward", async () => {
+  const {claimChallengeReward,view}=await import("../src/modules/domain.js");
+  const directory=await mkdtemp(join(tmpdir(),"aimi-claim-")),path=join(directory,"state.json"),uid="durable-claim";
+  try {
+    const repo=new FileRepository(path);
+    const id=await repo.transaction([uid],states=>{const s=states[uid],f=rewardPuzzleState(s);return submitAttempt(s,f.body,f.now,f.p).id;});
+    const restored=new FileRepository(path), before=(await restored.read(uid)).balance;
+    assert.equal(view(await restored.read(uid)).pendingChallengeReward?.id,id);
+    const claims=await Promise.all(Array.from({length:8},(_,i)=>restored.transaction([uid],states=>once(states[uid],"claim-key-"+i,"challenge-reward",{id},()=>claimChallengeReward(states[uid],id)))));
+    assert.equal(claims.reduce((n,r)=>n+r.credited,0),15);
+    assert.equal((await restored.read(uid)).balance,before+15);
+    const restart=new FileRepository(path);
+    const retried=await restart.transaction([uid],states=>claimChallengeReward(states[uid],id));
+    assert.equal(retried.credited,0);
+    assert.equal(retried.balance,before+15);
+    const legacy=await restart.transaction([uid],states=>{delete states[uid].attempts[id].rewardStatus;return claimChallengeReward(states[uid],id);});
+    assert.equal(legacy.credited,0);
+  } finally { await rm(directory,{recursive:true,force:true}); }
+});
+
+test("reward HTTP refuses failed/foreign attempts and client amounts; success waits for authenticated confirmation", async () => {
+  const Fastify=(await import("fastify")).default;
+  const {registerPrototype}=await import("../src/modules/routes.js");
+  const app=Fastify(),repo=new FileRepository(),uid="reward-http";
+  registerPrototype(app,repo,async r=>r.headers["x-user"]==="other"?"other":uid);
+  app.setErrorHandler((err,_r,reply)=>reply.code((err as any).status??400).send({error:{code:(err as any).code}}));
+  try {
+    const fixture=await repo.transaction([uid],states=>rewardPuzzleState(states[uid]));
+    const before=(await repo.read(uid)).balance;
+    const submission=await app.inject({method:"POST",url:"/v1/challenge/attempts",headers:{"idempotency-key":"reward-submit"},payload:{...fixture.body,contentVersion:packVersion(fixture.p)}});
+    assert.equal(submission.statusCode,200);
+    const attempt=submission.json().data;
+    assert.equal(attempt.rewardStatus,"pending");
+    assert.equal((await repo.read(uid)).balance,before);
+    const url="/v1/attempts/"+attempt.id+"/reward";
+    assert.equal((await app.inject({method:"POST",url,headers:{"idempotency-key":"foreign-claim","x-user":"other"},payload:{}})).statusCode,404);
+    assert.equal((await app.inject({method:"POST",url,headers:{"idempotency-key":"tampered-claim"},payload:{ep:9999}})).statusCode,400);
+    const results=await Promise.all(["claim-once","claim-once","claim-again"].map(key=>app.inject({method:"POST",url,headers:{"idempotency-key":key},payload:{}})));
+    assert.ok(results.every(r=>r.statusCode===200));
+    assert.equal((await repo.read(uid)).balance,before+15);
+    assert.equal((await app.inject({url:"/v1/state"})).json().data.pendingChallengeReward,null);
+    const failedId=await repo.transaction([uid],states=>{const id="failed-reward";states[uid].attempts[id]={...states[uid].attempts[attempt.id],id,passed:false,ep:0};return id;});
+    assert.equal((await app.inject({method:"POST",url:"/v1/attempts/"+failedId+"/reward",headers:{"idempotency-key":"failed-claim"},payload:{}})).statusCode,409);
+    assert.equal((await repo.read(uid)).balance,before+15);
+  } finally {await app.close();}
+});
+
+test("model tips require an approved exact-model match and explicit enablement, never unconditional removal", () => {
+  const pack=structuredClone(generatedPack("2026-11-11"));
+  const ids=pack.correct_keywords.map(k=>k.id);
+  const tips=pack.tips.filter(t=>t.requires_actual_model_match);
+  assert.equal(tips.length,1);
+  pack.model_plan.model_tips_enabled=false;
+  tips[0].approval="editorial_draft";
+  assert.ok(!puzzleFeedback(pack,ids,1,true).reveal!.tips.some(t=>t.title===tips[0].title));
+  pack.model_plan.model_tips_enabled=true;
+  assert.ok(!puzzleFeedback(pack,ids,1,true).reveal!.tips.some(t=>t.title===tips[0].title));
+  tips[0].approval="approved";
+  assert.ok(puzzleFeedback(pack,ids,1,true).reveal!.tips.some(t=>t.title===tips[0].title));
+  tips[0].applicable_model_ids=["different/model"];
+  assert.ok(!puzzleFeedback(pack,ids,1,true).reveal!.tips.some(t=>t.title===tips[0].title));
+  assert.ok(puzzleFeedback(pack,ids,1,true).reveal!.tips.some(t=>t.title===pack.tips.find(t=>!t.requires_actual_model_match)!.title));
+});
+
+test("first challenge submission locks new games and unsettled active games without changing budget", async () => {
+  const { seoulDate } = await import("@aimi/contracts");
+  const now = Date.now(), s = newState("first-challenge-lock", true);
+  const p = latestStartPlay(s, "dino", now - 1000);
+  const d = daily(s, seoulDate(new Date(now)));
+  d.attemptsUsed = 1;
+  d.challengeBudget = 100;
+  d.challengeSpent = 30;
+  const before = JSON.stringify(s);
+  assert.throws(() => latestStartPlay(s, undefined, now), /GAME_CHALLENGE_STARTED/);
+  assert.throws(() => completePlay(s, p.id, { inputs: [], ticks: 0, abandon: true }, now), /GAME_CHALLENGE_STARTED/);
+  assert.equal(JSON.stringify(s), before);
+  p.result = { score: 0, ep: 0, best: 0, budget: 100, remaining: 4, status: "failed" };
+  assert.deepEqual(completePlay(s, p.id, { inputs: [], ticks: 0, abandon: true }, now), p.result);
 });

@@ -1,0 +1,181 @@
+[
+  {
+    "id": "day-01",
+    "model": "google/gemini-3.1-flash-image",
+    "format": "짧은 묘사 문단",
+    "old_answers": 8,
+    "new_answers": 7,
+    "old_candidates": 32,
+    "new_candidates": 21,
+    "excluded": {
+      "06": "옆면과 꼭지가 크게 보이는 정면에 가까운 시점이다. 탑뷰/눈높이 중 하나로 단정하지 않고 시점 조건 전체를 제외한다."
+    },
+    "changes": {},
+    "notes": "붉은 사과 두 개가 가로로 놓이고 흰 종이 바탕과 수채화 번짐이 보인다. 시점은 정면에 가까워 내려다보기 정답은 부적절하다. 잎의 초록색과 과육 표면의 밝은 얼룩은 사과 주색과 구분한다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-1dc61a70ac9c"
+  },
+  {
+    "id": "day-02",
+    "model": "black-forest-labs/flux-3-image",
+    "format": "관계가 드러나는 서사",
+    "old_answers": 9,
+    "new_answers": 9,
+    "old_candidates": 39,
+    "new_candidates": 26,
+    "excluded": {},
+    "changes": {
+      "09": {
+        "value": "3D 캐릭터풍",
+        "reason": "실제 제작 기법은 이미지로 증명할 수 없다. 둥근 형태·큰 눈·부드러운 입체 음영이 보이는 표현 양식으로 한정한다."
+      }
+    },
+    "notes": "흰 토끼 한 마리의 귀부터 발까지 보이고 목에 노란 목도리가 감겨 있다. 눈이 덮인 지형과 입체적인 캐릭터 표현이 보인다. 사진과 렌더링을 제작 기법으로 양분하는 후보는 제외한다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-c26fc696b88e"
+  },
+  {
+    "id": "day-03",
+    "model": "openai/gpt-image-2.6-sunburst",
+    "format": "대상·배치·하늘을 나눈 지시",
+    "old_answers": 11,
+    "new_answers": 11,
+    "old_candidates": 40,
+    "new_candidates": 30,
+    "excluded": {},
+    "changes": {
+      "04": {
+        "value": "금속 느낌",
+        "reason": "빛나는 판넬·관절의 금속성 표현을 말하며 실제 재료가 금속임을 단정하지 않는다."
+      }
+    },
+    "notes": "왼쪽에 파란 로봇 한 대가 전신으로 서 있고 한 손을 들고 있다. 검은 별 하늘·모래와 파도·픽셀 형태가 분명하다. 금속은 반사 음영의 표현으로 한정한다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-72699a09c3c8"
+  },
+  {
+    "id": "day-04",
+    "model": "krea/krea-2-medium",
+    "format": "자연어 시각 묘사",
+    "old_answers": 9,
+    "new_answers": 9,
+    "old_candidates": 37,
+    "new_candidates": 25,
+    "excluded": {},
+    "changes": {},
+    "notes": "중앙의 보라 화분 안에서 녹색 선인장 한 개가 자라며 전체 배경은 노란색이다. 자연스러운 가시·광택·그림자가 있는 사진풍이다. 화분 하단의 어두운 음영을 별도의 주색으로 채점하지 않는다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-8314f3e6d3b7"
+  },
+  {
+    "id": "day-05",
+    "model": "bytedance-seed/seedream-5-0-pro",
+    "format": "장면과 세부 조건 문단",
+    "old_answers": 10,
+    "new_answers": 10,
+    "old_candidates": 35,
+    "new_candidates": 28,
+    "excluded": {},
+    "changes": {
+      "07": {
+        "value": "발이 지면에서 떨어진",
+        "reason": "그림에서 확인되는 것은 몸과 발이 달 표면 위로 떠 있고 아래에 그림자가 있는 순간이다. 점프의 전후 동작까지 채점하지 않는다."
+      },
+      "10": {
+        "value": "픽셀아트",
+        "reason": "외곽선·별·지표가 계단형 픽셀로 표현되어 평면 만화보다 픽셀아트가 명확하다."
+      }
+    },
+    "notes": "주황 여우 한 마리와 투명 헬멧, 크레이터가 있는 달 지면, 검은 하늘의 지구가 보인다. 발은 지면과 떨어져 있다. 모든 외곽과 지표가 픽셀 단위로 보인다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-2c1c3bc85a78"
+  },
+  {
+    "id": "day-06",
+    "model": "black-forest-labs/flux.2-pro",
+    "format": "대상·속성·관계 목록",
+    "old_answers": 9,
+    "new_answers": 9,
+    "old_candidates": 43,
+    "new_candidates": 27,
+    "excluded": {},
+    "changes": {
+      "01": {
+        "value": "오리 모양",
+        "reason": "인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+      },
+      "04": {
+        "value": "원형 받침",
+        "reason": "받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+      }
+    },
+    "notes": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-9d4b51073614"
+  },
+  {
+    "id": "day-07",
+    "model": "recraft/recraft-v4",
+    "format": "상세 디자인 브리프",
+    "old_answers": 14,
+    "new_answers": 13,
+    "old_candidates": 57,
+    "new_candidates": 36,
+    "excluded": {
+      "13": "정면·약간 내려다보기의 경계가 주관적이며 수채화의 단순화된 원근만으로 눈높이를 엄격히 확정하기 어려워 시점 후보 전체를 제외한다."
+    },
+    "changes": {},
+    "notes": "곰이 자전거의 화면 왼쪽에 서 있고 노란 우산 손잡이를 잡고 있다. 빨간 프레임의 자전거와 나무·관목·산책로, 수채화 번짐이 보인다. 정확한 카메라 높이는 강제하지 않는다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-e17844a9efe6"
+  },
+  {
+    "id": "day-08",
+    "model": "google/gemini-nano-banana-2.1",
+    "format": "전체 장면 후 세부 묘사",
+    "old_answers": 13,
+    "new_answers": 13,
+    "old_candidates": 50,
+    "new_candidates": 38,
+    "excluded": {},
+    "changes": {},
+    "notes": "해바라기 꽃머리 세 개, 노란 꽃잎·녹색 줄기, 물과 줄기가 비쳐 보이는 꽃병 한 개, 왼쪽의 파란 책과 나무 무늬 탁자가 보인다. 배경 상단은 흰색이다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-af10bc2f6198"
+  },
+  {
+    "id": "day-09",
+    "model": "openai/gpt-image-2.5-flare",
+    "format": "장면 요구사항 목록",
+    "old_answers": 12,
+    "new_answers": 12,
+    "old_candidates": 45,
+    "new_candidates": 35,
+    "excluded": {},
+    "changes": {
+      "02": {
+        "value": "주요 산장 한 채",
+        "reason": "멀리 호숫가에 작은 건물들이 더 보인다. 그림 전체의 건물 총수가 아니라 전경의 주요 산장 수로 범위를 한정한다."
+      }
+    },
+    "notes": "전경에 큰 산장 한 채와 빨간 눈 덮인 지붕·노란 창문빛이 보인다. 뒤의 침엽수와 하늘의 주황 열기구 두 대가 명확하다. 멀리 작은 건물들이 있어 한 채의 범위를 주요 산장으로 명시한다. 표면에는 붓자국 표현이 있다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-1e2435c82dbf"
+  },
+  {
+    "id": "day-10",
+    "model": "x-ai/grok-imagine-image-2.0",
+    "format": "대상부터 시작하는 상세 묘사",
+    "old_answers": 19,
+    "new_answers": 17,
+    "old_candidates": 84,
+    "new_candidates": 48,
+    "excluded": {
+      "16": "지붕은 종이 콜라주로 표현되며 배경과 구조물은 보이지만 투명한 유리라는 실제 재질/투명성을 명확히 판단하기 어렵다.",
+      "18": "정면에 가까운 구도지만 카메라 높이를 엄격하게 구분할 근거가 부족하다."
+    },
+    "changes": {
+      "12": {
+        "value": "로봇의 화면 오른쪽",
+        "reason": "로봇 신체의 해부학적 오른손 방향이 아니라 보는 사람의 화면 기준으로 화분 위치를 명시한다."
+      },
+      "15": {
+        "value": "물을 뿌리고 있다",
+        "reason": "물뿌리개에서 물줄기와 물방울이 나오는 모습은 분명하지만 화분 흙에 정확히 떨어지는지는 불명확하다. 물 도착점은 채점하지 않는다."
+      }
+    },
+    "notes": "초록 로봇 한 대가 물뿌리개를 잡고 있고 물줄기/물방울이 나온다. 화면 오른쪽의 보라 화분 두 개에 선인장이 각각 하나씩 있다. 종이 겹침과 온실 프레임이 보이나 지붕 재질과 정확한 물 도착점·카메라 높이는 강제하지 않는다.",
+    "content_version": "aimi-puzzle-pack-v3-reviewed-80d638e5ac7f"
+  }
+]

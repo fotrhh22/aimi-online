@@ -1,0 +1,495 @@
+{
+  "day": "day-06",
+  "image_path": "apps/miniapp/public/content/challenges/generated-10d-v2/day-06.png",
+  "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+  "reviewer_kind": "ai",
+  "conditions": [
+    {
+      "id": "day-06-c01",
+      "variable": "subject",
+      "entity": "duck",
+      "context": "주요 대상",
+      "requested_value": "오리 인형",
+      "observed_value": "오리 모양",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "오리 모양",
+      "score_enabled": true,
+      "review_note": "인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "id": "day-06-c02",
+      "variable": "count",
+      "entity": "duck",
+      "context": "오리 모양 수",
+      "requested_value": "한 개",
+      "observed_value": "한 개",
+      "review_status": "confirmed",
+      "requested_context": "오리 인형 수",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "한 개",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c03",
+      "variable": "color",
+      "entity": "duck",
+      "context": "오리 모양 색",
+      "requested_value": "노란색",
+      "observed_value": "노란색",
+      "review_status": "confirmed",
+      "requested_context": "오리 인형 색",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "노란색",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c04",
+      "variable": "subject",
+      "entity": "ball",
+      "context": "받침 대상",
+      "requested_value": "공",
+      "observed_value": "원형 받침",
+      "review_status": "revised_to_observed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "원형 받침",
+      "score_enabled": true,
+      "review_note": "받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "id": "day-06-c05",
+      "variable": "color",
+      "entity": "ball",
+      "context": "원형 받침 색",
+      "requested_value": "빨간색",
+      "observed_value": "빨간색",
+      "review_status": "confirmed",
+      "requested_context": "공 색",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "빨간색",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c06",
+      "variable": "vertical_relation",
+      "entity": "duck->ball",
+      "context": "오리 모양과 받침",
+      "requested_value": "위에",
+      "observed_value": "위에",
+      "review_status": "confirmed",
+      "requested_context": "오리 인형과 공",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "위에",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c07",
+      "variable": "background_color",
+      "entity": "scene",
+      "context": "배경",
+      "requested_value": "파란색 배경",
+      "observed_value": "파란색 배경",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "파란색 배경",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c08",
+      "variable": "visible_side",
+      "entity": "duck",
+      "context": "오리 모양의 보이는 면",
+      "requested_value": "옆면",
+      "observed_value": "옆면",
+      "review_status": "confirmed",
+      "requested_context": "오리 인형의 보이는 면",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "옆면",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "id": "day-06-c09",
+      "variable": "medium",
+      "entity": "scene",
+      "context": "표현 방식",
+      "requested_value": "종이 콜라주",
+      "observed_value": "종이 콜라주",
+      "review_status": "confirmed",
+      "reviewer": "Codex AI",
+      "reviewed_at": "2026-11-11",
+      "image_sha256": "166371d6c2fe7205f403a2db85fef001718d3865e64edd49ff67a5359073406d",
+      "scored_value": "종이 콜라주",
+      "score_enabled": true,
+      "review_note": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    }
+  ],
+  "old_candidates": [
+    {
+      "old_id": "k-0116ce9e6784616f",
+      "old_label": "검은색",
+      "context": "공 색",
+      "condition_id": "day-06-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-1265aed2cbcb8122",
+      "old_label": "안에",
+      "context": "오리 인형과 공",
+      "condition_id": "day-06-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 위에와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-15727ee6195f832d",
+      "old_label": "아래에",
+      "context": "오리 인형과 공",
+      "condition_id": "day-06-c06",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 위에와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-1eaa224d9528dddc",
+      "old_label": "옆면",
+      "context": "오리 인형의 보이는 면",
+      "condition_id": "day-06-c08",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-2122d8d283eeb578",
+      "old_label": "종이 콜라주",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-22b31d174e890977",
+      "old_label": "자동차 장난감",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "old_id": "k-25096df41c28d172",
+      "old_label": "책",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-260bca2e8b888b7b",
+      "old_label": "바닥에 체스판 무늬가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-27cd11588f054f62",
+      "old_label": "한 개",
+      "context": "오리 인형 수",
+      "condition_id": "day-06-c02",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-2dc442050b10887a",
+      "old_label": "화면에 눈사람이 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-30ba4a7451576a36",
+      "old_label": "파란색 배경",
+      "context": "배경",
+      "condition_id": "day-06-c07",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-3647f6b83a61ba29",
+      "old_label": "빨간색",
+      "context": "공 색",
+      "condition_id": "day-06-c05",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-48a0a9b3968dde33",
+      "old_label": "포도",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "old_id": "k-4935362214c2c3bb",
+      "old_label": "천장에 샹들리에가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-4e5986b846324fb3",
+      "old_label": "위에",
+      "context": "오리 인형과 공",
+      "condition_id": "day-06-c06",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-4f9672162be899a7",
+      "old_label": "바나나",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-519921af4d854ca6",
+      "old_label": "물속에 산호초가 보인다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-51d240aa49bc0b30",
+      "old_label": "픽셀아트",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 종이 콜라주와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-57be3a1319a4d372",
+      "old_label": "배경에 무지개가 있다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-611bcb1b8c765a62",
+      "old_label": "세 개",
+      "context": "오리 인형 수",
+      "condition_id": "day-06-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-64d00b0f0ee70442",
+      "old_label": "흰색 배경",
+      "context": "배경",
+      "condition_id": "day-06-c07",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-6a5cd9101fa487ba",
+      "old_label": "유화",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-7d0bfae41ec83edd",
+      "old_label": "배경에 번개가 친다",
+      "context": "추가 장면 묘사",
+      "condition_id": null,
+      "disposition": "removed_unrelated_detail",
+      "reason": "무관한 추가 장면 묘사로 핵심 변수 학습과 무관하여 제거. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-7f74ef45e2ed1312",
+      "old_label": "수박",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "old_id": "k-82330fe1902a2153",
+      "old_label": "수박",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-8fc5b51550d8cae2",
+      "old_label": "상자",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-9231483d09e2ff30",
+      "old_label": "오리 인형",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "old_id": "k-970ffc66eb39b586",
+      "old_label": "두 개",
+      "context": "오리 인형 수",
+      "condition_id": "day-06-c02",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 한 개와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-9937fa0926baac6f",
+      "old_label": "분홍 배경",
+      "context": "배경",
+      "condition_id": "day-06-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색 배경와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-9d24f08c3fed9c14",
+      "old_label": "바나나",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    },
+    {
+      "old_id": "k-9eb14629ba048c78",
+      "old_label": "보라색",
+      "context": "오리 인형 색",
+      "condition_id": "day-06-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-9f27603c2b67d127",
+      "old_label": "사진풍",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 종이 콜라주와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-a65c78988c96f4e3",
+      "old_label": "수채화",
+      "context": "표현 방식",
+      "condition_id": "day-06-c09",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-a6ae5112058a634c",
+      "old_label": "흰색",
+      "context": "공 색",
+      "condition_id": "day-06-c05",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 빨간색와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-ad03cf841e89f670",
+      "old_label": "검정 배경",
+      "context": "배경",
+      "condition_id": "day-06-c07",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 파란색 배경와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-b844e201c1983c02",
+      "old_label": "포도",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-cbee3a679aeb7752",
+      "old_label": "정면",
+      "context": "오리 인형의 보이는 면",
+      "condition_id": "day-06-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 옆면와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-d1de5e9c334cbaa2",
+      "old_label": "초록색",
+      "context": "오리 인형 색",
+      "condition_id": "day-06-c03",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 노란색와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-d3a4c5fbad01a162",
+      "old_label": "주황색",
+      "context": "오리 인형 색",
+      "condition_id": "day-06-c03",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-da4e395a3a77950f",
+      "old_label": "노란색",
+      "context": "오리 인형 색",
+      "condition_id": "day-06-c03",
+      "disposition": "retained_correct",
+      "reason": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-e9a60532ea77acfe",
+      "old_label": "뒷면",
+      "context": "오리 인형의 보이는 면",
+      "condition_id": "day-06-c08",
+      "disposition": "retained_distractor",
+      "reason": "같은 대상/속성 범위에서 관찰된 옆면와 대비되는 선택지. 노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+    },
+    {
+      "old_id": "k-fa7d40c8d4adc84e",
+      "old_label": "공",
+      "context": "받침 대상",
+      "condition_id": "day-06-c04",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 받침은 붉은 평면 원으로 보이며 구형 공이라는 깊이 단서가 부족하다."
+    },
+    {
+      "old_id": "k-fad92d9417d414a3",
+      "old_label": "고양이 인형",
+      "context": "주요 대상",
+      "condition_id": "day-06-c01",
+      "disposition": "replaced_or_trimmed",
+      "reason": "같은 속성의 명확한 정답/대비 후보로 정리. 모호한 스타일·무관한 과일·중복 후보는 사용하지 않음. 인형의 봉제·입체 몸체가 아니라 종이를 잘라 겹친 오리 실루엣이 보인다."
+    }
+  ],
+  "notes": "노란 종이 오리 옆면과 붉은 원형 받침, 푸른 종이 바탕, 겹친 종이 가장자리와 섬유 질감이 보인다. 인형/구형 공이라는 해석은 정답 강제에서 제외한다."
+}

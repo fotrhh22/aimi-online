@@ -1,27 +1,34 @@
+import { SentenceCard } from "./sentence-card";
 import React from "react";
-import type { Attempt, Keyword } from "@aimi/contracts";
+import {
+  composeKeywordSentence,
+  type Attempt,
+  type Keyword,
+} from "@aimi/contracts";
 export function feedbackLabel(a: Attempt) {
   if (a.passed || a.feedbackStatus === "complete")
     return "모든 키워드를 맞혔어요";
   if (a.feedbackStatus === "partial") return "맞았지만 더 찾으세요";
   if (a.feedbackStatus === "none") return "키워드가 아예 포함 안 돼요";
   if (a.feedbackStatus === "mixed") return "포함되지 않은 키워드가 있어요";
-  return "이전 규칙의 도전 결과예요";
+  return "이전 규칙의 챌린지 결과예요";
 }
 export function AttemptResults({
   attempts,
   keywords,
+  heading = true,
 }: {
   attempts: Attempt[];
   keywords: Keyword[];
+  heading?: boolean;
 }) {
   const labels = new Map(keywords.map((k) => [k.id, k.label]));
   return (
     <section
       className="challenge-attempt-results"
-      aria-label="조합별 도전 결과"
+      aria-label="조합별 챌린지 결과"
     >
-      <h2>도전 결과</h2>
+      {heading && <h2>챌린지 결과</h2>}
       <div className="attempt-result-list">
         {attempts.map((a, i) => (
           <article
@@ -30,31 +37,35 @@ export function AttemptResults({
             key={a.id}
           >
             <header>
-              <h3>{a.attemptNumber ?? i + 1}차 도전</h3>
+              <h3>{a.attemptNumber ?? i + 1}차 챌린지</h3>
               <span className="caption">{a.cost}예산 사용</span>
             </header>
             <div className="attempt-result-columns">
-              <section className="attempt-sentence">
-                <h4>선택한 조합 문장</h4>
-                <p>{a.sentence}</p>
-              </section>
+              <SentenceCard
+                title="이번 문장"
+                className="attempt-sentence"
+                heading="h4"
+              >
+                {a.keywordIds.every((id) => keywords.some((k) => k.id === id))
+                  ? composeKeywordSentence(
+                      a.keywordIds.map((id) =>
+                        keywords.find((k) => k.id === id)!,
+                      ),
+                    )
+                  : a.sentence}
+              </SentenceCard>
               <section className="attempt-assessment">
-                <strong>{feedbackLabel(a)}</strong>
                 <p className="attempt-match-rate">일치율 {a.score}%</p>
                 {a.matchedKeywordIds ? (
                   <>
                     <h4>맞은 키워드</h4>
-                    <div className="attempt-keywords">
-                      {a.matchedKeywordIds.length ? (
-                        a.matchedKeywordIds.map((id) => (
-                          <span className="is-match" key={id}>
-                            {labels.get(id) ?? "이전 키워드"}
-                          </span>
-                        ))
-                      ) : (
-                        <span className="caption">아직 없어요</span>
-                      )}
-                    </div>
+                    <p className="attempt-keywords-text">
+                      {a.matchedKeywordIds.length
+                        ? a.matchedKeywordIds
+                            .map((id) => labels.get(id) ?? "이전 키워드")
+                            .join(" · ")
+                        : "아직 없어요"}
+                    </p>
                   </>
                 ) : (
                   <p className="caption">
@@ -63,14 +74,12 @@ export function AttemptResults({
                 )}
                 {!!a.incorrectKeywordIds?.length && (
                   <>
-                    <h4>포함되지 않은 키워드</h4>
-                    <div className="attempt-keywords">
-                      {a.incorrectKeywordIds.map((id) => (
-                        <span className="is-mismatch" key={id}>
-                          {labels.get(id) ?? "이전 키워드"}
-                        </span>
-                      ))}
-                    </div>
+                    <h4>다시 확인할 키워드</h4>
+                    <p className="attempt-keywords-text is-mismatch">
+                      {a.incorrectKeywordIds
+                        .map((id) => labels.get(id) ?? "이전 키워드")
+                        .join(" · ")}
+                    </p>
                   </>
                 )}
               </section>
@@ -79,5 +88,16 @@ export function AttemptResults({
         ))}
       </div>
     </section>
+  );
+}
+
+/** Both screens expand history in place, without navigation or duplicate round headers. */
+export function PreviousCombinations({ attempts, keywords }: { attempts: Attempt[]; keywords: Keyword[] }) {
+  if (!attempts.length) return null;
+  return (
+    <details className="challenge-previous-results">
+      <summary>이전 조합 {attempts.length}회 보기</summary>
+      <AttemptResults heading={false} attempts={attempts} keywords={keywords} />
+    </details>
   );
 }

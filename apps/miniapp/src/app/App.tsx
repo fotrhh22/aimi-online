@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { AppProvider, useApp } from "./context";
-import { Button, Asset, Icon, Modal } from "../ui/primitives";
+import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
 import { login } from "../lib/toss/bridge";
 import { Home, Mission } from "../features/home/screens";
 import { Garden, Shop, Social, Account } from "../features/garden/screens";
+import { ChallengeRewardPopup } from "../features/challenge/reward-popup";
 import { Challenge } from "../features/challenge/screens";
 import {
   Optimizer,
   Recommendations,
   ModelDetails,
 } from "../features/optimizer/screens";
+import { GameResult } from "../games/shared/GameResult";
 import { GameScreen } from "../games/shared/GameScreen";
 const titles: Record<string, string> = {
   "/": "AIMI",
@@ -27,6 +29,7 @@ const titles: Record<string, string> = {
   "/challenge/combination": "조합 확인",
 };
 function Screens() {
+  const visitedAI = useRef({ optimizer: false, recommendations: false });
   const a = useApp(),
     [devName, setDevName] = useState("player"),
     [noticeOpen, setNoticeOpen] = useState(false);
@@ -38,7 +41,9 @@ function Screens() {
     return (
       <main className="loading-screen">
         <Asset id="seed" size={120} />
-        <h1>AIMI</h1>
+        <h1>
+          <BrandLogo />
+        </h1>
         <p>오늘의 작은 도전을 준비해요</p>
         <progress aria-label="불러오는 중" />
         <small>잠시만 기다려주세요</small>
@@ -48,7 +53,9 @@ function Screens() {
     return (
       <main className="login-screen">
         <Asset id="seed" size={120} />
-        <h1>AIMI</h1>
+        <h1>
+          <BrandLogo />
+        </h1>
         <p>오늘의 작은 도전과 나만의 정원</p>
         {a.localRuntime && (
           <label>
@@ -84,12 +91,20 @@ function Screens() {
         <Button onClick={() => void a.refresh()}>다시 시도하기</Button>
       </main>
     );
+  const aiTransit =
+    ["/optimizer", "/recommendations", "/account"].includes(a.path) ||
+    a.path.startsWith("/models/");
+  if (!aiTransit)
+    visitedAI.current = { optimizer: false, recommendations: false };
+  if (a.path === "/optimizer") visitedAI.current.optimizer = true;
+  if (a.path === "/recommendations") visitedAI.current.recommendations = true;
   const game = a.path.startsWith("/game"),
     nav = ["/", "/mission", "/garden", "/social"].includes(a.path),
     shop = a.path.startsWith("/shop"),
     hasBalance = a.path === "/" || a.path === "/garden" || shop;
   let body: React.ReactNode;
-  if (game) body = <GameScreen />;
+  if (a.path.startsWith("/results/game/")) body = <GameResult />;
+  else if (game) body = <GameScreen />;
   else if (a.path === "/") body = <Home />;
   else if (a.path === "/mission") body = <Mission />;
   else if (a.path.startsWith("/challenge")) body = <Challenge />;
@@ -97,10 +112,7 @@ function Screens() {
   else if (shop) body = <Shop />;
   else if (a.path === "/social" || a.path.startsWith("/friends/"))
     body = <Social />;
-  else if (a.path === "/optimizer")
-    body = <Optimizer key={"optimizer-" + a.aiEpoch} />;
-  else if (a.path === "/recommendations")
-    body = <Recommendations key={"recommendations-" + a.aiEpoch} />;
+  else if (["/optimizer", "/recommendations"].includes(a.path)) body = null;
   else if (a.path.startsWith("/models/"))
     body = <ModelDetails key={"models-" + a.aiEpoch} />;
   else if (a.path === "/account") body = <Account />;
@@ -128,13 +140,29 @@ function Screens() {
         </div>
       )}
       {!game && (
-        <header className="screen-head">
+        <header
+          className={
+            "screen-head" + (a.path === "/" ? " home-screen-head" : "")
+          }
+        >
           <h1>
-            {a.path.startsWith("/models/")
-              ? "모델 상세"
-              : a.path.startsWith("/friends/")
-                ? "친구 정원"
-                : (titles[a.path] ?? "AIMI")}
+            {a.path === "/" ? (
+              <BrandLogo />
+            ) : a.path.startsWith("/challenge/answer/") ? (
+              "챌린지 해설"
+            ) : (a.path.startsWith("/challenge") &&
+                (a.data.daily.success || a.data.daily.challengeClosed)) ||
+              a.path.startsWith("/challenge/result/") ? (
+              "챌린지 결과"
+            ) : a.path.startsWith("/results/game/") ? (
+              "게임 결과"
+            ) : a.path.startsWith("/models/") ? (
+              "모델 상세"
+            ) : a.path.startsWith("/friends/") ? (
+              "친구 정원"
+            ) : (
+              (titles[a.path] ?? "AIMI")
+            )}
           </h1>
           {a.path === "/" && (
             <button
@@ -165,11 +193,30 @@ function Screens() {
         </Modal>
       )}
       <main
+        hidden={["/optimizer", "/recommendations"].includes(a.path)}
         data-screen={a.path.split("?")[0]}
         className={game ? "game-main" : "page " + (nav ? "with-tabs" : "")}
       >
         {body}
       </main>
+      {visitedAI.current.optimizer && (
+        <main
+          hidden={a.path !== "/optimizer"}
+          data-screen="/optimizer"
+          className="page"
+        >
+          <Optimizer key={"optimizer-" + a.aiEpoch} />
+        </main>
+      )}
+      {visitedAI.current.recommendations && (
+        <main
+          hidden={a.path !== "/recommendations"}
+          data-screen="/recommendations"
+          className="page"
+        >
+          <Recommendations key={"recommendations-" + a.aiEpoch} />
+        </main>
+      )}
       {nav && (
         <nav className="bottom-nav" aria-label="하단 메뉴">
           {[
@@ -194,8 +241,15 @@ function Screens() {
       {a.localRuntime && (
         <span className="development-marker">개발용 예시 · 실제 보상 아님</span>
       )}
+      <ChallengeRewardPopup />
       {a.toast && (
-        <div className="toast" role="status">
+        <div
+          className={
+            "toast" +
+            (a.toast === "챌린지 보상을 받았어요." ? " toast-text-only" : "")
+          }
+          role="status"
+        >
           {a.toast}
         </div>
       )}

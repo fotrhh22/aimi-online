@@ -53,7 +53,8 @@ test("current distance-based runners are replay-identical, capped and have survi
       assert.equal(s.status, "cleared", `${kind}/${seed} failed ${s.score}`);
       assert.equal(s.score, 100);
       assert.ok(s.ep >= 0 && s.ep <= 7);
-      if(kind === "runner") assert.equal(s.ep, coinCountFor(kind,seed));
+      // This driver avoids obstacles; it does not steer toward optional coins.
+      if(kind === "runner") assert.ok(s.ep <= coinCountFor(kind,seed));
       assert.ok(s.tick / 30 > 50 && s.tick / 30 < 80);
       assert.deepEqual(replayGame(kind, seed, inputs, s.tick), s);
       assert.strictEqual(stepGame(s, ["jump"]), s);
@@ -357,7 +358,7 @@ test("latest speed increase and Dino rhythm patterns preserve previous v4 replay
 });
 
 test("v6 doubles completion distances, enlarges Dino obstacles and preserves v5 rules", () => {
-  assert.equal(GAME_VERSION, "aimi-game-v11");
+  assert.equal(GAME_VERSION, "aimi-game-v12");
   assert.equal(V3.dinoDistancePerPoint, 280);
   assert.equal(V3.runnerDistancePerPoint, 20);
   assert.equal(stepGame(initialGame("dino", 1, "aimi-game-v5")).speed, 245);
@@ -573,4 +574,45 @@ test("seeded coin counts vary from four to seven and fast traffic stays versione
   let old=initialGame("dino",1,"aimi-game-v10");
   old=stepGame({...old,score:100,distance:28000,nextAt:1e9});
   assert.equal(old.ep,10);
+});
+
+test("v12 seeded layouts vary between plays, replay deterministically and preserve v11", () => {
+  for (const kind of ["crossing", "dino", "runner"] as const) {
+    const layouts = new Set<string>();
+    for (let seed = 1; seed <= 24; seed++) {
+      let state = initialGame(kind, seed);
+      const inputs = [{ tick: 1, action: (kind === "crossing" ? "forward" : kind === "dino" ? "jump" : "left") as GameAction }];
+      for (let tick = 1; tick <= 30; tick++) state = stepGame(state, tick === 1 ? [inputs[0].action] : []);
+      assert.deepEqual(replayGame(kind, seed, inputs, state.tick), state);
+      layouts.add(JSON.stringify(kind === "crossing" ? crossingEntities(seed, 3, 30) : state.obstacles));
+      const old = initialGame(kind, seed, "aimi-game-v11");
+      assert.equal(old.version, "aimi-game-v11");
+      assert.equal(stepGame(old).version, "aimi-game-v11");
+      assert.deepEqual(replayGame(kind, seed, [], 1, "aimi-game-v11"), stepGame(old));
+    }
+    assert.ok(layouts.size >= 12, `${kind} produced only ${layouts.size} layouts`);
+  }
+  const sequences = new Set(Array.from({length:24}, (_, n) => JSON.stringify(Array.from({length:24}, (_, i) => runnerPattern(n + 1, i).safe))));
+  assert.ok(sequences.size >= 20);
+});
+
+test("terminal challenges block new games, active-game resume and late rewards without consuming a play", () => {
+  const now = Date.now();
+  for (const terminal of ["success", "challengeClosed", "legacy"] as const) {
+    const user = newState("closed-" + terminal, true);
+    const active = startPlay(user, "runner", now);
+    const day = daily(user, active.date);
+    if (terminal === "legacy") day.attemptsUsed = 5;
+    else day[terminal] = true;
+    const snapshot = JSON.stringify(user);
+    assert.throws(() => startPlay(user, "runner", now + 1000), /GAME_CHALLENGE_FINISHED/);
+    assert.throws(() => completePlay(user, active.id, { inputs: [], ticks: 1, abandon: true }, now + 1000), /GAME_CHALLENGE_FINISHED/);
+    assert.equal(JSON.stringify(user), snapshot);
+    active.status = "expired";
+    assert.throws(() => startPlay(user, "runner", now + 2000), /GAME_CHALLENGE_FINISHED/);
+    assert.equal(day.playsUsed, 1);
+    const next = startPlay(user, "runner", now + 86400000);
+    assert.equal(next.status, "running");
+    assert.notEqual(next.date, active.date);
+  }
 });

@@ -1,0 +1,190 @@
+{
+  "id": "day-02",
+  "title": "설원의 목도리 토끼",
+  "version": "aimi-puzzle-pack-v3-reviewed-c26fc696b88e",
+  "target": "/content/challenges/generated-10d-v2/day-02.png",
+  "candidate_keywords": [
+    {
+      "id": "k-4c3ee3f7ca75a8af",
+      "label": "토끼",
+      "context": "동물",
+      "sentence_fragment": "토끼를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-ea906aed1dcc954f",
+      "label": "기린",
+      "context": "동물",
+      "sentence_fragment": "기린을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-f7d366fb8246ab1c",
+      "label": "고양이",
+      "context": "동물",
+      "sentence_fragment": "고양이를 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-72cb63590f6eb854",
+      "label": "토끼 한 마리",
+      "context": "토끼 수",
+      "sentence_fragment": "토끼는 한 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-c93a338ab89797fb",
+      "label": "토끼 두 마리",
+      "context": "토끼 수",
+      "sentence_fragment": "토끼는 두 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-e94b4cf532d74b6d",
+      "label": "토끼 네 마리",
+      "context": "토끼 수",
+      "sentence_fragment": "토끼는 네 마리만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-6298422f5969853c",
+      "label": "토끼 털 색: 흰색",
+      "context": "토끼 털 색",
+      "sentence_fragment": "토끼 털은 흰색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-2b45571943ebf7b7",
+      "label": "토끼 털 색: 검은색",
+      "context": "토끼 털 색",
+      "sentence_fragment": "토끼 털은 검은색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-a7ddbd352d89b558",
+      "label": "토끼 털 색: 주황색",
+      "context": "토끼 털 색",
+      "sentence_fragment": "토끼 털은 주황색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-ee0590ee8007475b",
+      "label": "목도리",
+      "context": "토끼의 소품",
+      "sentence_fragment": "목도리를 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-12ac7bc36227c3bf",
+      "label": "왕관",
+      "context": "토끼의 소품",
+      "sentence_fragment": "왕관을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-085317668326ca23",
+      "label": "우산",
+      "context": "토끼의 소품",
+      "sentence_fragment": "우산을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-1cad290cc164778d",
+      "label": "목도리 색: 노란색",
+      "context": "목도리 색",
+      "sentence_fragment": "목도리는 노란색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-fb5b00e7625c9401",
+      "label": "목도리 색: 보라색",
+      "context": "목도리 색",
+      "sentence_fragment": "목도리는 보라색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-0fb628b2bfe18ec2",
+      "label": "목도리 색: 빨간색",
+      "context": "목도리 색",
+      "sentence_fragment": "목도리는 빨간색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-31e237b72606c220",
+      "label": "토끼와 목도리: 두르고 있다",
+      "context": "토끼와 목도리",
+      "sentence_fragment": "토끼가 목도리를 두르고 있게 해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-b6b78eff61351d02",
+      "label": "토끼와 목도리: 발로 밟고 있다",
+      "context": "토끼와 목도리",
+      "sentence_fragment": "토끼가 목도리를 발로 밟고 있게 해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-8afb698ef16987d9",
+      "label": "토끼와 목도리: 손에 들고 있다",
+      "context": "토끼와 목도리",
+      "sentence_fragment": "토끼가 목도리를 손에 들고 있게 해줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-164f9e567832e298",
+      "label": "설원",
+      "context": "배경 장소",
+      "sentence_fragment": "설원을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-4ebb8f77b5fa3f99",
+      "label": "해변",
+      "context": "배경 장소",
+      "sentence_fragment": "해변을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-81fa7083143ef8fb",
+      "label": "교실",
+      "context": "배경 장소",
+      "sentence_fragment": "교실을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-a1828f950fc7defa",
+      "label": "전신",
+      "context": "토끼가 보이는 범위",
+      "sentence_fragment": "토끼의 전신이 보이게 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-3df05cd724994ba1",
+      "label": "얼굴만 확대",
+      "context": "토끼가 보이는 범위",
+      "sentence_fragment": "토끼의 얼굴만 확대이 보이게 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-e2b7d5a301c55823",
+      "label": "3D 캐릭터풍",
+      "context": "표현 방식",
+      "sentence_fragment": "3D 캐릭터풍 스타일로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-ca7bc81a33c2fdfb",
+      "label": "수채화",
+      "context": "표현 방식",
+      "sentence_fragment": "수채화 스타일로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-f3b09744b9ea6288",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 8
+    }
+  ]
+}

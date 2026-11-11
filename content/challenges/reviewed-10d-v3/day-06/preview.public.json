@@ -1,0 +1,197 @@
+{
+  "id": "day-06",
+  "title": "공 위에 놓인 오리 인형",
+  "version": "aimi-puzzle-pack-v3-reviewed-9d4b51073614",
+  "target": "/content/challenges/generated-10d-v2/day-06.png",
+  "candidate_keywords": [
+    {
+      "id": "k-34d9bade9123205d",
+      "label": "오리 모양",
+      "context": "주요 대상",
+      "sentence_fragment": "오리 모양을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-a2e565fab83567dc",
+      "label": "토끼 모양",
+      "context": "주요 대상",
+      "sentence_fragment": "토끼 모양을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-ff416b3c4dbb868c",
+      "label": "고양이 모양",
+      "context": "주요 대상",
+      "sentence_fragment": "고양이 모양을 장면에 포함해줘.",
+      "sentence_order": 0
+    },
+    {
+      "id": "k-27cd11588f054f62",
+      "label": "오리 모양 한 개",
+      "context": "오리 모양 수",
+      "sentence_fragment": "오리 모양은 한 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-970ffc66eb39b586",
+      "label": "오리 모양 두 개",
+      "context": "오리 모양 수",
+      "sentence_fragment": "오리 모양은 두 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-611bcb1b8c765a62",
+      "label": "오리 모양 세 개",
+      "context": "오리 모양 수",
+      "sentence_fragment": "오리 모양은 세 개만 보여줘.",
+      "sentence_order": 1
+    },
+    {
+      "id": "k-da4e395a3a77950f",
+      "label": "오리 모양 색: 노란색",
+      "context": "오리 모양 색",
+      "sentence_fragment": "오리 모양은 노란색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-9eb14629ba048c78",
+      "label": "오리 모양 색: 보라색",
+      "context": "오리 모양 색",
+      "sentence_fragment": "오리 모양은 보라색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-d1de5e9c334cbaa2",
+      "label": "오리 모양 색: 초록색",
+      "context": "오리 모양 색",
+      "sentence_fragment": "오리 모양은 초록색으로 표현해줘.",
+      "sentence_order": 2
+    },
+    {
+      "id": "k-e8d19c415682c333",
+      "label": "원형 받침",
+      "context": "받침 대상",
+      "sentence_fragment": "원형 받침을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-fba4a6a43fabb001",
+      "label": "정사각 받침",
+      "context": "받침 대상",
+      "sentence_fragment": "정사각 받침을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-1c0aec1d3c3dad6b",
+      "label": "삼각 받침",
+      "context": "받침 대상",
+      "sentence_fragment": "삼각 받침을 장면에 포함해줘.",
+      "sentence_order": 3
+    },
+    {
+      "id": "k-3647f6b83a61ba29",
+      "label": "원형 받침 색: 빨간색",
+      "context": "원형 받침 색",
+      "sentence_fragment": "원형 받침은 빨간색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-0116ce9e6784616f",
+      "label": "원형 받침 색: 검은색",
+      "context": "원형 받침 색",
+      "sentence_fragment": "원형 받침은 검은색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-a6ae5112058a634c",
+      "label": "원형 받침 색: 흰색",
+      "context": "원형 받침 색",
+      "sentence_fragment": "원형 받침은 흰색으로 표현해줘.",
+      "sentence_order": 4
+    },
+    {
+      "id": "k-4e5986b846324fb3",
+      "label": "오리 모양과 받침: 위에",
+      "context": "오리 모양과 받침",
+      "sentence_fragment": "오리 모양을 원형 받침 위에 놓아줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-15727ee6195f832d",
+      "label": "오리 모양과 받침: 아래에",
+      "context": "오리 모양과 받침",
+      "sentence_fragment": "오리 모양을 원형 받침 아래에 놓아줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-1265aed2cbcb8122",
+      "label": "오리 모양과 받침: 안에",
+      "context": "오리 모양과 받침",
+      "sentence_fragment": "오리 모양을 원형 받침 안에 놓아줘.",
+      "sentence_order": 5
+    },
+    {
+      "id": "k-30ba4a7451576a36",
+      "label": "파란색 배경",
+      "context": "배경",
+      "sentence_fragment": "파란색 배경을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-ad03cf841e89f670",
+      "label": "검정 배경",
+      "context": "배경",
+      "sentence_fragment": "검정 배경을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-9937fa0926baac6f",
+      "label": "분홍 배경",
+      "context": "배경",
+      "sentence_fragment": "분홍 배경을 배경으로 그려줘.",
+      "sentence_order": 6
+    },
+    {
+      "id": "k-1eaa224d9528dddc",
+      "label": "옆면",
+      "context": "오리 모양의 보이는 면",
+      "sentence_fragment": "옆면이 보이는 구도로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-cbee3a679aeb7752",
+      "label": "정면",
+      "context": "오리 모양의 보이는 면",
+      "sentence_fragment": "정면이 보이는 구도로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-e9a60532ea77acfe",
+      "label": "뒷면",
+      "context": "오리 모양의 보이는 면",
+      "sentence_fragment": "뒷면이 보이는 구도로 그려줘.",
+      "sentence_order": 7
+    },
+    {
+      "id": "k-2122d8d283eeb578",
+      "label": "종이 콜라주",
+      "context": "표현 방식",
+      "sentence_fragment": "종이 콜라주 스타일로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-9f27603c2b67d127",
+      "label": "사진풍",
+      "context": "표현 방식",
+      "sentence_fragment": "사진풍 스타일로 표현해줘.",
+      "sentence_order": 8
+    },
+    {
+      "id": "k-51d240aa49bc0b30",
+      "label": "픽셀아트",
+      "context": "표현 방식",
+      "sentence_fragment": "픽셀아트 스타일로 표현해줘.",
+      "sentence_order": 8
+    }
+  ]
+}
