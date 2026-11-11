@@ -3,6 +3,7 @@ import { copyFileSync, mkdirSync } from "node:fs";
 // Always explicit: regular npm run ait:build never sets these flags.
 const env = {
   ...process.env,
+  VITE_APP_RUNTIME: "toss",
   VITE_TEST_DEMO: "true",
   AIMI_TEST_BUILD: "true",
   VITE_API_BASE_URL: "https://aimi-online-api.onrender.com",

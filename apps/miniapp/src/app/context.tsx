@@ -22,7 +22,10 @@ import {
   setToken,
   errorText,
   localRuntime,
+  browserRuntime,
+  webDemoRuntime,
 } from "../lib/api/client";
+import { startTestDemo } from "../lib/demo";
 import { hostNavigation, updateNavigation, exit } from "../lib/toss/bridge";
 export type HomeState = {
   todayTip: DailyTip;
@@ -313,6 +316,15 @@ function useAppState() {
   const refreshVersion = useRef(0);
   const refresh = useCallback(async (includeContent = true) => {
     const version = ++refreshVersion.current;
+    if (webDemoRuntime && !token()) {
+      try {
+        await startTestDemo();
+      } catch (e) {
+        setError(errorText(e));
+        setLoading(false);
+        return;
+      }
+    }
     const session = token();
     if (!token()) {
       setLoading(false);
@@ -338,7 +350,7 @@ function useAppState() {
         setAuthenticated(false);
       }
     } finally {
-      setLoading(false);
+      if (version === refreshVersion.current) setLoading(false);
     }
   }, []);
   useEffect(() => {
@@ -371,10 +383,42 @@ function useAppState() {
       setContent(null);
       setLoading(false);
       setError("");
+      if (webDemoRuntime) {
+        setLoading(true);
+        void refresh();
+      }
     };
     window.addEventListener("aimi-session-expired", expired);
     return () => window.removeEventListener("aimi-session-expired", expired);
   }, []);
+  useEffect(() => {
+    if (!webDemoRuntime) return;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const changed = (e: StorageEvent) => {
+      if (e.key !== "aimi.web-demo.session") return;
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        for (const key of Object.keys(sessionStorage))
+          if (key.startsWith("aimi.") && key !== "aimi.pending-invite")
+            sessionStorage.removeItem(key);
+        setData(null);
+        setContent(null);
+        setAuthenticated(false);
+        setLoading(true);
+        void refresh();
+      }, 30);
+    };
+    const focus = () => {
+      if (document.visibilityState === "visible") void refresh();
+    };
+    window.addEventListener("storage", changed);
+    window.addEventListener("focus", focus);
+    return () => {
+      if (timer) clearTimeout(timer);
+      window.removeEventListener("storage", changed);
+      window.removeEventListener("focus", focus);
+    };
+  }, [refresh]);
   const perform = useCallback(
     async <T,>(
       fn: () => Promise<T>,
@@ -417,6 +461,8 @@ function useAppState() {
     authenticated,
     setAuthenticated,
     localRuntime,
+    browserRuntime,
+    webDemoRuntime,
   };
 }
 export function AppProvider({ children }: { children: React.ReactNode }) {

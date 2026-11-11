@@ -2,6 +2,8 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { Pool } from "pg";
 import { z } from "zod";
+import { ECONOMY_POLICY, IdempotencyKey, seoulDate } from "@aimi/contracts";
+import { once } from "../../modules/domain.js";
 import { ApiError } from "../../db.js";
 import { registerPrototype } from "../../modules/routes.js";
 import { DemoRepository, demoUser } from "./repository.js";
@@ -86,6 +88,28 @@ export function registerDemo(
           },
         };
       });
+      instance.post<{ Params: { type: string } }>(
+        "/daily-rewards/:type/claim",
+        async (r) => {
+          const id = await auth(r),
+            type = z.enum(["attendance", "tip"]).parse(r.params.type);
+          z.object({})
+            .strict()
+            .parse(r.body ?? {});
+          const key = IdempotencyKey.parse(r.headers["idempotency-key"]);
+          const data = await repo.transaction([id], (states) =>
+            once(states[id], key, "reward:" + type, {}, () => {
+              const s = states[id],
+                claims = (s.claims[seoulDate()] ??= []);
+              const awarded = claims.includes(type) ? 0 : ECONOMY_POLICY[type];
+              if (awarded) claims.push(type);
+              s.balance += awarded;
+              return { awarded, balance: s.balance };
+            }),
+          );
+          return { data };
+        },
+      );
       instance.post("/auth/logout", async (r) => {
         await auth(r);
         return { data: { loggedOut: true } };

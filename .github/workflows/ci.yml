@@ -34,6 +34,9 @@ jobs:
       - run: npm run build
       - run: npm run typecheck
       - run: npm test
+      - run: npm run test:web-demo
+      - name: Build isolated Vercel web demo
+        run: npm run build:web-demo
       - name: Add Supabase compatibility roles in disposable CI database
         env:
           PGPASSWORD: ci-local-only

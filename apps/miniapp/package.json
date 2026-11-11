@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1 --port 5180",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
-    "ait:build": "npm run build && ait build"
+    "ait:build": "node ../../tools/assert-toss-build.mjs && npm run build && ait build"
   },
   "dependencies": {
     "@aimi/contracts": "0.1.0",

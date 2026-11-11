@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { ECONOMY_POLICY } from "@aimi/contracts";
 import { randomUUID } from "node:crypto";
 import { createApp } from "../src/app.js";
 import { createPool } from "../src/db.js";
@@ -41,6 +42,26 @@ test("demo database: isolation, atomic reset, stale epochs, persistent quota and
     const get = await app.inject({ url: "/demo/v1/state", headers });
     assert.equal(get.statusCode, 200);
     assert.equal(get.json().data.balance, 125);
+    const rewards = await Promise.all(
+      Array.from({ length: 4 }, (_, n) =>
+        app.inject({
+          method: "POST",
+          url: "/demo/daily-rewards/attendance/claim",
+          headers: { ...headers, "idempotency-key": "demo-attendance-" + n },
+          payload: {},
+        }),
+      ),
+    );
+    assert.ok(rewards.every((r) => r.statusCode === 200));
+    assert.equal(
+      rewards.reduce((sum, r) => sum + r.json().data.awarded, 0),
+      ECONOMY_POLICY.attendance,
+    );
+    assert.equal(
+      (await app.inject({ url: "/demo/v1/state", headers })).json().data
+        .balance,
+      125 + ECONOMY_POLICY.attendance,
+    );
     const social = await app.inject({ url: "/demo/v1/social", headers });
     assert.equal(social.json().data.people.length, 1);
     const meta = await repo.withStore((r) => ({

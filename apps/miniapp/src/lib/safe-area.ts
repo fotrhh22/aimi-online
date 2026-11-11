@@ -1,9 +1,10 @@
 import { SafeArea } from "@apps-in-toss/web-framework";
+import { tossRuntime } from "./runtime";
 import { normalizedInsets } from "./safe-area-policy";
 /** Set all four insets before React paints, then follow host/orientation/viewport changes. */
 export function installSafeArea() {
   const root = document.documentElement;
-  const host = !["localhost", "127.0.0.1"].includes(location.hostname);
+  const host = tossRuntime;
   root.dataset.aimiHost = host ? "toss" : "browser";
   const apply = (raw: unknown) => {
     const insets = normalizedInsets(raw);

@@ -5,6 +5,12 @@ if (
   process.env.AIMI_TEST_BUILD !== "true"
 )
   throw Error("DEMO_REQUIRES_EXPLICIT_TEST_BUILD");
+if (
+  process.env.VITE_APP_RUNTIME === "web-demo" &&
+  (process.env.AIMI_TEST_BUILD !== "true" ||
+    process.env.VITE_TEST_DEMO !== "true")
+)
+  throw Error("WEB_DEMO_REQUIRES_EXPLICIT_TEST_BUILD");
 export default defineConfig({
   plugins: [react()],
   server: {

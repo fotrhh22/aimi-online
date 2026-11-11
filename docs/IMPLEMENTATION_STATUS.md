@@ -1,3 +1,9 @@
+## Vercel 웹 공유 테스트 모드 구현 (2026-11-12)
+
+명시적web-demo 런타임/빌드,자동 테스트 세션,웹 내비게이션·클립보드·공유,별도 웹 세션 키,초기화 후 재인증/storage 갱신을 구현했다. api/demo.js는고정Render·허용데모경로만 전달하고 vercel.json이루트npmci/웹빌드/dist/API·SPA rewrite/sin1을설정한다. 정식ait와웹빌드를혼용하지않도록가드. 테스트출석/팁API누락도보완해데모원자적상태에만지급한다.
+
+웹빌드/타입/108테스트/프록시4테스트/로컬DB5테스트및실제웹빌드브라우저자동진입·소셜·방문·새로고침·입력검증. Vercel 계정 연결·실제 URL 배포는 아직 하지 않았다. VERCEL_WEB_DEMO.md에 Import 순서와설정기록. 추가환경변수/SQL불필요,기존AI만료유지.
+
 ## 조회 성능 개선 원격 검증 완료 (2026-11-12)
 
 38e8bd3 push/Render dep-dbq8pk5bedkc739j0cf0 live. GitHub CI43050979391 모든 단계 성공. Render 테스트 계정의 실제 Gemini 개선문 생성 성공(약3.9초). 오류코드 AI_NOT_CONFIGURED 해소,한글 수량/숫자 표기 검증 보정. 새 토스 번들 output/releases/toss-ui-test/AIMI_UI_TEST_FAST.ait(비밀값 검사 통과). migration/원격 사용자 상태 초기화 없음. 실제 iPhone 입력 확대·게임 체감은 새 QR에서 사용자 확인 필요.

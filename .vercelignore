@@ -1,0 +1,7 @@
+output/
+design/
+secrets/
+**/*.ait
+**/.env
+**/.env.*
+**/dist/

@@ -1,6 +1,5 @@
-export const localRuntime = ["localhost", "127.0.0.1"].includes(
-  location.hostname,
-);
+import { localRuntime, webDemoRuntime } from "../runtime";
+export { localRuntime, browserRuntime, webDemoRuntime } from "../runtime";
 const configured = import.meta.env.VITE_API_BASE_URL as string | undefined;
 const remoteBase = "https://aimi-online-api.onrender.com";
 // Local .env.local settings must never route an installed miniapp to loopback.
@@ -16,9 +15,11 @@ const productionBase = (() => {
     return remoteBase;
   }
 })();
-const base = import.meta.env.PROD
-  ? productionBase
-  : configured || (localRuntime ? "/api" : remoteBase);
+const base = webDemoRuntime
+  ? "/api"
+  : import.meta.env.PROD
+    ? productionBase
+    : configured || (localRuntime ? "/api" : remoteBase);
 const inviteCode = new URLSearchParams(location.search).get("invite");
 if (inviteCode && /^[A-F0-9]{8}$/.test(inviteCode))
   sessionStorage.setItem("aimi.pending-invite", inviteCode);
@@ -32,7 +33,9 @@ export class RequestError extends Error {
 }
 const keys = new Map<string, string>();
 export function token() {
-  return localStorage.getItem("aimi.session");
+  return localStorage.getItem(
+    webDemoRuntime ? "aimi.web-demo.session" : "aimi.session",
+  );
 }
 export function setToken(value: string | null) {
   if (value !== token()) {
@@ -41,8 +44,15 @@ export function setToken(value: string | null) {
         sessionStorage.removeItem(key);
     keys.clear();
   }
-  if (value) localStorage.setItem("aimi.session", value);
-  else localStorage.removeItem("aimi.session");
+  if (value)
+    localStorage.setItem(
+      webDemoRuntime ? "aimi.web-demo.session" : "aimi.session",
+      value,
+    );
+  else
+    localStorage.removeItem(
+      webDemoRuntime ? "aimi.web-demo.session" : "aimi.session",
+    );
 }
 export async function request<T>(
   path: string,
@@ -103,6 +113,8 @@ const messages: Record<string, string> = {
     "48시간의 AI 테스트 이용 기간이 끝났어요. 다른 기능은 계속 이용할 수 있어요.",
   DEMO_RESET_BUSY: "방금 초기화했어요. 잠시 후 다시 눌러주세요.",
   DEMO_RESET_REQUIRED: "테스트 계정은 탈퇴 대신 테스트 초기화를 이용해주세요.",
+  DEMO_UPSTREAM_UNAVAILABLE:
+    "서버 연결이 지연되고 있어요. 잠시 후 다시 시도해주세요.",
   NETWORK_ERROR: "연결을 확인한 뒤 다시 시도해주세요.",
   UNAUTHENTICATED: "다시 로그인해주세요.",
   GAME_DAILY_LIMIT: "오늘 게임은 모두 마쳤어요.",

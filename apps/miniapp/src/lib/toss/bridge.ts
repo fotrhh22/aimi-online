@@ -7,8 +7,15 @@ import {
   share,
   setClipboardText,
 } from "@apps-in-toss/web-framework";
-import { localRuntime, request, setToken } from "../api/client";
+import {
+  localRuntime,
+  browserRuntime,
+  webDemoRuntime,
+  request,
+  setToken,
+} from "../api/client";
 export async function login(name = "player") {
+  if (webDemoRuntime) throw Error("WEB_DEMO_USES_TEST_SESSION");
   if (localRuntime) {
     const r = await request<{ token: string }>("/auth/local", "POST", { name });
     setToken(r.token);
@@ -19,12 +26,23 @@ export async function login(name = "player") {
   setToken(r.token);
 }
 export async function copy(text: string) {
-  if (localRuntime) await navigator.clipboard.writeText(text);
+  if (browserRuntime) await navigator.clipboard.writeText(text);
   else await setClipboardText(text);
 }
 export async function invite(code: string) {
-  if (localRuntime) {
-    await copy(location.origin + "/?invite=" + encodeURIComponent(code));
+  if (browserRuntime) {
+    const url = location.origin + "/?invite=" + encodeURIComponent(code);
+    if (webDemoRuntime && navigator.share) {
+      try {
+        await navigator.share({
+          title: "AIMI 테스트",
+          text: "AIMI에서 함께 정원을 꾸며요!",
+          url,
+        });
+      } catch (e) {
+        if ((e as Error).name !== "AbortError") await copy(url);
+      }
+    } else await copy(url);
     return;
   }
   const link = await getTossShareLink(
@@ -33,7 +51,7 @@ export async function invite(code: string) {
   await share({ message: "AIMI에서 함께 정원을 꾸며요! " + link });
 }
 export function hostNavigation(back: () => void) {
-  if (localRuntime) return () => {};
+  if (browserRuntime) return () => {};
   let cleanup = () => {};
   try {
     cleanup = graniteEvent.addEventListener("backEvent", {
@@ -44,7 +62,7 @@ export function hostNavigation(back: () => void) {
   return cleanup;
 }
 export function updateNavigation(hasBack: boolean) {
-  if (!localRuntime)
+  if (!browserRuntime)
     void NavigationBar.setOptions({
       withBackButton: hasBack,
       withHomeButton: false,
@@ -54,5 +72,5 @@ export function updateNavigation(hasBack: boolean) {
     }).catch(() => {});
 }
 export function exit() {
-  if (!localRuntime) void closeView();
+  if (!browserRuntime) void closeView();
 }

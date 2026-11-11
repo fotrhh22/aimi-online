@@ -92,22 +92,24 @@ function Screens() {
             </p>
           </>
         )}
-        <Button
-          weak={testDemoEnabled}
-          loading={a.busy}
-          onClick={() =>
-            void a.perform(
-              async () => {
-                await login(devName);
-                a.setAuthenticated(true);
-              },
-              undefined,
-              "all",
-            )
-          }
-        >
-          {a.localRuntime ? "개발용으로 시작하기" : "토스로 시작하기"}
-        </Button>
+        {!a.webDemoRuntime && (
+          <Button
+            weak={testDemoEnabled}
+            loading={a.busy}
+            onClick={() =>
+              void a.perform(
+                async () => {
+                  await login(devName);
+                  a.setAuthenticated(true);
+                },
+                undefined,
+                "all",
+              )
+            }
+          >
+            {a.localRuntime ? "개발용으로 시작하기" : "토스로 시작하기"}
+          </Button>
+        )}
         {a.error && <p role="alert">{a.error}</p>}
         {a.toast && <p role="alert">{a.toast}</p>}
       </main>
@@ -154,7 +156,7 @@ function Screens() {
     );
   return (
     <div className={"app-shell " + (game ? "game-shell" : "")}>
-      {a.localRuntime && (
+      {a.browserRuntime && (
         <div className="dev-platform">
           {a.path !== "/" ? (
             <button aria-label="뒤로가기" onClick={a.back}>
