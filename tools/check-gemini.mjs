@@ -3,7 +3,7 @@
 import { config } from 'dotenv';
 import { fileURLToPath } from 'node:url';
 config({ path: fileURLToPath(new URL('../apps/api/.env.local', import.meta.url)), quiet: true });
-const key = process.env.GEMINI_API_KEY;
+const key = process.env.AIMI_GEMINI_API_KEY;
 const model = process.env.GEMINI_TEXT_MODEL;
 if (!key || !model || !/^[a-zA-Z0-9_.-]+$/.test(model)) throw new Error('Gemini key/model configuration missing or invalid');
 try {

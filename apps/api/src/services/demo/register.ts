@@ -34,7 +34,7 @@ export function registerDemo(
       });
       const auth = async (r: FastifyRequest) => {
         const epoch = demoTokenEpoch(secret, r.headers.authorization ?? "");
-        await repo.transaction([demoUser(epoch)], () => {});
+        await repo.validateEpoch(epoch);
         return demoUser(epoch);
       };
       const session = async () =>
@@ -66,8 +66,9 @@ export function registerDemo(
         return { data: { token: demoToken(secret, next), demo: true } };
       });
       instance.get("/status", async (r) => {
-        await auth(r);
-        return repo.withStore((row) => ({
+        const id = await auth(r);
+        const row = await repo.status(id);
+        return {
           data: {
             shared: true,
             aiLimit: 20,
@@ -83,7 +84,7 @@ export function registerDemo(
               : null,
             aiEndsAt: row.ends_at,
           },
-        }));
+        };
       });
       instance.post("/auth/logout", async (r) => {
         await auth(r);

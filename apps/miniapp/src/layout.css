@@ -1271,3 +1271,55 @@
 
 #root .test-demo-controls { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-peer);font-size:11px;line-height:18px;color:var(--color-muted);padding-block:var(--space-peer); }
 #root .test-demo-controls > button { min-height:44px;font-size:12px; }
+
+/* Shared host inset contract: never start app content underneath native chrome. */
+:root {
+  --sdk-safe-top:0px; --sdk-safe-right:0px; --sdk-safe-bottom:0px; --sdk-safe-left:0px;
+  --safe-top:max(env(safe-area-inset-top,0px),var(--sdk-safe-top));
+  --safe-right:max(env(safe-area-inset-right,0px),var(--sdk-safe-right));
+  --safe-bottom:max(env(safe-area-inset-bottom,0px),var(--sdk-safe-bottom));
+  --safe-left:max(env(safe-area-inset-left,0px),var(--sdk-safe-left));
+  --native-nav-height:0px;
+  --content-safe-top:calc(var(--safe-top) + var(--native-nav-height));
+}
+html[data-aimi-host="toss"] { --native-nav-height:48px; }
+#root .app-shell {
+  display:flex;flex-direction:column;box-sizing:border-box;
+  min-height:100dvh;
+  padding-top:var(--content-safe-top);
+  padding-right:var(--safe-right);padding-left:var(--safe-left);padding-bottom:0;
+}
+#root .app-shell > .page,
+#root .app-shell > .dev-platform ~ .page {
+  min-height:0;flex:1 0 auto;
+}
+#root .page:not(.with-tabs) { padding-bottom:calc(var(--space-section) + var(--safe-bottom)); }
+#root .page.with-tabs { padding-bottom:calc(128px + var(--safe-bottom)); }
+#root .bottom-nav { bottom:calc(var(--space-section) + var(--safe-bottom));width:min(calc(100% - 48px - var(--safe-left) - var(--safe-right)),432px); }
+#root .page .fixed-cta { bottom:calc(var(--space-content) + var(--safe-bottom)); }
+#root .loading-screen, #root .login-screen {
+  box-sizing:border-box;min-height:100dvh;
+  padding-top:calc(var(--space-section) + var(--content-safe-top));
+  padding-bottom:calc(var(--space-section) + var(--safe-bottom));
+  padding-left:calc(var(--space-section) + var(--safe-left));
+  padding-right:calc(var(--space-section) + var(--safe-right));
+}
+#root .game-shell { height:100dvh;min-height:0;padding-bottom:var(--safe-bottom); }
+#root .game-pause { top:12px;width:44px;height:36px; }
+#root .game-hud { top:56px; }
+#root .game-progress { top:99px; }
+#root .game-controls { bottom:24px; }
+#root .toast { bottom:calc(110px + var(--safe-bottom)); }
+#root .test-demo-controls { padding:0 var(--page-margin) var(--space-peer); }
+#root .test-demo-controls > span { flex:1;min-width:0; }
+#root .test-demo-controls > button { flex-shrink:0; }
+html[data-keyboard="open"] #root .bottom-nav { display:none; }
+
+/* iOS focus zoom is triggered by editable text smaller than 16 CSS px.
+   Keep user pinch zoom available; do not lock viewport maximum-scale. */
+html { -webkit-text-size-adjust:100%;text-size-adjust:100%; }
+#root input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+#root textarea, #root select, #root [contenteditable="true"] {
+  font-size:max(16px,1rem) !important;line-height:1.5;
+}
+#root button, #root a, #root summary { touch-action:manipulation; }

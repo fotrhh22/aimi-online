@@ -79,7 +79,9 @@ export function Optimizer() {
             );
           return;
         }
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        await new Promise((resolve) =>
+          setTimeout(resolve, Math.min(2500, 700 + i * 200)),
+        );
       }
       if (alive.current)
         a.setToast(
@@ -95,11 +97,14 @@ export function Optimizer() {
     if (starting || waiting) return;
     setStarting(true);
     try {
-      const result = await a.perform(() =>
-        request<{ id: string }>("/v1/optimizer/jobs", "POST", {
-          text,
-          visitId,
-        }),
+      const result = await a.perform(
+        () =>
+          request<{ id: string }>("/v1/optimizer/jobs", "POST", {
+            text,
+            visitId,
+          }),
+        undefined,
+        "background",
       );
       if (alive.current && result) void poll(result.id);
     } finally {
@@ -138,7 +143,9 @@ export function Optimizer() {
             조건을 추가한 예시를 볼 수 있어요.
           </p>
           {job?.status === "failed" && (
-            <Notice title="처리하지 못했어요">{job.error}</Notice>
+            <Notice title="처리하지 못했어요">
+              {errorText(new RequestError(job.error ?? "AI_FAILED", 503))}
+            </Notice>
           )}
           <div className="fixed-cta">
             <Button
@@ -216,7 +223,11 @@ export function Optimizer() {
                   <button
                     aria-label="문장 복사"
                     onClick={() =>
-                      void a.perform(() => copy(current), "문장을 복사했어요.")
+                      void a.perform(
+                        () => copy(current),
+                        "문장을 복사했어요.",
+                        "none",
+                      )
                     }
                   >
                     <Icon name="copy" />
@@ -411,13 +422,16 @@ export function Recommendations() {
     if (requestedTier) setTier(requestedTier);
     const input = text;
     try {
-      const r = await a.perform(() =>
-        request<Recommendation>("/v1/recommendations", "POST", {
-          text: input,
-          visitId,
-          outputKind,
-          ...(requestedTier ? { tier: requestedTier } : {}),
-        }),
+      const r = await a.perform(
+        () =>
+          request<Recommendation>("/v1/recommendations", "POST", {
+            text: input,
+            visitId,
+            outputKind,
+            ...(requestedTier ? { tier: requestedTier } : {}),
+          }),
+        undefined,
+        "background",
       );
       if (!alive.current) return;
       if (r) {

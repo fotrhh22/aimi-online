@@ -1,3 +1,21 @@
+## 요청 지연·Gemini·입력 확대 개선 (2026-11-12)
+
+게임 시작/정산과 AI 응답을 공통 refresh에서 분리하고 background state 갱신. 복사/초대/친구 방문/로그아웃/탈퇴 재조회 및 로그인·소셜 중복 조회 제거. 일반 변경은state만, 챌린지/힌트는content도 갱신. 운영read는wallet/state JOIN SELECT, 데모auth/read/status는SELECT로 분리. 친구batch조회, AI polling read경로/backoff, 모델파일캐시, 낡은refresh/토큰 응답 차단. 입력최소16px/버튼더블탭확대 예방.
+
+타입/빌드/108테스트와 임시로컬DB5개 통합 검사 통과. SDK/CSS 안전 영역21개/입력5종 검사 통과. Render 키 등록 및 실제 Gemini JSON 호출 성공. 기존 CI 실패는 후속성공2건으로 해결된 기록. 실제 iOS 자동확대/본계정 토스 로그인은 새 QR에서 확인 필요. 상세 REQUEST_LATENCY_FIXES_20261112.md.
+
+## 요청·DB 지연 전수 조사 (2026-11-12, 조사만)
+
+운영 본계정도 perform 후 state/content를 기다리고 단순 read가 지갑/상태 잠금·UPDATE를 수행함을 확인했다. 운영 인증은 단순 세션SELECT이며 테스트 인증의 공유 상태 쓰기와 구분한다. 실제 Repository mock 실행에서 운영read6/테스트read5문장, 게임 시작+refresh는 인증 포함21/30문장. 복사/초대 재조회·로그인 중복 refresh·소셜 순차조회/중복 reload·AI polling 쓰기도 조사했다. 실제 본계정 토스 응답시간은 미측정. 코드/DB/Render/번들 변경 없이 REQUEST_AND_DB_LATENCY_AUDIT_20261112.md에 개선 우선순위 기록.
+
+## 토스 실기기 안전 영역 공통 보정 (2026-11-11)
+
+- 기존 SDK 처리는 하단 값만 읽었고 실제 CSS 변수와도 연결되지 않았다. 초기 렌더 전 상하좌우 읽기·변경 구독, CSS env fallback, 투명 네이티브 내비게이션48px 행을 공통 적용했다.
+- 일반 페이지·홈·로딩/로그인·게임·하단 탭·CTA·토스트를 같은 안전 영역으로 통일했다. 게임 HUD는 중복 상단 보정을 제거했다. 키보드가 열릴 때 하단 탭 숨김.
+- 홈 테스트 안내를 헤더 아래로 옮겨 간소화했고 게임 결과의 ‘이번 게임 결과’ 중복 제목을 삭제했다. 게임 결과는 기존 요구대로 페이지이며 Modal 코드는 변경하지 않았다.
+- SDK 초기값/변경/비정상값/키보드/정리/로컬 분리 검사와320·393·480px 공통 CSS21개 fixture 검사 통과. 실제 토스 기기 재검증은 새 번들 업로드 후 필요하다. 상세 TOSS_SAFE_AREA_AUDIT_20261111.md.
+- 테스트 번들: output/releases/toss-ui-test/AIMI_UI_TEST_SAFE_AREA.ait. API·DB 변경 없음.
+
 ## 토스 테스트 계정 원격 동작 확인 (2026-11-11)
 
 - 데모 migration0007 적용, Render ENABLE_TEST_DEMO=true 반영. 기본 토스 로그인은 그대로 유지. 새 파일 output/releases/toss-ui-test/AIMI_UI_TEST_ONLY.ait에만 테스트로 시작하기 포함.

@@ -65,13 +65,31 @@ export function validatePromptRewrite(
 ) {
   if (!isRequest(result.improvedText) || !isRequest(result.extendedExample))
     throw new ApiError("AI_NOT_A_PROMPT", 503);
-  const numbers: string[] = original.match(/\d+(?:\.\d+)?/g) ?? [];
-  const improvedNumbers: string[] =
-    result.improvedText.match(/\d+(?:\.\d+)?/g) ?? [];
+  const quantities = (text: string): string[] => {
+    const counts: Record<string, string> = {
+      한: "1",
+      두: "2",
+      세: "3",
+      네: "4",
+      다섯: "5",
+      여섯: "6",
+      일곱: "7",
+      여덟: "8",
+      아홉: "9",
+      열: "10",
+    };
+    const canonical = text.replace(
+      /(^|[^가-힣])(다섯|여섯|일곱|여덟|아홉|한|두|세|네|열)\s*(?=가지|개|명|회|일|개월|년|시간|분|초|장|번)/g,
+      (_m, prefix, count) => prefix + counts[count],
+    );
+    return canonical.match(/\d+(?:\.\d+)?/g) ?? [];
+  };
+  const numbers = quantities(original),
+    improvedNumbers = quantities(result.improvedText),
+    extendedNumbers = quantities(result.extendedExample);
   if (
     numbers.some(
-      (n) =>
-        !result.improvedText.includes(n) || !result.extendedExample.includes(n),
+      (n) => !improvedNumbers.includes(n) || !extendedNumbers.includes(n),
     ) ||
     improvedNumbers.some((n) => !numbers.includes(n))
   )

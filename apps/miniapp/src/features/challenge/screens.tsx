@@ -157,22 +157,28 @@ export function Challenge() {
   const submittedAttempt = matchingChallengeAttempt(history, ids);
   const submittedSelection = Boolean(submittedAttempt);
   const buyCountHint = () =>
-    a.perform(() =>
-      request<{ answerCount: number; cost: number }>(
-        "/v1/challenge/count-hint",
-        "POST",
-        { date: s.daily.date, contentVersion: content.version },
-      ),
+    a.perform(
+      () =>
+        request<{ answerCount: number; cost: number }>(
+          "/v1/challenge/count-hint",
+          "POST",
+          { date: s.daily.date, contentVersion: content.version },
+        ),
+      undefined,
+      "all",
     );
   const submit = async () => {
     const origin = a.path;
-    const r = await a.perform(() =>
-      request<Attempt>("/v1/challenge/attempts", "POST", {
-        keywordIds: ids,
-        ...(puzzle ? {} : { model }),
-        date: s.daily.date,
-        contentVersion: content.version,
-      }),
+    const r = await a.perform(
+      () =>
+        request<Attempt>("/v1/challenge/attempts", "POST", {
+          keywordIds: ids,
+          ...(puzzle ? {} : { model }),
+          date: s.daily.date,
+          contentVersion: content.version,
+        }),
+      undefined,
+      "all",
     );
     if (r && a.isCurrentPath(origin)) {
       setResult(r);
@@ -390,7 +396,10 @@ export function Challenge() {
               ? "이미 확인한 조합이에요. 아래에서 결과를 펼쳐보거나 단어를 바꿔보세요."
               : `시도 1회 ${cost}예산 · 시도 후 ${Math.max(0, s.budget - cost)} 남아요`}
           </p>
-          <PreviousCombinations attempts={history} keywords={content.keywords} />
+          <PreviousCombinations
+            attempts={history}
+            keywords={content.keywords}
+          />
           <div className="fixed-cta">
             <Button
               loading={a.busy}
@@ -491,7 +500,10 @@ export function Challenge() {
               남은 예산 {s.budget} · 추가 시도 {attemptsLeft}회
             </p>
           )}
-          <PreviousCombinations attempts={previousAttempts} keywords={content.keywords} />
+          <PreviousCombinations
+            attempts={previousAttempts}
+            keywords={content.keywords}
+          />
         </>
       )}
       {puzzle && stage === "answer" && closed && shownAttempt?.reveal && (
@@ -548,7 +560,9 @@ export function Challenge() {
                 <strong>{t.title}</strong>
                 <p>{t.text}</p>
                 {t.sourceLabel && (
-                  <p className="caption challenge-tip-source">출처: {t.sourceLabel}</p>
+                  <p className="caption challenge-tip-source">
+                    출처: {t.sourceLabel}
+                  </p>
                 )}
               </section>
             ))}

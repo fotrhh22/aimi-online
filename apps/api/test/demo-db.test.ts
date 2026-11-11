@@ -47,6 +47,21 @@ test("demo database: isolation, atomic reset, stale epochs, persistent quota and
       epoch: r.epoch,
       ends_at: r.ends_at,
     }));
+    const beforeRead = await pool.query(
+      "SELECT xmin::text AS version FROM aimi.test_demo_stores WHERE id=$1",
+      [storeId],
+    );
+    await repo.validateEpoch(meta.epoch);
+    await repo.read(demoUser(meta.epoch));
+    const afterRead = await pool.query(
+      "SELECT xmin::text AS version FROM aimi.test_demo_stores WHERE id=$1",
+      [storeId],
+    );
+    assert.deepEqual(
+      afterRead.rows,
+      beforeRead.rows,
+      "demo auth/read must not rewrite shared row",
+    );
     await repo.transaction([demoUser(meta.epoch)], (s) => {
       s[demoUser(meta.epoch)].balance = 17;
     });

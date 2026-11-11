@@ -6,7 +6,6 @@ import {
   getTossShareLink,
   share,
   setClipboardText,
-  getSafeAreaInsets,
 } from "@apps-in-toss/web-framework";
 import { localRuntime, request, setToken } from "../api/client";
 export async function login(name = "player") {
@@ -36,13 +35,6 @@ export async function invite(code: string) {
 export function hostNavigation(back: () => void) {
   if (localRuntime) return () => {};
   let cleanup = () => {};
-  try {
-    const v = getSafeAreaInsets();
-    document.documentElement.style.setProperty(
-      "--safe-bottom",
-      v.bottom + "px",
-    );
-  } catch {}
   try {
     cleanup = graniteEvent.addEventListener("backEvent", {
       onEvent: back,

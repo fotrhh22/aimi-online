@@ -874,10 +874,13 @@ export function Social() {
     setFriendError(false);
     if (a.path.startsWith("/friends/"))
       void a
-        .perform(() =>
-          request<FriendGarden>(
-            "/v1/friends/" + a.path.split("/")[2] + "/garden",
-          ),
+        .perform(
+          () =>
+            request<FriendGarden>(
+              "/v1/friends/" + a.path.split("/")[2] + "/garden",
+            ),
+          undefined,
+          "none",
         )
         .then((result) => {
           if (cancelled) return;
@@ -896,7 +899,6 @@ export function Social() {
       .then((result) => {
         if (result) {
           setDeleting(null);
-          void reload();
         }
       });
   if (a.path.startsWith("/friends/"))
@@ -949,7 +951,11 @@ export function Social() {
         <span className="inline-actions">
           <button
             onClick={() =>
-              void a.perform(() => copy(a.data!.code), "코드를 복사했어요.")
+              void a.perform(
+                () => copy(a.data!.code),
+                "코드를 복사했어요.",
+                "none",
+              )
             }
           >
             코드 복사
@@ -960,6 +966,7 @@ export function Social() {
               void a.perform(
                 () => invite(a.data!.code),
                 "초대 링크를 준비했어요.",
+                "none",
               )
             }
           >
@@ -1096,7 +1103,11 @@ export function Account() {
         weak
         onClick={() =>
           void a
-            .perform(() => request("/auth/logout", "POST", {}))
+            .perform(
+              () => request("/auth/logout", "POST", {}),
+              undefined,
+              "none",
+            )
             .then(() => {
               setToken(null);
               location.href = "/";
@@ -1123,7 +1134,11 @@ export function Account() {
             <Button
               onClick={() =>
                 void a
-                  .perform(() => request("/v1/account", "DELETE"))
+                  .perform(
+                    () => request("/v1/account", "DELETE"),
+                    undefined,
+                    "none",
+                  )
                   .then((r) => {
                     if (r) {
                       setToken(null);

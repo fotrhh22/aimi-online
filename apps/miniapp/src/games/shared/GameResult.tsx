@@ -54,9 +54,7 @@ export function GameResult() {
   const cleared = result.status === "cleared";
   return (
     <section className="game-result-page">
-      <h2 className="green">
-        {cleared ? "최고 점수 달성!" : "이번 게임 결과"}
-      </h2>
+      {cleared && <h2 className="green">최고 점수 달성!</h2>}
       {cleared && <p>만점으로 완주했어요!</p>}
       <Stats
         rows={[

@@ -81,12 +81,15 @@ export function GameScreen() {
       setEnding(null);
     }
     setSaving(true);
-    const r = await a.perform(() =>
-      request<NonNullable<Play["result"]>>(
-        "/v1/game-plays/" + p.id + "/complete",
-        "POST",
-        { inputs: events.current, ticks: s.tick, abandon },
-      ),
+    const r = await a.perform(
+      () =>
+        request<NonNullable<Play["result"]>>(
+          "/v1/game-plays/" + p.id + "/complete",
+          "POST",
+          { inputs: events.current, ticks: s.tick, abandon },
+        ),
+      undefined,
+      "background",
     );
     setSaving(false);
     if (r) {
@@ -133,7 +136,11 @@ export function GameScreen() {
       return;
     }
     void a
-      .perform(() => request<Play>("/v1/game-plays", "POST", {}))
+      .perform(
+        () => request<Play>("/v1/game-plays", "POST", {}),
+        undefined,
+        "background",
+      )
       .then((p) => {
         if (cancelled) return;
         if (!p) {

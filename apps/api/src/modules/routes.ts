@@ -290,8 +290,17 @@ export function registerPrototype(
       s = await repo.read(uid);
     const ids = [...new Set([...s.friends, ...s.friendRequests])];
     const people = [];
+    const others: Record<
+      string,
+      Awaited<ReturnType<Repository["read"]>>
+    > = repo.readMany
+      ? await repo.readMany(ids)
+      : Object.fromEntries(
+          await Promise.all(ids.map(async (id) => [id, await repo.read(id)])),
+        );
     for (const id of ids) {
-      const other = await repo.read(id);
+      const other = others[id];
+      if (!other) continue;
       if (!other.blocked.includes(uid) && !s.blocked.includes(id))
         people.push({
           id,
@@ -407,7 +416,8 @@ export function registerPrototype(
           s,
           date,
           "optimizer",
-          repo.aiDailyLimit ?? Math.min(50, Number(process.env.OPTIMIZER_DAILY_LIMIT) || 5),
+          repo.aiDailyLimit ??
+            Math.min(50, Number(process.env.OPTIMIZER_DAILY_LIMIT) || 5),
         );
         created = true;
         const j: AIJob = {
@@ -453,6 +463,14 @@ export function registerPrototype(
   });
   app.get<{ Params: { id: string } }>("/v1/optimizer/jobs/:id", async (r) => {
     const uid = await auth(r);
+    const current = (await repo.read(uid)).jobs[r.params.id];
+    if (!current || Date.now() - current.createdAt > 86400_000)
+      throw new ApiError("JOB_NOT_FOUND", 404);
+    if (
+      current.status !== "running" ||
+      Date.now() - current.createdAt <= 60_000
+    )
+      return wrap(current);
     return wrap(
       await repo.transaction([uid], (s) => {
         const job = s[uid].jobs[r.params.id];
@@ -467,7 +485,7 @@ export function registerPrototype(
       }),
     );
   });
-  async function models() {
+  async function loadModelSnapshot() {
     try {
       const readSnapshot = async (name: string) =>
         JSON.parse(
@@ -512,6 +530,15 @@ export function registerPrototype(
       return { models: [], developmentSample: true };
     }
   }
+  let modelSnapshot: ReturnType<typeof loadModelSnapshot> | undefined;
+  let modelSnapshotAt = 0;
+  function models() {
+    if (!modelSnapshot || Date.now() - modelSnapshotAt > 60000) {
+      modelSnapshotAt = Date.now();
+      modelSnapshot = loadModelSnapshot();
+    }
+    return modelSnapshot;
+  }
   app.get("/v1/models", async (r) => {
     await auth(r);
     return wrap({
@@ -555,10 +582,9 @@ export function registerPrototype(
       source = previous.taskAnalysis?.source ?? previous.result!.source;
     } else {
       const date = seoulDate(),
-        limit = repo.aiDailyLimit ?? Math.min(
-          50,
-          Number(process.env.RECOMMENDATION_DAILY_LIMIT) || 5,
-        ),
+        limit =
+          repo.aiDailyLimit ??
+          Math.min(50, Number(process.env.RECOMMENDATION_DAILY_LIMIT) || 5),
         jobId = randomUUID();
       await repo.transaction([uid], (states) => {
         const state = states[uid];

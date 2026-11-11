@@ -48,6 +48,7 @@ export interface Repository {
     ids: string[],
     fn: (states: Record<string, UserState>) => T,
   ): Promise<T>;
+  readMany?(ids: string[]): Promise<Record<string, UserState>>;
   findCode(code: string): Promise<string | null>;
   reserveAI(date: string, limit: number): Promise<void>;
   pruneAI(before: number): Promise<void>;
@@ -154,7 +155,24 @@ export class FileRepository implements Repository {
 export class PostgresRepository implements Repository {
   readonly development = false;
   constructor(private pool: Pool) {}
+  async readMany(ids: string[]) {
+    if (!ids.length) return {};
+    // One statement snapshot keeps the wallet and aggregate consistent without row locks.
+    const r = await this.pool.query(
+      "SELECT p.user_id,p.state,w.balance FROM aimi.prototype_states p JOIN aimi.ep_wallets w ON w.user_id=p.user_id WHERE p.user_id=ANY($1::uuid[])",
+      [[...new Set(ids)]],
+    );
+    return Object.fromEntries(
+      r.rows.map((row) => [
+        row.user_id,
+        { ...row.state, balance: row.balance },
+      ]),
+    );
+  }
   async read(id: string) {
+    const states = await this.readMany([id]);
+    if (states[id]) return states[id];
+    // Creation is a write, kept explicit and atomic; subsequent reads never save state.
     return this.transaction([id], (s) => structuredClone(s[id]));
   }
   async transaction<T>(

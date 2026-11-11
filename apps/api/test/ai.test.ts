@@ -547,3 +547,26 @@ test("five provider failures do not exhaust optimizer or recommendation allowanc
     await app.close();
   }
 });
+
+test("optimizer treats Korean count words and digits as equivalent without accepting changed quantities", () => {
+  const result = {
+    improvedText: "재활용 방법 3가지를 추천해줘.",
+    extendedExample: "재활용 방법 세 가지를 준비물과 함께 추천해줘.",
+    addedAssumptions: ["준비물 안내"],
+  };
+  assert.doesNotThrow(() =>
+    validatePromptRewrite("재활용 방법 세 가지 추천해줘", result),
+  );
+  assert.throws(
+    () => validatePromptRewrite("재활용 방법 두 가지 추천해줘", result),
+    /AI_INTENT_CHANGED/,
+  );
+  assert.throws(
+    () =>
+      validatePromptRewrite("재활용 방법 3가지 추천해줘", {
+        ...result,
+        extendedExample: "재활용 방법 30가지를 추천해줘.",
+      }),
+    /AI_INTENT_CHANGED/,
+  );
+});

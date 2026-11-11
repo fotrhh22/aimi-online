@@ -50,6 +50,21 @@ test("PostgreSQL v1: atomic purchase/ledger, revision, quota, friends, account d
     }
     const a = await account(),
       b = await account();
+    const beforeRead = await pool.query(
+      "SELECT user_id,xmin::text AS version FROM aimi.prototype_states WHERE user_id=ANY($1::uuid[]) ORDER BY user_id",
+      [[a.id, b.id]],
+    );
+    assert.equal(Object.keys(await repo.readMany([a.id, b.id])).length, 2);
+    await Promise.all([repo.read(a.id), repo.read(b.id)]);
+    const afterRead = await pool.query(
+      "SELECT user_id,xmin::text AS version FROM aimi.prototype_states WHERE user_id=ANY($1::uuid[]) ORDER BY user_id",
+      [[a.id, b.id]],
+    );
+    assert.deepEqual(
+      afterRead.rows,
+      beforeRead.rows,
+      "reads must not write a new row version",
+    );
     const purchaseResponses = await Promise.all(
       Array.from({ length: 12 }, () =>
         app.inject({

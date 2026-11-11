@@ -97,8 +97,44 @@ export class DemoRepository implements Repository {
       c.release();
     }
   }
+  async status(id: string) {
+    const r = await this.pool.query(
+      "SELECT epoch,starts_at,ends_at,ai_calls FROM aimi.test_demo_stores WHERE id=$1",
+      [this.storeId],
+    );
+    const row = r.rows[0] as DemoStore | undefined;
+    if (!row || id !== demoUser(row.epoch))
+      throw new ApiError("UNAUTHENTICATED", 401);
+    return row;
+  }
+  async validateEpoch(epoch: string) {
+    const r = await this.pool.query(
+      "SELECT epoch FROM aimi.test_demo_stores WHERE id=$1 AND epoch=$2",
+      [this.storeId, epoch],
+    );
+    if (!r.rowCount) throw new ApiError("UNAUTHENTICATED", 401);
+  }
+  async readMany(ids: string[]) {
+    const r = await this.pool.query(
+      "SELECT epoch,state FROM aimi.test_demo_stores WHERE id=$1",
+      [this.storeId],
+    );
+    const row = r.rows[0] as DemoStore | undefined;
+    if (
+      !row ||
+      ids.some((id) => id !== demoUser(row.epoch) && id !== DEMO_FRIEND)
+    )
+      throw new ApiError("UNAUTHENTICATED", 401);
+    return Object.fromEntries(
+      ids
+        .filter((id) => row.state[id])
+        .map((id) => [id, structuredClone(row.state[id])]),
+    );
+  }
   async read(id: string) {
-    return this.transaction([id], (s) => structuredClone(s[id]));
+    const states = await this.readMany([id]);
+    if (!states[id]) throw new ApiError("UNAUTHENTICATED", 401);
+    return states[id];
   }
   async transaction<T>(ids: string[], fn: (s: Record<string, UserState>) => T) {
     return this.withStore((row) => {

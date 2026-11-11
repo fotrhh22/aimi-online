@@ -13,6 +13,7 @@ export function TestControls() {
   } | null>(null);
   useEffect(() => {
     let active = true;
+    if (a.path !== "/account") return;
     void request<{ aiUsed: number; aiEndsAt: string; aiNextAt: string | null }>(
       "/demo/status",
     )
@@ -23,12 +24,12 @@ export function TestControls() {
     return () => {
       active = false;
     };
-  }, [a.data]);
+  }, [a.data, a.path]);
   return (
     <aside className="test-demo-controls">
       <span>
-        공유 테스트 계정 · 실제 보상 아님
-        {ai && (
+        테스트 계정 · 실제 보상 아님
+        {a.path === "/account" && ai && (
           <>
             <br />
             {Date.now() >= Date.parse(ai.aiEndsAt)
@@ -63,11 +64,15 @@ export function TestControls() {
             <Button
               loading={a.busy}
               onClick={() =>
-                void a.perform(async () => {
-                  await resetTestDemo();
-                  a.navigate("/", { replace: true });
-                  setConfirm(false);
-                }, "테스트를 초기화했어요.")
+                void a.perform(
+                  async () => {
+                    await resetTestDemo();
+                    a.navigate("/", { replace: true });
+                    setConfirm(false);
+                  },
+                  "테스트를 초기화했어요.",
+                  "all",
+                )
               }
             >
               초기화하기

@@ -57,10 +57,14 @@ export type Content = {
 const Context = createContext<ReturnType<typeof useAppState> | null>(null);
 function useAppState() {
   const [path, setPath] = useState(() => {
-    // A fresh app load starts at home; invite query was captured by the API client.
-    history.replaceState({ ...history.state, aimiNavigation: { index: 0, trail: ["/"] } }, "", "/" + location.search);
-    return "/";
-  }),
+      // A fresh app load starts at home; invite query was captured by the API client.
+      history.replaceState(
+        { ...history.state, aimiNavigation: { index: 0, trail: ["/"] } },
+        "",
+        "/" + location.search,
+      );
+      return "/";
+    }),
     [data, setData] = useState<HomeState | null>(null),
     [content, setContent] = useState<Content | null>(null),
     [loading, setLoading] = useState(true),
@@ -306,7 +310,10 @@ function useAppState() {
     const timer = setTimeout(() => setToast(""), 4000);
     return () => clearTimeout(timer);
   }, [toast]);
-  const refresh = useCallback(async () => {
+  const refreshVersion = useRef(0);
+  const refresh = useCallback(async (includeContent = true) => {
+    const version = ++refreshVersion.current;
+    const session = token();
     if (!token()) {
       setLoading(false);
       return;
@@ -314,13 +321,17 @@ function useAppState() {
     try {
       const [s, c] = await Promise.all([
         request<HomeState>("/v1/state"),
-        request<Content>("/v1/content"),
+        includeContent
+          ? request<Content>("/v1/content")
+          : Promise.resolve(null),
       ]);
+      if (version !== refreshVersion.current || token() !== session) return;
       setData(s);
-      setContent(c);
+      if (c) setContent(c);
       setError("");
       setAuthenticated(true);
     } catch (e) {
+      if (version !== refreshVersion.current || token() !== session) return;
       setError(errorText(e));
       if ((e as { status?: number }).status === 401) {
         setToken(null);
@@ -368,11 +379,13 @@ function useAppState() {
     async <T,>(
       fn: () => Promise<T>,
       message?: string,
+      update: "state" | "all" | "none" | "background" = "state",
     ): Promise<T | undefined> => {
       setBusy(true);
       try {
         const result = await fn();
-        await refresh();
+        if (update === "background") void refresh(false);
+        else if (update !== "none") await refresh(update === "all");
         if (message) setToast(message);
         return result;
       } catch (e) {

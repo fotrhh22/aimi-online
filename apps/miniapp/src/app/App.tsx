@@ -74,10 +74,14 @@ function Screens() {
             <Button
               loading={a.busy}
               onClick={() =>
-                void a.perform(async () => {
-                  await startTestDemo();
-                  a.setAuthenticated(true);
-                })
+                void a.perform(
+                  async () => {
+                    await startTestDemo();
+                    a.setAuthenticated(true);
+                  },
+                  undefined,
+                  "all",
+                )
               }
             >
               테스트로 시작하기
@@ -92,11 +96,14 @@ function Screens() {
           weak={testDemoEnabled}
           loading={a.busy}
           onClick={() =>
-            void a.perform(async () => {
-              await login(devName);
-              a.setAuthenticated(true);
-              await a.refresh();
-            })
+            void a.perform(
+              async () => {
+                await login(devName);
+                a.setAuthenticated(true);
+              },
+              undefined,
+              "all",
+            )
           }
         >
           {a.localRuntime ? "개발용으로 시작하기" : "토스로 시작하기"}
@@ -161,9 +168,6 @@ function Screens() {
           </button>
         </div>
       )}
-      {isDemoSession() && (a.path === "/" || a.path === "/account") && (
-        <TestControls />
-      )}
       {!game && (
         <header
           className={
@@ -204,6 +208,9 @@ function Screens() {
             </span>
           )}
         </header>
+      )}
+      {isDemoSession() && (a.path === "/" || a.path === "/account") && (
+        <TestControls />
       )}
       {noticeOpen && a.path === "/" && (
         <Modal title="업데이트 예정 안내" onClose={() => setNoticeOpen(false)}>
