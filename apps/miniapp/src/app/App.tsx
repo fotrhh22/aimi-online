@@ -3,6 +3,7 @@ import { AppProvider, useApp } from "./context";
 import { browserRuntime } from "../lib/runtime";
 import { TossProvider } from "../ui/toss-provider";
 import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
+import { WebAccountEntry } from "../features/demo/web-account-entry";
 import { TestControls } from "../features/demo/test-controls";
 import { testDemoEnabled, isDemoSession, startTestDemo } from "../lib/demo";
 import { login } from "../lib/toss/bridge";
@@ -70,28 +71,32 @@ function Screens() {
             />
           </label>
         )}
-        {testDemoEnabled && (
-          <>
-            <Button
-              loading={a.busy}
-              onClick={() =>
-                void a.perform(
-                  async () => {
-                    await startTestDemo();
-                    a.setAuthenticated(true);
-                  },
-                  undefined,
-                  "all",
-                )
-              }
-            >
-              테스트로 시작하기
-            </Button>
-            <p className="caption">
-              로그인 없이 테스트 계정으로 체험해요. 기록은 다른 테스트 접속자와
-              공유해요.
-            </p>
-          </>
+        {a.webDemoRuntime ? (
+          <WebAccountEntry />
+        ) : (
+          testDemoEnabled && (
+            <>
+              <Button
+                loading={a.busy}
+                onClick={() =>
+                  void a.perform(
+                    async () => {
+                      await startTestDemo();
+                      a.setAuthenticated(true);
+                    },
+                    undefined,
+                    "all",
+                  )
+                }
+              >
+                테스트로 시작하기
+              </Button>
+              <p className="caption">
+                로그인 없이 테스트 계정으로 체험해요. 기록은 다른 테스트
+                접속자와 공유해요.
+              </p>
+            </>
+          )
         )}
         {!a.webDemoRuntime && (
           <Button

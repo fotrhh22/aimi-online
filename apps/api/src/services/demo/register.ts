@@ -1,3 +1,11 @@
+import {
+  personalIdentity,
+  personalToken,
+  personalSession,
+  personalScope,
+  scopedRepository,
+  PersonalDemoRepository,
+} from "./personal.js";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import type { Pool } from "pg";
@@ -27,15 +35,48 @@ export function registerDemo(
   pool: Pool,
   secret: string,
   storeId?: string,
+  personal = false,
 ) {
-  const repo = new DemoRepository(pool, storeId);
+  const shared = new DemoRepository(pool, storeId);
+  const repo = personal ? scopedRepository(shared) : shared;
   app.register(
     async (instance) => {
+      if (personal)
+        instance.addHook("onRequest", (r, _reply, done) => {
+          try {
+            const isEntry = r.url.split("?")[0].endsWith("/session");
+            const identity = isEntry
+              ? null
+              : personalIdentity(secret, r.headers.authorization ?? "");
+            personalScope.run(
+              {
+                repo: identity
+                  ? new PersonalDemoRepository(pool, identity.hash)
+                  : shared,
+              },
+              done,
+            );
+          } catch (e) {
+            done(e as Error);
+          }
+        });
+      const epochOf = (r: FastifyRequest) =>
+        personal
+          ? personalIdentity(secret, r.headers.authorization ?? "").epoch
+          : demoTokenEpoch(secret, r.headers.authorization ?? "");
+      const tokenFor = (r: FastifyRequest, epoch: string) =>
+        personal
+          ? personalToken(
+              secret,
+              personalIdentity(secret, r.headers.authorization ?? "").hash,
+              epoch,
+            )
+          : demoToken(secret, epoch);
       instance.addHook("onRequest", async (_r, reply) => {
         reply.header("Cache-Control", "no-store");
       });
       const auth = async (r: FastifyRequest) => {
-        const epoch = demoTokenEpoch(secret, r.headers.authorization ?? "");
+        const epoch = epochOf(r);
         await repo.validateEpoch(epoch);
         return demoUser(epoch);
       };
@@ -54,6 +95,21 @@ export function registerDemo(
           };
         });
       instance.post("/session", async (r) => {
+        if (personal) {
+          const body = z
+            .union([
+              z.object({ create: z.literal(true) }).strict(),
+              z.object({ code: z.string().max(80) }).strict(),
+            ])
+            .parse(r.body);
+          return {
+            data: await personalSession(
+              pool,
+              secret,
+              "code" in body ? body.code : undefined,
+            ),
+          };
+        }
         z.object({})
           .strict()
           .parse(r.body ?? {});
@@ -63,16 +119,17 @@ export function registerDemo(
         z.object({})
           .strict()
           .parse(r.body ?? {});
-        const epoch = demoTokenEpoch(secret, r.headers.authorization ?? "");
+        const epoch = epochOf(r);
         const next = await repo.reset(epoch);
-        return { data: { token: demoToken(secret, next), demo: true } };
+        return { data: { token: tokenFor(r, next), demo: true } };
       });
       instance.get("/status", async (r) => {
         const id = await auth(r);
         const row = await repo.status(id);
         return {
           data: {
-            shared: true,
+            shared: !personal,
+            aiQuotaShared: true,
             aiLimit: 20,
             aiUsed: row.ai_calls.filter((t) => t > Date.now() - 3600000).length,
             aiNextAt: row.ai_calls
@@ -116,6 +173,6 @@ export function registerDemo(
       });
       registerPrototype(instance, repo, auth);
     },
-    { prefix: "/demo" },
+    { prefix: personal ? "/web-demo" : "/demo" },
   );
 }

@@ -31,13 +31,20 @@ export async function proxyDemo(request, send, fetchUpstream = fetch) {
   const path = url.searchParams.has("__demo_path")
     ? "/" + url.searchParams.get("__demo_path")
     : url.pathname.replace(/^\/api/, "");
-  if (!routes.some(([m, re]) => method === m && re.test(path)))
+  if (
+    !routes.some(
+      ([m, re]) =>
+        method === m && re.test(path.replace(/^\/web-demo(?=\/)/, "/demo")),
+    )
+  )
     return error(404, "NOT_FOUND");
   const auth = request.headers.authorization;
   if (
     auth &&
     (typeof auth !== "string" ||
-      !/^Bearer demo\.[a-f0-9-]{36}\.[a-f0-9]{64}$/.test(auth))
+      !/^Bearer (?:demo\.[a-f0-9-]{36}|guest\.[a-f0-9]{64}\.[a-f0-9-]{36})\.[a-f0-9]{64}$/.test(
+        auth,
+      ))
   )
     return error(401, "UNAUTHENTICATED");
   const headers = { "Content-Type": "application/json" };

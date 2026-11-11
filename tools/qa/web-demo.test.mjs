@@ -139,3 +139,31 @@ test("cold start HTML, network errors and oversized bodies get controlled errors
   );
   assert.equal(out.code, 413);
 });
+
+test("web proxy forwards scoped personal sessions without accepting production paths", async () => {
+  const out = response();
+  const auth =
+    "Bearer guest." +
+    "b".repeat(64) +
+    ".00000000-0000-4000-8000-000000000001." +
+    "c".repeat(64);
+  await proxyDemo(
+    {
+      url: "/api/web-demo/v1/state",
+      method: "GET",
+      headers: { authorization: auth },
+    },
+    out,
+    async (url, options) => {
+      assert.equal(
+        url,
+        "https://aimi-online-api.onrender.com/web-demo/v1/state",
+      );
+      assert.equal(options.headers.Authorization, auth);
+      return new Response(JSON.stringify({ data: { balance: 125 } }), {
+        headers: { "content-type": "application/json" },
+      });
+    },
+  );
+  assert.equal(out.code, 200);
+});

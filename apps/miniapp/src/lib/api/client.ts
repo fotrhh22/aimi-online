@@ -69,11 +69,17 @@ export async function request<T>(
   try {
     const sentToken = token();
     const demoPath =
-      import.meta.env.VITE_TEST_DEMO === "true" &&
-      sentToken?.startsWith("demo.") &&
-      !path.startsWith("/demo/")
-        ? "/demo" + path
-        : path;
+      webDemoRuntime
+        ? path.startsWith("/demo/")
+          ? path.replace(/^\/demo\//, "/web-demo/")
+          : path.startsWith("/web-demo/")
+            ? path
+            : "/web-demo" + path
+        : import.meta.env.VITE_TEST_DEMO === "true" &&
+            sentToken?.startsWith("demo.") &&
+            !path.startsWith("/demo/")
+          ? "/demo" + path
+          : path;
     const response = await fetch(base + demoPath, {
       method,
       headers: {
@@ -107,6 +113,9 @@ export async function request<T>(
   }
 }
 const messages: Record<string, string> = {
+  INVALID_ACCESS_CODE: "접속 코드를 다시 확인해주세요.",
+  ACCESS_CODE_NOT_FOUND:
+    "등록된 접속 코드가 아니에요. 발급받은 코드를 확인해주세요.",
   DEMO_AI_HOURLY_LIMIT:
     "Gemini는 전체 테스트 계정에서 시간당 20회까지 사용할 수 있어요. 잠시 후 다시 이용해주세요.",
   DEMO_AI_EXPIRED:

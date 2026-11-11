@@ -45,3 +45,28 @@ test("demo Gemini quota is rolling60min, shared and expires without an unlimited
     /DEMO_AI_EXPIRED/,
   );
 });
+
+import {
+  accountHash,
+  personalIdentity,
+  personalToken,
+} from "../src/services/demo/personal.js";
+test("personal recovery codes are normalized, hashed, and tokens are scoped to account and epoch", () => {
+  const code = "12345678-90ABCDEF-12345678-90ABCDEF";
+  const hash = accountHash(code);
+  assert.equal(hash, accountHash(code.toLowerCase().replaceAll("-", " ")));
+  assert.throws(() => accountHash("82792F5C"));
+  const token = personalToken("secret", hash, epoch);
+  assert.deepEqual(personalIdentity("secret", "Bearer " + token), {
+    hash,
+    epoch,
+  });
+  assert.throws(() => personalIdentity("other", "Bearer " + token));
+  assert.throws(() =>
+    personalIdentity("secret", "Bearer " + token.replace(hash, "b".repeat(64))),
+  );
+  assert.throws(() => demoTokenEpoch("secret", "Bearer " + token));
+  assert.throws(() =>
+    personalIdentity("secret", "Bearer " + demoToken("secret", epoch)),
+  );
+});

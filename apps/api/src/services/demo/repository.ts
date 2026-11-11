@@ -57,7 +57,7 @@ export class DemoRepository implements Repository {
   readonly development = false;
   readonly aiDailyLimit = 10000;
   constructor(
-    private pool: Pool,
+    protected pool: Pool,
     readonly storeId = "shared-ui-test-v1",
   ) {}
   async withStore<T>(fn: (row: DemoStore) => T): Promise<T> {

@@ -142,7 +142,10 @@ export function createApp(config: Config, pool: Pool) {
       }
     });
   }
-  if (process.env.ENABLE_TEST_DEMO === "true") registerDemo(app, pool, config.SESSION_SIGNING_KEY);
+  if (process.env.ENABLE_TEST_DEMO === "true") {
+    registerDemo(app, pool, config.SESSION_SIGNING_KEY);
+    registerDemo(app, pool, config.SESSION_SIGNING_KEY, undefined, true);
+  }
   const unlinkToss = registerTossAuth(
     app,
     pool,

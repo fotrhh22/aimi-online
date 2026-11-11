@@ -1403,5 +1403,15 @@ html[data-keyboard="open"] #root .page.with-tabs { padding-bottom:calc(24px + va
 html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
 
 /* Page titles belong to the scrolling content, never to the native safe area. */
-#root .page > .screen-head { position:static; padding:var(--space-section) 0 var(--space-content); }
+#root .page > .screen-head { position:static; padding:var(--space-section) 0 0; }
+#root .page[data-screen] > .screen-head + :not(dialog):not(.test-demo-controls) { margin-top:var(--space-content); }
 #root .page > .test-demo-controls { padding-inline:0; }
+
+#root .page > .screen-head + .test-demo-controls { margin-top:0; }
+#root .personal-account-tools { width:100%;display:flex;flex-direction:column;gap:12px; }
+#root .personal-account-tools code { display:block;overflow-wrap:anywhere;padding:8px 0;font-size:12px; }
+
+#root .page > .test-demo-controls + :not(dialog) { margin-top:0; }
+#root .issued-access-code { width:100%;padding:16px;border:1px solid var(--color-brand-text);border-radius:16px;box-sizing:border-box; }
+#root .issued-access-code code { display:block;font-size:13px;line-height:20px;overflow-wrap:anywhere;padding:12px 0; }
+#root .issued-access-code .caption { margin-top:8px; }

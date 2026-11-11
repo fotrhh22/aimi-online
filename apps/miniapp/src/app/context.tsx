@@ -26,7 +26,6 @@ import {
   browserRuntime,
   webDemoRuntime,
 } from "../lib/api/client";
-import { startTestDemo } from "../lib/demo";
 import { hostNavigation, updateNavigation, exit } from "../lib/toss/bridge";
 export type HomeState = {
   todayTip: DailyTip;
@@ -317,15 +316,6 @@ function useAppState() {
   const refreshVersion = useRef(0);
   const refresh = useCallback(async (includeContent = true) => {
     const version = ++refreshVersion.current;
-    if (webDemoRuntime && !token()) {
-      try {
-        await startTestDemo();
-      } catch (e) {
-        setError(errorText(e));
-        setLoading(false);
-        return;
-      }
-    }
     const session = token();
     if (!token()) {
       setLoading(false);
@@ -384,10 +374,6 @@ function useAppState() {
       setContent(null);
       setLoading(false);
       setError("");
-      if (webDemoRuntime) {
-        setLoading(true);
-        void refresh();
-      }
     };
     window.addEventListener("aimi-session-expired", expired);
     return () => window.removeEventListener("aimi-session-expired", expired);
