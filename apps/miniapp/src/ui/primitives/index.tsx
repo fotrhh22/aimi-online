@@ -39,6 +39,7 @@ export function Button({
     return (
       <button
         type="button"
+        data-aimi-button="native"
         className={"aimi-button " + (weak ? "weak " : "") + className}
         onClick={onClick}
         disabled={disabled || loading}

@@ -1420,3 +1420,6 @@ html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
 #root .issued-access-code { width:100%;padding:16px;border:1px solid var(--color-brand-text);border-radius:16px;box-sizing:border-box; }
 #root .issued-access-code code { display:block;font-size:13px;line-height:20px;overflow-wrap:anywhere;padding:12px 0; }
 #root .issued-access-code .caption { margin-top:8px; }
+
+/* Browser and weak actions must not inherit user-agent button layout defaults. */
+#root .aimi-button[data-aimi-button="native"] { display:flex;align-items:center;justify-content:center;padding-inline:0;appearance:none;-webkit-appearance:none;text-align:center; }
