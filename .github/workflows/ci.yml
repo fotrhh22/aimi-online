@@ -33,6 +33,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run typecheck
+      - run: npm run qa:labels
       - run: npm test
       - run: npm run test:web-demo
       - name: Build isolated Vercel web demo

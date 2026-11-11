@@ -205,7 +205,10 @@ export function Mission() {
     challenge =
       (d.attemptsUsed > 0 || (d.playsUsed >= 5 && !s.activePlay)) && !terminal;
   return (
-    <>
+    <section
+      className="mission-screen"
+      data-stage={terminal ? "finished" : challenge ? "challenge" : "game"}
+    >
       <h2 className="section-heading">
         {d.success
           ? "오늘의 목표를 완성했어요!"
@@ -312,14 +315,10 @@ export function Mission() {
               )
             }
           >
-            {terminal
-              ? d.success
-                ? "성공 결과 다시 보기"
-                : "마지막 챌린지 결과 보기"
-              : "챌린지 계속하기"}
+            {terminal ? "챌린지 결과 보기" : "챌린지 계속하기"}
           </Button>
         </>
       )}
-    </>
+    </section>
   );
 }

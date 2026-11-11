@@ -38,7 +38,7 @@ try{
  await page.getByRole('dialog').getByText('+5 EP',{exact:true}).waitFor({timeout:3000});
  const primaryHTML=await page.locator('.reward-dialog .aimi-button').evaluate(n=>n.outerHTML);
  await page.getByRole('dialog').getByRole('button',{name:'확인',exact:true}).click();
- const labels=['15예산 쓰기','저장하기','다시 시도하기','다시 확인','선택하기','구매하기','친구 삭제','취소'];
+ const labels=['힌트 보기','저장하기','다시 시도하기','다시 확인','선택하기','구매하기','친구 삭제','취소'];
  let cases=0;
  for(const width of [320,360,393,480]){
   await page.setViewportSize({width,height:852});

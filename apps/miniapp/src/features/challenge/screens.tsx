@@ -228,7 +228,7 @@ export function Challenge() {
   return (
     <>
       {introOpen && puzzle && stage === "selection" && !closed && (
-        <Modal title="그림 속 정답 단어를 찾아보세요" onClose={dismissIntro}>
+        <Modal title="그림 속 단어 찾기" onClose={dismissIntro}>
           <p>그림을 설명하는 단어를 모두 골라 프롬프트를 맞춰보세요.</p>
           <p className="caption">
             시도 {PUZZLE_ATTEMPT_COST}예산 · 개수 힌트 {PUZZLE_COUNT_HINT_COST}
@@ -241,14 +241,13 @@ export function Challenge() {
       )}
       {hintConfirm && (
         <Modal
-          title="정답 단어가 몇 개인지 알려드려요"
+          title="정답 개수 힌트"
           dismissible={!a.busy}
           onClose={() => setHintConfirm(false)}
         >
           <p>
-            어떤 단어를 더 골라야 할지 고민되나요? 예산 {PUZZLE_COUNT_HINT_COST}
-            을 쓰면 정답 단어가 모두 몇 개인지 알려드려요. 한 번 열면 오늘은
-            계속 볼 수 있어요.
+            {PUZZLE_COUNT_HINT_COST}예산을 사용하면 정답 단어 개수를 알려드려요.
+            오늘은 다시 구매하지 않아도 볼 수 있어요.
           </p>
           <p className="caption">
             구매 후 남을 예산 {Math.max(0, s.budget - PUZZLE_COUNT_HINT_COST)} ·
@@ -272,7 +271,7 @@ export function Challenge() {
                 if (purchased) setHintConfirm(false);
               }}
             >
-              {PUZZLE_COUNT_HINT_COST}예산 쓰기
+              힌트 보기
             </Button>
             <Button
               weak
@@ -390,7 +389,7 @@ export function Challenge() {
           <p className="caption">
             {submittedSelection
               ? "이미 확인한 조합이에요. 아래에서 결과를 펼쳐보거나 단어를 바꿔보세요."
-              : `시도 1회 ${cost}예산 · 시도 후 ${Math.max(0, s.budget - cost)} 남아요`}
+              : `1회 ${cost}예산 · 이후 ${Math.max(0, s.budget - cost)}예산`}
           </p>
           <PreviousCombinations
             attempts={history}

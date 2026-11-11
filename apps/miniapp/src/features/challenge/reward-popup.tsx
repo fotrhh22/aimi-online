@@ -30,7 +30,7 @@ export function ChallengeRewardPopup() {
                   "POST",
                   {},
                 ),
-              "챌린지 보상을 받았어요.",
+              `${attempt.ep} EP를 획득했어요.`,
             )
           }
         >

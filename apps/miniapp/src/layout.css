@@ -1185,7 +1185,6 @@
 #root .model-fact-rows > .model-aspect-ratios { grid-template-columns:minmax(0,1fr);gap:4px; }
 #root .model-fact-rows > .model-aspect-ratios > dd { min-width:0;max-width:100%;white-space:nowrap;overflow-x:auto;overflow-wrap:normal;text-align:left;scrollbar-width:thin;overscroll-behavior-x:contain;padding-bottom:4px; }
 
-#root .toast.toast-text-only { background:transparent;border:0;border-radius:0;box-shadow:none;padding:0;text-align:center;color:var(--color-brand-text);font-weight:700;pointer-events:none; }
 
 /* Count hints require explicit spending confirmation; targets stay visible. */
 #root button.challenge-count-hint { flex-basis:88px;gap:2px;padding:4px 6px;background:var(--color-background-bottom);color:var(--color-brand-text);border:1px solid #b8cda5;border-radius:12px;box-shadow:none; }
@@ -1204,7 +1203,7 @@
 #root dialog.overlay .dialog-actions { display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch; }
 #root dialog.overlay .dialog-actions:has(> .aimi-button ~ .aimi-button) { grid-template-columns:repeat(2,minmax(0,1fr)); }
 #root dialog.overlay .dialog-actions > * { min-width:0; }
-#root dialog.overlay .dialog-actions > .aimi-button { width:100%;height:auto;min-height:var(--button-height);padding:8px;white-space:normal;overflow-wrap:anywhere; }
+#root dialog.overlay .dialog-actions > .aimi-button { width:100%;height:auto;min-height:var(--button-height);padding:8px;white-space:nowrap;overflow-wrap:normal; }
 #root dialog.overlay .dialog-actions > .text-link { grid-column:1 / -1; }
 #root .hint-purchase-actions .aimi-button { font-size:14px; }
 
@@ -1345,3 +1344,57 @@ html { -webkit-text-size-adjust:100%;text-size-adjust:100%; }
 #root dialog.overlay .stat { gap:8px;align-items:baseline; }
 #root dialog.overlay .stat > span { min-width:0;font-size:13px;line-height:20px; }
 #root dialog.overlay .stat > strong { flex-shrink:0;white-space:nowrap;font-size:clamp(14px,4vw,18px);line-height:1.4; }
+
+/* Mission content owns its spacing; reserve only nav height + clearance, not a second footer. */
+#root .page[data-screen="/mission"].with-tabs { padding-bottom:calc(100px + var(--safe-bottom)); }
+#root .page[data-screen="/mission"] > .mission-screen {
+  display:flex;flex-direction:column;gap:12px;margin:0;min-width:0;
+}
+#root .mission-screen > * { margin:0;flex-shrink:0;min-width:0; }
+#root .mission-screen .section-heading { font-size:18px;line-height:24px;word-break:keep-all; }
+#root .mission-screen .mission-brief,
+#root .mission-screen > p { font-size:13px;line-height:19px;word-break:keep-all; }
+#root .mission-screen .game-preview { height:clamp(96px,calc(100dvh - 700px),144px); }
+#root .mission-screen .mission-target-image { display:block;width:100%;height:auto;max-height:clamp(128px,calc(100dvh - 650px),220px);object-fit:contain;margin:0; }
+#root .mission-screen .notice { padding:12px; }
+#root .mission-screen .stat + .stat { margin-top:6px; }
+#root .mission-screen .stat { gap:8px; }
+#root .mission-screen .stat > span { font-size:13px;line-height:20px; }
+#root .mission-screen .aimi-button-label { font-size:16px;line-height:22px;white-space:nowrap; }
+#root .mission-screen > .text-link { min-height:32px;padding-block:4px; }
+
+/* Only the content pane scrolls: native navigation and page headers remain outside it. */
+#root .app-shell { height:var(--visual-viewport-height,100dvh);min-height:0;overflow:hidden; }
+#root .app-shell > .page,
+#root .app-shell > .dev-platform ~ .page { flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior-y:contain; }
+#root .screen-head, #root .dev-platform, #root .test-demo-controls { flex-shrink:0; }
+#root .page.with-tabs { padding-bottom:calc(100px + var(--safe-bottom)); }
+#root .page[data-screen="/challenge/combination"] > :not(dialog) + :not(dialog) { margin-top:10px; }
+#root .page[data-screen="/challenge/combination"] > .challenge-combination-target { margin-block:10px; }
+#root .page[data-screen="/challenge/combination"] .challenge-combination-target .challenge-art { max-height:clamp(96px,calc(100dvh - 710px),150px); }
+#root .page[data-screen="/challenge/combination"] .challenge-sentence-card { padding:12px; }
+#root .page[data-screen="/challenge/combination"] .challenge-sentence-card > p { font-size:15px;line-height:22px; }
+#root .page[data-screen="/challenge/combination"] .challenge-selected-labels > span { font-size:12px;line-height:18px;padding:3px 6px; }
+#root .page[data-screen="/challenge/combination"] .challenge-previous-results > summary { min-height:32px; }
+#root .page[data-screen="/challenge/combination"] > .fixed-cta { margin-top:auto;padding-top:12px; }
+#root dialog.overlay:not(.sheet) {
+  inset:var(--content-safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+  max-height:calc(100dvh - var(--content-safe-top) - var(--safe-bottom) - 24px);
+}
+#root dialog.overlay.sheet { max-height:min(78dvh,calc(100dvh - var(--content-safe-top) - 12px)); }
+#root .toast.toast-reward { background:var(--color-brand-text);color:#fff;border:2px solid #c3d9aa;border-radius:18px;padding:14px 20px;font-size:16px;line-height:24px;font-weight:700;box-shadow:0 4px 16px #203c2426;text-align:center; }
+html[data-keyboard="open"] #root .page.with-tabs { padding-bottom:calc(24px + var(--safe-bottom)); }
+#root .page[data-screen="/"] > .today-card { margin-top:8px; }
+#root .page[data-screen="/"] > .reward-grid,
+#root .page[data-screen="/"] > .entry-list { margin-top:16px; }
+#root .page[data-screen="/"] > .account-link { margin-top:8px; }
+
+#root .page[data-screen="/garden/edit"] > :not(dialog) + :not(dialog) { margin-top:12px; }
+#root .page[data-screen="/garden/edit"] > .button-row { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px; }
+#root .page[data-screen="/garden/edit"] > .button-row .aimi-button-label { font-size:14px;white-space:nowrap; }
+#root .page[data-screen^="/friends/"] > :not(dialog) + :not(dialog) { margin-top:12px; }
+#root .page[data-screen="/garden/edit"] { padding-bottom:calc(16px + var(--safe-bottom)); }
+#root .page[data-screen="/garden/edit"] > :not(dialog) + :not(dialog) { margin-top:8px; }
+#root .farm-inventory { scrollbar-width:none; }
+#root .farm-inventory::-webkit-scrollbar { height:0; }
+#root .page[data-screen="/garden/edit"] { padding-bottom:calc(8px + var(--safe-bottom)); }

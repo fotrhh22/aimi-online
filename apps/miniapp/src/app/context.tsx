@@ -1,3 +1,4 @@
+import { pageScrollTop, restorePageScroll } from "../lib/page-scroll";
 import { parentRoute, navigationTrail } from "./navigation";
 import React, {
   createContext,
@@ -115,11 +116,11 @@ function useAppState() {
       };
       if (replace) history.replaceState(snapshot, "", next);
       else history.pushState(snapshot, "", next);
-      scrollPositions.current.set(currentPath.current, window.scrollY ?? 0);
+      scrollPositions.current.set(currentPath.current, pageScrollTop());
       currentPath.current = next;
       setPath(next);
       requestAnimationFrame(() =>
-        window.scrollTo(0, scrollPositions.current.get(next) ?? 0),
+        restorePageScroll(scrollPositions.current.get(next) ?? 0),
       );
     },
     [],
@@ -229,12 +230,12 @@ function useAppState() {
           restore();
           return;
         }
-        scrollPositions.current.set(currentPath.current, window.scrollY ?? 0);
+        scrollPositions.current.set(currentPath.current, pageScrollTop());
         nav.current = { index: incoming.index, trail: incoming.trail };
         currentPath.current = next;
         setPath(next);
         requestAnimationFrame(() =>
-          window.scrollTo(0, scrollPositions.current.get(next) ?? 0),
+          restorePageScroll(scrollPositions.current.get(next) ?? 0),
         );
         return;
       }

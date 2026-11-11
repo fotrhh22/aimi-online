@@ -29,6 +29,12 @@ export function TestControls() {
     <aside className="test-demo-controls">
       <span>
         테스트 계정 · 실제 보상 아님
+        {a.path === "/account" && (
+          <>
+            <br />
+            UI 버전 20261112-R3
+          </>
+        )}
         {a.path === "/account" && ai && (
           <>
             <br />

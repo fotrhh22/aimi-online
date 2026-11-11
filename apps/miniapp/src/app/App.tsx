@@ -280,7 +280,7 @@ function Screens() {
         <div
           className={
             "toast" +
-            (a.toast === "챌린지 보상을 받았어요." ? " toast-text-only" : "")
+            (/^\d+ EP를 획득했어요/.test(a.toast) ? " toast-reward" : "")
           }
           role="status"
         >

@@ -365,8 +365,8 @@ export function Garden() {
           </div>
           <p className="muted caption">
             {tab === "items"
-              ? "보유 아이템을 추가하고 정원 안에서 끌어 옮겨요."
-              : "현재 착용 중인 캐릭터"}
+              ? `배치 ${placements.length}/${MAX_GARDEN_ITEMS} · 눌러 추가하고 끌어 옮겨요.`
+              : "상자를 눌러 보유 캐릭터를 바꿔보세요."}
           </p>
           {tab === "items" ? (
             <div
@@ -428,11 +428,6 @@ export function Garden() {
               <span>›</span>
             </button>
           )}
-          <p className="caption section">
-            {tab === "items"
-              ? `배치 ${placements.length} / ${MAX_GARDEN_ITEMS}개 · 아이템을 끌어서 옮겨요.`
-              : "상자를 눌러 다른 보유 캐릭터로 바꿔보세요."}
-          </p>
           <div className="button-row">
             <Button
               weak
