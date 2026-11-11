@@ -1268,3 +1268,6 @@
 #root .challenge-learning-tip > strong { font-size:14px;line-height:20px;color:var(--color-brand-text); }
 #root .challenge-learning-tip > p { margin:0;font-size:15px;line-height:22px;overflow-wrap:anywhere; }
 #root .challenge-learning-tip > .challenge-tip-source { font-size:12px;line-height:18px;color:var(--color-muted); }
+
+#root .test-demo-controls { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-peer);font-size:11px;line-height:18px;color:var(--color-muted);padding-block:var(--space-peer); }
+#root .test-demo-controls > button { min-height:44px;font-size:12px; }

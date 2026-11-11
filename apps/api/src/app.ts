@@ -15,6 +15,7 @@ import {
 import { ZodError } from "zod";
 import type { Config } from "./config.js";
 import { ApiError } from "./db.js";
+import { registerDemo } from "./services/demo/register.js";
 import { registerTossAuth } from "./services/toss/auth.js";
 import { registerPrototype } from "./modules/routes.js";
 import { PostgresRepository } from "./modules/repository.js";
@@ -141,6 +142,7 @@ export function createApp(config: Config, pool: Pool) {
       }
     });
   }
+  if (process.env.ENABLE_TEST_DEMO === "true") registerDemo(app, pool, config.SESSION_SIGNING_KEY);
   const unlinkToss = registerTossAuth(
     app,
     pool,

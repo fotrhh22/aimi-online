@@ -1,3 +1,18 @@
+## 토스 UI 테스트 전용 계정 구현 (2026-11-11)
+
+- 정식 토스 로그인 유지. 명시적 테스트 빌드에만 테스트로 시작하기/홈·계정 초기화 추가. /demo API와 aimi.test_demo_stores로 실제 계정·원장을 격리. 초기화는 새 epoch로 기존 세션/비동기 결과 차단.
+- Gemini는 실제 호출, 전체 최근60분20회/첫 테스트 접속부터48시간. reset으로 사용량/기간 복원 불가. 운영 기능별 일일 한도는 유지.
+-104개 단위/도메인 테스트, 실제DB 임시 행의 동시 한도/초기화/인증격리 검사 통과. 일반 빌드의 테스트 문구 제외 확인. 상세 TOSS_UI_TEST_DEMO.md. 원격 배포·번들 검증 결과는 후속 기록.
+
+## Vercel 데모 Gemini 임시 한도 계획 (2026-11-11)
+
+- Gemini만 데모 전체20회/최근60분, 실제 공개 후48시간 사용 가능으로 계획 수정. 초기화/재시작으로 연장되지 않는 DB 카운터·시작/만료 시각, 실제 외부 호출 기준 집계, 만료 후 AI 차단을 정의했다. 토스 운영 한도·원격 환경변수는 변경하지 않았다.
+
+## Vercel 단일 테스트 계정 계획 (2026-11-11, 계획만)
+
+- VERCEL_DEMO_DEPLOYMENT_PLAN.md 작성. Vercel 웹/서버 프록시→Render /demo→Supabase 별도 데모 저장소 구성. 단일 공유 계정·125EP·샘플 친구·초기화 버튼, 동시 요청/epoch/실제 AI 사용량 상한 분리 계획.
+- 기존 토스 로그인·운영 계정/원장·개발 인증 차단은 유지. 이번에는 계획 문서만 작성했으며 구현·migration·원격 설정/배포는 수행하지 않음.
+
 ## Supabase·Render 최신 테스트 반영 완료 (2026-11-11)
 
 - 코드7531f43을 GitHub main에 push하고 Render dep-dbq6vtetehms73bb38gg live 확인. 실제 health/live·ready200, ready.commit 일치 및 source=supabase/releases10/preview=true 확인.

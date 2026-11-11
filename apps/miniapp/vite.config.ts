@@ -1,5 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+if (
+  process.env.VITE_TEST_DEMO === "true" &&
+  process.env.AIMI_TEST_BUILD !== "true"
+)
+  throw Error("DEMO_REQUIRES_EXPLICIT_TEST_BUILD");
 export default defineConfig({
   plugins: [react()],
   server: {

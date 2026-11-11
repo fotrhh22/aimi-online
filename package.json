@@ -36,7 +36,8 @@
     "models:audit:collect": "node tools/model-sync/audit-lifecycle-collect.mjs",
     "models:audit:build": "python3 tools/model-sync/build-lifecycle-policy.py",
     "models:audit:report": "npm run build:shared && node tools/model-sync/report-lifecycle.mjs",
-    "preview:reset": "npm run build:shared && node tools/reset-preview.mjs"
+    "preview:reset": "npm run build:shared && node tools/reset-preview.mjs",
+    "ait:build:test": "node tools/build-test-ait.mjs"
   },
   "engines": {
     "node": ">=22.12.0"

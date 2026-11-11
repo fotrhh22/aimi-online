@@ -42,6 +42,7 @@ export function newState(id: string, development = false): UserState {
 }
 export interface Repository {
   development: boolean;
+  aiDailyLimit?: number;
   read(id: string): Promise<UserState>;
   transaction<T>(
     ids: string[],

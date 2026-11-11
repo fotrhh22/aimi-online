@@ -57,11 +57,18 @@ export async function request<T>(
     timer = setTimeout(() => controller.abort(), 35000);
   if (mutation) window.dispatchEvent(new Event("aimi-write-start"));
   try {
-    const response = await fetch(base + path, {
+    const sentToken = token();
+    const demoPath =
+      import.meta.env.VITE_TEST_DEMO === "true" &&
+      sentToken?.startsWith("demo.") &&
+      !path.startsWith("/demo/")
+        ? "/demo" + path
+        : path;
+    const response = await fetch(base + demoPath, {
       method,
       headers: {
         "Content-Type": "application/json",
-        ...(token() ? { Authorization: "Bearer " + token() } : {}),
+        ...(sentToken ? { Authorization: "Bearer " + sentToken } : {}),
         ...(mutation ? { "Idempotency-Key": keys.get(signature)! } : {}),
       },
       body: body === undefined ? undefined : JSON.stringify(body),
@@ -69,7 +76,7 @@ export async function request<T>(
     });
     const data = await response.json();
     if (!response.ok) {
-      if (response.status === 401 && token()) {
+      if (response.status === 401 && sentToken && token() === sentToken) {
         setToken(null);
         window.dispatchEvent(new Event("aimi-session-expired"));
       }
@@ -90,6 +97,12 @@ export async function request<T>(
   }
 }
 const messages: Record<string, string> = {
+  DEMO_AI_HOURLY_LIMIT:
+    "Gemini는 전체 테스트 계정에서 시간당 20회까지 사용할 수 있어요. 잠시 후 다시 이용해주세요.",
+  DEMO_AI_EXPIRED:
+    "48시간의 AI 테스트 이용 기간이 끝났어요. 다른 기능은 계속 이용할 수 있어요.",
+  DEMO_RESET_BUSY: "방금 초기화했어요. 잠시 후 다시 눌러주세요.",
+  DEMO_RESET_REQUIRED: "테스트 계정은 탈퇴 대신 테스트 초기화를 이용해주세요.",
   NETWORK_ERROR: "연결을 확인한 뒤 다시 시도해주세요.",
   UNAUTHENTICATED: "다시 로그인해주세요.",
   GAME_DAILY_LIMIT: "오늘 게임은 모두 마쳤어요.",

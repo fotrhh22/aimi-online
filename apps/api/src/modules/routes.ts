@@ -407,7 +407,7 @@ export function registerPrototype(
           s,
           date,
           "optimizer",
-          Math.min(50, Number(process.env.OPTIMIZER_DAILY_LIMIT) || 5),
+          repo.aiDailyLimit ?? Math.min(50, Number(process.env.OPTIMIZER_DAILY_LIMIT) || 5),
         );
         created = true;
         const j: AIJob = {
@@ -555,7 +555,7 @@ export function registerPrototype(
       source = previous.taskAnalysis?.source ?? previous.result!.source;
     } else {
       const date = seoulDate(),
-        limit = Math.min(
+        limit = repo.aiDailyLimit ?? Math.min(
           50,
           Number(process.env.RECOMMENDATION_DAILY_LIMIT) || 5,
         ),

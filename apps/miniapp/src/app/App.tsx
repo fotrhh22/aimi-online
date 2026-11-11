@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { AppProvider, useApp } from "./context";
 import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
+import { TestControls } from "../features/demo/test-controls";
+import { testDemoEnabled, isDemoSession, startTestDemo } from "../lib/demo";
 import { login } from "../lib/toss/bridge";
 import { Home, Mission } from "../features/home/screens";
 import { Garden, Shop, Social, Account } from "../features/garden/screens";
@@ -67,7 +69,27 @@ function Screens() {
             />
           </label>
         )}
+        {testDemoEnabled && (
+          <>
+            <Button
+              loading={a.busy}
+              onClick={() =>
+                void a.perform(async () => {
+                  await startTestDemo();
+                  a.setAuthenticated(true);
+                })
+              }
+            >
+              테스트로 시작하기
+            </Button>
+            <p className="caption">
+              로그인 없이 테스트 계정으로 체험해요. 기록은 다른 테스트 접속자와
+              공유해요.
+            </p>
+          </>
+        )}
         <Button
+          weak={testDemoEnabled}
           loading={a.busy}
           onClick={() =>
             void a.perform(async () => {
@@ -138,6 +160,9 @@ function Screens() {
             ···
           </button>
         </div>
+      )}
+      {isDemoSession() && (a.path === "/" || a.path === "/account") && (
+        <TestControls />
       )}
       {!game && (
         <header
