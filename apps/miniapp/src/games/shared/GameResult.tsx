@@ -69,7 +69,7 @@ export function GameResult() {
       )}
       <div className="dialog-actions">
         <Button onClick={() => a.navigate("/challenge")}>
-          {cleared ? "챌린지 도전하러 가기" : "이미지 챌린지 도전하기"}
+          챌린지 시작하기
         </Button>
         {!cleared && (
           <Button

@@ -8,9 +8,9 @@ import {
 export function feedbackLabel(a: Attempt) {
   if (a.passed || a.feedbackStatus === "complete")
     return "모든 키워드를 맞혔어요";
-  if (a.feedbackStatus === "partial") return "맞았지만 더 찾으세요";
-  if (a.feedbackStatus === "none") return "키워드가 아예 포함 안 돼요";
-  if (a.feedbackStatus === "mixed") return "포함되지 않은 키워드가 있어요";
+  if (a.feedbackStatus === "partial") return "맞는 단어를 더 찾아보세요";
+  if (a.feedbackStatus === "none") return "아직 맞는 단어가 없어요";
+  if (a.feedbackStatus === "mixed") return "다시 확인할 단어가 있어요";
   return "이전 규칙의 챌린지 결과예요";
 }
 export function AttemptResults({
@@ -37,7 +37,7 @@ export function AttemptResults({
             key={a.id}
           >
             <header>
-              <h3>{a.attemptNumber ?? i + 1}차 챌린지</h3>
+              <h3>{a.attemptNumber ?? i + 1}번째 시도</h3>
               <span className="caption">{a.cost}예산 사용</span>
             </header>
             <div className="attempt-result-columns">
@@ -92,7 +92,13 @@ export function AttemptResults({
 }
 
 /** Both screens expand history in place, without navigation or duplicate round headers. */
-export function PreviousCombinations({ attempts, keywords }: { attempts: Attempt[]; keywords: Keyword[] }) {
+export function PreviousCombinations({
+  attempts,
+  keywords,
+}: {
+  attempts: Attempt[];
+  keywords: Keyword[];
+}) {
   if (!attempts.length) return null;
   return (
     <details className="challenge-previous-results">

@@ -285,7 +285,7 @@ export function Challenge() {
       )}
       {puzzle && (stage === "selection" || stage === "combination") && (
         <div className="challenge-round-meta">
-          <strong>{s.daily.attemptsUsed + 1}차 챌린지</strong>
+          <strong>{s.daily.attemptsUsed + 1}번째 시도</strong>
           <span>
             예산 {s.budget} · 남은 시도 {attemptsLeft}회
           </span>
@@ -463,14 +463,14 @@ export function Challenge() {
                 {shownAttempt.passed
                   ? "성공했어요!"
                   : closed
-                    ? "챌린지에 실패"
+                    ? "아쉽게 실패했어요"
                     : "아직 정답이 아니에요"}
               </h2>
               <p>
                 {shownAttempt.passed
                   ? "목표 이미지의 키워드를 모두 맞혔어요."
                   : closed
-                    ? "이번 챌린지는 끝났어요. 정답과 작성 팁을 확인해보세요."
+                    ? "오늘의 챌린지를 마쳤어요. 해설에서 정답과 작성 팁을 확인해보세요."
                     : "선택한 키워드를 확인하고 다시 시도해보세요."}
               </p>
             </section>
@@ -601,7 +601,7 @@ export function Challenge() {
           )}
           {!closed && shownAttempt && (
             <Button onClick={() => a.navigate("/mission", { replace: true })}>
-              다시 챌린지하기
+              다시 시도하기
             </Button>
           )}
         </div>

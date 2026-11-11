@@ -1171,8 +1171,13 @@
 #root .challenge-outcome > h2 { color:var(--color-brand-text); }
 #root .challenge-outcome > p { margin-top:var(--space-peer);font-size:14px;line-height:22px; }
 #root .challenge-reward-amount { font-size:28px;line-height:36px;font-weight:700;color:var(--color-brand-text); }
-#root .challenge-model-attribution { display:flex;align-items:baseline;flex-wrap:wrap;gap:var(--space-peer);min-width:0; }
-#root .challenge-model-attribution > p { font-size:14px;line-height:22px;overflow-wrap:anywhere; }
+#root .challenge-model-attribution { display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--space-peer);min-width:0; }
+#root .challenge-model-attribution > p { margin:0;font-size:14px;line-height:22px;overflow-wrap:anywhere; }
+#root .challenge-model-attribution > .model-info-link { align-self:center;white-space:nowrap;line-height:22px; }
+@media(max-width:340px) {
+  #root .challenge-model-attribution { grid-template-columns:minmax(0,1fr);gap:0; }
+  #root .challenge-model-attribution > .model-info-link { justify-self:start; }
+}
 
 /* Compact generation pricing while retaining a 44px disclosure hit area. */
 #root .model-price-details { margin-top:var(--space-peer); }

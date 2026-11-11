@@ -284,7 +284,7 @@ export function Mission() {
                           (d.challengeVersion ? "%" : "점"),
                       ],
                       [
-                        d.success ? "성공 보상" : "남은 챌린지",
+                        d.success ? "성공 보상" : "남은 시도",
                         d.success
                           ? "+" + s.latestAttempt?.ep + " EP · 지급 완료"
                           : "예산 소진 · 추가 시도 불가",
@@ -293,7 +293,7 @@ export function Mission() {
                   : [
                       ["게임", `${d.playsUsed}회 플레이 완료`],
                       [
-                        "남은 챌린지",
+                        "남은 시도",
                         `${s.challengeRemaining ?? Math.max(0, 5 - d.attemptsUsed)}회`,
                       ],
                       ["현재 챌린지 예산", String(s.budget)],

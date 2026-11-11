@@ -48,7 +48,7 @@ function Screens() {
         <h1>
           <BrandLogo />
         </h1>
-        <p>오늘의 작은 도전을 준비해요</p>
+        <p>오늘의 챌린지를 준비해요</p>
         <progress aria-label="불러오는 중" />
         <small>잠시만 기다려주세요</small>
       </main>
@@ -60,7 +60,7 @@ function Screens() {
         <h1>
           <BrandLogo />
         </h1>
-        <p>오늘의 작은 도전과 나만의 정원</p>
+        <p>오늘의 챌린지와 나만의 정원</p>
         {a.localRuntime && (
           <label>
             개발용 사용자

@@ -68,18 +68,17 @@ export async function request<T>(
   if (mutation) window.dispatchEvent(new Event("aimi-write-start"));
   try {
     const sentToken = token();
-    const demoPath =
-      webDemoRuntime
-        ? path.startsWith("/demo/")
-          ? path.replace(/^\/demo\//, "/web-demo/")
-          : path.startsWith("/web-demo/")
-            ? path
-            : "/web-demo" + path
-        : import.meta.env.VITE_TEST_DEMO === "true" &&
-            sentToken?.startsWith("demo.") &&
-            !path.startsWith("/demo/")
-          ? "/demo" + path
-          : path;
+    const demoPath = webDemoRuntime
+      ? path.startsWith("/demo/")
+        ? path.replace(/^\/demo\//, "/web-demo/")
+        : path.startsWith("/web-demo/")
+          ? path
+          : "/web-demo" + path
+      : import.meta.env.VITE_TEST_DEMO === "true" &&
+          sentToken?.startsWith("demo.") &&
+          !path.startsWith("/demo/")
+        ? "/demo" + path
+        : path;
     const response = await fetch(base + demoPath, {
       method,
       headers: {
@@ -129,7 +128,7 @@ const messages: Record<string, string> = {
   GAME_DAILY_LIMIT: "오늘 게임은 모두 마쳤어요.",
   GAME_CHALLENGE_STARTED: "챌린지를 시작한 뒤에는 게임을 할 수 없어요.",
   GAME_CHALLENGE_FINISHED: "오늘 챌린지가 끝났어요. 내일 새 게임으로 만나요.",
-  CHALLENGE_DAILY_LIMIT: "오늘 챌린지 도전을 모두 마쳤어요.",
+  CHALLENGE_DAILY_LIMIT: "오늘의 챌린지를 모두 마쳤어요.",
   GAME_REQUIRED: "게임을 먼저 플레이해주세요.",
   INSUFFICIENT_EP: "EP를 더 모으면 구매할 수 있어요.",
   ALREADY_OWNED: "이미 보유하고 있어요.",
@@ -155,7 +154,7 @@ const messages: Record<string, string> = {
   AI_QUOTA_EXCEEDED: "AI 사용량이 많아요. 잠시 후 다시 시도해주세요.",
   GARDEN_PRIVATE: "지금은 이 정원을 방문할 수 없어요.",
   HINT_REQUIRES_ATTEMPT_BUDGET:
-    "힌트 구매 후 도전할 30예산을 남겨야 해요. 45예산 이상일 때 구매할 수 있어요.",
+    "힌트를 본 뒤에도 한 번 시도할 예산 30이 필요해요. 예산이 45 이상일 때 힌트를 볼 수 있어요.",
   CHALLENGE_CLOSED: "오늘 챌린지는 종료됐어요. 결과를 확인해주세요.",
   CONTENT_VERSION_CHANGED:
     "문제가 바뀌었어요. 화면을 새로고침한 뒤 다시 선택해주세요.",
