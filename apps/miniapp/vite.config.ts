@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { lockedViewport } from "./src/lib/scale-policy";
 if (
   process.env.VITE_TEST_DEMO === "true" &&
   process.env.AIMI_TEST_BUILD !== "true"
@@ -12,7 +13,20 @@ if (
 )
   throw Error("WEB_DEMO_REQUIRES_EXPLICIT_TEST_BUILD");
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "aimi-toss-viewport",
+      apply: "build",
+      transformIndexHtml(html) {
+        if (process.env.VITE_APP_RUNTIME === "web-demo") return html;
+        return html.replace(
+          /(name="viewport"\s+content=")[^"]*(")/,
+          "$1" + lockedViewport + "$2",
+        );
+      },
+    },
+  ],
   server: {
     proxy: {
       "/api": {
