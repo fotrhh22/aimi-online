@@ -4,7 +4,7 @@ import { resolve, extname } from "node:path";
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { proxyDemo } from "../../api/demo.js";
-const root = resolve("apps/miniapp/dist");
+const root = resolve(process.env.AIMI_AUDIT_DIST || "apps/miniapp/dist");
 const server = createServer(async (req, res) => {
   const path = new URL(req.url, "http://local").pathname;
   if (path.startsWith("/api/")) {
@@ -306,7 +306,7 @@ try {
       await page.waitForTimeout(80);
       const g = await page.evaluate(() => {
         const main = document.querySelector(".app-shell > main:not([hidden])");
-        const header = document.querySelector(".screen-head");
+        const header = document.querySelector("main:not([hidden]) > .screen-head");
         return {
           pageScroll: main.scrollHeight - main.clientHeight,
           documentScroll: document.documentElement.scrollHeight - innerHeight,
@@ -339,11 +339,12 @@ try {
       const after = await page.evaluate(() => ({
         doc: window.scrollY,
         header:
-          document.querySelector(".screen-head")?.getBoundingClientRect().top ??
+          document.querySelector("main:not([hidden]) > .screen-head")?.getBoundingClientRect().top ??
           null,
       }));
       assert.equal(after.doc, 0);
-      assert.equal(after.header, g.headerTop);
+      const scroll = await page.evaluate(() => document.querySelector(".app-shell > main:not([hidden])").scrollTop);
+      if (g.headerTop !== null) assert.ok(Math.abs(after.header - (g.headerTop - scroll)) < 1, "Title must scroll with content");
       await page.close();
     }
   }

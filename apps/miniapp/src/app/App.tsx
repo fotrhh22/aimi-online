@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { AppProvider, useApp } from "./context";
+import { browserRuntime } from "../lib/runtime";
+import { TossProvider } from "../ui/toss-provider";
 import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
 import { TestControls } from "../features/demo/test-controls";
 import { testDemoEnabled, isDemoSession, startTestDemo } from "../lib/demo";
@@ -154,6 +155,45 @@ function Screens() {
         <Button onClick={() => a.navigate("/")}>홈으로</Button>
       </>
     );
+  const screenHeader = (
+    <header
+      className={"screen-head" + (a.path === "/" ? " home-screen-head" : "")}
+    >
+      <h1>
+        {a.path === "/" ? (
+          <BrandLogo />
+        ) : a.path.startsWith("/challenge/answer/") ? (
+          "챌린지 해설"
+        ) : (a.path.startsWith("/challenge") &&
+            (a.data.daily.success || a.data.daily.challengeClosed)) ||
+          a.path.startsWith("/challenge/result/") ? (
+          "챌린지 결과"
+        ) : a.path.startsWith("/results/game/") ? (
+          "게임 결과"
+        ) : a.path.startsWith("/models/") ? (
+          "모델 상세"
+        ) : a.path.startsWith("/friends/") ? (
+          "친구 정원"
+        ) : (
+          (titles[a.path] ?? "AIMI")
+        )}
+      </h1>
+      {a.path === "/" && (
+        <button
+          className="home-notice-button"
+          aria-label="공지"
+          onClick={() => setNoticeOpen(true)}
+        >
+          공지
+        </button>
+      )}
+      {hasBalance && (
+        <span className="balance">
+          {a.data.balance} <small>EP</small>
+        </span>
+      )}
+    </header>
+  );
   return (
     <div className={"app-shell " + (game ? "game-shell" : "")}>
       {a.browserRuntime && (
@@ -169,50 +209,6 @@ function Screens() {
             ···
           </button>
         </div>
-      )}
-      {!game && (
-        <header
-          className={
-            "screen-head" + (a.path === "/" ? " home-screen-head" : "")
-          }
-        >
-          <h1>
-            {a.path === "/" ? (
-              <BrandLogo />
-            ) : a.path.startsWith("/challenge/answer/") ? (
-              "챌린지 해설"
-            ) : (a.path.startsWith("/challenge") &&
-                (a.data.daily.success || a.data.daily.challengeClosed)) ||
-              a.path.startsWith("/challenge/result/") ? (
-              "챌린지 결과"
-            ) : a.path.startsWith("/results/game/") ? (
-              "게임 결과"
-            ) : a.path.startsWith("/models/") ? (
-              "모델 상세"
-            ) : a.path.startsWith("/friends/") ? (
-              "친구 정원"
-            ) : (
-              (titles[a.path] ?? "AIMI")
-            )}
-          </h1>
-          {a.path === "/" && (
-            <button
-              className="home-notice-button"
-              aria-label="공지"
-              onClick={() => setNoticeOpen(true)}
-            >
-              공지
-            </button>
-          )}
-          {hasBalance && (
-            <span className="balance">
-              {a.data.balance} <small>EP</small>
-            </span>
-          )}
-        </header>
-      )}
-      {isDemoSession() && (a.path === "/" || a.path === "/account") && (
-        <TestControls />
       )}
       {noticeOpen && a.path === "/" && (
         <Modal title="업데이트 예정 안내" onClose={() => setNoticeOpen(false)}>
@@ -231,6 +227,10 @@ function Screens() {
         data-screen={a.path.split("?")[0]}
         className={game ? "game-main" : "page " + (nav ? "with-tabs" : "")}
       >
+        {!game && screenHeader}
+        {isDemoSession() && (a.path === "/" || a.path === "/account") && (
+          <TestControls />
+        )}
         {body}
       </main>
       {visitedAI.current.optimizer && (
@@ -239,6 +239,7 @@ function Screens() {
           data-screen="/optimizer"
           className="page"
         >
+          {screenHeader}
           <Optimizer key={"optimizer-" + a.aiEpoch} />
         </main>
       )}
@@ -248,6 +249,7 @@ function Screens() {
           data-screen="/recommendations"
           className="page"
         >
+          {screenHeader}
           <Recommendations key={"recommendations-" + a.aiEpoch} />
         </main>
       )}
@@ -291,11 +293,12 @@ function Screens() {
   );
 }
 export function App() {
-  return (
-    <TDSMobileAITProvider brandPrimaryColor="#527A41">
-      <AppProvider>
-        <Screens />
-      </AppProvider>
-    </TDSMobileAITProvider>
+  // Toss builds keep the official TDS provider; the web demo renders without it
+  // because @toss/tds-mobile throws on non-Toss hosts and blanks the screen.
+  const content = (
+    <AppProvider>
+      <Screens />
+    </AppProvider>
   );
+  return browserRuntime ? content : <TossProvider>{content}</TossProvider>;
 }

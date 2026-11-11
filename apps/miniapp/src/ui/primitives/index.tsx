@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { Button as TDSButton } from "@toss/tds-mobile";
+import { browserRuntime } from "../../lib/runtime";
 export function BrandLogo() {
   return (
     <svg
@@ -32,11 +33,13 @@ export function Button({
   loading?: boolean;
   className?: string;
 }) {
-  if (weak) {
+  // The web demo cannot render the TDS Button (@toss/tds-mobile throws on
+  // non-Toss hosts), so every button uses the plain HTML fallback there.
+  if (weak || browserRuntime) {
     return (
       <button
         type="button"
-        className={"aimi-button weak " + className}
+        className={"aimi-button " + (weak ? "weak " : "") + className}
         onClick={onClick}
         disabled={disabled || loading}
         aria-busy={loading || undefined}

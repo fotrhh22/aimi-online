@@ -1363,7 +1363,7 @@ html { -webkit-text-size-adjust:100%;text-size-adjust:100%; }
 #root .mission-screen .aimi-button-label { font-size:16px;line-height:22px;white-space:nowrap; }
 #root .mission-screen > .text-link { min-height:32px;padding-block:4px; }
 
-/* Only the content pane scrolls: native navigation and page headers remain outside it. */
+/* Only the content pane scrolls; native navigation remains outside it. */
 #root .app-shell { height:var(--visual-viewport-height,100dvh);min-height:0;overflow:hidden; }
 #root .app-shell > .page,
 #root .app-shell > .dev-platform ~ .page { flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior-y:contain; }
@@ -1401,3 +1401,7 @@ html[data-keyboard="open"] #root .page.with-tabs { padding-bottom:calc(24px + va
 
 /* Installed miniapp scale lock; web demo keeps the browser's own zoom behavior. */
 html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
+
+/* Page titles belong to the scrolling content, never to the native safe area. */
+#root .page > .screen-head { position:static; padding:var(--space-section) 0 var(--space-content); }
+#root .page > .test-demo-controls { padding-inline:0; }
