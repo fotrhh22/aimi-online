@@ -1,3 +1,11 @@
+## Supabase·Render 최신 테스트 반영 완료 (2026-11-11)
+
+- 코드7531f43을 GitHub main에 push하고 Render dep-dbq6vtetehms73bb38gg live 확인. 실제 health/live·ready200, ready.commit 일치 및 source=supabase/releases10/preview=true 확인.
+- Supabase6개 migration은 이미 적용된 상태. 검수v3의 새 일일 프로그램 daily-program-v2-reviewed-v3-preview-20261111 활성화, 이미지10개 SHA256 확인, 일별 해설30개/오늘의 팁10개/요일게임 일정 반영. 기존 콘텐츠·계정·원장 보존.
+- 토스 로그인 코드는 그대로 유지했고 익명·게스트 인증은 추가하지 않음. 개발 인증 false, 운영/QR CORS 등록, 원격 dev/local/social restore404 및 미인증 state401 확인. 인증서·콘솔 설정 전 실제 토스 로그인 이후 테스트는 불가.
+- 전체101개 로컬 테스트/API·미니앱 빌드/새 AIT/번들 비밀값 검사 통과. GitHub CI43031035655도 성공(별도 DB 통합 검사 포함). 토스 업로드/실기기 테스트/심사는 실행하지 않음.
+- 새 파일 output/releases/2026-11-11-toss-test/AIMI_Toss_Test.ait. 상세 RENDER_TEST_RELEASE_20261111.md 및 동일폴더 BUILD_RECORD.json.
+
 ## 최신 토스 테스트 번들 생성 (2026-11-11)
 
 - appName=aimi, HTTPS API=https://aimi-online-api.onrender.com 으로 최신 작업 트리의 .ait 생성. 파일 output/releases/2026-11-11-toss-test/AIMI_Toss_Test.ait, 체크섬/크기/기준 commit은 동일 폴더 BUILD_RECORD.json. 미커밋 변경 포함. 기존 번들 archive 보존.
