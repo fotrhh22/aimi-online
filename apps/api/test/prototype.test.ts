@@ -1428,8 +1428,8 @@ test("selected-only sentences and inline result feedback never need the hidden o
     make(partial, ids.slice(1), "partial"),
     make(none, [noneId], "none"),
   ];
-  assert.equal(feedbackLabel(rows[0]), "맞았지만 더 찾으세요");
-  assert.equal(feedbackLabel(rows[1]), "키워드가 아예 포함 안 돼요");
+  assert.equal(feedbackLabel(rows[0]), "맞는 단어를 더 찾아보세요");
+  assert.equal(feedbackLabel(rows[1]), "아직 맞는 단어가 없어요");
   const html = renderToStaticMarkup(
     React.createElement(AttemptResults, {
       attempts: rows,
