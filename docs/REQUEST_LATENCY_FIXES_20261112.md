@@ -38,3 +38,14 @@ SQL 개수는 응답 초 단위 보장이 아니다. Render 절전과 네트워�
 ## 실제 호출 후 보정
 
 Render의 실제 개선기 호출이 Gemini 응답을 받은 뒤 AI_INTENT_CHANGED로 거절되는 경로를 확인했다. 정적 검증에서 ‘세 가지’→‘3가지’ 숫자 표기도 거절하던 문제를 보정했다. 한글 수량과 숫자는 동등 비교하고,3→30 같은 실제 변경은 여전히 거절한다. 해당 회귀 검사 추가. 키 미설정과 출력 검증 오류는 별개다.
+
+
+## 원격 반영 확인
+
+- 코드38e8bd367d097f35d573c52ee173ed57f5a987f4 push 완료.
+- Render dep-dbq8pk5bedkc739j0cf0 live 확인. migration 추가 없음.
+- GitHub CI43050979391 전체 단계 성공(빌드/타입/108테스트/migration2회/DB5테스트).
+- 최신 Render `/demo/v1/optimizer/jobs` 실제 생성·결과 조회 성공. hasImprovedText=true,오류 없음,전체 약3,873ms(네트워크/폴링 포함, 일반 사용자 응답시간 보장 아님).
+- 테스트를 위한 실제 Gemini 요청은 실패/성공 각1회이며 기존 시간당20회 카운터에 포함된다. 게임/EP/정원/챌린지 상태는 초기화하지 않았다.
+- 새 번들 output/releases/toss-ui-test/AIMI_UI_TEST_FAST.ait,20,908,094bytes. SHA256 8273e64cb00b1ea4dd487d0433aa2617348feac5d84070109ce150a78ab8bbc4. 비밀값 검사 통과. 입력16px/공통 안전 영역 규칙이 실제 번들 CSS에 포함됐음을 확인했다.
+- 새 QR에서 실제 iPhone 입력 확대/키보드/게임 체감속도 재확인 필요. 본계정의 토스 로그인 실기기 검증은 수행하지 않았다.

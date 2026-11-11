@@ -1,3 +1,7 @@
+## 조회 성능 개선 원격 검증 완료 (2026-11-12)
+
+38e8bd3 push/Render dep-dbq8pk5bedkc739j0cf0 live. GitHub CI43050979391 모든 단계 성공. Render 테스트 계정의 실제 Gemini 개선문 생성 성공(약3.9초). 오류코드 AI_NOT_CONFIGURED 해소,한글 수량/숫자 표기 검증 보정. 새 토스 번들 output/releases/toss-ui-test/AIMI_UI_TEST_FAST.ait(비밀값 검사 통과). migration/원격 사용자 상태 초기화 없음. 실제 iPhone 입력 확대·게임 체감은 새 QR에서 사용자 확인 필요.
+
 ## 요청 지연·Gemini·입력 확대 개선 (2026-11-12)
 
 게임 시작/정산과 AI 응답을 공통 refresh에서 분리하고 background state 갱신. 복사/초대/친구 방문/로그아웃/탈퇴 재조회 및 로그인·소셜 중복 조회 제거. 일반 변경은state만, 챌린지/힌트는content도 갱신. 운영read는wallet/state JOIN SELECT, 데모auth/read/status는SELECT로 분리. 친구batch조회, AI polling read경로/backoff, 모델파일캐시, 낡은refresh/토큰 응답 차단. 입력최소16px/버튼더블탭확대 예방.
