@@ -26,21 +26,30 @@ export function Home() {
   const a = useApp(),
     s = a.data!,
     [modal, setModal] = useState<"attendance" | "tip" | null>(null),
-    [awarded, setAwarded] = useState(0);
+    [awarded, setAwarded] = useState(0),
+    [attendancePending, setAttendancePending] = useState(false),
+    [attendanceError, setAttendanceError] = useState(false);
   const reward = async (type: "attendance" | "tip") => {
-    const r = await a.perform(() =>
-      request<{ awarded: number }>(
-        a.localRuntime
-          ? "/v1/dev/rewards/" + type
-          : "/daily-rewards/" + type + "/claim",
-        "POST",
-        {},
-      ),
+    if (attendancePending) return;
+    setAttendancePending(true);
+    setAttendanceError(false);
+    setAwarded(0);
+    setModal(type);
+    const r = await a.perform(
+      () =>
+        request<{ awarded: number }>(
+          a.localRuntime
+            ? "/v1/dev/rewards/" + type
+            : "/daily-rewards/" + type + "/claim",
+          "POST",
+          {},
+        ),
+      undefined,
+      "background",
     );
-    if (r) {
-      setAwarded(r.awarded);
-      setModal(type);
-    }
+    setAttendancePending(false);
+    if (r) setAwarded(r.awarded);
+    else setAttendanceError(true);
   };
   return (
     <>
@@ -52,13 +61,26 @@ export function Home() {
       </h2>
       <button className="today-card" onClick={() => a.navigate("/mission")}>
         <small>오늘 · {GAME_LABELS[s.daily.gameKind]}</small>
-        <strong>{s.daily.success || s.daily.challengeClosed ? "챌린지 결과 보기" : s.daily.attemptsUsed > 0 ? "챌린지 계속하기" : "게임으로 예산 모으기"}</strong>
-        <span>{s.daily.attemptsUsed > 0 ? "챌린지 시작 · 게임 종료" : `남은 게임 ${5 - s.daily.playsUsed}회`}</span>
+        <strong>
+          {s.daily.success || s.daily.challengeClosed
+            ? "챌린지 결과 보기"
+            : s.daily.attemptsUsed > 0
+              ? "챌린지 계속하기"
+              : "게임으로 예산 모으기"}
+        </strong>
+        <span>
+          {s.daily.attemptsUsed > 0
+            ? "챌린지 시작 · 게임 종료"
+            : `남은 게임 ${5 - s.daily.playsUsed}회`}
+        </span>
         <span>최고 점수 {s.daily.best}점</span>
         <Asset id={s.character} size={50} />
       </button>
       <div className="reward-grid">
-        <button onClick={() => void reward("attendance")}>
+        <button
+          disabled={attendancePending}
+          onClick={() => void reward("attendance")}
+        >
           <strong>
             {s.claims.includes("attendance") ? "출석 완료" : "출석하기"}
           </strong>
@@ -98,10 +120,20 @@ export function Home() {
       {modal && (
         <Modal
           className="reward-dialog"
-          title={modal === "attendance" ? "오늘 출석 완료!" : "오늘의 팁"}
+          title={
+            modal === "attendance"
+              ? attendancePending || attendanceError
+                ? "오늘의 출석"
+                : "오늘 출석 완료!"
+              : "오늘의 팁"
+          }
           onClose={() => setModal(null)}
         >
-          {modal === "attendance" ? (
+          {modal === "attendance" && attendancePending ? (
+            <p role="status">출석을 확인하고 있어요.</p>
+          ) : modal === "attendance" && attendanceError ? (
+            <p>출석을 확인하지 못했어요. 다시 시도해주세요.</p>
+          ) : modal === "attendance" ? (
             <>
               <p className="large-reward">+{awarded} EP</p>
               <p>
@@ -130,24 +162,31 @@ export function Home() {
           )}
           <div className="dialog-actions">
             <Button
-              loading={a.busy}
+              loading={a.busy || attendancePending}
               onClick={() => {
+                if (modal === "attendance" && attendanceError) {
+                  void reward("attendance");
+                  return;
+                }
                 if (modal === "tip")
                   void a
-                    .perform(() =>
-                      request(
-                        a.localRuntime
-                          ? "/v1/dev/rewards/tip"
-                          : "/daily-rewards/tip/claim",
-                        "POST",
-                        {},
-                      ),
+                    .perform(
+                      () =>
+                        request(
+                          a.localRuntime
+                            ? "/v1/dev/rewards/tip"
+                            : "/daily-rewards/tip/claim",
+                          "POST",
+                          {},
+                        ),
+                      undefined,
+                      "background",
                     )
                     .then(() => setModal(null));
                 else setModal(null);
               }}
             >
-              확인
+              {modal === "attendance" && attendanceError ? "다시 확인" : "확인"}
             </Button>
           </div>
         </Modal>
@@ -163,7 +202,8 @@ export function Mission() {
       d.success ||
       d.challengeClosed === true ||
       (!d.challengeVersion && d.attemptsUsed >= 5),
-    challenge = (d.attemptsUsed > 0 || (d.playsUsed >= 5 && !s.activePlay)) && !terminal;
+    challenge =
+      (d.attemptsUsed > 0 || (d.playsUsed >= 5 && !s.activePlay)) && !terminal;
   return (
     <>
       <h2 className="section-heading">

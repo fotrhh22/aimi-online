@@ -1,3 +1,9 @@
+## 모바일 팝업 한 줄 CTA·반응 개선 (2026-11-12)
+
+힌트 강제br 제거,선택/구매/저장/다시확인 등 CTA를간결화. 팝업버튼13~16px/제목16~18px,의미단위본문줄바꿈·금액한줄유지. Modal layout effect와preventScroll포커스,실시간blur제거·active피드백,로딩버튼disabled 적용. 출석은즉시처리중팝업을열고서버응답후보상표시. 구매/팁확인후공통state대기는background로분리하고구매후잔액은서버응답사용.
+
+타입/웹빌드/토스테스트ait/비밀값검사통과. 실제TDS버튼DOM·폰트로320/360/393/480px64개버튼조건검사통과. 합성서버응답보류중출석창82ms표시/승인전보상미표시검사. 원격EP변경·초기화없음. 실제iPhone체감은새QR재확인필요. 신규토스파일output/releases/toss-ui-test/AIMI_UI_TEST_POPUP.ait. API/DB변경없음.
+
 ## Vercel 웹 데모 준비 원격 검증 (2026-11-12)
 
 f261701 push,CI43052821106 전체 성공(웹 전용 빌드/프록시4검사 포함). Render dep-dbq8uso473hc73ae4le0 live로 테스트 출석/팁 API 반영. Vercel 프로젝트/공개 URL은 계정 미연결로 아직 생성하지 않음. VERCEL_WEB_DEMO.md의 저장소루트 Import/Other/Deploy 절차와 vercel.json으로 추가env/SQL없이 배포 가능하도록 준비.

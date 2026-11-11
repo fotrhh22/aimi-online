@@ -272,11 +272,7 @@ export function Challenge() {
                 if (purchased) setHintConfirm(false);
               }}
             >
-              <span>
-                예산 {PUZZLE_COUNT_HINT_COST} 쓰고
-                <br />
-                힌트 얻기
-              </span>
+              {PUZZLE_COUNT_HINT_COST}예산 쓰기
             </Button>
             <Button
               weak

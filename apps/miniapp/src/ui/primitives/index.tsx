@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { Button as TDSButton } from "@toss/tds-mobile";
 export function BrandLogo() {
   return (
@@ -41,7 +41,9 @@ export function Button({
         disabled={disabled || loading}
         aria-busy={loading || undefined}
       >
-        {loading ? "처리 중…" : children}
+        <span className="aimi-button-label">
+          {loading ? "처리 중…" : children}
+        </span>
       </button>
     );
   }
@@ -52,10 +54,11 @@ export function Button({
       size="xlarge"
       display="block"
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
       loading={loading}
     >
-      {children}
+      <span className="aimi-button-label">{children}</span>
     </TDSButton>
   );
 }
@@ -180,17 +183,20 @@ export function Modal({
   dismissible?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const before = document.activeElement as HTMLElement | null;
-    ref.current?.showModal();
+    const dialog = ref.current;
+    dialog?.showModal();
+    dialog?.focus({ preventScroll: true });
     return () => {
-      ref.current?.close();
-      before?.focus();
+      dialog?.close();
+      if (before?.isConnected) before.focus({ preventScroll: true });
     };
   }, []);
   return (
     <dialog
       ref={ref}
+      tabIndex={-1}
       className={"overlay " + (sheet ? "sheet" : "") + " " + className}
       aria-label={title}
       onCancel={(e) => {

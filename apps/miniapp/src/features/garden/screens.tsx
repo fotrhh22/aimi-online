@@ -489,7 +489,7 @@ export function Garden() {
                 setPicker(false);
               }}
             >
-              {choice === character ? "캐릭터 선택" : name(choice) + " 선택"}
+              선택하기
             </Button>
             <Button weak onClick={() => setPicker(false)}>
               취소
@@ -511,7 +511,7 @@ export function Garden() {
           </p>
           <div className="dialog-actions">
             <Button loading={a.busy} onClick={() => void save(leaveTarget)}>
-              저장하고 나가기
+              저장하기
             </Button>
             <Button weak disabled={a.busy} onClick={() => setUnsaved(false)}>
               취소
@@ -541,9 +541,11 @@ export function Shop() {
     s = a.data!,
     characters = a.path === "/shop/characters",
     [selected, setSelected] = useState<CatalogItem | null>(null),
-    [done, setDone] = useState<{ item: CatalogItem; quantity: number } | null>(
-      null,
-    ),
+    [done, setDone] = useState<{
+      item: CatalogItem;
+      quantity: number;
+      balance: number;
+    } | null>(null),
     [quantity, setQuantity] = useState(1);
   const ownedCharacter = Boolean(
     characters && selected && s.inventory.includes(selected.id),
@@ -552,15 +554,22 @@ export function Shop() {
     if (!selected) return;
     const origin = a.path;
     const item = selected;
-    const r = await a.perform(() =>
-      request("/v1/purchases", "POST", {
-        itemId: item.id,
-        quantity: characters ? 1 : quantity,
-      }),
+    const r = await a.perform(
+      () =>
+        request<{ balance: number }>("/v1/purchases", "POST", {
+          itemId: item.id,
+          quantity: characters ? 1 : quantity,
+        }),
+      undefined,
+      "background",
     );
     if (r && a.isCurrentPath(origin)) {
       setSelected(null);
-      setDone({ item, quantity: characters ? 1 : quantity });
+      setDone({
+        item,
+        quantity: characters ? 1 : quantity,
+        balance: r.balance,
+      });
     }
   };
   return (
@@ -694,7 +703,7 @@ export function Shop() {
                   }
                   onClick={() => void buy()}
                 >
-                  {selected.price * quantity} EP로 구매
+                  구매하기
                 </Button>
                 <Button
                   weak
@@ -717,7 +726,7 @@ export function Shop() {
             {done.item.name}
             {done.quantity > 1 ? ` ×${done.quantity}` : ""}
           </h3>
-          <Stats rows={[["구매 후 보유 EP", s.balance + " EP"]]} />
+          <Stats rows={[["구매 후 보유 EP", done.balance + " EP"]]} />
           <p>
             보유 아이템에 추가했어요.
             <br />
@@ -1147,7 +1156,7 @@ export function Account() {
                   })
               }
             >
-              삭제하고 연결 해제
+              삭제하기
             </Button>
             <Button weak disabled={a.busy} onClick={() => setConfirm(false)}>
               취소

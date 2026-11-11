@@ -1323,3 +1323,25 @@ html { -webkit-text-size-adjust:100%;text-size-adjust:100%; }
   font-size:max(16px,1rem) !important;line-height:1.5;
 }
 #root button, #root a, #root summary { touch-action:manipulation; }
+
+/* Mobile popup labels are concise, single-line actions; prose may grow naturally. */
+#root dialog.overlay .dialog-heading h2 {
+  font-size:clamp(16px,4.5vw,18px);line-height:1.4;word-break:keep-all;overflow-wrap:anywhere;
+}
+#root dialog.overlay .dialog-body { word-break:keep-all;overflow-wrap:anywhere; }
+#root dialog.overlay .dialog-actions > .aimi-button {
+  min-height:var(--button-height);height:var(--button-height);padding:8px;
+  font-size:clamp(13px,3.8vw,16px);white-space:nowrap;overflow-wrap:normal;word-break:keep-all;
+}
+#root dialog.overlay .aimi-button-label { display:block;white-space:nowrap;line-height:22px;font-size:clamp(13px,3.8vw,16px); }
+#root dialog.overlay::backdrop { background:#203c2433;backdrop-filter:none;-webkit-backdrop-filter:none; }
+#root dialog.overlay:focus { outline:none; }
+#root .aimi-button:not(:disabled):active,
+#root .reward-grid button:not(:disabled):active,
+#root .entry-list button:active,
+#root .today-card:active,
+#root .product:active,
+#root .text-link:not(:disabled):active { opacity:.82; }
+#root dialog.overlay .stat { gap:8px;align-items:baseline; }
+#root dialog.overlay .stat > span { min-width:0;font-size:13px;line-height:20px; }
+#root dialog.overlay .stat > strong { flex-shrink:0;white-space:nowrap;font-size:clamp(14px,4vw,18px);line-height:1.4; }

@@ -760,7 +760,7 @@ export function GameScreen() {
                   void finish(simulation.current?.status === "running")
                 }
               >
-                결과 다시 확인
+                다시 확인
               </Button>
               <Button weak onClick={() => a.navigate("/mission")}>
                 취소
