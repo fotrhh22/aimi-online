@@ -122,18 +122,19 @@ try {
     .getByRole("button", { name: "\ud655\uc778", exact: true })
     .click();
   await page.locator(".toast-reward").waitFor();
-  const style = await page
-    .locator(".toast-reward")
-    .evaluate((n) => ({
-      text: n.textContent,
-      background: getComputedStyle(n).backgroundColor,
-      weight: getComputedStyle(n).fontWeight,
-      border: getComputedStyle(n).borderTopWidth,
-    }));
+  const style = await page.locator(".toast-reward").evaluate((n) => ({
+    text: n.textContent,
+    background: getComputedStyle(n).backgroundColor,
+    weight: getComputedStyle(n).fontWeight,
+    fontSize: getComputedStyle(n).fontSize,
+    border: getComputedStyle(n).borderTopWidth,
+  }));
   assert.match(style.text, /15 EP/);
   assert.notEqual(style.background, "rgba(0, 0, 0, 0)");
-  assert.equal(style.weight, "700");
-  assert.equal(style.border, "2px");
+  assert.equal(style.weight, "500");
+  assert.equal(style.fontSize, "11px");
+  assert.equal(style.border, "1px");
+  assert.match(style.background, /0\.12/);
   await mkdir("output/qa/scroll-audit", { recursive: true });
   await page.screenshot({ path: "output/qa/scroll-audit/reward-toast.png" });
   console.log(

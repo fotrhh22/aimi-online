@@ -1382,7 +1382,7 @@ html { -webkit-text-size-adjust:100%;text-size-adjust:100%; }
   max-height:calc(100dvh - var(--content-safe-top) - var(--safe-bottom) - 24px);
 }
 #root dialog.overlay.sheet { max-height:min(78dvh,calc(100dvh - var(--content-safe-top) - 12px)); }
-#root .toast.toast-reward { background:var(--color-brand-text);color:#fff;border:2px solid #c3d9aa;border-radius:18px;padding:14px 20px;font-size:16px;line-height:24px;font-weight:700;box-shadow:0 4px 16px #203c2426;text-align:center; }
+#root .toast.toast-reward { width:max-content;max-width:calc(100% - 48px);background:rgba(248,250,240,.12);color:var(--color-brand-text);border:1px solid rgba(82,122,65,.25);border-radius:10px;padding:6px 10px;font-size:11px;line-height:16px;font-weight:500;box-shadow:none;text-align:center;pointer-events:none; }
 html[data-keyboard="open"] #root .page.with-tabs { padding-bottom:calc(24px + var(--safe-bottom)); }
 #root .page[data-screen="/"] > .today-card { margin-top:8px; }
 #root .page[data-screen="/"] > .reward-grid,
