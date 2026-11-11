@@ -18,6 +18,8 @@ test("demo database: isolation, atomic reset, stale epochs, persistent quota and
   const app = createApp(config, pool);
   registerDemo(app, pool, secret, storeId);
   const repo = new DemoRepository(pool, storeId);
+  const beforeKey = process.env.AIMI_GEMINI_API_KEY;
+  process.env.AIMI_GEMINI_API_KEY = "synthetic-demo-quota-test";
   const before = await pool.query("SELECT count(*)::int AS n FROM aimi.users");
   try {
     const session = await app.inject({
@@ -84,6 +86,8 @@ test("demo database: isolation, atomic reset, stale epochs, persistent quota and
       before.rows[0].n,
     );
   } finally {
+    if (beforeKey === undefined) delete process.env.AIMI_GEMINI_API_KEY;
+    else process.env.AIMI_GEMINI_API_KEY = beforeKey;
     await app.close();
     await pool.query("DELETE FROM aimi.test_demo_stores WHERE id=$1", [
       storeId,

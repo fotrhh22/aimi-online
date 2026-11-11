@@ -114,6 +114,8 @@ export class DemoRepository implements Repository {
     );
   }
   async reserveAI(_date: string, _limit: number) {
+    if (!process.env.AIMI_GEMINI_API_KEY)
+      throw new ApiError("AI_NOT_CONFIGURED", 503);
     await this.withStore((row) => reserveDemoCall(row, Date.now()));
   }
   async pruneAI(_before: number) {
