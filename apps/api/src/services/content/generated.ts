@@ -1,6 +1,11 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { PUZZLE_ATTEMPT_COST, type Keyword } from "@aimi/contracts";
+import {
+  PUZZLE_ATTEMPT_COST,
+  PUZZLE_RULE_VERSION,
+  composeKeywordSentence,
+  type Keyword,
+} from "@aimi/contracts";
 import { ApiError } from "../../db.js";
 export type PuzzlePack = {
   id: string;
@@ -10,7 +15,7 @@ export type PuzzlePack = {
   authored_prompt: string;
   correct_keywords: { id: string }[];
   display_labels: Record<string, string>;
-  candidate_keywords: { id: string }[];
+  candidate_keywords: { id: string; context?: string }[];
   tips: { title: string; text: string; requires_actual_model_match: boolean }[];
   highlights: {
     start_utf16: number;
@@ -87,13 +92,18 @@ export function generatedPack(date: string, version?: string) {
   );
   return packs[((offset % 10) + 10) % 10]!;
 }
-export function puzzleContent(p: PuzzlePack, seed: string, attempts = 0) {
+export function puzzleContent(
+  p: PuzzlePack,
+  seed: string,
+  countVisible = false,
+) {
   const keywords: Keyword[] = p.candidate_keywords.map((k) => ({
     id: k.id,
     label: p.display_labels[k.id]!,
     group: "",
     value: "",
     cost: 0,
+    sentenceClause: keywordClause(p.display_labels[k.id]!, k.context ?? ""),
   }));
   keywords.sort((a, b) =>
     createHash("sha256")
@@ -107,14 +117,14 @@ export function puzzleContent(p: PuzzlePack, seed: string, attempts = 0) {
   );
   return {
     version: packVersion(p),
-    ruleVersion: "aimi-keyword-set-v3",
+    ruleVersion: PUZZLE_RULE_VERSION,
     title: "이미지 챌린지 · " + p.id.replace("day-", "Day "),
     target: targetFor(p),
     keywords,
     developmentSample: reviews.get(p.id) !== "approved",
     reviewStatus: reviews.get(p.id) === "approved" ? "approved" : "unreviewed",
     generationModel: p.model_plan.actual_model_id,
-    ...(attempts ? { answerCount: p.correct_keywords.length } : {}),
+    ...(countVisible ? { answerCount: p.correct_keywords.length } : {}),
   };
 }
 export function evaluatePuzzle(
@@ -142,8 +152,15 @@ export function evaluatePuzzle(
     passed: selected.size === answers.size && matched === answers.size,
     cost: PUZZLE_ATTEMPT_COST,
     image: targetFor(p),
-    sentence:
-      ids.map((id) => p.display_labels[id]).join(" · ") + " 조건으로 표현해줘.",
+    sentence: composeKeywordSentence(
+      ids.map((id) => ({
+        label: p.display_labels[id],
+        sentenceClause: keywordClause(
+          p.display_labels[id],
+          p.candidate_keywords.find((k) => k.id === id)?.context ?? "",
+        ),
+      })),
+    ),
     feedback: [] as string[],
   };
 }
@@ -154,16 +171,22 @@ export function puzzleFeedback(
   closed: boolean,
 ) {
   const answers = new Set(p.correct_keywords.map((k) => k.id));
+  const matchedKeywordIds = ids.filter((id) => answers.has(id)),
+    incorrectKeywordIds = ids.filter((id) => !answers.has(id));
+  const complete =
+    matchedKeywordIds.length === answers.size && !incorrectKeywordIds.length;
   return {
     attemptNumber,
-    answerCount: answers.size,
-    ...(attemptNumber >= 2
-      ? {
-          incorrectKeywordIds: ids.filter((id) => !answers.has(id)),
-          missingKeywordCount: [...answers].filter((id) => !ids.includes(id))
-            .length,
-        }
-      : {}),
+    matchedKeywordIds,
+    incorrectKeywordIds,
+    feedbackStatus: complete
+      ? ("complete" as const)
+      : !matchedKeywordIds.length
+        ? ("none" as const)
+        : incorrectKeywordIds.length
+          ? ("mixed" as const)
+          : ("partial" as const),
+    ...(closed ? { answerCount: answers.size } : {}),
     ...(closed
       ? {
           reveal: {
@@ -186,4 +209,27 @@ export function puzzlePreviews() {
     target: targetFor(p),
     model: p.model_plan.actual_model_id,
   }));
+}
+
+function keywordClause(label: string, context: string) {
+  const role = /배경/.test(context)
+    ? "배경"
+    : /개수|수량/.test(context)
+      ? "개수"
+      : /시점|카메라/.test(context)
+        ? "시점"
+        : /색/.test(context)
+          ? "색상"
+          : /배치|위치|방향/.test(context)
+            ? "배치"
+            : /방식|그림체|스타일|화풍/.test(context)
+              ? "표현 방식"
+              : /종류|대상/.test(context)
+                ? "대상"
+                : null;
+  if (!role) return `‘${label}’ 조건을 반영하고`;
+  const last = label.charCodeAt(label.length - 1),
+    batchim = last >= 0xac00 && last <= 0xd7a3 ? (last - 0xac00) % 28 : 1;
+  const particle = batchim === 0 || batchim === 8 ? "로" : "으로";
+  return `${role}${role === "개수" || role === "배치" ? "는" : "은"} ‘${label}’${particle} 설정하고`;
 }

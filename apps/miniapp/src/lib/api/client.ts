@@ -116,6 +116,9 @@ const messages: Record<string, string> = {
   AI_TIMEOUT: "응답을 확인하지 못했어요. 잠시 후 다시 시도해주세요.",
   AI_QUOTA_EXCEEDED: "AI 사용량이 많아요. 잠시 후 다시 시도해주세요.",
   GARDEN_PRIVATE: "지금은 이 정원을 방문할 수 없어요.",
+  HINT_REQUIRES_ATTEMPT_BUDGET:
+    "힌트 구매 후 도전할 30예산을 남겨야 해요. 45예산 이상일 때 구매할 수 있어요.",
+  CHALLENGE_CLOSED: "오늘 챌린지는 종료됐어요. 결과를 확인해주세요.",
   CONTENT_VERSION_CHANGED:
     "문제가 바뀌었어요. 화면을 새로고침한 뒤 다시 선택해주세요.",
   MISSION_DATE_CHANGED: "새 미션이 열렸어요. 오늘의 미션을 다시 확인해주세요.",

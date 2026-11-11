@@ -37,6 +37,7 @@ export type HomeState = {
   claims: string[];
   activePlay: Play | null;
   latestAttempt: Attempt | null;
+  challengeAttempts?: Attempt[];
 };
 export type Content = {
   ruleVersion?: string;

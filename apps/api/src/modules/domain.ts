@@ -5,6 +5,8 @@ import {
 } from "../services/content/generated.js";
 import {
   PUZZLE_ATTEMPT_COST,
+  PUZZLE_COUNT_HINT_COST,
+  PUZZLE_RULE_VERSION,
   gardenPlacements,
   challengeRewardEP,
   gardenPlacementId,
@@ -78,6 +80,13 @@ export function view(s: UserState, date = seoulDate()) {
     activePlay:
       Object.values(s.plays).find((p) => p.status === "running") ?? null,
     latestAttempt: d.lastAttempt ? s.attempts[d.lastAttempt] : null,
+    challengeAttempts: Object.values(s.attempts)
+      .filter(
+        (a) =>
+          a.date === date &&
+          (!d.challengeVersion || a.version === d.challengeVersion),
+      )
+      .sort((a, b) => (a.attemptNumber ?? 0) - (b.attemptNumber ?? 0)),
     development: false,
   };
 }
@@ -242,7 +251,7 @@ export function submitAttempt(
     sentence: e.sentence,
     ...(puzzle
       ? {
-          ruleVersion: "aimi-keyword-set-v3",
+          ruleVersion: PUZZLE_RULE_VERSION,
           ...puzzleFeedback(
             puzzle,
             body.keywordIds,
@@ -321,4 +330,45 @@ export function saveGarden(
     revision: s.garden.revision + 1,
   };
   return s.garden;
+}
+
+/** Runs inside once/repository transaction; hint is one purchase, never a submission. */
+export function buyPuzzleCountHint(
+  s: UserState,
+  p: PuzzlePack,
+  date = seoulDate(),
+) {
+  const d = daily(s, date);
+  if (d.success || d.challengeClosed)
+    throw new ApiError("CHALLENGE_CLOSED", 409);
+  if (
+    !d.playsUsed ||
+    !Object.values(s.plays).some((p) => p.date === date && p.result)
+  )
+    throw new ApiError("GAME_REQUIRED");
+  if (
+    d.answerCountPurchased ||
+    (d.lastAttempt && s.attempts[d.lastAttempt]?.answerCount !== undefined)
+  ) {
+    d.answerCountPurchased = true;
+    return {
+      answerCount: p.correct_keywords.length,
+      cost: 0,
+      alreadyPurchased: true,
+    };
+  }
+  const available = Math.max(
+    0,
+    (d.challengeBudget ?? earnedBudget(d.best)) - (d.challengeSpent ?? 0),
+  );
+  if (available < PUZZLE_COUNT_HINT_COST + PUZZLE_ATTEMPT_COST)
+    throw new ApiError("HINT_REQUIRES_ATTEMPT_BUDGET", 409);
+  d.challengeBudget ??= earnedBudget(d.best);
+  d.challengeSpent = (d.challengeSpent ?? 0) + PUZZLE_COUNT_HINT_COST;
+  d.answerCountPurchased = true;
+  return {
+    answerCount: p.correct_keywords.length,
+    cost: PUZZLE_COUNT_HINT_COST,
+    alreadyPurchased: false,
+  };
 }

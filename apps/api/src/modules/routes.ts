@@ -37,6 +37,7 @@ import type { Repository } from "./repository.js";
 import {
   view,
   daily,
+  buyPuzzleCountHint,
   once,
   startPlay,
   completePlay,
@@ -128,11 +129,18 @@ export function registerPrototype(
         if (d.challengeVersion || d.attemptsUsed === 0) {
           const pack = generatedPack(d.date, d.challengeVersion);
           d.challengeVersion = packVersion(pack);
+          if (
+            d.lastAttempt &&
+            st[uid].attempts[d.lastAttempt]?.answerCount !== undefined
+          )
+            d.answerCountPurchased = true;
           return wrap({
             ...puzzleContent(
               pack,
               uid + d.date + d.challengeVersion,
-              d.attemptsUsed,
+              d.answerCountPurchased === true ||
+                d.challengeClosed === true ||
+                d.success,
             ),
             catalog: CATALOG,
           });
@@ -193,6 +201,26 @@ export function registerPrototype(
           )
         : evaluateChallenge(b.keywordIds, b.model, b.date);
     return wrap({ cost: e.cost, sentence: e.sentence, version: e.version });
+  });
+  app.post("/v1/challenge/count-hint", async (r) => {
+    const b = z
+      .object({
+        date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+        contentVersion: z.string().max(150),
+      })
+      .strict()
+      .parse(r.body);
+    return mutate(r, "challenge-count-hint", b, (s) => {
+      const d = daily(s);
+      if (b.date !== d.date) throw new ApiError("MISSION_DATE_CHANGED", 409);
+      if (
+        !generatedContentEnabled(repo.development) ||
+        !d.challengeVersion ||
+        b.contentVersion !== d.challengeVersion
+      )
+        throw new ApiError("CONTENT_VERSION_CHANGED", 409);
+      return buyPuzzleCountHint(s, generatedPack(d.date, d.challengeVersion));
+    });
   });
   app.post("/v1/challenge/attempts", async (r) => {
     const b = AttemptInput.parse(r.body);

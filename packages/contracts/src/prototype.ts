@@ -61,6 +61,7 @@ export type TaskProfile = {
   unknowns: string[];
 };
 export type Keyword = {
+  sentenceClause?: string;
   id: string;
   label: string;
   group: string;
@@ -79,6 +80,7 @@ export type DailyProgress = {
   challengeBudget?: number;
   challengeSpent?: number;
   challengeClosed?: boolean;
+  answerCountPurchased?: boolean;
   date: string;
   gameKind: z.infer<typeof GameKind>;
   playsUsed: number;
@@ -109,6 +111,8 @@ export type Play = {
   ticks?: number;
 };
 export type Attempt = {
+  matchedKeywordIds?: string[];
+  feedbackStatus?: "complete" | "partial" | "mixed" | "none";
   ruleVersion?: string;
   attemptNumber?: number;
   answerCount?: number;

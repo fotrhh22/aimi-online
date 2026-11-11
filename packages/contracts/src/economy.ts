@@ -83,3 +83,6 @@ export function shopPrice(id: string) {
 
 /** Keyword puzzle v3: one submitted attempt, no per-keyword/model fee. */
 export const PUZZLE_ATTEMPT_COST = 30;
+
+export const PUZZLE_COUNT_HINT_COST = 15;
+export const PUZZLE_RULE_VERSION = "aimi-keyword-set-v4";

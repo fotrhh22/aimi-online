@@ -1025,7 +1025,7 @@ test("ten generated packs use exact-set matching and initial projections never d
   );
   assert.equal(
     "incorrectKeywordIds" in puzzleFeedback(p, [wrong], 1, false),
-    false,
+    true,
   );
   assert.deepEqual(puzzleFeedback(p, [wrong], 3, false).incorrectKeywordIds, [
     wrong,
@@ -1053,7 +1053,7 @@ test("generated challenge API pins content, preserves hidden answers, stages fee
   try {
     const initial = (await app.inject({ url: "/v1/content" })).json().data,
       p = generatedPack(date, initial.version);
-    assert.equal(initial.ruleVersion, "aimi-keyword-set-v3");
+    assert.equal(initial.ruleVersion, "aimi-keyword-set-v4");
     assert.equal(initial.answerCount, undefined);
     assert.ok(!JSON.stringify(initial).includes("authored_prompt"));
     const gallery = (await app.inject({ url: "/v1/content/previews" })).json()
@@ -1109,8 +1109,8 @@ test("generated challenge API pins content, preserves hidden answers, stages fee
     const first = await submit([wrong], "same-attempt"),
       firstBody = first.json().data;
     assert.equal(first.statusCode, 200);
-    assert.equal(firstBody.answerCount, answers.length);
-    assert.equal(firstBody.incorrectKeywordIds, undefined);
+    assert.equal(firstBody.answerCount, undefined);
+    assert.deepEqual(firstBody.incorrectKeywordIds, [wrong]);
     assert.equal(firstBody.reveal, undefined);
     assert.deepEqual(
       (await submit([wrong], "same-attempt")).json().data,
@@ -1119,7 +1119,7 @@ test("generated challenge API pins content, preserves hidden answers, stages fee
     assert.equal((await repo.read(uid)).days[date].attemptsUsed, 1);
     assert.equal(
       (await app.inject({ url: "/v1/content" })).json().data.answerCount,
-      answers.length,
+      undefined,
     );
     const second = (await submit([wrong])).json().data;
     assert.deepEqual(second.incorrectKeywordIds, [wrong]);
@@ -1127,7 +1127,7 @@ test("generated challenge API pins content, preserves hidden answers, stages fee
     assert.equal((await repo.read(uid)).days[date].challengeSpent, 60);
     const third = (await submit([wrong])).json().data;
     assert.deepEqual(third.incorrectKeywordIds, [wrong]);
-    assert.equal(third.missingKeywordCount, answers.length);
+    assert.equal(third.missingKeywordCount, undefined);
     assert.equal(third.reveal, undefined);
     await submit([wrong]);
     const fifth = (await submit([wrong])).json().data;
@@ -1162,7 +1162,8 @@ test("fixed puzzle cost exhausts the pinned budget at 30-unit boundaries and can
   );
   const partial = puzzleFeedback(pack, answers.slice(1), 2, false);
   assert.deepEqual(partial.incorrectKeywordIds, []);
-  assert.equal(partial.missingKeywordCount, 1);
+  assert.equal("missingKeywordCount" in partial, false);
+  assert.equal(partial.feedbackStatus, "partial");
   for (const score of [0, 9, 10, 39, 40, 100]) {
     const state = newState("budget-" + score, true),
       p = startPlay(state, "dino", now - 100000),
@@ -1226,4 +1227,212 @@ test("fixed puzzle cost exhausts the pinned budget at 30-unit boundaries and can
       /CHALLENGE_DAILY_LIMIT/,
     );
   }
+});
+
+test("count hint charges 15 once, preserves an attempt and reveals no count automatically after a failure", async () => {
+  const Fastify = (await import("fastify")).default,
+    { registerPrototype } = await import("../src/modules/routes.js");
+  const { seoulDate } = await import("@aimi/contracts");
+  const app = Fastify(),
+    repo = new FileRepository(),
+    uid = "count-hint-http",
+    date = seoulDate();
+  registerPrototype(app, repo, async () => uid);
+  app.setErrorHandler((err, _r, reply) =>
+    reply
+      .code((err as any).status ?? 500)
+      .send({ error: { code: (err as any).code } }),
+  );
+  try {
+    const initial = (await app.inject({ url: "/v1/content" })).json().data,
+      p = generatedPack(date, initial.version),
+      answers = p.correct_keywords.map((k) => k.id);
+    assert.equal(initial.answerCount, undefined);
+    const buy = (key: string, version = initial.version) =>
+      app.inject({
+        method: "POST",
+        url: "/v1/challenge/count-hint",
+        headers: { "idempotency-key": key },
+        payload: { date, contentVersion: version },
+      });
+    assert.equal((await buy("before-game")).statusCode, 400);
+    await repo.transaction([uid], (st) => {
+      const d = daily(st[uid]);
+      d.best = 100;
+      d.playsUsed = 1;
+      st[uid].plays["done"] = {
+        id: "done",
+        date,
+        kind: d.gameKind,
+        seed: 1,
+        version: "prototype-game-v2",
+        character: "seed",
+        startedAt: Date.now() - 100000,
+        status: "cleared",
+        result: {
+          score: 100,
+          ep: 0,
+          best: 100,
+          budget: 150,
+          remaining: 4,
+          status: "cleared",
+        },
+      };
+    });
+    assert.equal((await buy("wrong-version", "bad-version")).statusCode, 409);
+    const before = await repo.read(uid);
+    const results = await Promise.all([
+      buy("same-hint"),
+      buy("same-hint"),
+      buy("another-hint"),
+    ]);
+    assert.ok(results.every((r) => r.statusCode === 200));
+    assert.equal(results[0].json().data.answerCount, answers.length);
+    const state = await repo.read(uid);
+    assert.equal(state.days[date].challengeSpent, 15);
+    assert.equal(state.days[date].attemptsUsed, 0);
+    assert.equal(state.balance, before.balance);
+    assert.equal((await buy("hint-again")).json().data.cost, 0);
+    assert.equal(
+      (await app.inject({ url: "/v1/content" })).json().data.answerCount,
+      answers.length,
+    );
+    const attempt = await app.inject({
+      method: "POST",
+      url: "/v1/challenge/attempts",
+      headers: { "idempotency-key": "after-hint" },
+      payload: {
+        keywordIds: answers.slice(1),
+        date,
+        contentVersion: initial.version,
+      },
+    });
+    assert.equal(attempt.statusCode, 200);
+    const r = attempt.json().data;
+    assert.equal(r.cost, 30);
+    assert.equal(r.budget, 135);
+    assert.equal(r.remaining, 3);
+    assert.equal(r.answerCount, undefined);
+    assert.equal(r.missingKeywordCount, undefined);
+    assert.equal(r.feedbackStatus, "partial");
+    assert.deepEqual(r.incorrectKeywordIds, []);
+    const loaded = (await app.inject({ url: "/v1/state" })).json().data;
+    assert.equal(loaded.budget, 105);
+    assert.equal(loaded.challengeAttempts.length, 1);
+    assert.equal(loaded.challengeAttempts[0].sentence, r.sentence);
+    const wrong = p.candidate_keywords.find((k) => !answers.includes(k.id))!.id;
+    const another = await app.inject({
+      method: "POST",
+      url: "/v1/challenge/attempts",
+      headers: { "idempotency-key": "different-combination" },
+      payload: { keywordIds: [wrong], date, contentVersion: initial.version },
+    });
+    assert.equal(another.statusCode, 200);
+    const restored = (await app.inject({ url: "/v1/state" })).json().data;
+    assert.equal(restored.challengeAttempts.length, 2);
+    assert.notEqual(
+      restored.challengeAttempts[0].sentence,
+      restored.challengeAttempts[1].sentence,
+    );
+    assert.equal(restored.challengeAttempts[1].feedbackStatus, "none");
+  } finally {
+    await app.close();
+  }
+});
+test("hint reservation leaves exactly 30 at its minimum boundary and cannot revive a closed challenge", async () => {
+  const { buyPuzzleCountHint } = await import("../src/modules/domain.js"),
+    { seoulDate } = await import("@aimi/contracts");
+  const date = seoulDate(),
+    pack = generatedPack(date);
+  for (const budget of [44, 45]) {
+    const s = newState("hint-boundary-" + budget, true),
+      p = startPlay(s, "dino", Date.now() - 100000),
+      d = daily(s, date);
+    p.status = "failed";
+    p.result = {
+      score: 0,
+      ep: 0,
+      best: 0,
+      budget: 50,
+      remaining: 4,
+      status: "failed",
+    };
+    d.challengeBudget = budget;
+    d.challengeVersion = packVersion(pack);
+    const before = JSON.stringify(s);
+    if (budget === 44) {
+      assert.throws(
+        () => buyPuzzleCountHint(s, pack, date),
+        /HINT_REQUIRES_ATTEMPT_BUDGET/,
+      );
+      assert.equal(JSON.stringify(s), before);
+    } else {
+      assert.equal(buyPuzzleCountHint(s, pack, date).cost, 15);
+      assert.equal(d.challengeSpent, 15);
+      assert.equal(d.attemptsUsed, 0);
+      assert.equal(buyPuzzleCountHint(s, pack, date).cost, 0);
+      assert.equal(d.challengeSpent, 15);
+    }
+    d.challengeClosed = true;
+    assert.throws(() => buyPuzzleCountHint(s, pack, date), /CHALLENGE_CLOSED/);
+  }
+});
+test("selected-only sentences and inline result feedback never need the hidden original prompt", async () => {
+  const { composeKeywordSentence } = await import("@aimi/contracts");
+  const React = await import("react"),
+    { renderToStaticMarkup } = await import("react-dom/server");
+  const { AttemptResults, feedbackLabel } =
+    await import("../../miniapp/src/features/challenge/attempt-results.js");
+  const p = generatedPack("2026-11-11"),
+    pub = puzzleContent(p, "sentence-test"),
+    ids = p.correct_keywords.map((k) => k.id);
+  const selected = pub.keywords.filter((k) => ids.includes(k.id));
+  const sentence = composeKeywordSentence(selected);
+  for (const k of selected) assert.ok(sentence.includes(k.label));
+  assert.ok(!sentence.includes(" · "));
+  const ordered = ids.map((id) => pub.keywords.find((k) => k.id === id)!);
+  assert.equal(
+    evaluatePuzzle(p, ids, "low").sentence,
+    composeKeywordSentence(ordered),
+  );
+  const partial = puzzleFeedback(p, ids.slice(1), 1, false),
+    noneId = p.candidate_keywords.find((k) => !ids.includes(k.id))!.id,
+    none = puzzleFeedback(p, [noneId], 1, false);
+  assert.equal(partial.answerCount, undefined);
+  assert.equal(none.answerCount, undefined);
+  const make = (feedback: any, keywordIds: string[], id: string) => ({
+    id,
+    date: "2026-11-11",
+    keywordIds,
+    model: "low" as const,
+    version: pub.version,
+    score: 50,
+    threshold: 100,
+    passed: false,
+    ep: 0,
+    cost: 30,
+    budget: 150,
+    remaining: 4,
+    image: pub.target,
+    feedback: [],
+    sentence,
+    ...feedback,
+  });
+  const rows = [
+    make(partial, ids.slice(1), "partial"),
+    make(none, [noneId], "none"),
+  ];
+  assert.equal(feedbackLabel(rows[0]), "맞았지만 더 찾으세요");
+  assert.equal(feedbackLabel(rows[1]), "키워드가 아예 포함 안 돼요");
+  const html = renderToStaticMarkup(
+    React.createElement(AttemptResults, {
+      attempts: rows,
+      keywords: pub.keywords,
+    }),
+  );
+  assert.ok(html.includes("attempt-result-columns"));
+  assert.ok(html.includes("맞은 키워드"));
+  assert.ok(html.includes("일치율"));
+  assert.ok(!html.includes("<dialog"));
+  assert.ok(!html.includes(p.authored_prompt));
 });

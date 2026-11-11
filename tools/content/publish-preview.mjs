@@ -1,3 +1,4 @@
+import { PUZZLE_RULE_VERSION } from "@aimi/contracts";
 /** Upload generated images and seed private content; does not approve or expose answers publicly. */
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
@@ -116,8 +117,8 @@ try {
   );
   for (const r of rows) {
     const q = await c.query(
-      `INSERT INTO aimi.content_releases(version,day_id,rule_version,review_status,manifest,target_storage_key,target_url,asset_sha256) VALUES($1,$2,'aimi-keyword-set-v3','preview',$3,$4,$5,$6) ON CONFLICT(version) DO UPDATE SET manifest=excluded.manifest,target_url=excluded.target_url WHERE content_releases.review_status='preview' RETURNING version`,
-      [r.version, r.day, r.manifest, r.key, r.url, r.hash],
+      `INSERT INTO aimi.content_releases(version,day_id,rule_version,review_status,manifest,target_storage_key,target_url,asset_sha256) VALUES($1,$2,$7,'preview',$3,$4,$5,$6) ON CONFLICT(version) DO UPDATE SET rule_version=excluded.rule_version,manifest=excluded.manifest,target_url=excluded.target_url WHERE content_releases.review_status='preview' RETURNING version`,
+      [r.version, r.day, r.manifest, r.key, r.url, r.hash, PUZZLE_RULE_VERSION],
     );
     if (q.rowCount !== 1) throw Error("APPROVED_CONTENT_IMMUTABLE");
   }

@@ -1,7 +1,10 @@
+import { AttemptResults } from "./attempt-results";
 import React, { useState, useEffect } from "react";
 import {
   ECONOMY_POLICY,
   PUZZLE_ATTEMPT_COST,
+  PUZZLE_COUNT_HINT_COST,
+  composeKeywordSentence,
   type Attempt,
 } from "@aimi/contracts";
 import { useApp } from "../../app/context";
@@ -92,6 +95,23 @@ export function Challenge() {
     s.daily.success ||
     s.daily.challengeClosed === true ||
     (!puzzle && s.daily.attemptsUsed >= 5);
+  const history = [
+    ...new Map(
+      [...(s.challengeAttempts ?? []), ...(result ? [result] : [])].map((r) => [
+        r.id,
+        r,
+      ]),
+    ).values(),
+  ].sort((a, b) => (a.attemptNumber ?? 0) - (b.attemptNumber ?? 0));
+  const terminalAttempt = [...history].reverse().find((r) => r.reveal);
+  const buyCountHint = () =>
+    a.perform(() =>
+      request<{ answerCount: number; cost: number }>(
+        "/v1/challenge/count-hint",
+        "POST",
+        { date: s.daily.date, contentVersion: content.version },
+      ),
+    );
   function move(index: number, by: number) {
     const dest = index + by;
     if (dest < 0 || dest >= ids.length) return;
@@ -110,6 +130,16 @@ export function Challenge() {
     );
     if (r) setResult(r);
   };
+  useEffect(() => {
+    if (puzzle && result)
+      document
+        .getElementById("challenge-attempt-" + result.id)
+        ?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, [result?.id]);
+  const resultHistory =
+    puzzle && history.length > 0 ? (
+      <AttemptResults attempts={history} keywords={content.keywords} />
+    ) : null;
   const reset = () => {
     setIds([]);
     setModel("low");
@@ -141,7 +171,34 @@ export function Challenge() {
           10일 이미지 모아보기 ›
         </button>
       )}
-      {!combination ? (
+      {puzzle && !closed && (
+        <section className="challenge-count-hint">
+          {content.answerCount !== undefined ? (
+            <strong>정답 키워드는 {content.answerCount}개예요.</strong>
+          ) : (
+            <>
+              <div>
+                <strong>정답 키워드 개수가 궁금한가요?</strong>
+                <p className="caption">
+                  힌트 15예산 · 구매하면 도전 가능 횟수가 줄어들 수 있어요.
+                </p>
+              </div>
+              <Button
+                weak
+                loading={a.busy}
+                disabled={
+                  a.busy ||
+                  s.budget < PUZZLE_COUNT_HINT_COST + PUZZLE_ATTEMPT_COST
+                }
+                onClick={() => void buyCountHint()}
+              >
+                개수 보기 · {PUZZLE_COUNT_HINT_COST}예산
+              </Button>
+            </>
+          )}
+        </section>
+      )}
+      {puzzle && closed ? null : !combination ? (
         <>
           <div className="target-summary">
             <ChallengeArt src={content.target} />
@@ -157,11 +214,6 @@ export function Challenge() {
             누르면 선택되고, 다시 누르면 해제돼요.
             {puzzle && " 순서는 채점에 영향을 주지 않아요."}
           </p>
-          {puzzle && content.answerCount !== undefined && (
-            <p className="caption green">
-              정답 단어 {content.answerCount}개 · 남은 도전 {attemptsLeft}회
-            </p>
-          )}
           <div className="keywords">
             {content.keywords.map((k) => (
               <button
@@ -180,6 +232,7 @@ export function Challenge() {
             ))}
           </div>
           <p className="caption green">{ids.length}개 선택됨</p>
+          {resultHistory}
           <div className="fixed-cta">
             <Button
               disabled={!ids.length || s.daily.success || closed}
@@ -250,7 +303,12 @@ export function Challenge() {
           <div className="notice section">
             <strong>자동 조합 문장</strong>
             <p>
-              {selected.map((k) => k!.label).join(" · ")} 조건으로 표현해줘.
+              {puzzle
+                ? composeKeywordSentence(
+                    selected.filter((k): k is NonNullable<typeof k> => !!k),
+                  )
+                : selected.map((k) => k!.label).join(" · ") +
+                  " 조건으로 표현해줘."}
             </p>
           </div>
           {!puzzle && (
@@ -284,11 +342,16 @@ export function Challenge() {
               ? `제출 1회 ${PUZZLE_ATTEMPT_COST}예산 · 키워드 수와 무관 · 남은 도전 ${attemptsLeft}회`
               : `키워드 ${cost - (model === "low" ? 12 : 40)} + 모델 ${model === "low" ? 12 : 40}`}
           </p>
+          {resultHistory}
           <div className="fixed-cta">
             <Button
               loading={a.busy}
               disabled={
-                cost > s.budget || !ids.length || s.daily.success || closed
+                a.busy ||
+                cost > s.budget ||
+                !ids.length ||
+                s.daily.success ||
+                closed
               }
               onClick={() => void submit()}
             >
@@ -322,112 +385,43 @@ export function Challenge() {
           </div>
         </Modal>
       )}
-      {result && puzzle && (
-        <Modal
-          className="challenge-result puzzle-feedback"
-          title={
-            result.passed
-              ? "챌린지 성공!"
-              : result.remaining === 0
-                ? "챌린지 실패"
-                : result.incorrectKeywordIds?.length === 0 &&
-                    (result.missingKeywordCount ?? 0) > 0
-                  ? "개수가 부족해요"
-                  : result.attemptNumber === 1
-                    ? "정답 개수를 알려드릴게요"
-                    : "선택한 오답을 확인해보세요"
-          }
-          onClose={() => {
-            setResult(null);
-            a.navigate("/mission", { replace: true });
-          }}
-        >
-          {result.passed || result.remaining === 0 ? (
-            <>
-              {result.reveal && (
-                <div className="puzzle-reveal">
-                  <strong>정답</strong>
-                  <p>
-                    {result.reveal.answerKeywordIds
-                      .map(
-                        (id) =>
-                          content.keywords.find((k) => k.id === id)?.label ??
-                          id,
-                      )
-                      .join(" · ")}
-                  </p>
-                  <strong>원문</strong>
-                  <HighlightedPrompt
-                    prompt={result.reveal.prompt}
-                    highlights={result.reveal.highlights}
-                  />
-                  <strong>작성 팁</strong>
-                  {result.reveal.tips.map((t, i) => (
-                    <div key={i}>
-                      <strong>{t.title}</strong>
-                      <p>{t.text}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </>
-          ) : (
-            <>
-              <p>정답 단어는 {result.answerCount}개예요.</p>
-              <p className="caption">일치율 {result.score}%</p>
-              {result.incorrectKeywordIds && (
-                <div className="notice">
-                  {result.incorrectKeywordIds.length ? (
-                    <>
-                      <strong>선택한 오답</strong>
-                      <p>
-                        {result.incorrectKeywordIds
-                          .map(
-                            (id) =>
-                              content.keywords.find((k) => k.id === id)
-                                ?.label ?? id,
-                          )
-                          .join(" · ")}
-                      </p>
-                    </>
-                  ) : (
-                    <p>개수가 부족해요</p>
-                  )}
-                  {(result.missingKeywordCount ?? 0) > 0 && (
-                    <p className="caption">
-                      정답 단어 {result.missingKeywordCount}개를 더 찾아보세요.
-                    </p>
-                  )}
-                </div>
-              )}
-              <p className="caption">
-                이번 시도 {result.cost}예산 사용 · 남은 예산{" "}
-                {Math.max(0, result.budget - result.cost)} · 추가 도전{" "}
-                {result.remaining}회
-              </p>
-            </>
-          )}
-          <div
-            className={
-              result.passed || result.remaining === 0
-                ? "dialog-actions"
-                : "dialog-actions puzzle-feedback-actions"
-            }
-          >
-            {!result.passed && result.remaining > 0 && (
-              <Button onClick={reset}>다시 시도하기</Button>
-            )}
-            <Button
-              weak={!result.passed && result.remaining > 0}
-              onClick={() => {
-                setResult(null);
-                a.navigate("/mission", { replace: true });
-              }}
-            >
-              나가기
+      {puzzle && closed && resultHistory}
+      {puzzle && closed && terminalAttempt?.reveal && (
+        <section className="notice puzzle-reveal puzzle-terminal">
+          <h2>{s.daily.success ? "챌린지 성공!" : "챌린지 실패"}</h2>
+          <strong>정답</strong>
+          <p>
+            {terminalAttempt.reveal.answerKeywordIds
+              .map(
+                (id) => content.keywords.find((k) => k.id === id)?.label ?? id,
+              )
+              .join(" · ")}
+          </p>
+          <strong>원문</strong>
+          <HighlightedPrompt
+            prompt={terminalAttempt.reveal.prompt}
+            highlights={terminalAttempt.reveal.highlights}
+          />
+          <strong>작성 팁</strong>
+          {terminalAttempt.reveal.tips.map((t, i) => (
+            <div key={i}>
+              <strong>{t.title}</strong>
+              <p>{t.text}</p>
+            </div>
+          ))}
+        </section>
+      )}
+      {puzzle && history.length > 0 && (
+        <div className="dialog-actions puzzle-history-actions">
+          {!closed && (
+            <Button weak onClick={() => a.navigate("/challenge")}>
+              키워드 다시 고르기
             </Button>
-          </div>
-        </Modal>
+          )}
+          <Button onClick={() => a.navigate("/mission", { replace: true })}>
+            나가기
+          </Button>
+        </div>
       )}
       {result && !puzzle && (
         <Modal
