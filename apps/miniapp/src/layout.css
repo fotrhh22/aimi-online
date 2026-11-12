@@ -1232,7 +1232,8 @@
 #root .game-preview-runner > .asset { left:calc(50% - 32px);bottom:6px; }
 
 #root .brand-logo { display:block;width:72px;height:34px;flex-shrink:0; }
-#root .loading-screen .brand-logo,
+#root .loading-screen .brand-logo { width:min(240px,72vw);height:auto;aspect-ratio:1368/634; }
+#root .loading-screen h1 { margin:0;line-height:1; }
 #root .login-screen .brand-logo { width:126px;height:59px; }
 
 #root .home-screen-head { align-items:center;gap:var(--space-copy-list); }

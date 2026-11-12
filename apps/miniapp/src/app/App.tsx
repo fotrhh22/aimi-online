@@ -44,7 +44,6 @@ function Screens() {
   if (a.loading)
     return (
       <main className="loading-screen">
-        <Asset id="seed" size={120} />
         <h1>
           <BrandLogo />
         </h1>
