@@ -17,11 +17,18 @@ import type { Config } from "./config.js";
 import { ApiError } from "./db.js";
 import { registerDemo } from "./services/demo/register.js";
 import { registerTossAuth } from "./services/toss/auth.js";
+import { registerAnonymousAuth } from "./services/toss/anonymous.js";
 import { registerPrototype } from "./modules/routes.js";
 import { PostgresRepository } from "./modules/repository.js";
 import { claimReward } from "./economy.js";
 
-export function createApp(config: Config, pool: Pool) {
+export function createApp(
+  config: Config,
+  pool: Pool,
+  dependencies: {
+    exchangeAnonymousCode?: (code: string) => Promise<string>;
+  } = {},
+) {
   const app = Fastify({
     bodyLimit: 200000,
     requestTimeout: 15000,
@@ -151,6 +158,12 @@ export function createApp(config: Config, pool: Pool) {
     pool,
     config.SESSION_SIGNING_KEY,
     user,
+  );
+  registerAnonymousAuth(
+    app,
+    pool,
+    config.SESSION_SIGNING_KEY,
+    dependencies.exchangeAnonymousCode,
   );
   app.post("/auth/logout", async (request) => {
     await user(request);

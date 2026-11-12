@@ -1,14 +1,13 @@
+import { getModelCatalog } from "../../lib/api/catalog";
 import React, { useEffect, useState } from "react";
-import type { ModelRecord } from "@aimi/contracts";
 import { useApp } from "../../app/context";
-import { request } from "../../lib/api/client";
 
 export function ModelAttribution({ modelId }: { modelId: string }) {
   const a = useApp();
   const [model, setModel] = useState<{ id: string; name: string } | null>(null);
   useEffect(() => {
     let cancelled = false;
-    void request<{ models: ModelRecord[] }>("/v1/models")
+    void getModelCatalog()
       .then((r) => {
         if (!cancelled)
           setModel(r.models.find((m) => m.id === modelId) ?? null);

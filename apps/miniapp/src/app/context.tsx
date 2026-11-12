@@ -25,6 +25,7 @@ import {
   localRuntime,
   browserRuntime,
   webDemoRuntime,
+  isCurrentSession,
 } from "../lib/api/client";
 import { hostNavigation, updateNavigation, exit } from "../lib/toss/bridge";
 export type HomeState = {
@@ -92,7 +93,7 @@ function useAppState() {
     },
   );
   const backHandlers = useRef(new Map<string, () => boolean>());
-  const writeLocks = useRef(0);
+  const operationCounts = useRef(new Map<string, number>());
   const restorePop = useRef(false);
   const scrollPositions = useRef(new Map<string, number>());
   const registerBackHandler = useCallback(
@@ -118,17 +119,13 @@ function useAppState() {
       scrollPositions.current.set(currentPath.current, pageScrollTop());
       currentPath.current = next;
       setPath(next);
+      setBusy((operationCounts.current.get(next) ?? 0) > 0);
       requestAnimationFrame(() =>
         restorePageScroll(scrollPositions.current.get(next) ?? 0),
       );
     },
     [],
   );
-  const locked = useCallback(() => {
-    if (!writeLocks.current) return false;
-    setToast("처리 중이에요. 완료될 때까지 잠시 기다려주세요.");
-    return true;
-  }, []);
   const closeBackLayer = useCallback(() => {
     const dialogs =
       document.querySelectorAll<HTMLDialogElement>("dialog[open]");
@@ -141,7 +138,7 @@ function useAppState() {
   }, []);
   const navigate = useCallback(
     (next: string, options?: { replace?: boolean }) => {
-      if (next === currentPath.current || locked()) return;
+      if (next === currentPath.current) return;
       if (guard.current && !guard.current(next)) return;
       const trail = navigationTrail(nav.current.trail, next, options?.replace);
       // Tabs, finished attempts and existing destinations don't accumulate duplicate history.
@@ -153,10 +150,10 @@ function useAppState() {
         ["/", "/mission", "/garden", "/social"].includes(next);
       commit(next, trail, Boolean(replace));
     },
-    [commit, locked],
+    [commit],
   );
   const back = useCallback(() => {
-    if (locked() || closeBackLayer()) return;
+    if (closeBackLayer()) return;
     const target = parentRoute(currentPath.current, nav.current.trail);
     if (target === null) {
       exit();
@@ -164,7 +161,7 @@ function useAppState() {
     }
     if (guard.current && !guard.current(target)) return;
     commit(target, navigationTrail(nav.current.trail, target));
-  }, [commit, locked, closeBackLayer]);
+  }, [commit, closeBackLayer]);
   const isCurrentPath = useCallback(
     (route: string) => currentPath.current === route,
     [],
@@ -210,10 +207,6 @@ function useAppState() {
             currentPath.current,
           );
       };
-      if (locked()) {
-        restore();
-        return;
-      }
       const beforeLayer = currentPath.current;
       if (closeBackLayer()) {
         if (currentPath.current !== beforeLayer) {
@@ -251,32 +244,14 @@ function useAppState() {
       nav.current.index = incoming?.index ?? Math.max(0, nav.current.index - 1);
       commit(target, navigationTrail(nav.current.trail, target));
     };
-    const writing = () => {
-      writeLocks.current++;
-    };
-    const written = () => {
-      writeLocks.current = Math.max(0, writeLocks.current - 1);
-    };
-    const unloading = (e: BeforeUnloadEvent) => {
-      if (writeLocks.current) {
-        e.preventDefault();
-        e.returnValue = "";
-      }
-    };
-    window.addEventListener("aimi-write-start", writing);
-    window.addEventListener("aimi-write-end", written);
-    window.addEventListener("beforeunload", unloading);
     window.addEventListener("popstate", listener);
     const clean = hostNavigation(back);
     return () => {
-      window.removeEventListener("aimi-write-start", writing);
-      window.removeEventListener("aimi-write-end", written);
-      window.removeEventListener("beforeunload", unloading);
       window.removeEventListener("popstate", listener);
       clean();
     };
-  }, [back, commit, closeBackLayer, locked]);
-  useEffect(() => updateNavigation(path !== "/"), [path]);
+  }, [back, commit, closeBackLayer]);
+  useEffect(() => updateNavigation(true), [path]);
   useEffect(() => {
     const clearAI = () => {
       for (const key of Object.keys(sessionStorage))
@@ -328,13 +303,15 @@ function useAppState() {
           ? request<Content>("/v1/content")
           : Promise.resolve(null),
       ]);
-      if (version !== refreshVersion.current || token() !== session) return;
+      if (version !== refreshVersion.current || !isCurrentSession(session))
+        return;
       setData(s);
       if (c) setContent(c);
       setError("");
       setAuthenticated(true);
     } catch (e) {
-      if (version !== refreshVersion.current || token() !== session) return;
+      if (version !== refreshVersion.current || !isCurrentSession(session))
+        return;
       setError(errorText(e));
       if ((e as { status?: number }).status === 401) {
         setToken(null);
@@ -412,18 +389,29 @@ function useAppState() {
       message?: string,
       update: "state" | "all" | "none" | "background" = "state",
     ): Promise<T | undefined> => {
+      const origin = currentPath.current;
+      operationCounts.current.set(
+        origin,
+        (operationCounts.current.get(origin) ?? 0) + 1,
+      );
       setBusy(true);
       try {
         const result = await fn();
         if (update === "background") void refresh(false);
         else if (update !== "none") await refresh(update === "all");
+        if (origin !== currentPath.current) return undefined;
         if (message) setToast(message);
         return result;
       } catch (e) {
-        setToast(errorText(e));
+        if (origin === currentPath.current) setToast(errorText(e));
         return undefined;
       } finally {
-        setBusy(false);
+        const count = Math.max(
+          0,
+          (operationCounts.current.get(origin) ?? 1) - 1,
+        );
+        operationCounts.current.set(origin, count);
+        setBusy((operationCounts.current.get(currentPath.current) ?? 0) > 0);
       }
     },
     [refresh],

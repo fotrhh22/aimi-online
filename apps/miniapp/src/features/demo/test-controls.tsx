@@ -104,6 +104,9 @@ export function TestControls() {
             Gemini 시간당 사용량과 48시간 이용 기간은 초기화되지 않아요.
           </p>
           <div className="dialog-actions">
+            <Button weak onClick={() => setConfirm(false)}>
+              닫기
+            </Button>
             <Button
               loading={a.busy}
               onClick={() =>
@@ -119,9 +122,6 @@ export function TestControls() {
               }
             >
               초기화하기
-            </Button>
-            <Button weak disabled={a.busy} onClick={() => setConfirm(false)}>
-              취소
             </Button>
           </div>
         </Modal>

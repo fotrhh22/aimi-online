@@ -92,7 +92,8 @@ export function ChallengeArt({
   src: string;
   className?: string;
 }) {
-  return src.includes(".svg#") ? (
+  const generated = !src.includes(".svg#");
+  const art = !generated ? (
     <svg
       className={"challenge-art " + className}
       viewBox="0 0 330 145"
@@ -105,8 +106,23 @@ export function ChallengeArt({
     <img
       src={src}
       className={"challenge-art " + className}
-      alt="챌린지 예시 이미지"
+      alt="AI로 만든 챌린지 목표 이미지"
     />
+  );
+  return (
+    <span className="ai-image-frame">
+      {art}
+      {generated && <small className="ai-image-label">AI로 만든 이미지</small>}
+    </span>
+  );
+}
+export function AIUseNotice({ image = false }: { image?: boolean }) {
+  return (
+    <p className="ai-use-notice">
+      {image
+        ? "AI로 미리 만든 그림의 키워드를 찾는 챌린지예요."
+        : "생성형 AI로 질문을 다듬고 업무를 분석해요. 입력 내용은 Google Gemini로 보내니 개인정보는 적지 마세요."}
+    </p>
   );
 }
 export function Icon({ name }: { name: string }) {

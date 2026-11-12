@@ -1,5 +1,5 @@
 import {
-  TossAuth,
+  User,
   NavigationBar,
   graniteEvent,
   closeView,
@@ -13,7 +13,59 @@ import {
   webDemoRuntime,
   request,
   setToken,
+  setAnonymousToken,
+  configureSessionRecovery,
+  RequestError,
 } from "../api/client";
+import { AnonymousLogin, SessionResult } from "@aimi/contracts";
+
+async function anonymousCredential() {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    return await Promise.race([
+      User.createAnonymousKeyAuthCode(),
+      new Promise<never>((_resolve, reject) => {
+        timer = setTimeout(
+          () => reject(new RequestError("TOSS_AUTH_UNAVAILABLE", 0)),
+          10000,
+        );
+      }),
+    ]);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+async function anonymousSession() {
+  // A rejected/expired code gets one fresh code, never a replay of the old one.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const credential = await anonymousCredential();
+      const body = AnonymousLogin.parse({ code: credential.code });
+      const result = await request("/auth/anonymous", "POST", body);
+      return SessionResult.parse(result).token;
+    } catch (error) {
+      if (error instanceof RequestError) {
+        if (error.code === "TOSS_AUTH_CODE_INVALID" && attempt === 0) continue;
+        throw error;
+      }
+      const code = String(
+        (error as { code?: string; message?: string })?.code ??
+          (error as Error)?.message ??
+          "",
+      );
+      throw new RequestError(
+        code.includes("UNSUPPORTED")
+          ? "TOSS_AUTH_UNSUPPORTED"
+          : "TOSS_AUTH_FAILED",
+        0,
+      );
+    }
+  }
+  throw new RequestError("TOSS_AUTH_FAILED", 0);
+}
+if (!browserRuntime) configureSessionRecovery(anonymousSession);
+
+let pendingLogin: Promise<void> | undefined;
 export async function login(name = "player") {
   if (webDemoRuntime) throw Error("WEB_DEMO_USES_TEST_SESSION");
   if (localRuntime) {
@@ -21,9 +73,13 @@ export async function login(name = "player") {
     setToken(r.token);
     return;
   }
-  const credential = await TossAuth.login();
-  const r = await request<{ token: string }>("/auth/toss", "POST", credential);
-  setToken(r.token);
+  if (!pendingLogin)
+    pendingLogin = anonymousSession()
+      .then((value) => setAnonymousToken(value))
+      .finally(() => {
+        pendingLogin = undefined;
+      });
+  return pendingLogin;
 }
 export async function copy(text: string) {
   if (browserRuntime) await navigator.clipboard.writeText(text);
@@ -62,7 +118,8 @@ export function hostNavigation(back: () => void) {
   return cleanup;
 }
 export function updateNavigation(hasBack: boolean) {
-  if (!browserRuntime)
+  if (browserRuntime) return;
+  try {
     void NavigationBar.setOptions({
       withBackButton: hasBack,
       withHomeButton: false,
@@ -70,6 +127,9 @@ export function updateNavigation(hasBack: boolean) {
       transparentBackground: true,
       theme: "light",
     }).catch(() => {});
+  } catch {
+    // Unsupported hosts may throw synchronously before returning a Promise.
+  }
 }
 export function exit() {
   if (!browserRuntime) void closeView();

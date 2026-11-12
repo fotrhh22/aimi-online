@@ -2,6 +2,7 @@ import { ECONOMY_POLICY } from "@aimi/contracts";
 import React, { useState } from "react";
 import { useApp } from "../../app/context";
 import {
+  AIUseNotice,
   Asset,
   Button,
   Modal,
@@ -10,6 +11,7 @@ import {
   ChallengeArt,
 } from "../../ui/primitives";
 import { request } from "../../lib/api/client";
+import { PendingRewardButton } from "../challenge/reward-popup";
 export const GAME_LABELS = {
   crossing: "폴짝 길건너기",
   dino: "점프 달리기",
@@ -59,6 +61,7 @@ export function Home() {
         )?.name ?? "내 캐릭터"}
         , 오늘도 한 판 어때요?
       </h2>
+      <PendingRewardButton />
       <button className="today-card" onClick={() => a.navigate("/mission")}>
         <small>오늘 · {GAME_LABELS[s.daily.gameKind]}</small>
         <strong>
@@ -153,6 +156,9 @@ export function Home() {
                 <br />
                 {s.todayTip.body}
               </p>
+              <small className="ai-result-label">
+                AI와 함께 정리한 작성 팁이에요.
+              </small>
               <h3>
                 팁 확인 보상 +
                 {s.claims.includes("tip") ? 0 : ECONOMY_POLICY.tip} EP
@@ -265,6 +271,7 @@ export function Mission() {
         </>
       ) : (
         <>
+          {!terminal && <AIUseNotice image />}
           <ChallengeArt
             src={a.content!.target}
             className="mission-target-image"

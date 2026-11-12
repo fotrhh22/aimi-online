@@ -1,5 +1,6 @@
 import { SentenceCard } from "./sentence-card";
 import { ModelAttribution } from "./model-attribution";
+import { PendingRewardButton } from "./reward-popup";
 import {
   challengeStage,
   selectChallengeResult,
@@ -16,7 +17,14 @@ import {
   type Attempt,
 } from "@aimi/contracts";
 import { useApp } from "../../app/context";
-import { Button, ChallengeArt, Icon, Modal, Stats } from "../../ui/primitives";
+import {
+  AIUseNotice,
+  Button,
+  ChallengeArt,
+  Icon,
+  Modal,
+  Stats,
+} from "../../ui/primitives";
 import { request } from "../../lib/api/client";
 function HighlightedPrompt({
   prompt,
@@ -259,6 +267,9 @@ export function Challenge() {
             회
           </p>
           <div className="dialog-actions hint-purchase-actions">
+            <Button weak onClick={() => setHintConfirm(false)}>
+              닫기
+            </Button>
             <Button
               loading={a.busy}
               disabled={
@@ -272,13 +283,6 @@ export function Challenge() {
               }}
             >
               힌트 보기
-            </Button>
-            <Button
-              weak
-              disabled={a.busy}
-              onClick={() => setHintConfirm(false)}
-            >
-              취소
             </Button>
           </div>
         </Modal>
@@ -297,6 +301,7 @@ export function Challenge() {
           <div className="challenge-selection-target">
             <ChallengeArt src={content.target} />
           </div>
+          <AIUseNotice image />
           <p className="challenge-selection-description">
             목표 이미지를 설명하는 정답 단어를 모두 골라보세요.
             대상·개수·색상·배경·그림체가 단서예요.
@@ -504,6 +509,7 @@ export function Challenge() {
       {puzzle && stage === "answer" && closed && shownAttempt?.reveal && (
         <section className="puzzle-reveal puzzle-terminal challenge-answer-content">
           <h2>{s.daily.success ? "최종 결과: 성공" : "최종 결과: 실패"}</h2>
+          <PendingRewardButton />
           <figure className="challenge-result-image">
             <ChallengeArt src={shownAttempt.image || content.target} />
             <figcaption>목표 이미지</figcaption>
@@ -537,6 +543,9 @@ export function Challenge() {
             </details>
           )}
           <strong>오늘의 작성 포인트</strong>
+          <small className="ai-result-label">
+            AI와 함께 정리한 학습 해설이에요.
+          </small>
           {shownAttempt.reveal.tips
             .filter((t) => t.kind !== "model")
             .map((t, i) => (

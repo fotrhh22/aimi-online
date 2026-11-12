@@ -39,7 +39,7 @@
     "preview:reset": "npm run build:shared && node tools/reset-preview.mjs",
     "ait:build:test": "node tools/build-test-ait.mjs",
     "build:web-demo": "node tools/build-web-demo.mjs",
-    "test:web-demo": "node --test tools/qa/web-demo.test.mjs tools/qa/runtime.test.mjs tools/qa/scale-lock.test.mjs",
+    "test:web-demo": "node --test tools/qa/web-demo.test.mjs tools/qa/runtime.test.mjs tools/qa/scale-lock.test.mjs tools/qa/session-recovery.test.mjs tools/qa/release-policy.test.mjs",
     "qa:labels": "node tools/qa/audit-action-labels.mjs"
   },
   "engines": {

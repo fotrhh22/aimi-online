@@ -723,10 +723,13 @@ export function GameScreen() {
           <p>
             게임이 일시정지됐어요.
             <br />
-            취소를 누르면 이어서 플레이할 수 있어요.
+            닫기를 누르면 이어서 플레이할 수 있어요.
           </p>
           <p className="caption">나가면 게임 횟수 1회가 차감돼요.</p>
           <div className="dialog-actions">
+            <Button weak onClick={() => syncPause(false)}>
+              닫기
+            </Button>
             <Button
               loading={saving}
               onClick={() => {
@@ -735,9 +738,6 @@ export function GameScreen() {
             >
               나가기
             </Button>
-            <Button weak disabled={saving} onClick={() => syncPause(false)}>
-              취소
-            </Button>
           </div>
         </Modal>
       )}
@@ -745,25 +745,25 @@ export function GameScreen() {
         <Modal
           title={saving ? "기록을 확인하고 있어요" : "기록을 다시 확인해주세요"}
           onClose={() => {
-            if (saveError) a.navigate("/mission", { replace: true });
+            a.navigate("/mission", { replace: true });
           }}
         >
           <p>
             {saving
               ? "잠시만 기다려주세요."
-              : "같은 플레이 결과를 다시 요청해요. 보상은 중복 지급하지 않아요. 취소하면 미션으로 돌아가요."}
+              : "같은 플레이 결과를 다시 요청해요. 보상은 중복 지급하지 않아요. 닫기를 누르면 미션으로 돌아가요."}
           </p>
           {saveError && (
             <div className="dialog-actions">
+              <Button weak onClick={() => a.navigate("/mission")}>
+                닫기
+              </Button>
               <Button
                 onClick={() =>
                   void finish(simulation.current?.status === "running")
                 }
               >
                 다시 확인
-              </Button>
-              <Button weak onClick={() => a.navigate("/mission")}>
-                취소
               </Button>
             </div>
           )}

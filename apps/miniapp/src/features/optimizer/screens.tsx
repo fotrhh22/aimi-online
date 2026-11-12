@@ -1,3 +1,4 @@
+import { getModelCatalog } from "../../lib/api/catalog";
 import { ModelFacts, modelPriceLabel } from "./model-facts";
 import { sourceName } from "./model-copy";
 import {
@@ -24,7 +25,7 @@ import type {
   TaskProfile,
 } from "@aimi/contracts";
 import { useApp } from "../../app/context";
-import { Button, Icon, Notice } from "../../ui/primitives";
+import { AIUseNotice, Button, Icon, Notice } from "../../ui/primitives";
 import { request, errorText, RequestError } from "../../lib/api/client";
 import { copy } from "../../lib/toss/bridge";
 export function Optimizer() {
@@ -126,6 +127,7 @@ export function Optimizer() {
       {!r ? (
         <>
           <h2>어떻게 질문할까요?</h2>
+          <AIUseNotice />
           <textarea
             className="prompt-input"
             value={text}
@@ -185,6 +187,13 @@ export function Optimizer() {
               : "이렇게 더 구체화해보세요"}
           </h2>
           <div className="prompt-result">
+            <small className="ai-result-label">
+              {editing ||
+              current !==
+                (tab === "improved" ? r.improvedText : r.extendedExample)
+                ? "AI 초안을 직접 수정한 질문이에요"
+                : "AI가 작성한 질문이에요"}
+            </small>
             {editing ? (
               <textarea
                 aria-label="결과 문장 편집"
@@ -397,7 +406,7 @@ export function Recommendations() {
     let cancelled = false;
     setCatalogLoading(true);
     setCatalogError(false);
-    void request<{ models: ModelRecord[] }>("/v1/models")
+    void getModelCatalog()
       .then((r) => {
         if (!cancelled) setAll(r.models);
       })
@@ -526,6 +535,7 @@ export function Recommendations() {
           ))}
         </div>
       </section>
+      <AIUseNotice />
       <div className="recommendation-input">
         <input
           aria-label="추천받을 업무"
@@ -803,7 +813,7 @@ export function ModelDetails() {
     setFailed(false);
     setProfileId(undefined);
     // Always use the current selected catalogue; old session cache may contain removed models.
-    void request<{ models: ModelRecord[] }>("/v1/models")
+    void getModelCatalog()
       .then((result) => {
         if (cancelled) return;
         const found = result.models.find((m) => m.id === id);

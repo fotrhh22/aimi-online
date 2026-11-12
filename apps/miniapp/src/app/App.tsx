@@ -112,7 +112,7 @@ function Screens() {
               )
             }
           >
-            {a.localRuntime ? "개발용으로 시작하기" : "토스로 시작하기"}
+            {a.localRuntime ? "개발용으로 시작하기" : "시작하기"}
           </Button>
         )}
         {a.error && <p role="alert">{a.error}</p>}

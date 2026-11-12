@@ -1424,3 +1424,11 @@ html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
 
 /* Browser and weak actions must not inherit user-agent button layout defaults. */
 #root .aimi-button[data-aimi-button="native"] { display:flex;align-items:center;justify-content:center;padding-inline:0;appearance:none;-webkit-appearance:none;text-align:center; }
+
+/* Release policy: labels keep the PDF layout and use existing spacing/typography. */
+#root .ai-use-notice { margin:0;font:inherit;font-size:12px;line-height:1.6;color:var(--color-brand-text);overflow-wrap:anywhere; }
+#root .ai-result-label { display:block;font:inherit;font-size:11px;line-height:1.5;color:var(--color-brand-text);margin:0; }
+#root .ai-image-frame { display:block;position:relative;min-width:0;width:100%; }
+#root .ai-image-frame .challenge-art { display:block; }
+#root .ai-image-label { position:absolute;right:6px;bottom:6px;padding:3px 6px;background:rgba(248,250,240,.94);border:1px solid rgba(39,78,47,.18);border-radius:6px;font:inherit;font-size:10px;line-height:14px;color:#274e2f;max-width:calc(100% - 12px);box-sizing:border-box; }
+#root .target-summary > .ai-image-frame { flex:0 0 64px; }

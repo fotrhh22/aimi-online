@@ -1,4 +1,5 @@
 import { localRuntime, webDemoRuntime } from "../runtime";
+import { createSessionRecovery } from "./session-recovery";
 export { localRuntime, browserRuntime, webDemoRuntime } from "../runtime";
 const configured = import.meta.env.VITE_API_BASE_URL as string | undefined;
 const remoteBase = "https://aimi-online-api.onrender.com";
@@ -37,12 +38,14 @@ export function token() {
     webDemoRuntime ? "aimi.web-demo.session" : "aimi.session",
   );
 }
-export function setToken(value: string | null) {
+export function setToken(value: string | null, renewal = false) {
   if (value !== token()) {
+    if (!renewal && !webDemoRuntime)
+      localStorage.removeItem("aimi.session.kind");
     for (const key of Object.keys(sessionStorage))
       if (key.startsWith("aimi.") && key !== "aimi.pending-invite")
         sessionStorage.removeItem(key);
-    keys.clear();
+    if (!renewal) keys.clear();
   }
   if (value)
     localStorage.setItem(
@@ -54,20 +57,69 @@ export function setToken(value: string | null) {
       webDemoRuntime ? "aimi.web-demo.session" : "aimi.session",
     );
 }
-export async function request<T>(
+export function setAnonymousToken(value: string, renewal = false) {
+  setToken(value, renewal);
+  localStorage.setItem("aimi.session.kind", "anonymous");
+}
+let recoverTossSession: (() => Promise<string>) | undefined;
+export function configureSessionRecovery(handler: () => Promise<string>) {
+  recoverTossSession = handler;
+}
+const recovery = createSessionRecovery({
+  read: token,
+  write: (value) => setAnonymousToken(value, true),
+  authenticate: async () => (recoverTossSession ? recoverTossSession() : null),
+});
+export const isCurrentSession = recovery.current;
+const pendingReads = new Map<string, Promise<unknown>>();
+export function request<T>(
+  path: string,
+  method = "GET",
+  body?: unknown,
+): Promise<T> {
+  if (method !== "GET") return performRequest<T>(path, method, body);
+  const key = JSON.stringify([token(), path]);
+  const existing = pendingReads.get(key);
+  if (existing) return existing as Promise<T>;
+  const task = performRequest<T>(path, method, body);
+  pendingReads.set(key, task);
+  void task
+    .finally(() => {
+      if (pendingReads.get(key) === task) pendingReads.delete(key);
+    })
+    .catch(() => {});
+  return task;
+}
+async function performRequest<T>(
   path: string,
   method = "GET",
   body?: unknown,
 ): Promise<T> {
   const signature = method + path + JSON.stringify(body),
-    mutation = method !== "GET";
-  if (mutation && !keys.has(signature))
+    mutation = method !== "GET",
+    idempotent = mutation && !path.startsWith("/auth/");
+  if (idempotent && !keys.has(signature))
     keys.set(signature, crypto.randomUUID());
   const controller = new AbortController(),
     timer = setTimeout(() => controller.abort(), 35000);
   if (mutation) window.dispatchEvent(new Event("aimi-write-start"));
   try {
-    const sentToken = token();
+    let sentToken = token();
+    const idempotencyKey = keys.get(signature);
+    const releaseKey = () => {
+      if (keys.get(signature) === idempotencyKey) keys.delete(signature);
+    };
+    const send = () =>
+      fetch(base + demoPath, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          ...(sentToken ? { Authorization: "Bearer " + sentToken } : {}),
+          ...(idempotent ? { "Idempotency-Key": idempotencyKey! } : {}),
+        },
+        body: body === undefined ? undefined : JSON.stringify(body),
+        signal: controller.signal,
+      });
     const demoPath = webDemoRuntime
       ? path.startsWith("/demo/")
         ? path.replace(/^\/demo\//, "/web-demo/")
@@ -79,29 +131,47 @@ export async function request<T>(
           !path.startsWith("/demo/")
         ? "/demo" + path
         : path;
-    const response = await fetch(base + demoPath, {
-      method,
-      headers: {
-        "Content-Type": "application/json",
-        ...(sentToken ? { Authorization: "Bearer " + sentToken } : {}),
-        ...(mutation ? { "Idempotency-Key": keys.get(signature)! } : {}),
-      },
-      body: body === undefined ? undefined : JSON.stringify(body),
-      signal: controller.signal,
-    });
+    let response = await send();
+    if (
+      response.status === 401 &&
+      !path.startsWith("/auth/") &&
+      !localRuntime &&
+      !webDemoRuntime &&
+      localStorage.getItem("aimi.session.kind") === "anonymous" &&
+      sentToken &&
+      /^[a-f0-9]{64}$/.test(sentToken)
+    ) {
+      try {
+        const renewed = await recovery.recover(sentToken);
+        if (renewed && !controller.signal.aborted) {
+          sentToken = renewed;
+          response = await send(); // Only once; never replay network/5xx errors.
+        }
+      } catch (error) {
+        if (token() === sentToken) {
+          setToken(null);
+          window.dispatchEvent(new Event("aimi-session-expired"));
+        }
+        throw error;
+      }
+    }
     const data = await response.json();
+    if (sentToken && token() !== sentToken && !isCurrentSession(sentToken)) {
+      releaseKey();
+      throw new RequestError("SESSION_CHANGED", 409);
+    }
     if (!response.ok) {
       if (response.status === 401 && sentToken && token() === sentToken) {
         setToken(null);
         window.dispatchEvent(new Event("aimi-session-expired"));
       }
-      if (response.status < 500) keys.delete(signature);
+      if (response.status < 500) releaseKey();
       throw new RequestError(
         data.error?.code ?? "REQUEST_FAILED",
         response.status,
       );
     }
-    keys.delete(signature);
+    releaseKey();
     return data.data as T;
   } catch (e) {
     if (e instanceof RequestError) throw e;
@@ -112,6 +182,15 @@ export async function request<T>(
   }
 }
 const messages: Record<string, string> = {
+  SESSION_CHANGED: "사용자 연결이 바뀌었어요. 현재 화면에서 다시 확인해주세요.",
+  TOSS_AUTH_NOT_CONFIGURED:
+    "사용자 연결을 준비하고 있어요. 잠시 후 다시 시도해주세요.",
+  TOSS_AUTH_CODE_INVALID: "연결 시간이 지났어요. 다시 시작해주세요.",
+  TOSS_AUTH_RATE_LIMITED: "연결 요청이 많아요. 잠시 후 다시 시도해주세요.",
+  TOSS_AUTH_UNAVAILABLE: "토스 연결이 지연돼요. 잠시 후 다시 시도해주세요.",
+  TOSS_AUTH_FAILED: "사용자를 확인하지 못했어요. 다시 시작해주세요.",
+  TOSS_AUTH_UNSUPPORTED:
+    "토스 앱을 최신 버전으로 업데이트한 뒤 다시 시작해주세요.",
   INVALID_ACCESS_CODE: "접속 코드를 다시 확인해주세요.",
   ACCESS_CODE_NOT_FOUND:
     "등록된 접속 코드가 아니에요. 발급받은 코드를 확인해주세요.",

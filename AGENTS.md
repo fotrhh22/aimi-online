@@ -14,7 +14,7 @@ START_HERE.md → docs/DEVELOPMENT_SPEC.md → design/DESIGN_SYSTEM.md → desig
 - 정원은 드래그 자유 배치. packages/contracts/src/garden.ts와 docs/GARDEN_FREE_PLACEMENT.md를 따른다. 고정 슬롯 제한은 삭제했으며 legacy slots는 이전 데이터 읽기 전용이다.
 - EP는 정원 아이템·캐릭터 구매용. 한 캐릭터만 정원과 세 게임에서 사용.
 - 추천은 Small/Medium/High + 공개 지표, 코드로 최대3개 선정. 챌린지의 저/고성능 2등급과 구분.
-- 토스 로그인·자체 친구 관계·미니앱 딥링크 공유. 외부 다운로드 유도 없음.
+- 토스 익명 인증 코드 교환·자체 친구 관계·미니앱 딥링크 공유. 기존 토스 로그인 서버 경로는 호환용으로 유지하며 두 식별자를 임의로 합치지 않는다. 외부 다운로드 유도 없음.
 
 ## 구현
 

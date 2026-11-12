@@ -34,6 +34,7 @@ export function seoulDate(date = new Date()): string {
   }).format(date);
 }
 export * from "./prototype.js";
+export * from "./auth.js";
 
 export * from "./garden.js";
 

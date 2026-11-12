@@ -1,5 +1,3 @@
-import https from "node:https";
-import { readFileSync } from "node:fs";
 import {
   createHash,
   createHmac,
@@ -14,72 +12,15 @@ import { z } from "zod";
 import { ApiError } from "../../db.js";
 type Tokens = { userKey: string; accessToken: string; refreshToken: string };
 const prefix = "/api-partner/v1/apps-in-toss/user/oauth2/";
-export function preserveUserKey(raw: string) {
-  return raw.replace(/("userKey"\s*:\s*)(\d+)(?=\s*[,}])/g, '$1"$2"');
-}
+export { preserveUserKey } from "./client.js";
+import { tossPartnerRequest, preserveUserKey } from "./client.js";
 export function tossClient(
   path: string,
   method: string,
   body: unknown,
   token?: string,
-): Promise<unknown> {
-  const cert = process.env.TOSS_CLIENT_CERT_PATH,
-    key = process.env.TOSS_CLIENT_KEY_PATH;
-  if (!cert || !key) throw new ApiError("TOSS_AUTH_NOT_CONFIGURED", 503);
-  let payload = body === undefined ? undefined : JSON.stringify(body);
-  if (path === "access/remove-by-user-key") {
-    const userKey = z
-      .string()
-      .regex(/^\d{1,20}$/)
-      .parse((body as { userKey: string }).userKey);
-    payload = '{"userKey":' + userKey + "}";
-  }
-  return new Promise((resolve, reject) => {
-    let req: import("node:http").ClientRequest;
-    try {
-      req = https.request(
-        {
-          hostname: "apps-in-toss-api.toss.im",
-          path: prefix + path,
-          method,
-          cert: readFileSync(cert),
-          key: readFileSync(key),
-          rejectUnauthorized: true,
-          timeout: 15000,
-          headers: {
-            "Content-Type": "application/json",
-            ...(token ? { Authorization: "Bearer " + token } : {}),
-            ...(payload
-              ? { "Content-Length": Buffer.byteLength(payload) }
-              : {}),
-          },
-        },
-        (res) => {
-          let buffer = "";
-          res.on("data", (chunk: Buffer) => {
-            buffer += chunk.toString("utf8");
-            if (buffer.length > 200000) req.destroy();
-          });
-          res.on("end", () => {
-            try {
-              const r = JSON.parse(preserveUserKey(buffer));
-              if (res.statusCode !== 200 || r.resultType !== "SUCCESS")
-                return reject(new ApiError("TOSS_AUTH_FAILED", 502));
-              resolve(r.success);
-            } catch {
-              reject(new ApiError("TOSS_AUTH_FAILED", 502));
-            }
-          });
-        },
-      );
-    } catch {
-      return reject(new ApiError("TOSS_AUTH_NOT_CONFIGURED", 503));
-    }
-    req.on("timeout", () => req.destroy());
-    req.on("error", () => reject(new ApiError("TOSS_AUTH_UNAVAILABLE", 503)));
-    if (payload) req.write(payload);
-    req.end();
-  });
+) {
+  return tossPartnerRequest(prefix + path, method, body, token);
 }
 export function registerTossAuth(
   app: FastifyInstance,

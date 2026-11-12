@@ -477,6 +477,9 @@ export function Garden() {
           ) && <p>다른 캐릭터를 구매하면 선택할 수 있어요.</p>}
           <p className="caption">선택한 뒤 정원 편집에서 저장해주세요.</p>
           <div className="dialog-actions button-row">
+            <Button weak onClick={() => setPicker(false)}>
+              닫기
+            </Button>
             <Button
               disabled={choice === character}
               onClick={() => {
@@ -486,9 +489,6 @@ export function Garden() {
             >
               선택하기
             </Button>
-            <Button weak onClick={() => setPicker(false)}>
-              취소
-            </Button>
           </div>
         </Modal>
       )}
@@ -496,7 +496,7 @@ export function Garden() {
         <Modal
           title="변경사항을 저장할까요?"
           onClose={() => {
-            if (!a.busy) setUnsaved(false);
+            setUnsaved(false);
           }}
         >
           <p>
@@ -505,11 +505,11 @@ export function Garden() {
             저장하지 않으면 이전 정원으로 돌아가요.
           </p>
           <div className="dialog-actions">
+            <Button weak onClick={() => setUnsaved(false)}>
+              닫기
+            </Button>
             <Button loading={a.busy} onClick={() => void save(leaveTarget)}>
               저장하기
-            </Button>
-            <Button weak disabled={a.busy} onClick={() => setUnsaved(false)}>
-              취소
             </Button>
             <button
               className="text-link"
@@ -616,7 +616,7 @@ export function Shop() {
                 : "이 아이템을 구매할까요?"
           }
           onClose={() => {
-            if (!a.busy) setSelected(null);
+            setSelected(null);
           }}
         >
           <div className="product-preview">
@@ -690,6 +690,9 @@ export function Shop() {
                 구매 후 정원 편집에서 직접 적용해주세요.
               </p>
               <div className="dialog-actions">
+                <Button weak onClick={() => setSelected(null)}>
+                  닫기
+                </Button>
                 <Button
                   loading={a.busy}
                   disabled={
@@ -699,13 +702,6 @@ export function Shop() {
                   onClick={() => void buy()}
                 >
                   구매하기
-                </Button>
-                <Button
-                  weak
-                  disabled={a.busy}
-                  onClick={() => setSelected(null)}
-                >
-                  취소
                 </Button>
               </div>
             </>
@@ -1019,19 +1015,19 @@ export function Social() {
         <Modal
           title="친구를 삭제하시겠어요?"
           onClose={() => {
-            if (!a.busy) setDeleting(null);
+            setDeleting(null);
           }}
         >
           <p>{deleting.name}님을 친구 목록에서 삭제해요.</p>
           <div className="dialog-actions">
+            <Button weak onClick={() => setDeleting(null)}>
+              닫기
+            </Button>
             <Button
               loading={a.busy}
               onClick={() => void action("remove", deleting)}
             >
               삭제
-            </Button>
-            <Button weak disabled={a.busy} onClick={() => setDeleting(null)}>
-              취소
             </Button>
           </div>
         </Modal>
@@ -1045,7 +1041,7 @@ export function Social() {
         <Modal
           title="코드로 친구 추가"
           onClose={() => {
-            if (!a.busy) setAdding(false);
+            setAdding(false);
           }}
         >
           <label>
@@ -1121,13 +1117,13 @@ export function Account() {
         로그아웃
       </Button>
       <Button weak onClick={() => setConfirm(true)}>
-        계정 연결 해제·탈퇴
+        계정 삭제
       </Button>
       {confirm && (
         <Modal
-          title="계정 연결을 해제할까요?"
+          title="계정을 삭제할까요?"
           onClose={() => {
-            if (!a.busy) setConfirm(false);
+            setConfirm(false);
           }}
         >
           <p>
@@ -1135,6 +1131,9 @@ export function Account() {
             <br />이 작업은 되돌릴 수 없어요.
           </p>
           <div className="dialog-actions">
+            <Button weak onClick={() => setConfirm(false)}>
+              닫기
+            </Button>
             <Button
               onClick={() =>
                 void a
@@ -1152,9 +1151,6 @@ export function Account() {
               }
             >
               삭제하기
-            </Button>
-            <Button weak disabled={a.busy} onClick={() => setConfirm(false)}>
-              취소
             </Button>
           </div>
         </Modal>
