@@ -4,6 +4,16 @@
 
 출시 완료가 아니다. RELEASE_READINESS.md의 Gate1(코드·번들) 검증을 수행했으며 Gate2의 운영 DB·서버 코드 반영과 사용자가 수행할 인증서/환경변수 연결을 구분한다. Gate3의 토스 실기기·콘솔·심사·실제 공개는 대기다. 최초94항목 조사 결과는 TOSS_NONGAME_RELEASE_AUDIT_20261113.md에 변경 전 증거로 보존한다.
 
+## 운영 반영 확인
+
+- API 소스 커밋 `45b5cf4c669affc552833d4cedeadf6f56fe9021` 푸시 완료. Render `dep-dbqut6h42hec73fgkbh0` live 확인.
+- GitHub CI [43263237098](https://github.com/fotrhh22/aimi-online/actions/runs/43263237098) 전체 성공. 빌드·타입·단위·웹·일회용DB migration2회·DB통합검증 포함.
+- `/health/live`, `/health/ready` HTTP200. ready의commit이 위 커밋과 일치하고 content는supabase/10개/preview:false다.
+- 무효 코드 probe는HTTP503 `TOSS_AUTH_NOT_CONFIGURED`. 인증 경로 배포는 확인했지만 인증서/env가 아직 연결되지 않아 유효SDK코드 교환은 미검증이다. 인증서/env를 임의로 등록하지 않았다.
+- Vercel은HTML200·새AI고지 포함 확인. 웹 번들에서 익명인증 경로는제거됐으며 웹접속코드인증과토스인증의빌드분리를유지한다.
+- 배포 검증 JSON: `output/releases/nongame-ready/deployment.json`.
+- 최종AIT SHA256: `508be19b1cfa282de35f641b51b89aea9807a24e764e9db7a0b50b2bd44df23e`,20,910,826바이트. 네이티브Toss인증/콘솔업로드/기기검증전이며출시완료가아니다.
+
 ## 체크리스트 후속 조치
 
 | 항목 | 조치와 현재 증거 | 남은 확인 |
