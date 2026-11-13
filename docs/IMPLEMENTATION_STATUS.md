@@ -1,5 +1,7 @@
 ## 2026-11-13 — 닉네임 저장 CORS·개인정보 안전 영역 수정
 
+- 반영 완료: commit 23be565, Render dep-dbr6dd8jo6nc73eohpfg live, CI 43344639566 success. 운영 OPTIONS에서 PUT/DELETE 허용 확인. 닉네임 관련 회귀 3개·API 빌드 및 개인정보 393px 안전 영역/본문 스크롤 확인 통과. 실제 토스 닉네임 저장은 사용자 재시도 필요.
+- 새 번들: output/releases/toss-privacy/AIMI_PROFILE_PRIVACY_FIXED.ait. 사용자 인증서·환경변수·DB 기록은 변경하지 않았다.
 - 운영 OPTIONS 응답이 GET/HEAD/POST만 허용해 PUT 닉네임 저장이 브라우저에서 차단되는 원인을 확인했다. PUT/DELETE/OPTIONS를 명시 허용하고 기존 출처 제한을 유지한다. 정원 저장·계정 삭제도 같은 경계에 해당한다.
 - 개인정보 페이지는 모든 인증 상태에서 공통 app-shell 안전 영역과 내부 page 스크롤을 사용한다. 상단 여백 자체가 스크롤되는 별도 구현을 제거했다.
 - 운영자 Hunho Kang(강훈호)·문의 이메일을 유지하고 사용자 화면의 검토용/출시 전 확정 안내를 제거했다. 외부 국가·계약·로그/백업/문의 보유기간 확인은 내부 준비 문서에 남기며 법적 요건 완료를 의미하지 않는다.
