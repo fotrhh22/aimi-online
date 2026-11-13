@@ -1,39 +1,38 @@
-# AIMI 프로토타입 v1 시작
+# AIMI 개발·운영 시작 안내
 
-갱신: 2026-11-09 Asia/Seoul. 이 폴더만 별도 작업 공간으로 사용한다.
+갱신: 2026-11-13 · Asia/Seoul. **AIMI는 앱인토스 배포를 완료했다.** 운영자가 알려준 배포 상태를 현재 기준으로 사용한다.
 
-## 현재 기준
+## 먼저 읽을 문서
 
-1. AGENTS.md: 앱인토스 범위/비밀/기존 프로젝트 분리.
-2. docs/IMPLEMENTATION_STATUS.md 상단: 최신 실제 구현/검증/제한. 아래 과거 준비 기록과 구분.
-3. docs/PROTOTYPE_V1.md: 실제 실행·코드 위치·검증·남은 외부 작업.
-4. docs/DEVELOPMENT_SPEC.md와 GAME_SCORING_AND_REWARDS.md, RECOMMENDATION_POLICY.md: 규칙/API.
-5. output/pdf/AIMI_UX_Light.pdf와 tools/ux_pdf 제작 소스, design/DESIGN_SYSTEM.md: 시각 기준. Figma/MCP 사용 안 함.
-6. docs/UI_COMPONENT_CONTRACTS.md, TOSS_DELIVERY_AND_ACCEPTANCE.md: 공통 UI/호스트 인수.
+1. [README](README.md): 서비스 소개·기능·로컬 실행·환경변수.
+2. [현재 구현·운영 상태](docs/IMPLEMENTATION_STATUS.md): 현재 상태의 기준 문서.
+3. [유지보수·배포](docs/DEPLOYMENT.md): 기존 서비스 업데이트 절차.
+4. [업데이트 점검](docs/RELEASE_READINESS.md): 다음 배포의 회귀 점검 기준.
+5. [운영 이력](docs/RELEASE_HISTORY.md): 출시 전 점검과 종료된 웹 데모의 짧은 기록.
 
-## 로컬 실행
+AGENTS.md는 작업 범위·비밀 관리 기준이다. 기능 변경은 공유 계약과 키워드 퍼즐·모델 추천·정원 규격을 함께 확인한다. 초기 개발 계획이나 날짜별 조사 기록의 ‘아직 미구현/심사 대기’는 당시 상태이며 현재 출시 상태를 덮어쓰지 않는다.
+
+## 로컬 개발
 
 ```sh
-cd /Users/hunhokang/Downloads/esg_campaign/aimi-online
-npm install
-npm run dev
+npm ci
+AIMI_AI_MODE=fixture npm run dev
 ```
 
-http://127.0.0.1:5180 에서 개발용으로 시작한다. 게임은 요일별 편성을 따르며 테스트 게임 선택·연습 경로는 삭제했다. API8081과 UI5180이 함께 실행된다. fixture를 생략하면 설정된 Gemini 키를 사용하며 실제 키는 서버에만 둔다. 개발 잔액/예시 응답은 운영 데이터가 아니다. 기본 개발 상태는 메모리에 저장되어 서버 재시작 때 초기화된다. AIMI_AI_MODE=fixture는 명시적인 예시 AI 테스트 모드다.
+프론트는 http://127.0.0.1:5180, 개발 API는 8081에서 실행된다. 개발 인증·초기 재화·예시 응답은 실제 계정과 분리된다. 기본 개발 기록은 API 재시작 때 초기화되며, 실제 DB·토스 사용자 기록을 초기화하지 않는다.
 
 ```sh
 npm run typecheck
 npm run build
 npm test
-npm run ait:build
+VITE_APP_RUNTIME=toss VITE_TEST_DEMO=false npm run ait:build
 ```
 
-.ait 생성은 업로드·실기기·심사·출시 완료가 아니다. API의 PostgreSQL 어댑터·추가 migration은 준비됐으나 원격 Supabase/Render에는 이번 새 코드를 적용하지 않았다. 설정 파일의 임시 appName `aimi`를 콘솔 등록명과 대조한다.
+운영 API 주소는 apps/miniapp/.env.example을 참고한다. `.ait` 생성과 토스 콘솔 반영은 별도 작업이다. API·DB를 바꾸지 않는 화면 수정에 불필요한 migration·서버 배포를 추가하지 않는다.
 
-## 최신 정원·생성기 상태
+## 작업 경계
 
-정원은 드래그 자유 배치이며 GARDEN_FREE_PLACEMENT.md를 따른다. 생성기를 제외한 전 영역이 운영 완료된 것은 아니다. 실제 남은 콘텐츠 조회·발행·모델 수집·토스 인수는 CONTENT_STUDIO_IMPLEMENTATION_PLAN.md의 상태표를 먼저 확인한다.
-
-## 범위
-
-홈·미션·게임3종·규칙 챌린지·정원/상점/캐릭터·소셜·계정·개선기·추천을 구현했다. 상세 검증과 v1 제한은 PROTOTYPE_V1.md를 우선한다. 대표 에셋/과제는 PDF 기반 개발 예시다. 별도 생성기/자동 수집Actions·외부 설정/배포·사용자 실기기 작업은 제외했다. 프로덕션 경로는 검토 전 차단하며 로컬 fixture가 자동 사용되지 않는다.
+- 현재 서비스: 앱인토스 미니앱 + Render API + Supabase DB/Storage.
+- 실제 인증: 토스 익명 인증 코드 교환·mTLS·서버 세션. 기존 OAuth 경로는 호환용이다.
+- 별도 콘텐츠 생성기·향후 자동 제작/수집은 유지보수 과제이며 출시 미완료의 근거로 취급하지 않는다.
+- 종료된 웹 데모를 사용자 진입 경로나 신규 배포 대상으로 안내하지 않는다.

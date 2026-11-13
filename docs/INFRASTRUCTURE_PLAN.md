@@ -1,3 +1,5 @@
+> **초기 설계·계획 기록.** 현재 AIMI는 앱인토스 배포 완료 상태다. 아래의 개발 착수점·미구현·배포 대기 표현은 작성 당시 기준이다. 현행 상태는 [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md), 현재 기능은 [README](../README.md), 업데이트 절차는 [DEPLOYMENT.md](DEPLOYMENT.md)를 우선한다.
+
 # AIMI 환경변수·Supabase·Render 구축 계획
 
 작성: 2026-11-08, Asia/Seoul. **설계 및 사전 점검 보고이며, 서비스 생성·DB 적용·배포 완료가 아니다.** 제품 규칙은 DEVELOPMENT_SPEC.md를 따른다.
@@ -52,7 +54,7 @@ GitHub Actions / 수동 모델 수집 → 검증된 DB 스냅샷 발행
 | API | `TOSS_CLIENT_CERT_PATH`, `TOSS_CLIENT_KEY_PATH` | 토스 서버 인증용 파일 경로 제안. 정확한 인증 방식은 최신 연동 문서·콘솔에서 추가 확인 |
 | API | `TOSS_USERINFO_DECRYPTION_KEY` | 암호화 사용자 정보를 사용하는 경우 콘솔에서 발급받는 복호화 키 |
 | API | `TOSS_UNLINK_BASIC_AUTH` | 연결 해제 콜백 검증용 자격정보. 콘솔 등록값과 서버 검증 규약 일치 |
-| API | `GEMINI_API_KEY`, `GEMINI_TEXT_MODEL` | 실제 사용 가능한 텍스트 모델 ID·키. 모델명을 목업에서 복사하지 않음 |
+| API | `AIMI_GEMINI_API_KEY`, `GEMINI_TEXT_MODEL` | 실제 사용 가능한 텍스트 모델 ID·키. 모델명을 목업에서 복사하지 않음 |
 | API | `OPTIMIZER_DAILY_LIMIT`, `RECOMMENDATION_DAILY_LIMIT` | 사용자별 호출 한도. 게임/챌린지 각 5회와 별개 |
 | API | `LLM_REQUEST_TIMEOUT_MS`, `LLM_MAX_INPUT_CHARS`, `LLM_MAX_OUTPUT_TOKENS`, `LLM_MAX_RETRIES` | 입력·출력·재시도·시간 제한 |
 | API | `LLM_DAILY_BUDGET_USD`, `PROMPT_RETENTION_HOURS` | 전체 지출 상한·원문 보존. 실제 정책 확정 후 설정 |

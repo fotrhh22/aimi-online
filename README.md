@@ -166,13 +166,13 @@ npm run ait:build
 
 ## 개발 문서
 
-- [구현 상태](docs/IMPLEMENTATION_STATUS.md)
+- [현재 구현·운영 상태](docs/IMPLEMENTATION_STATUS.md) · [운영 이력](docs/RELEASE_HISTORY.md)
 - [키워드 퍼즐 규칙](docs/KEYWORD_PUZZLE_V4.md)
 - [모델 추천 정책](docs/RECOMMENDATION_POLICY.md) · [멀티모달 추천](docs/MULTIMODAL_RECOMMENDATION.md)
 - [정원 자유 배치](docs/GARDEN_FREE_PLACEMENT.md)
 - [토스 익명 인증](docs/TOSS_ANONYMOUS_AUTH.md)
 - [UI·간격·내비게이션 규칙](docs/UI_LAYOUT_AND_INTERACTION_RULES.md)
-- [배포 안내](docs/DEPLOYMENT.md)
+- [유지보수·배포 안내](docs/DEPLOYMENT.md) · [업데이트 점검](docs/RELEASE_READINESS.md)
 
 별도 콘텐츠 생성기와 향후 자동 제작·편성은 앱 본체의 범위와 구분해 관리합니다. 이전 Vercel 웹 데모는 현재 서비스 이용 경로로 안내하지 않습니다.
 

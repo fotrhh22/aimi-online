@@ -1,3 +1,5 @@
+> **현재 운영 인증 기준.** 앱인토스 배포 완료 후에도 토스 익명 인증 코드 교환·mTLS·서버 세션을 사용한다. 이전 웹 시연의 접속 코드 인증은 종료됐으며 현재 사용자 진입 방식이 아니다.
+
 # 토스 익명 사용자 인증 전환
 
 작성: 2026-11-12 Asia/Seoul. 비게임/웹 미니앱에서 SDK 사용자 식별키 인증 코드를 사용한다. 토스 OAuth 로그인 동의 절차와 별개다.
@@ -17,7 +19,7 @@
 - `aimi.users.id`와 기존 EP/정원/소셜 외래키를 그대로 유지한다.
 - migration0008은 `toss_anon_key` 유일 컬럼을 추가하고 식별 조건을 `num_nonnulls(toss_user_key, dev_subject, toss_anon_key)=1`로 확장한다.
 - 기존 토스 로그인과 익명 식별키가 같은 사람인지 추측해서 합치지 않는다. 기존 `/auth/toss`, OAuth refresh/unlink 콜백은 서버 호환용으로 유지한다. 기존 OAuth 세션이 만료되면 시작 화면에서 새 익명 방식으로 진입하며, 이전 OAuth 기록을 자동 이전하지 않는다.
-- 새 실제 계정의 지갑 초기값은 기존 운영 정책0EP다. 공유 데모의125EP·예시 친구·초기화 기능은 가져오지 않는다. 개인 Vercel 코드 계정도 별도 저장소를 유지한다.
+- 새 실제 계정의 지갑 초기값은 기존 운영 정책0EP다. 공유 데모의125EP·예시 친구·초기화 기능은 가져오지 않는다. 과거 웹 시연 계정은 실제 토스 계정과 합치지 않으며, 종료 이력만 보관한다.
 - 자동 복구는 새 익명 세션에만 적용한다. 브라우저의 `aimi.session.kind=anonymous`는 자동 복구 방식 표시이며 사용자 인증 근거가 아니다. 서버는 항상 세션과 토스 교환 결과를 검증한다.
 
 ## 수정 파일
@@ -27,9 +29,9 @@
 - 서버: `apps/api/src/services/toss/anonymous.ts`, 공통mTLS `client.ts`, 기존OAuth `auth.ts`
 - migration: `supabase/migrations/202611120008_anonymous_auth.sql`
 
-## 운영 반영 순서
+## 인증 설정 변경·재연결 참고
 
-새 `.ait`만 올려서는 인증되지 않는다. 2026-11-13 운영 DB migration0008은 적용했다. Render 인증서·환경변수 등록은 사용자가 직접 수행하며 에이전트는 변경하지 않는다. 최신 완료/대기 상태는 NONGAME_RELEASE_HANDOFF_20261113.md를 따른다.
+현재 토스 익명 인증은 실제 계정 생성·세션 발급을 확인했고 앱인토스 배포를 완료했다. 아래는 인증서 교체·재연결 시 참고할 구성 순서이며 현재 미연결 안내가 아니다. 운영 DB migration0008은 적용 이력이 있으며 임의로 초기화하지 않는다. 인증서·환경변수는 운영자가 관리한다. 현재 상태는 IMPLEMENTATION_STATUS.md를 따른다.
 
 1. 운영 migration 전 DB 백업/복원 지점을 확인한다. 기존 admin 연결을 보관한 `apps/api/.env.local`의 `MIGRATION_DATABASE_URL`로 프로젝트 루트에서 `npm run db:migrate`를 실행한다. 런타임 `DATABASE_URL`로 DDL하지 않는다. 기존 migration 파일은 수정하지 않는다.
 2. Render AIMI API 서비스의 Environment → Secret Files에 `AIMI_mTLS_public.crt`, `AIMI_mTLS_private.key`를 등록한다. 콘솔의 같은 AIMI 앱에서 발급된 인증서여야 한다. 인증서 내용을 Git/.ait/Vercel에 넣지 않는다.
@@ -45,19 +47,19 @@
 | CORS_ALLOWED_ORIGINS | 실제 appName에 맞는 토스 운영·QR 주소 추가, 기존 필요한 주소 유지 |
 | AIMI_GEMINI_API_KEY | 기존 서버 값 유지 |
 
-현재 appName은 `aimi`. SDK3.1+의 운영/QR origin은 `https://aimi.apps.tossmini.com`, `https://aimi.private-apps.tossmini.com`다. 콘솔 등록명과 대조한다. 기존 Vercel 데모가 사용 중이면 `ENABLE_TEST_DEMO`는 유지할 수 있으며 일반 `.ait`에는 테스트 버튼이 포함되지 않는다. `TOSS_UNLINK_BASIC_AUTH`는 기존 OAuth 콜백용으로, 익명 인증에는 필요하지 않다.
+현재 appName은 `aimi`. SDK3.1+의 운영/QR origin은 `https://aimi.apps.tossmini.com`, `https://aimi.private-apps.tossmini.com`다. 콘솔 등록명과 대조한다. 일반 `.ait`에는 공유 테스트 시작 버튼을 포함하지 않는다. 종료된 웹 시연을 위해 운영 테스트 모드를 다시 활성화하지 않는다. `TOSS_UNLINK_BASIC_AUTH`는 기존 OAuth 콜백용으로, 익명 인증에는 필요하지 않다.
 
 4. API 새 코드를 Render에 배포하고 readiness와 오류 로그를 확인한다. 마이그레이션보다 먼저 인증 트래픽을 새 API로 보내지 않는다.
 5. `.ait` 생성: `VITE_APP_RUNTIME=toss VITE_TEST_DEMO=false VITE_API_BASE_URL=https://aimi-online-api.onrender.com npm run ait:build`. 별도 보관 파일은 `output/releases/toss-anonymous/AIMI_ANONYMOUS_AUTH.ait`다. 공유 테스트 `.ait`와 구분한다.
 6. 기존 콘솔 AIMI 앱에 새 번들을 올리고 QR로 실제 토스에서 시작/종료/재접속, 사용자2명, 친구 코드·수락·방문을 확인한다. 실기기에서 코드교환에 성공하기 전 실제 연동 완료라고 하지 않는다. 인증코드/anonKey/개인키를 로그로 남기지 않는다.
 
-## 검증과 한계
+## 최초 구현 당시 검증 기록 — 과거 기준
 
 - 서버112개, 클라이언트/웹·정책20개, 격리 PostgreSQL 통합7개 통과. 실제 인증서 대신 테스트 전송 어댑터를 사용한 mTLS 옵션/고정경로/일회용코드 실패 검증을 포함한다.
 - 기존 회원·잔액을 둔 migration 업그레이드와 기존 제한 API 역할 권한을 임시DB의 rollback 트랜잭션으로 검증했다. migration 재실행도8개 모두 Unchanged였다.
 - 일반 `.ait` 생성과 웹데모 빌드 성공. 익명 인증 경로 포함/공유 테스트 시작 버튼 제외/클라이언트 비밀값 검사 통과. artifact 해시·크기는 같은 출력 폴더의 `validation.json`에 기록했다.
 - 실제 로컬DB에서 동시 첫 접속의 계정 유일성, 다른 사용자0EP, 출석 보상 보존, 재접속, 세션 만료·재발급, 친구 요청/수락/정원 방문, 계정 삭제, 이전OAuth 콜백과 Vercel 데모 격리를 확인했다.
-- 운영 Supabase migration0008은2026-11-13 적용했다. 토스 실제 SDK·인증서 코드교환, 콘솔 업로드·심사·출시는 미검증이며 Render 코드 배포 결과는 최신 인수 기록을 따른다.
+- 운영 Supabase migration0008은 2026-11-13 적용했다. 최초 작성 당시 미검증이었던 실제 토스 교환은 이후 계정/세션 생성으로 확인했고, 운영자가 앱인토스 배포 완료를 알렸다. 상세한 실기기/성능 점검 범위는 개별 증거와 구분한다.
 
 ## 공식 근거
 
