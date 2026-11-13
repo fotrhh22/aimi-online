@@ -3,6 +3,7 @@ import { useApp } from "../../app/context";
 import { Asset, Button, Icon, Modal, Notice, Stats } from "../../ui/primitives";
 import { request, setToken } from "../../lib/api/client";
 import { copy, invite } from "../../lib/toss/bridge";
+import { NicknameForm } from "../profile/screens";
 import {
   gardenPlacements,
   gardenPlacementId,
@@ -189,11 +190,6 @@ export function GardenScene({
           size={100}
         />
       </div>
-      {!editing && (
-        <span className="garden-title">
-          {character === "seed" ? "새싹이" : "캐릭터"}의 정원
-        </span>
-      )}
       {onEdit && (
         <button
           className="garden-pencil icon-button"
@@ -936,7 +932,7 @@ export function Social() {
       <>
         <p role="status">
           {friendError
-            ? "정원을 불러오지 못했어요. 공개 여부와 친구 관계를 확인해주세요."
+            ? "정원을 불러오지 못했어요. 친구 관계를 확인해주세요."
             : "정원을 불러오고 있어요."}
         </p>
         {friendError && (
@@ -947,9 +943,15 @@ export function Social() {
   return (
     <>
       <h2>친구들과 함께</h2>
-      <Notice title={"내 코드 " + a.data!.code}>
-        <span className="inline-actions">
+      <section className="social-identity" aria-label="내 소셜 정보">
+        <strong>{a.data!.name}</strong>
+        <p>
+          내 친구 코드 <b>{a.data!.code}</b>
+        </p>
+        <Button onClick={() => setAdding(true)}>친구 추가하기</Button>
+        <div className="social-share-actions">
           <button
+            className="text-link"
             onClick={() =>
               void a.perform(
                 () => copy(a.data!.code),
@@ -958,10 +960,10 @@ export function Social() {
               )
             }
           >
-            코드 복사
-          </button>{" "}
-          · <button onClick={() => setAdding(true)}>코드로 친구 추가</button> ·{" "}
+            내 코드 복사
+          </button>
           <button
+            className="text-link"
             onClick={() =>
               void a.perform(
                 () => invite(a.data!.code),
@@ -970,10 +972,13 @@ export function Social() {
               )
             }
           >
-            미니앱 초대
+            친구 초대
           </button>
-        </span>
-      </Notice>
+        </div>
+      </section>
+      <p className="caption">
+        친구 코드를 입력하고, 상대가 요청을 수락하면 서로의 정원을 볼 수 있어요.
+      </p>
       <p className="caption" id="friend-long-press-help">
         친구를 꾹 누르면 삭제할 수 있어요.
       </p>
@@ -1087,18 +1092,10 @@ export function Account() {
     <>
       <h2>내 계정</h2>
       <Notice title={a.data!.name}>친구 코드 {a.data!.code}</Notice>
-      <label className="privacy-row">
-        <input
-          type="checkbox"
-          checked={a.data!.garden.public}
-          onChange={(e) =>
-            void a.perform(() =>
-              request("/v1/profile", "PUT", { public: e.target.checked }),
-            )
-          }
-        />
-        친구에게 정원 공개
-      </label>
+      <details className="nickname-edit">
+        <summary>닉네임 변경</summary>
+        <NicknameForm />
+      </details>
       <Button
         weak
         onClick={() =>

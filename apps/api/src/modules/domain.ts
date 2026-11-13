@@ -52,11 +52,16 @@ export function view(s: UserState, date = seoulDate()) {
   return {
     todayTip: dailyProgramForDate(date).todayTip,
     name: s.name,
+    nicknameSet: s.nicknameSet === true,
     code: s.code,
     balance: s.balance,
     character: s.selectedCharacter,
     inventory: s.inventory,
-    garden: { ...s.garden, placements: gardenPlacements(s.garden) },
+    garden: {
+      ...s.garden,
+      public: true,
+      placements: gardenPlacements(s.garden),
+    },
     daily: d,
     budget:
       d.challengeBudget !== undefined
@@ -125,7 +130,11 @@ export function startPlay(s: UserState, override?: GameKind, now = Date.now()) {
   const date = seoulDate(new Date(now)),
     d = daily(s, date),
     active = Object.values(s.plays).find((p) => p.status === "running");
-  if (d.success || d.challengeClosed || (!d.challengeVersion && d.attemptsUsed >= 5))
+  if (
+    d.success ||
+    d.challengeClosed ||
+    (!d.challengeVersion && d.attemptsUsed >= 5)
+  )
     throw new ApiError("GAME_CHALLENGE_FINISHED", 409);
   if (d.attemptsUsed > 0) throw new ApiError("GAME_CHALLENGE_STARTED", 409);
   if (active && now - active.startedAt < RULES.pauseGraceMs) return active;
@@ -156,9 +165,14 @@ export function completePlay(
   if (p.result) return p.result;
   if (p.status !== "running") throw new ApiError("PLAY_EXPIRED", 409);
   const challengeDay = daily(s, p.date);
-  if (challengeDay.success || challengeDay.challengeClosed || (!challengeDay.challengeVersion && challengeDay.attemptsUsed >= 5))
+  if (
+    challengeDay.success ||
+    challengeDay.challengeClosed ||
+    (!challengeDay.challengeVersion && challengeDay.attemptsUsed >= 5)
+  )
     throw new ApiError("GAME_CHALLENGE_FINISHED", 409);
-  if (challengeDay.attemptsUsed > 0) throw new ApiError("GAME_CHALLENGE_STARTED", 409);
+  if (challengeDay.attemptsUsed > 0)
+    throw new ApiError("GAME_CHALLENGE_STARTED", 409);
   if (now - p.startedAt > RULES.pauseGraceMs)
     throw new ApiError("PLAY_EXPIRED", 409);
   if ((body.ticks / RULES.tickRate) * 1000 > now - p.startedAt + 1500)

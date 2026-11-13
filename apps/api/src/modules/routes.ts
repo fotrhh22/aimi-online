@@ -10,6 +10,7 @@ import {
   publishAvailableModels,
   type AvailabilityPolicy,
   PurchaseInput,
+  ProfileInput,
   ECONOMY_POLICY,
 } from "@aimi/contracts";
 import type { FastifyInstance, FastifyRequest } from "fastify";
@@ -264,10 +265,12 @@ export function registerPrototype(
     return mutate(r, "garden-save", b, (s) => saveGarden(s, b));
   });
   app.put("/v1/profile", async (r) => {
-    const b = z.object({ public: z.boolean() }).strict().parse(r.body);
+    const b = ProfileInput.parse(r.body);
     return mutate(r, "profile", b, (s) => {
-      s.garden.public = b.public;
-      return { public: s.garden.public };
+      s.name = b.name;
+      s.nicknameSet = true;
+      s.garden.public = true;
+      return { name: s.name, nicknameSet: true };
     });
   });
   if (repo.development)
@@ -373,8 +376,7 @@ export function registerPrototype(
     if (!me.friends.includes(r.params.id) || me.blocked.includes(r.params.id))
       throw new ApiError("GARDEN_PRIVATE", 403);
     const other = await repo.read(r.params.id);
-    if (other.blocked.includes(uid) || !other.garden.public)
-      throw new ApiError("GARDEN_PRIVATE", 403);
+    if (other.blocked.includes(uid)) throw new ApiError("GARDEN_PRIVATE", 403);
     return wrap({
       name: other.name,
       character: other.selectedCharacter,
@@ -382,7 +384,11 @@ export function registerPrototype(
       challengeSuccessCount: Object.values(other.days).filter(
         (day) => day.success,
       ).length,
-      garden: { ...other.garden, placements: gardenPlacements(other.garden) },
+      garden: {
+        ...other.garden,
+        public: true,
+        placements: gardenPlacements(other.garden),
+      },
     });
   });
   app.post("/v1/optimizer/jobs", async (r) => {

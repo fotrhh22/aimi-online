@@ -45,6 +45,7 @@ try {
     });
     page.on("pageerror", (e) => console.error("Browser error: " + e.stack));
     const state = structuredClone(fixture.state);
+    state.nicknameSet = false;
     state.daily.playsUsed = 5;
     state.budget = 120;
     let rewardCalls = 0,
@@ -65,6 +66,14 @@ try {
       let path = url.pathname
         .replace(/^\/api/, "")
         .replace(/^\/(web-demo|demo)/, "");
+      if (path === "/v1/profile" && route.request().method() === "PUT") {
+        const body = route.request().postDataJSON();
+        state.name = body.name.trim();
+        state.nicknameSet = true;
+        return route.fulfill({
+          json: { data: { name: state.name, nicknameSet: true } },
+        });
+      }
       if (path === "/v1/state") return route.fulfill({ json: { data: state } });
       if (path === "/v1/content")
         return route.fulfill({ json: { data: fixture.content } });
@@ -112,6 +121,32 @@ try {
       await page.screenshot({ path: `${dir}/${width}-${name}.png` });
       results.push({ width, name, ...metrics });
     };
+    await page.goto("http://127.0.0.1:" + server.address().port);
+    await page
+      .getByRole("heading", { name: "어떤 이름으로 불러드릴까요?" })
+      .waitFor();
+    await inspect("nickname-first-entry");
+    await page.getByLabel("닉네임", { exact: true }).fill("초록별");
+    await page.getByRole("button", { name: "이 닉네임으로 시작하기" }).click();
+    await page.locator(".greeting").waitFor();
+    assert.ok(
+      (await page.locator(".greeting").textContent()).includes("초록별"),
+    );
+    await page.getByRole("button", { name: "소셜", exact: true }).click();
+    await page.getByRole("button", { name: "친구 추가하기" }).waitFor();
+    await page.getByRole("button", { name: "친구 추가하기" }).click();
+    await page.getByRole("dialog").waitFor();
+    await page.getByLabel("친구 코드", { exact: true }).fill("ABCD1234");
+    await page.waitForFunction(() =>
+      [...document.querySelectorAll("dialog button")].some(
+        (b) => b.textContent.includes("친구 요청 보내기") && !b.disabled,
+      ),
+    );
+    await inspect("social-add-friend");
+    await page
+      .getByRole("dialog")
+      .getByRole("button", { name: "닫기" })
+      .click();
     await visit();
     await page.getByRole("button", { name: /프롬프트 개선기/ }).click();
     await page

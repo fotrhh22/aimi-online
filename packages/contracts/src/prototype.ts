@@ -182,6 +182,7 @@ export type AIJob = {
 export type UserState = {
   version: 1;
   authEpoch: string;
+  nicknameSet?: boolean;
   balance: number;
   name: string;
   code: string;

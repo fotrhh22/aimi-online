@@ -10,6 +10,7 @@ export function newState(id: string, development = false): UserState {
     authEpoch: randomUUID(),
     balance: development ? 125 : 0,
     name: "새싹이",
+    nicknameSet: development,
     code: createHash("sha256")
       .update(id)
       .digest("hex")

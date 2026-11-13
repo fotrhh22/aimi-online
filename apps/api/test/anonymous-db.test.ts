@@ -82,6 +82,15 @@ test("anonymous DB: stable identity, concurrent first login, isolated wallets, s
       0,
       "real users never inherit the shared demo's 125EP",
     );
+    assert.equal(a.nicknameSet, false);
+    const profile = await app.inject({
+      method: "PUT",
+      url: "/v1/profile",
+      headers: { ...headers(a1.token), "idempotency-key": randomUUID() },
+      payload: { name: "초록별" },
+    });
+    assert.equal(profile.statusCode, 200);
+    assert.equal((await get("/v1/state", a2.token)).name, "초록별");
     assert.equal(a.code, again.code);
     assert.notEqual(a.code, other.code);
     assert.equal((await get("/v1/social", a1.token)).people.length, 0);
@@ -100,6 +109,13 @@ test("anonymous DB: stable identity, concurrent first login, isolated wallets, s
     const social = await get("/v1/social", a1.token);
     assert.equal(social.people.length, 1);
     assert.equal(social.people[0].code, other.code);
+    const reciprocal = await get("/v1/social", b.token);
+    assert.equal(reciprocal.people[0].name, "초록별");
+    assert.equal(
+      (await get("/v1/friends/" + reciprocal.people[0].id + "/garden", b.token))
+        .name,
+      "초록별",
+    );
     const visit = await get(
       "/v1/friends/" + social.people[0].id + "/garden",
       a1.token,
@@ -118,6 +134,8 @@ test("anonymous DB: stable identity, concurrent first login, isolated wallets, s
     const restored = await login(identities[0]);
     const state = await get("/v1/state", restored.token);
     assert.equal(state.code, a.code);
+    assert.equal(state.name, "초록별");
+    assert.equal(state.nicknameSet, true);
     assert.equal(state.balance, claimed);
     assert.equal(
       (await get("/v1/social", restored.token)).people[0].code,

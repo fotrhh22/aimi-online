@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AppProvider, useApp } from "./context";
+import { NicknameSetup } from "../features/profile/screens";
 import { browserRuntime } from "../lib/runtime";
 import { TossProvider } from "../ui/toss-provider";
 import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
@@ -81,7 +82,6 @@ function Screens() {
                   void a.perform(
                     async () => {
                       await startTestDemo();
-                      a.setAuthenticated(true);
                     },
                     undefined,
                     "all",
@@ -104,8 +104,8 @@ function Screens() {
             onClick={() =>
               void a.perform(
                 async () => {
+                  a.setToast("");
                   await login(devName);
-                  a.setAuthenticated(true);
                 },
                 undefined,
                 "all",
@@ -127,6 +127,7 @@ function Screens() {
         <Button onClick={() => void a.refresh()}>다시 시도하기</Button>
       </main>
     );
+  if (!a.data.nicknameSet) return <NicknameSetup />;
   const aiTransit =
     ["/optimizer", "/recommendations", "/account"].includes(a.path) ||
     a.path.startsWith("/models/");

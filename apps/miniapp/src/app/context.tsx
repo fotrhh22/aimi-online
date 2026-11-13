@@ -32,6 +32,7 @@ export type HomeState = {
   todayTip: DailyTip;
   challengeRemaining?: number;
   name: string;
+  nicknameSet?: boolean;
   code: string;
   balance: number;
   character: string;

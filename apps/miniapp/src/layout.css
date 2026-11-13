@@ -1432,3 +1432,18 @@ html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
 #root .ai-image-frame .challenge-art { display:block; }
 #root .ai-image-label { position:absolute;right:6px;bottom:6px;padding:3px 6px;background:rgba(248,250,240,.94);border:1px solid rgba(39,78,47,.18);border-radius:6px;font:inherit;font-size:10px;line-height:14px;color:#274e2f;max-width:calc(100% - 12px);box-sizing:border-box; }
 #root .target-summary > .ai-image-frame { flex:0 0 64px; }
+
+/* Account identity: shared field spacing and visible friend entry, never tiny inline links. */
+#root .nickname-setup { box-sizing:border-box; width:100%; max-width:480px; margin:auto; padding:calc(var(--content-safe-top) + 24px) 24px calc(var(--safe-bottom) + 24px); min-height:100dvh; display:flex; flex-direction:column; justify-content:center; gap:24px; }
+#root .nickname-setup h1 { font-size:24px; line-height:1.4; margin:0; }
+#root .nickname-setup > p { margin:0; line-height:1.6; }
+#root .nickname-form { display:flex; flex-direction:column; gap:12px; }
+#root .nickname-form input { width:100%; box-sizing:border-box; font:inherit; font-size:16px; padding:16px; border:1px solid var(--color-brand); border-radius:16px; background:var(--color-surface); }
+#root .nickname-form p { margin:0; }
+#root .nickname-edit { margin-top:24px; }
+#root .nickname-edit summary { min-height:44px; font-weight:700; color:var(--color-brand-text); }
+#root .social-identity { display:flex; flex-direction:column; gap:16px; padding:20px; border-radius:24px; background:var(--color-weak); }
+#root .social-identity > strong { font-size:20px; line-height:1.4; }
+#root .social-identity p { margin:0; line-height:1.5; }
+#root .social-share-actions { display:flex; justify-content:space-around; gap:16px; }
+#root .social-share-actions button { min-height:44px; font:inherit; font-size:14px; }

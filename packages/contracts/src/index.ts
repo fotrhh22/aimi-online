@@ -49,3 +49,5 @@ export * from "./ai/output.js";
 export * from "./ai/lifecycle.js";
 
 export * from "./content/puzzle-sentence.js";
+
+export * from "./profile.js";

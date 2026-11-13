@@ -55,12 +55,7 @@ export function Home() {
   };
   return (
     <>
-      <h2 className="greeting">
-        {a.content?.catalog.find(
-          (i) => i.id === s.character && i.kind === "character",
-        )?.name ?? "내 캐릭터"}
-        , 오늘도 한 판 어때요?
-      </h2>
+      <h2 className="greeting">{s.name}, 오늘도 한 판 어때요?</h2>
       <PendingRewardButton />
       <button className="today-card" onClick={() => a.navigate("/mission")}>
         <small>오늘 · {GAME_LABELS[s.daily.gameKind]}</small>
