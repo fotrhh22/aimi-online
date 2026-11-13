@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AppProvider, useApp } from "./context";
 import { NicknameSetup } from "../features/profile/screens";
+import { PrivacyDocument } from "../features/legal/privacy";
 import { browserRuntime } from "../lib/runtime";
 import { TossProvider } from "../ui/toss-provider";
 import { Button, Asset, BrandLogo, Icon, Modal } from "../ui/primitives";
@@ -30,6 +31,7 @@ const titles: Record<string, string> = {
   "/shop/characters": "캐릭터 상점",
   "/social": "소셜",
   "/account": "계정 관리",
+  "/privacy": "개인정보처리방침",
   "/challenge": "키워드 고르기",
   "/challenge/combination": "조합 확인",
 };
@@ -39,9 +41,23 @@ function Screens() {
     [devName, setDevName] = useState("player"),
     [noticeOpen, setNoticeOpen] = useState(false);
   useEffect(() => {
-    if (a.authenticated && sessionStorage.getItem("aimi.pending-invite"))
+    if (
+      a.authenticated &&
+      a.path !== "/privacy" &&
+      sessionStorage.getItem("aimi.pending-invite")
+    )
       a.navigate("/social");
-  }, [a.authenticated]);
+  }, [a.authenticated, a.path]);
+  if (a.path === "/privacy" && (!a.authenticated || !a.data?.nicknameSet))
+    return (
+      <main className="privacy-standalone">
+        <h1>개인정보처리방침</h1>
+        <PrivacyDocument />
+        <Button weak onClick={a.back}>
+          돌아가기
+        </Button>
+      </main>
+    );
   if (a.loading)
     return (
       <main className="loading-screen">
@@ -115,6 +131,9 @@ function Screens() {
             {a.localRuntime ? "개발용으로 시작하기" : "시작하기"}
           </Button>
         )}
+        <Button weak onClick={() => a.navigate("/privacy")}>
+          개인정보처리방침
+        </Button>
         {a.error && <p role="alert">{a.error}</p>}
         {a.toast && <p role="alert">{a.toast}</p>}
       </main>
@@ -153,6 +172,7 @@ function Screens() {
   else if (a.path.startsWith("/models/"))
     body = <ModelDetails key={"models-" + a.aiEpoch} />;
   else if (a.path === "/account") body = <Account />;
+  else if (a.path === "/privacy") body = <PrivacyDocument />;
   else
     body = (
       <>

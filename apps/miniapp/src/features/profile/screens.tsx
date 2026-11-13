@@ -43,6 +43,11 @@ export function NicknameForm({ first = false }: { first?: boolean }) {
       <Button onClick={save} disabled={!valid || a.busy} loading={a.busy}>
         {first ? "이 닉네임으로 시작하기" : "닉네임 저장"}
       </Button>
+      {first && (
+        <Button weak onClick={() => a.navigate("/privacy")}>
+          개인정보처리방침
+        </Button>
+      )}
       {saved && <p role="status">닉네임을 저장했어요.</p>}
       {first && a.toast && <p role="alert">{a.toast}</p>}
     </form>

@@ -2,6 +2,7 @@ import { challengeBackTarget } from "../features/challenge/view-state";
 const tabs = new Set(["/", "/mission", "/garden", "/social"]);
 export function parentRoute(path: string, trail: string[]): string | null {
   if (path === "/") return null;
+  if (path === "/privacy") return trail.includes("/account") ? "/account" : "/";
   const challenge = challengeBackTarget(path);
   if (challenge) return challenge;
   if (path.startsWith("/results/game/")) return "/";

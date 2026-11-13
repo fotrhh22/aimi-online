@@ -4,6 +4,7 @@ import { Asset, Button, Icon, Modal, Notice, Stats } from "../../ui/primitives";
 import { request, setToken } from "../../lib/api/client";
 import { copy, invite } from "../../lib/toss/bridge";
 import { NicknameForm } from "../profile/screens";
+import { SupportContact } from "../legal/privacy";
 import {
   gardenPlacements,
   gardenPlacementId,
@@ -1096,6 +1097,10 @@ export function Account() {
         <summary>닉네임 변경</summary>
         <NicknameForm />
       </details>
+      <Button weak onClick={() => a.navigate("/privacy")}>
+        개인정보처리방침
+      </Button>
+      <SupportContact />
       <Button
         weak
         onClick={() =>
