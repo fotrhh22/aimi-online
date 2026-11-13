@@ -1,0 +1,66 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "minimax/hailuo-2.3",
+      "name": "MiniMax: Hailuo 2.3",
+      "created": 1776702740,
+      "description": "Hailuo 2.3 is a video generation model from MiniMax. It accepts text prompts and reference images as input and generates video output, supporting both text-to-video and image-to-video workflows. It is...",
+      "architecture": {
+        "tokenizer": "Other",
+        "instruct_type": null,
+        "modality": "text+image->video",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "video"
+        ]
+      },
+      "endpoints": [
+        {
+          "name": "Minimax | minimax/hailuo-2.3-20260420",
+          "model_id": "minimax/hailuo-2.3",
+          "model_name": "MiniMax: Hailuo 2.3",
+          "context_length": 0,
+          "pricing": {
+            "prompt": "0",
+            "completion": "0",
+            "discount": 0
+          },
+          "provider_name": "Minimax",
+          "tag": "minimax",
+          "service_tier": null,
+          "quantization": "unknown",
+          "max_completion_tokens": 0,
+          "max_prompt_tokens": null,
+          "supported_parameters": [
+            "max_tokens",
+            "temperature",
+            "top_p"
+          ],
+          "supports_tool_choice": {
+            "none": true,
+            "auto": true,
+            "required": true,
+            "function": true
+          },
+          "status": 0,
+          "uptime_last_30m": null,
+          "uptime_last_5m": null,
+          "uptime_last_1d": null,
+          "supports_implicit_caching": false,
+          "native_tools": {},
+          "supports_voice_cloning": false,
+          "supports_multiple_audio_references": false,
+          "supports_image_reference": false,
+          "supports_diarization": false,
+          "latency_last_30m": null,
+          "throughput_last_30m": null
+        }
+      ]
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/minimax/hailuo-2.3-20260420/endpoints"
+}

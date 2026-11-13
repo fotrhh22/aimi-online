@@ -1,0 +1,63 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "heygen/avatar-iv",
+      "name": "HeyGen: Avatar IV",
+      "created": 1787595728,
+      "description": "HeyGen: Avatar IV is an image-to-video model that animates a single photo into an expressive, lip-synced talking-head video. Rather than only matching mouth shapes to words, it interprets the vocal...",
+      "architecture": {
+        "tokenizer": "Other",
+        "instruct_type": null,
+        "modality": "text+image+audio->video",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output_modalities": [
+          "video"
+        ]
+      },
+      "endpoints": [
+        {
+          "name": "HeyGen | heygen/avatar-iv-20260625",
+          "model_id": "heygen/avatar-iv",
+          "model_name": "HeyGen: Avatar IV",
+          "context_length": 0,
+          "pricing": {
+            "prompt": "0",
+            "completion": "0",
+            "discount": 0
+          },
+          "provider_name": "HeyGen",
+          "tag": "heygen",
+          "service_tier": null,
+          "quantization": "unknown",
+          "max_completion_tokens": 0,
+          "max_prompt_tokens": null,
+          "supported_parameters": [],
+          "supports_tool_choice": {
+            "none": true,
+            "auto": true,
+            "required": true,
+            "function": true
+          },
+          "status": 0,
+          "uptime_last_30m": null,
+          "uptime_last_5m": null,
+          "uptime_last_1d": 100,
+          "supports_implicit_caching": false,
+          "native_tools": {},
+          "supports_voice_cloning": false,
+          "supports_multiple_audio_references": false,
+          "supports_image_reference": false,
+          "supports_diarization": false,
+          "latency_last_30m": null,
+          "throughput_last_30m": null
+        }
+      ]
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/heygen/avatar-iv-20260625/endpoints"
+}

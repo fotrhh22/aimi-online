@@ -1,0 +1,62 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "runway/gen-4.5",
+      "name": "Runway: Gen-4.5",
+      "created": 1785339483,
+      "description": "Runway Gen-4.5 is a video generation model from Runway for text-to-video and image-to-video workflows. It is designed for cinematic scene creation with strong motion quality, visual fidelity, and prompt adherence....",
+      "architecture": {
+        "tokenizer": "Media",
+        "instruct_type": null,
+        "modality": "text+image->video",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "video"
+        ]
+      },
+      "endpoints": [
+        {
+          "name": "Runway | runway/gen-4.5-20260729",
+          "model_id": "runway/gen-4.5",
+          "model_name": "Runway: Gen-4.5",
+          "context_length": 0,
+          "pricing": {
+            "prompt": "0",
+            "completion": "0",
+            "discount": 0
+          },
+          "provider_name": "Runway",
+          "tag": "runway",
+          "service_tier": null,
+          "quantization": "unknown",
+          "max_completion_tokens": 0,
+          "max_prompt_tokens": null,
+          "supported_parameters": [],
+          "supports_tool_choice": {
+            "none": true,
+            "auto": true,
+            "required": true,
+            "function": true
+          },
+          "status": 0,
+          "uptime_last_30m": null,
+          "uptime_last_5m": null,
+          "uptime_last_1d": null,
+          "supports_implicit_caching": false,
+          "native_tools": {},
+          "supports_voice_cloning": false,
+          "supports_multiple_audio_references": false,
+          "supports_image_reference": false,
+          "supports_diarization": false,
+          "latency_last_30m": null,
+          "throughput_last_30m": null
+        }
+      ]
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/runway/gen-4.5-20260729/endpoints"
+}

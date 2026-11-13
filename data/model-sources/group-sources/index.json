@@ -1,0 +1,1022 @@
+{
+  "checkedAt": "2026-11-10",
+  "sources": [
+    {
+      "id": "cohere/command-a",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/CohereForAI/c4ai-command-a-03-2025/raw/main/README.md",
+      "status": 401,
+      "contentType": "text/plain; charset=utf-8",
+      "file": null,
+      "characters": 141
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "cohere_north-mini-code_free.txt",
+      "characters": 10477
+    },
+    {
+      "id": "deepseek/deepseek-chat",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-chat.txt",
+      "characters": 19616
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-chat-v3-0324.txt",
+      "characters": 9199
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-chat-v3.1.txt",
+      "characters": 11092
+    },
+    {
+      "id": "deepseek/deepseek-v3.1-terminus",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v3.1-terminus.txt",
+      "characters": 4678
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4-flash.txt",
+      "characters": 13139
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4-flash-0731.txt",
+      "characters": 7219
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4-pro.txt",
+      "characters": 13139
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4-pro-0813.txt",
+      "characters": 7503
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4.1-flash.txt",
+      "characters": 13007
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "deepseek_deepseek-v4.1-flash-1017.txt",
+      "characters": 5203
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/google/gemma-4-26B-A4B-it/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "google_gemma-4-26b-a4b-it.txt",
+      "characters": 27945
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/google/gemma-4-31B-it/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "google_gemma-4-31b-it.txt",
+      "characters": 27929
+    },
+    {
+      "id": "ibm-granite/granite-4.2-8b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/ibm-granite/granite-4.2-8b/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "ibm-granite_granite-4.2-8b.txt",
+      "characters": 38567
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "inclusionai_ling-3.0-flash.txt",
+      "characters": 10840
+    },
+    {
+      "id": "inclusionai/ling-3.0-tiny",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "inclusionai_ling-3.0-tiny.txt",
+      "characters": 10100
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct/raw/main/README.md",
+      "status": 401,
+      "contentType": "text/plain; charset=utf-8",
+      "file": null,
+      "characters": 153
+    },
+    {
+      "id": "meta-llama/llama-4-scout",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct/raw/main/README.md",
+      "status": 401,
+      "contentType": "text/plain; charset=utf-8",
+      "file": null,
+      "characters": 149
+    },
+    {
+      "id": "meta/muse-spark-open",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/raw/main/README.md",
+      "status": 401,
+      "contentType": "text/plain; charset=utf-8",
+      "file": null,
+      "characters": 145
+    },
+    {
+      "id": "microsoft/phi-4",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/microsoft/phi-4/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "microsoft_phi-4.txt",
+      "characters": 13747
+    },
+    {
+      "id": "minimax/minimax-m2.5",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "minimax_minimax-m2.5.txt",
+      "characters": 28733
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "minimax_minimax-m2.7.txt",
+      "characters": 14876
+    },
+    {
+      "id": "minimax/minimax-m3",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/MiniMaxAI/Minimax-M3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "minimax_minimax-m3.txt",
+      "characters": 5108
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "minimax_minimax-m3.1-flash.txt",
+      "characters": 23705
+    },
+    {
+      "id": "mistralai/mistral-large-4-0",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "mistralai_mistral-large-4-0.txt",
+      "characters": 19154
+    },
+    {
+      "id": "mistralai/mistral-small-24b-instruct-2501",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "mistralai_mistral-small-24b-instruct-2501.txt",
+      "characters": 14751
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "mistralai_mistral-small-2603.txt",
+      "characters": 16473
+    },
+    {
+      "id": "moonshotai/kimi-k2",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2.txt",
+      "characters": 25465
+    },
+    {
+      "id": "moonshotai/kimi-k2-0905",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2-0905.txt",
+      "characters": 9876
+    },
+    {
+      "id": "moonshotai/kimi-k2-thinking",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2-thinking.txt",
+      "characters": 16132
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.5/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2.5.txt",
+      "characters": 40057
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.6/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2.6.txt",
+      "characters": 29315
+    },
+    {
+      "id": "moonshotai/kimi-k2.7-code",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k2.7-code.txt",
+      "characters": 15053
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k3.txt",
+      "characters": 45184
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "moonshotai_kimi-k3.1-pro.txt",
+      "characters": 47569
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "nvidia_nemotron-3-super-120b-a12b.txt",
+      "characters": 79551
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "nvidia_nemotron-3-ultra-550b-a55b.txt",
+      "characters": 88088
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "nvidia_nemotron-3.5-lightning.txt",
+      "characters": 85263
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL/raw/main/README.md",
+      "status": 401,
+      "contentType": "text/plain; charset=utf-8",
+      "file": null,
+      "characters": 29
+    },
+    {
+      "id": "openai/gpt-4-turbo:batch",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4-turbo.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4-turbo_batch.txt",
+      "characters": 3083
+    },
+    {
+      "id": "openai/gpt-4.1",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4.1.txt",
+      "characters": 3683
+    },
+    {
+      "id": "openai/gpt-4.1-mini",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4.1-mini.txt",
+      "characters": 3715
+    },
+    {
+      "id": "openai/gpt-4.1-nano",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-nano.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4.1-nano.txt",
+      "characters": 3723
+    },
+    {
+      "id": "openai/gpt-4o",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4o.txt",
+      "characters": 3518
+    },
+    {
+      "id": "openai/gpt-4o-2024-05-13",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-2024-05-13.md",
+      "status": 404,
+      "contentType": "text/plain;charset=UTF-8",
+      "file": null,
+      "characters": 9
+    },
+    {
+      "id": "openai/gpt-4o-2024-08-06",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-2024-08-06.md",
+      "status": 404,
+      "contentType": "text/plain;charset=UTF-8",
+      "file": null,
+      "characters": 9
+    },
+    {
+      "id": "openai/gpt-4o-mini",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-4o-mini.txt",
+      "characters": 3567
+    },
+    {
+      "id": "openai/gpt-5",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.txt",
+      "characters": 3584
+    },
+    {
+      "id": "openai/gpt-5-mini",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5-mini.txt",
+      "characters": 3511
+    },
+    {
+      "id": "openai/gpt-5-nano",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-nano.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5-nano.txt",
+      "characters": 3553
+    },
+    {
+      "id": "openai/gpt-5.1",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.1.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.1.txt",
+      "characters": 3527
+    },
+    {
+      "id": "openai/gpt-5.1-codex",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.1-codex.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.1-codex.txt",
+      "characters": 3547
+    },
+    {
+      "id": "openai/gpt-5.1-codex-mini",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.1-codex-mini.txt",
+      "characters": 3323
+    },
+    {
+      "id": "openai/gpt-5.2",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.2.txt",
+      "characters": 3541
+    },
+    {
+      "id": "openai/gpt-5.2-codex",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2-codex.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.2-codex.txt",
+      "characters": 3590
+    },
+    {
+      "id": "openai/gpt-5.3-codex",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.3-codex.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.3-codex.txt",
+      "characters": 3524
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.4.txt",
+      "characters": 4188
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.4-mini.txt",
+      "characters": 3693
+    },
+    {
+      "id": "openai/gpt-5.4-nano",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.4-nano.txt",
+      "characters": 3711
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.5.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.5.txt",
+      "characters": 4124
+    },
+    {
+      "id": "openai/gpt-5.6-luna",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.6-luna.txt",
+      "characters": 4043
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.6-sol.txt",
+      "characters": 4068
+    },
+    {
+      "id": "openai/gpt-5.6-terra",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-5.6-terra.txt",
+      "characters": 3827
+    },
+    {
+      "id": "openai/gpt-6-astra",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-6-astra.txt",
+      "characters": 3958
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-luna.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-6-luna.txt",
+      "characters": 4363
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-sol.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-6-sol.txt",
+      "characters": 4293
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-6.1-sol.txt",
+      "characters": 4333
+    },
+    {
+      "id": "openai/gpt-6.1-terra",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-6.1-terra.txt",
+      "characters": 4436
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-oss-120b.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-oss-120b.txt",
+      "characters": 3533
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/gpt-oss-20b.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_gpt-oss-20b.txt",
+      "characters": 3529
+    },
+    {
+      "id": "openai/o3",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/o3.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_o3.txt",
+      "characters": 3814
+    },
+    {
+      "id": "openai/o3-mini:batch",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/o3-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_o3-mini_batch.txt",
+      "characters": 3353
+    },
+    {
+      "id": "openai/o4-mini:batch",
+      "kind": "provider-document",
+      "url": "https://developers.openai.com/api/docs/models/o4-mini.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "openai_o4-mini_batch.txt",
+      "characters": 3570
+    },
+    {
+      "id": "qwen/qwen-2.5-72b-instruct",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen-2.5-72b-instruct.txt",
+      "characters": 6257
+    },
+    {
+      "id": "qwen/qwen3-14b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-14B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-14b.txt",
+      "characters": 16670
+    },
+    {
+      "id": "qwen/qwen3-235b-a22b-2507",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-235b-a22b-2507.txt",
+      "characters": 16211
+    },
+    {
+      "id": "qwen/qwen3-30b-a3b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-30B-A3B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-30b-a3b.txt",
+      "characters": 16798
+    },
+    {
+      "id": "qwen/qwen3-32b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-32B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-32b.txt",
+      "characters": 16636
+    },
+    {
+      "id": "qwen/qwen3-coder-30b-a3b-instruct",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-coder-30b-a3b-instruct.txt",
+      "characters": 5425
+    },
+    {
+      "id": "qwen/qwen3-coder-next",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-coder-next.txt",
+      "characters": 7598
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-next-80b-a3b-instruct.txt",
+      "characters": 16321
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-vl-235b-a22b-instruct.txt",
+      "characters": 6657
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-instruct",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3-vl-30b-a3b-instruct.txt",
+      "characters": 6690
+    },
+    {
+      "id": "qwen/qwen3.5-122b-a10b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.5-122b-a10b.txt",
+      "characters": 92618
+    },
+    {
+      "id": "qwen/qwen3.5-27b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-27B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.5-27b.txt",
+      "characters": 92402
+    },
+    {
+      "id": "qwen/qwen3.5-35b-a3b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.5-35b-a3b.txt",
+      "characters": 93145
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.5-397b-a17b.txt",
+      "characters": 94777
+    },
+    {
+      "id": "qwen/qwen3.5-9b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-9B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.5-9b.txt",
+      "characters": 77628
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.6-27B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.6-27b.txt",
+      "characters": 62584
+    },
+    {
+      "id": "qwen/qwen3.6-35b-a3b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.6-35b-a3b.txt",
+      "characters": 64541
+    },
+    {
+      "id": "qwen/qwen3.8-2.4t-a95b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.8-2.4t-a95b.txt",
+      "characters": 35746
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "qwen_qwen3.8-27b.txt",
+      "characters": 65029
+    },
+    {
+      "id": "rekaai/reka-flash-3",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/RekaAI/reka-flash-3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "rekaai_reka-flash-3.txt",
+      "characters": 3826
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "stepfun_step-3.5-flash.txt",
+      "characters": 26013
+    },
+    {
+      "id": "stepfun/step-3.7-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/stepfun-ai/Step-3.7-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "stepfun_step-3.7-flash.txt",
+      "characters": 14151
+    },
+    {
+      "id": "stepfun/step-5-preview",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/stepfun-ai/Step-5-Preview/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "stepfun_step-5-preview.txt",
+      "characters": 20980
+    },
+    {
+      "id": "tencent/hy3",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/tencent/Hy3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "tencent_hy3.txt",
+      "characters": 10305
+    },
+    {
+      "id": "thinkingmachines/inkling",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/thinkingmachines/Inkling/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "thinkingmachines_inkling.txt",
+      "characters": 13929
+    },
+    {
+      "id": "thinkingmachines/inkling-small",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-Small/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "thinkingmachines_inkling-small.txt",
+      "characters": 43798
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "xiaomi_mimo-v2.6-flash.txt",
+      "characters": 11511
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "xiaomi_mimo-v2.6-pro.txt",
+      "characters": 11663
+    },
+    {
+      "id": "z-ai/glm-4.5-air",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.5-Air/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.5-air.txt",
+      "characters": 2993
+    },
+    {
+      "id": "z-ai/glm-4.5v",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.5V/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.5v.txt",
+      "characters": 15300
+    },
+    {
+      "id": "z-ai/glm-4.6",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.6/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.6.txt",
+      "characters": 3048
+    },
+    {
+      "id": "z-ai/glm-4.6v",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.6V/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.6v.txt",
+      "characters": 8344
+    },
+    {
+      "id": "z-ai/glm-4.7",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.7/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.7.txt",
+      "characters": 13586
+    },
+    {
+      "id": "z-ai/glm-4.7-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-4.7-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-4.7-flash.txt",
+      "characters": 8160
+    },
+    {
+      "id": "z-ai/glm-5",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-5/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-5.txt",
+      "characters": 12712
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-5.1/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-5.1.txt",
+      "characters": 10727
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-5.2/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-5.2.txt",
+      "characters": 10912
+    },
+    {
+      "id": "z-ai/glm-5.3",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-5.3/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-5.3.txt",
+      "characters": 14163
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "kind": "publisher-model-card",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "file": "z-ai_glm-5.3-flash.txt",
+      "characters": 8007
+    }
+  ]
+}

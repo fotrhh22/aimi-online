@@ -1,0 +1,62 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "black-forest-labs/flux-video-edit",
+      "name": "Black Forest Labs: FLUX Video Edit",
+      "created": 1789073532,
+      "description": "FLUX Video Edit [fast] takes a source video and an edit prompt and returns a precisely edited video. Add, remove, or replace objects and characters, rebuild the setting, edit on-screen...",
+      "architecture": {
+        "tokenizer": "Media",
+        "instruct_type": null,
+        "modality": "text+video->video",
+        "input_modalities": [
+          "text",
+          "video"
+        ],
+        "output_modalities": [
+          "video"
+        ]
+      },
+      "endpoints": [
+        {
+          "name": "Black Forest Labs | black-forest-labs/flux-video-edit-20260910",
+          "model_id": "black-forest-labs/flux-video-edit",
+          "model_name": "Black Forest Labs: FLUX Video Edit",
+          "context_length": 0,
+          "pricing": {
+            "prompt": "0",
+            "completion": "0",
+            "discount": 0
+          },
+          "provider_name": "Black Forest Labs",
+          "tag": "black-forest-labs",
+          "service_tier": null,
+          "quantization": "unknown",
+          "max_completion_tokens": 0,
+          "max_prompt_tokens": null,
+          "supported_parameters": [],
+          "supports_tool_choice": {
+            "none": true,
+            "auto": true,
+            "required": true,
+            "function": true
+          },
+          "status": 0,
+          "uptime_last_30m": null,
+          "uptime_last_5m": null,
+          "uptime_last_1d": 100,
+          "supports_implicit_caching": false,
+          "native_tools": {},
+          "supports_voice_cloning": false,
+          "supports_multiple_audio_references": false,
+          "supports_image_reference": false,
+          "supports_diarization": false,
+          "latency_last_30m": null,
+          "throughput_last_30m": null
+        }
+      ]
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/black-forest-labs/flux-video-edit-20260910/endpoints"
+}

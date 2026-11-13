@@ -324,7 +324,7 @@ import {
 } from "@aimi/recommender";
 import { TaskSchema } from "../src/services/llm/gemini.js";
 test("full collection retains output-specific discovery, canonical media and real prices without text AA gates", async () => {
-  const raw = await read("output/model-audit/multimodal/models-all.json");
+  const raw = await read("data/model-sources/multimodal/models-all.json");
   const media = (await read("content/fixtures/models-media.json"))
     .models as ModelRecord[];
   assert.equal(raw.data.length, raw.total_count);

@@ -1,0 +1,8 @@
+{
+  "status": 200,
+  "body": {
+    "id": "meta/muse-image",
+    "endpoints": []
+  },
+  "url": "https://openrouter.ai/api/v1/images/models/meta/muse-image/endpoints"
+}

@@ -1,0 +1,68 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "google/veo-3.1-lite",
+      "name": "Google: Veo 3.1 Lite",
+      "created": 1776978818,
+      "description": "Google's most cost-effective video generation model, designed for high-volume applications and rapid iteration. Veo 3.1 Lite generates 720p and 1080p video from text or image prompts with native synchronized audio...",
+      "architecture": {
+        "tokenizer": "Other",
+        "instruct_type": null,
+        "modality": "text+image->video",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "video"
+        ]
+      },
+      "endpoints": [
+        {
+          "name": "Google | google/veo-3.1-lite-20260331",
+          "model_id": "google/veo-3.1-lite",
+          "model_name": "Google: Veo 3.1 Lite",
+          "context_length": 0,
+          "pricing": {
+            "prompt": "0",
+            "completion": "0",
+            "discount": 0
+          },
+          "provider_name": "Google",
+          "tag": "google-vertex",
+          "service_tier": null,
+          "quantization": "unknown",
+          "max_completion_tokens": 0,
+          "max_prompt_tokens": null,
+          "supported_parameters": [
+            "max_tokens",
+            "temperature",
+            "top_p",
+            "seed",
+            "response_format"
+          ],
+          "supports_tool_choice": {
+            "none": true,
+            "auto": true,
+            "required": true,
+            "function": true
+          },
+          "status": 0,
+          "uptime_last_30m": 100,
+          "uptime_last_5m": null,
+          "uptime_last_1d": 97.5,
+          "supports_implicit_caching": false,
+          "native_tools": {},
+          "supports_voice_cloning": false,
+          "supports_multiple_audio_references": false,
+          "supports_image_reference": false,
+          "supports_diarization": false,
+          "latency_last_30m": null,
+          "throughput_last_30m": null
+        }
+      ]
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/google/veo-3.1-lite-20260331/endpoints"
+}

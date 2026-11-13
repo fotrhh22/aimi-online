@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-11-10",
+  "sources": [
+    {
+      "key": "claude-overview",
+      "url": "https://platform.claude.com/docs/en/models/overview.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "claude-overview.txt",
+      "characters": 22915
+    },
+    {
+      "key": "claude-lifecycle",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "claude-lifecycle.txt",
+      "characters": 14826
+    },
+    {
+      "key": "gemma-4",
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4?hl=en",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "gemma-4.txt",
+      "characters": 167718
+    },
+    {
+      "key": "gemini-flash-lite",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite?hl=en",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "gemini-flash-lite.txt",
+      "characters": 10365
+    },
+    {
+      "key": "mistral-overview",
+      "url": "https://docs.mistral.ai/models",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "mistral-overview.txt",
+      "characters": 922918
+    },
+    {
+      "key": "mistral-large",
+      "url": "https://docs.mistral.ai/models/mistral-large",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "mistral-large.txt",
+      "characters": 747716
+    },
+    {
+      "key": "solar-mini",
+      "url": "https://console.upstage.ai/ko/docs/models/solar-mini-4",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "solar-mini.txt",
+      "characters": 247706
+    },
+    {
+      "key": "solar-pro",
+      "url": "https://console.upstage.ai/ko/docs/models/solar-pro-4",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "solar-pro.txt",
+      "characters": 249146
+    },
+    {
+      "key": "mistral-medium",
+      "url": "https://docs.mistral.ai/models/mistral-medium-3-5",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "file": null,
+      "characters": 179757
+    },
+    {
+      "key": "cohere-overview",
+      "url": "https://docs.cohere.com/docs/models.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "cohere-overview.txt",
+      "characters": 41221
+    },
+    {
+      "key": "cohere-north",
+      "url": "https://docs.cohere.com/changelog/north-mini-code-1-0.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "cohere-north.txt",
+      "characters": 1379
+    },
+    {
+      "key": "gemini-overview",
+      "url": "https://ai.google.dev/gemini-api/docs/models?hl=en",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "gemini-overview.txt",
+      "characters": 22220
+    },
+    {
+      "key": "zai-air",
+      "url": "https://docs.z.ai/guides/llm/glm-4.5.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "zai-air.txt",
+      "characters": 23058
+    },
+    {
+      "key": "gpt4o-base",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o.md",
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "file": "gpt4o-base.txt",
+      "characters": 3518
+    },
+    {
+      "key": "nvidia-super-vl",
+      "url": "https://build.nvidia.com/nvidia/nemotron-3.5-super-vl/modelcard",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "nvidia-super-vl.txt",
+      "characters": 70156
+    },
+    {
+      "key": "qwen-overview",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/text-generation-model/",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "file": "qwen-overview.txt",
+      "characters": 36238
+    },
+    {
+      "key": "grok-4.7",
+      "url": "https://docs.x.ai/developers/models/grok-4.7",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "grok-4.7.txt",
+      "characters": 370607
+    },
+    {
+      "key": "meta-muse",
+      "url": "https://ai.meta.com/tools/muse/",
+      "status": 200,
+      "contentType": "text/html; charset=\"utf-8\"",
+      "file": "meta-muse.txt",
+      "characters": 324507
+    },
+    {
+      "key": "grok-4.3",
+      "url": "https://docs.x.ai/developers/models/grok-4.3",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "grok-4.3.txt",
+      "characters": 372376
+    },
+    {
+      "key": "grok-4.6",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "grok-4.6.txt",
+      "characters": 370688
+    },
+    {
+      "key": "grok-4.5",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "grok-4.5.txt",
+      "characters": 372936
+    },
+    {
+      "key": "grok-4.20",
+      "url": "https://docs.x.ai/developers/models/grok-4.20",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "grok-4.20.txt",
+      "characters": 397026
+    },
+    {
+      "key": "meta-llama",
+      "url": "https://www.llama.com/models/llama-4/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "file": "meta-llama.txt",
+      "characters": 399093
+    }
+  ]
+}

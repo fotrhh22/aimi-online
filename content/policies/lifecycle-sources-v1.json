@@ -6,12 +6,12 @@
     {
       "provider": "OpenAI",
       "url": "https://developers.openai.com/api/docs/deprecations",
-      "localFile": "output/model-audit/openai-deprecations-2026-11-10.md"
+      "localFile": "data/model-sources/openai-deprecations-2026-11-10.md"
     },
     {
       "provider": "Google",
       "url": "https://ai.google.dev/gemini-api/docs/deprecations",
-      "localFile": "output/model-audit/lifecycle/2026-11-10/google-deprecations.md"
+      "localFile": "data/model-sources/lifecycle/2026-11-10/google-deprecations.md"
     },
     {
       "provider": "Anthropic",

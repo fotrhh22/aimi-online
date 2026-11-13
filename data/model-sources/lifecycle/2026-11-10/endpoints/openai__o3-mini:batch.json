@@ -1,0 +1,25 @@
+{
+  "status": 200,
+  "body": {
+    "data": {
+      "id": "openai/o3-mini",
+      "name": "OpenAI: o3 Mini",
+      "created": 1738351721,
+      "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
+      "architecture": {
+        "tokenizer": "GPT",
+        "instruct_type": null,
+        "modality": "text+file->text",
+        "input_modalities": [
+          "text",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ]
+      },
+      "endpoints": []
+    }
+  },
+  "url": "https://openrouter.ai/api/v1/models/openai/o3-mini-2025-01-31/endpoints"
+}
