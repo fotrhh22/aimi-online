@@ -33,6 +33,11 @@ export type HomeState = {
   challengeRemaining?: number;
   name: string;
   nicknameSet?: boolean;
+  aiQuota?: {
+    date: string;
+    optimizer: { limit: number; used: number; remaining: number };
+    analysis: { limit: number; used: number; remaining: number };
+  };
   code: string;
   balance: number;
   character: string;

@@ -570,3 +570,54 @@ test("optimizer treats Korean count words and digits as equivalent without accep
     /AI_INTENT_CHANGED/,
   );
 });
+
+test("rewrite request commands accept Korean imperative variants and still reject answers", () => {
+  for (const ending of [
+    "작성하라.",
+    "정리하세요.",
+    "분석하시오.",
+    "제시해라.",
+  ]) {
+    assert.doesNotThrow(() =>
+      validatePromptRewrite("재활용 방법", {
+        improvedText: "재활용 방법을 " + ending,
+        extendedExample: "재활용 방법을 " + ending,
+        addedAssumptions: [],
+      }),
+    );
+  }
+  assert.throws(
+    () =>
+      validatePromptRewrite("재활용 방법", {
+        improvedText: "재활용은 자원을 다시 사용하는 것입니다.",
+        extendedExample: "재활용은 자원을 다시 사용하는 것입니다.",
+        addedAssumptions: [],
+      }),
+    /AI_NOT_A_PROMPT/,
+  );
+});
+test("read-only quota separates users and features, refunds failures and changes date without writes", async () => {
+  const { userAIQuota } = await import("../src/services/llm/usage.js");
+  const s = newState("quota-display"),
+    date = "2026-11-13";
+  s.aiUsage = { [date]: { optimizer: 2, analysis: 3 } };
+  s.jobs.failed = {
+    id: "failed",
+    date,
+    textHash: "hash",
+    createdAt: 1,
+    status: "failed",
+    quotaFeature: "analysis",
+    error: "AI_FAILED",
+  };
+  const before = JSON.stringify(s),
+    limits = { optimizer: 5, analysis: 5 };
+  assert.equal(userAIQuota(s, date, limits).analysis.remaining, 3);
+  assert.equal(userAIQuota(s, date, limits).optimizer.remaining, 3);
+  assert.equal(
+    userAIQuota(newState("other"), date, limits).analysis.remaining,
+    5,
+  );
+  assert.equal(userAIQuota(s, "2026-11-14", limits).analysis.remaining, 5);
+  assert.equal(JSON.stringify(s), before);
+});

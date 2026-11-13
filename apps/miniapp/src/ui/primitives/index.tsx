@@ -116,12 +116,20 @@ export function ChallengeArt({
     </span>
   );
 }
-export function AIUseNotice({ image = false }: { image?: boolean }) {
+export function AIUseNotice({
+  image = false,
+  recommendation = false,
+}: {
+  image?: boolean;
+  recommendation?: boolean;
+}) {
   return (
     <p className="ai-use-notice">
       {image
         ? "AI로 미리 만든 그림의 키워드를 찾는 챌린지예요."
-        : "생성형 AI로 질문을 다듬고 업무를 분석해요. 입력 내용은 Google Gemini로 보내니 개인정보는 적지 마세요."}
+        : recommendation
+          ? "업무를 분석하고 모델군을 판단하는 AI는 Google Gemini예요. 분석을 위해 입력 내용이 Google에 전달돼요."
+          : "질문을 다듬는 AI는 Google Gemini예요. 개선을 위해 입력 내용이 Google에 전달돼요."}
     </p>
   );
 }

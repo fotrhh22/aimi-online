@@ -48,7 +48,7 @@ const ResultSchema = z
 function isRequest(text: string) {
   const value = text.trim();
   return (
-    /(?:해\s?줘(?:요)?|해\s?주세요|알려\s?줘(?:요)?|알려\s?주세요|부탁해(?:요)?|할까요|인가요)\s*[.?!。！？]*$/u.test(
+    /(?:해\s?줘(?:요)?|해\s?주세요|(?:작성|설명|정리|비교|분석|제시|출력|생성|번역|요약|추천|검토)(?:하라|하시오|하세요|해라)|부탁드립니다|요청합니다|알려\s?줘(?:요)?|알려\s?주세요|부탁해(?:요)?|할까요|인가요)\s*[.?!。！？]*$/u.test(
       value,
     ) ||
     /^(?:please\s+)?(?:write|explain|summari[sz]e|translate|list|provide|compare|analy[sz]e|create|suggest|recommend|describe|help|how|what|why|can you|could you|tell me|give me|generate|review|improve|debug|classify|extract|design|implement|calculate|act as|you are)\b/i.test(

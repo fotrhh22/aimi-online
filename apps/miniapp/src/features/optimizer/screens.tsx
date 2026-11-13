@@ -535,7 +535,12 @@ export function Recommendations() {
           ))}
         </div>
       </section>
-      <AIUseNotice />
+      <AIUseNotice recommendation />
+      <p className="caption ai-quota" role="status">
+        {a.data?.aiQuota
+          ? `오늘 남은 모델 추천 ${a.data.aiQuota.analysis.remaining} / ${a.data.aiQuota.analysis.limit}회`
+          : "남은 추천 횟수를 확인하고 있어요."}
+      </p>
       <div className="recommendation-input">
         <input
           aria-label="추천받을 업무"

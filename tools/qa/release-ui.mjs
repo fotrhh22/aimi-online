@@ -150,7 +150,7 @@ try {
     await visit();
     await page.getByRole("button", { name: /프롬프트 개선기/ }).click();
     await page
-      .getByText("생성형 AI로 질문을 다듬고 업무를 분석해요.", { exact: false })
+      .getByText("질문을 다듬는 AI는 Google Gemini예요.", { exact: false })
       .waitFor();
     await inspect("optimizer-input");
     await page

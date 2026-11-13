@@ -1447,3 +1447,23 @@ html[data-aimi-host="toss"] { touch-action:pan-x pan-y; }
 #root .social-identity p { margin:0; line-height:1.5; }
 #root .social-share-actions { display:flex; justify-content:space-around; gap:16px; }
 #root .social-share-actions button { min-height:44px; font:inherit; font-size:14px; }
+
+/* iOS keyboard pans the visual viewport; preserve native chrome above the inner scroll pane. */
+html[data-aimi-host="toss"], html[data-aimi-host="toss"] body, html[data-aimi-host="toss"] #root { width:100%;height:100%;overflow:hidden; }
+html[data-aimi-host="toss"] #root .app-shell { position:fixed;top:var(--visual-viewport-top,0px);left:0;right:0;width:100%; }
+#root .app-shell, #root .app-shell > .page { min-width:0;max-width:100%; }
+#root .app-shell > .page { width:100%;overflow-x:hidden; }
+#root .recommendation-input { width:100%;min-width:0;max-width:100%; }
+#root .recommendation-input input { flex:1 1 0;width:0;min-width:0;max-width:100%;font-size:16px; }
+#root .recommendation-input > button { flex:0 0 36px;width:36px;height:36px; }
+#root .output-kind-tabs { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible; }
+#root .output-kind-tabs > button { min-width:0;padding:8px;font-size:14px;white-space:nowrap; }
+#root .tier-list { width:100%;min-width:0;max-width:100%;grid-template-columns:minmax(0,1fr); }
+#root .tier-list > button { display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:8px;width:100%;min-width:0;max-width:100%; }
+#root .tier-list > button > small { min-width:0;overflow-wrap:anywhere; }
+#root .model-panel, #root .model-panel-list, #root .model-panel-heading { width:100%;min-width:0;max-width:100%; }
+#root .model-panel { overflow-wrap:anywhere; }
+#root .model-panel-list { overflow-x:hidden; }
+#root .model-panel-list > button { min-width:0;gap:8px; }
+#root .model-panel-list > button > * { min-width:0; }
+#root .ai-quota { margin-top:8px;color:var(--color-brand-text); }

@@ -26,6 +26,10 @@ export function installSafeArea() {
       "--visual-viewport-height",
       (visual?.height ?? window.innerHeight) + "px",
     );
+    root.style.setProperty(
+      "--visual-viewport-top",
+      (visual?.offsetTop ?? 0) + "px",
+    );
     const editing = document.activeElement?.matches(
       "input,textarea,[contenteditable=true]",
     );
@@ -55,6 +59,7 @@ export function installSafeArea() {
   document.addEventListener("focusin", viewport);
   document.addEventListener("focusout", viewport);
   window.visualViewport?.addEventListener("resize", viewport);
+  window.visualViewport?.addEventListener("scroll", viewport);
   return () => {
     unsubscribe();
     window.removeEventListener("resize", refresh);
@@ -63,5 +68,6 @@ export function installSafeArea() {
     document.removeEventListener("focusin", viewport);
     document.removeEventListener("focusout", viewport);
     window.visualViewport?.removeEventListener("resize", viewport);
+    window.visualViewport?.removeEventListener("scroll", viewport);
   };
 }

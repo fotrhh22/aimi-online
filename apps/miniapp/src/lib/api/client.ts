@@ -225,7 +225,7 @@ const messages: Record<string, string> = {
     "작성 팁을 처리하지 못했어요. 이용 횟수는 차감하지 않아요. 다시 시도해주세요.",
   AI_BUSY: "이전 요청을 처리하고 있어요.",
   AI_NOT_CONFIGURED: "AI 연결을 준비하고 있어요.",
-  AI_NOT_A_PROMPT: "질문 대신 답변이 생성됐어요. 다시 시도해주세요.",
+  AI_NOT_A_PROMPT: "요청문 형식으로 다듬지 못했어요. 횟수는 차감되지 않아요.",
   AI_INTENT_CHANGED: "원문의 조건을 유지하지 못했어요. 다시 시도해주세요.",
   AI_UNDISCLOSED_ASSUMPTIONS:
     "추가 조건을 확인하지 못했어요. 다시 시도해주세요.",

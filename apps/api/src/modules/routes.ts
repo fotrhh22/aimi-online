@@ -52,7 +52,11 @@ import {
 import { KEYWORDS, contentForDate } from "../services/content/fixture.js";
 import { Gemini } from "../services/llm/gemini.js";
 import { TASK_PROFILE_VERSION } from "../services/llm/prompts.js";
-import { reserveUserAI, releaseUserAI } from "../services/llm/usage.js";
+import {
+  reserveUserAI,
+  releaseUserAI,
+  userAIQuota,
+} from "../services/llm/usage.js";
 import { ApiError } from "../db.js";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -115,7 +119,17 @@ export function registerPrototype(
   };
   app.get("/v1/state", async (r) => {
     const s = await repo.read(await auth(r));
-    return wrap(view(s));
+    return wrap({
+      ...view(s),
+      aiQuota: userAIQuota(s, seoulDate(), {
+        optimizer:
+          repo.aiDailyLimit ??
+          Math.min(50, Number(process.env.OPTIMIZER_DAILY_LIMIT) || 5),
+        analysis:
+          repo.aiDailyLimit ??
+          Math.min(50, Number(process.env.RECOMMENDATION_DAILY_LIMIT) || 5),
+      }),
+    });
   });
   app.get("/v1/content/previews", async (r) => {
     await auth(r);

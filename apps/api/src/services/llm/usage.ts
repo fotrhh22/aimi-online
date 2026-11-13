@@ -41,3 +41,38 @@ export function reserveUserAI(
   usage[feature]++;
   return usage[feature];
 }
+
+/** Read-only quota display, including failures awaiting legacy reconciliation. */
+export function userAIQuota(
+  state: UserState,
+  date: string,
+  limits: Record<AIFeature, number>,
+) {
+  const analysis = (state.claims[date] ?? []).filter(
+    (v) => v === "analysis",
+  ).length;
+  const jobs = Object.values(state.jobs).filter((j) => j.date === date);
+  const usage = {
+    ...(state.aiUsage?.[date] ?? {
+      analysis,
+      optimizer: Math.max(0, jobs.length - analysis),
+    }),
+  };
+  for (const job of jobs) {
+    const feature =
+      job.quotaFeature ??
+      (job.error === "AI_INVALID_TIP" ? "optimizer" : undefined);
+    if (job.status === "failed" && !job.quotaRefunded && feature)
+      usage[feature] = Math.max(0, usage[feature] - 1);
+  }
+  const summary = (feature: AIFeature) => ({
+    limit: limits[feature],
+    used: usage[feature],
+    remaining: Math.max(0, limits[feature] - usage[feature]),
+  });
+  return {
+    date,
+    optimizer: summary("optimizer"),
+    analysis: summary("analysis"),
+  };
+}
