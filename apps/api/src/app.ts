@@ -151,7 +151,16 @@ export function createApp(
   }
   if (process.env.ENABLE_TEST_DEMO === "true") {
     registerDemo(app, pool, config.SESSION_SIGNING_KEY);
-    registerDemo(app, pool, config.SESSION_SIGNING_KEY, undefined, true);
+  }
+  // Retired Vercel demos must never authenticate, read records or invoke AI.
+  for (const url of ["/web-demo", "/web-demo/*"]) {
+    app.route({
+      method: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      url,
+      handler: async () => {
+        throw new ApiError("WEB_DEMO_CLOSED", 410);
+      },
+    });
   }
   const unlinkToss = registerTossAuth(
     app,

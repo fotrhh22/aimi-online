@@ -1,4 +1,6 @@
-# Vercel 개인 코드 데모
+# Vercel 개인 코드 데모 — 운영 종료
+
+2026-11-13 사용자 요청으로 종료. Render의 `/web-demo` 전체 경로는410 `WEB_DEMO_CLOSED`를 반환하며 세션 발급·기록 조회·Gemini 호출을 수행하지 않는다. Vercel API 프록시도 전달 기능을 제거했고 웹 빌드는 JavaScript/API 없는 종료 안내만 생성한다. 기존 DB 데모 기록과 토스용 인증·Gemini 기능은 유지한다. Vercel 프로젝트 삭제는 사용자가 수행한다. 아래는 이전 구현 기록이다.
 
 ## 사용자 흐름
 
