@@ -195,7 +195,7 @@
           "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon",
           "readAt": "2026-11-10",
           "localFile": "data/model-sources/group-sources/gemini-argon.txt",
-          "sha256": "f41d5d596f62a33590b650aa6dcf7c6b5b093708a5ef1d7ec3b25483b76388b7",
+          "sha256": "86db1179bd88e423dfc20bc594b9000edbdd55a6e7e39a06706a360ddfcb005c",
           "excerpt": "Gemini 4 Argon is Google&#39;s frontier model that excels at deep work in complex, real-world tasks across domains including coding, finance, legal,"
         },
         {
@@ -2377,7 +2377,7 @@
           "url": "https://ai.google.dev/gemma/docs/core/model_card_4?hl=en",
           "readAt": "2026-11-10",
           "localFile": "data/model-sources/group-sources/gemma-4.txt",
-          "sha256": "1b66ce04a78cb1d8e82c3f1c04f14f8476104433b1fcc3624b8294694da1bf3d",
+          "sha256": "f8a786000e74709758a9ba250d8155d8db865d71e2d176ea52557772d795714f",
           "excerpt": "Run efficiently on Edge LiteRT-LM Llama.cpp MLX"
         },
         {
@@ -2414,7 +2414,7 @@
           "url": "https://ai.google.dev/gemma/docs/core/model_card_4?hl=en",
           "readAt": "2026-11-10",
           "localFile": "data/model-sources/group-sources/gemma-4.txt",
-          "sha256": "1b66ce04a78cb1d8e82c3f1c04f14f8476104433b1fcc3624b8294694da1bf3d",
+          "sha256": "f8a786000e74709758a9ba250d8155d8db865d71e2d176ea52557772d795714f",
           "excerpt": "Run efficiently on Edge LiteRT-LM Llama.cpp MLX"
         },
         {

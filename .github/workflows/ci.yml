@@ -30,6 +30,8 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - name: Check tracked files for credential strings
+        run: python3 tools/security/check-secrets.py
       - run: npm ci
       - run: npm run build
       - run: npm run typecheck
