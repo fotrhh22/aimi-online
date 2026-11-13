@@ -3,7 +3,7 @@ import { Button } from "../../ui/primitives";
 import { copy } from "../../lib/toss/bridge";
 import { useApp } from "../../app/context";
 export const SUPPORT_EMAIL = "fotrhh22@gmail.com";
-export const PRIVACY_OPERATOR = "강훈호";
+export const PRIVACY_OPERATOR = "Hunho Kang(강훈호)";
 export const PRIVACY_VERSION = "2026-11-13";
 export function SupportContact() {
   const a = useApp();
@@ -31,7 +31,8 @@ const sections = [
   {
     title: "1. 운영자와 문의처",
     text: [
-      `AIMI는 ${PRIVACY_OPERATOR}가 운영합니다. 서비스 이용 및 개인정보의 열람·정정·삭제·처리정지 관련 요청은 ${SUPPORT_EMAIL}으로 보내주세요.`,
+      "AIMI는 서비스 제공에 필요한 정보를 아래와 같이 처리합니다.",
+      `운영자: ${PRIVACY_OPERATOR}. 서비스 이용 및 개인정보의 열람·정정·삭제·처리정지 관련 요청은 ${SUPPORT_EMAIL}으로 보내주세요.`,
       "요청 내용을 확인한 뒤 해당 계정의 소유 여부를 확인하고 처리 결과를 안내합니다. 인증 코드·세션 토큰·비밀번호는 이메일에 보내지 마세요.",
     ],
   },
@@ -55,7 +56,7 @@ const sections = [
     text: [
       "질문 개선과 업무 분석·모델군 판단에는 Google Gemini를 사용합니다. 사용자가 입력한 내용과 기능 수행을 위한 시스템 지침이 Google에 전달됩니다. 닉네임·친구 코드·세션 토큰을 AI 요청에 자동 첨부하지 않습니다.",
       "세부 모델 선정과 비용 비교는 AIMI 코드로 처리하고, 이미지 챌린지는 사전 제작 콘텐츠와 규칙으로 채점합니다. 추천 대상 모델 공급사 모두에 사용자 입력을 보내지는 않습니다.",
-      "Render는 API 서버 운영, Supabase는 데이터베이스와 콘텐츠 파일 저장에 사용합니다. Google의 입력·응답 처리 조건은 실제 계정에 적용되는 API 약관에 따라 달라집니다. Google을 포함한 외부 처리의 국가·기간·계약상 역할 및 필요한 고지·동의는 정식 출시 전에 확정합니다.",
+      "서버 운영에는 Render, 데이터·파일 저장에는 Supabase, 질문 개선·업무 분석에는 Google Gemini를 이용합니다. 각 업체의 데이터 처리 조건은 해당 서비스 약관과 데이터 처리 약정에 따릅니다.",
     ],
   },
   {
@@ -70,7 +71,7 @@ const sections = [
     text: [
       "회원 식별·진행·EP·정원·친구 기록은 서비스 이용 중 기록 유지에 사용하며, 계정 삭제 요청을 처리할 때 운영 데이터베이스의 해당 회원 및 연결 기록을 삭제합니다.",
       "AI 결과와 관련 중복 요청 응답은 생성 후 24시간이 지나면 주기적 정리 대상이 됩니다. 이는 외부 업체의 로그·백업이나 Google의 보유기간까지 24시간이라는 뜻은 아닙니다.",
-      "외부 업체의 백업·로그 및 문의 내역의 세부 보유기간은 출시 전 확인 항목으로 남아 있습니다. 확인되지 않은 기간을 보관 없음 또는 즉시 완전 삭제로 안내하지 않습니다.",
+      "외부 서비스의 로그·백업은 각 서비스의 약관과 데이터 처리 약정에 따라 처리됩니다. 계정 삭제가 외부 서비스의 모든 백업에서 즉시 삭제된다는 뜻은 아닙니다.",
     ],
   },
   {
@@ -84,18 +85,14 @@ const sections = [
     title: "8. 보호 조치와 방침 변경",
     text: [
       "서버 인증과 접근 권한 확인, HTTPS 통신, 서버 비밀 키 분리, 원본 사용자 식별키의 변환 저장 등으로 정보를 보호합니다.",
-      "이 문서는 2026년 11월 13일 작성한 시범운영 검토용 방침입니다. 외부 처리와 보유기간의 미확정 사항을 확정하고, 방침 변경 시 앱 내부에 최신 작성일과 내용을 안내합니다.",
+      "방침 변경 시 앱 내부에 최신 작성일과 변경 내용을 안내합니다.",
     ],
   },
 ];
 export function PrivacyDocument() {
   return (
     <article className="privacy-document">
-      <p className="caption">작성일 {PRIVACY_VERSION} · 시범운영 검토용</p>
-      <p className="privacy-review-note">
-        외부 처리 국가·계약 및 로그·백업 보유기간은 정식 출시 전 확정이 필요한
-        항목입니다.
-      </p>
+      <p className="caption">작성일 {PRIVACY_VERSION}</p>
       {sections.map((s) => (
         <section key={s.title}>
           <h2>{s.title}</h2>

@@ -50,6 +50,7 @@ export function createApp(
     origin: config.CORS_ALLOWED_ORIGINS.split(",")
       .map((s) => s.trim())
       .filter(Boolean),
+    methods: ["GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: false,
   });
   const hashToken = (token: string) =>

@@ -113,3 +113,63 @@ test("nickname persists on the current user and social; only accepted friends ca
     await app.close();
   }
 });
+
+// Browser requests must pass preflight before the profile route can run.
+test("browser preflight allows profile/garden writes and account deletion only for configured origins", async () => {
+  const { createApp } = await import("../src/app.js");
+  const { parseConfig } = await import("../src/config.js");
+  const origin = "https://aimi.private-apps.tossmini.com";
+  const pool = { query: async () => ({ rows: [], rowCount: 0 }) };
+  const app = createApp(
+    parseConfig({
+      NODE_ENV: "test",
+      DATABASE_URL: "postgresql://localhost/unused",
+      SESSION_SIGNING_KEY: "test-only-".repeat(8),
+      LOG_LEVEL: "silent",
+      CORS_ALLOWED_ORIGINS: origin,
+    }),
+    pool as unknown as import("pg").Pool,
+  );
+  try {
+    for (const [url, method] of [
+      ["/v1/profile", "PUT"],
+      ["/v1/garden", "PUT"],
+      ["/v1/account", "DELETE"],
+    ]) {
+      const r = await app.inject({
+        method: "OPTIONS",
+        url,
+        headers: {
+          origin,
+          "access-control-request-method": method,
+          "access-control-request-headers":
+            "authorization,content-type,idempotency-key",
+        },
+      });
+      assert.equal(r.statusCode, 204);
+      assert.equal(r.headers["access-control-allow-origin"], origin);
+      assert.ok(
+        String(r.headers["access-control-allow-methods"])
+          .split(", ")
+          .join(",")
+          .split(",")
+          .includes(method),
+      );
+      assert.match(
+        String(r.headers["access-control-allow-headers"]),
+        /idempotency-key/i,
+      );
+    }
+    const denied = await app.inject({
+      method: "OPTIONS",
+      url: "/v1/profile",
+      headers: {
+        origin: "https://untrusted.example",
+        "access-control-request-method": "PUT",
+      },
+    });
+    assert.equal(denied.headers["access-control-allow-origin"], undefined);
+  } finally {
+    await app.close();
+  }
+});

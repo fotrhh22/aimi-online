@@ -48,15 +48,19 @@ function Screens() {
     )
       a.navigate("/social");
   }, [a.authenticated, a.path]);
-  if (a.path === "/privacy" && (!a.authenticated || !a.data?.nicknameSet))
+  if (a.path === "/privacy")
     return (
-      <main className="privacy-standalone">
-        <h1>개인정보처리방침</h1>
-        <PrivacyDocument />
-        <Button weak onClick={a.back}>
-          돌아가기
-        </Button>
-      </main>
+      <div className="app-shell">
+        <main className="page" data-screen="privacy">
+          <header className="screen-head">
+            <h1>개인정보처리방침</h1>
+          </header>
+          <PrivacyDocument />
+          <Button weak onClick={a.back}>
+            돌아가기
+          </Button>
+        </main>
+      </div>
     );
   if (a.loading)
     return (
@@ -172,7 +176,6 @@ function Screens() {
   else if (a.path.startsWith("/models/"))
     body = <ModelDetails key={"models-" + a.aiEpoch} />;
   else if (a.path === "/account") body = <Account />;
-  else if (a.path === "/privacy") body = <PrivacyDocument />;
   else
     body = (
       <>

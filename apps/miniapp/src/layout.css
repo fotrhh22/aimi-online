@@ -1474,10 +1474,6 @@ html[data-aimi-host="toss"] #root .app-shell { position:fixed;top:var(--visual-v
 #root .privacy-document h2 { font-size:17px;line-height:1.5;margin:0; }
 #root .privacy-document p { margin:0;font-size:14px;line-height:1.8; }
 #root .privacy-document .caption { font-size:12px; }
-#root .privacy-review-note { padding:12px;border-radius:12px;background:var(--color-weak);color:var(--color-brand-text); }
-#root .privacy-standalone { box-sizing:border-box;height:var(--visual-viewport-height,100dvh);overflow-y:auto;padding:calc(var(--content-safe-top) + 24px) 24px calc(var(--safe-bottom) + 24px);max-width:480px;margin:auto; }
-#root .privacy-standalone > h1 { font-size:22px;line-height:1.5;margin:0 0 24px; }
-#root .privacy-standalone > .aimi-button { margin-top:24px; }
 #root .support-contact { display:flex;flex-direction:column;gap:12px;min-width:0; }
 #root .support-contact h2 { font-size:17px;line-height:1.5; }
 #root .support-contact p { font-size:14px;line-height:1.6;margin:0; }
