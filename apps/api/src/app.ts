@@ -21,6 +21,7 @@ import { registerAnonymousAuth } from "./services/toss/anonymous.js";
 import { registerPrototype } from "./modules/routes.js";
 import { PostgresRepository } from "./modules/repository.js";
 import { claimReward } from "./economy.js";
+import { measuredQuery, registerStartupTimings } from "./observability/startup.js";
 
 export function createApp(
   config: Config,
@@ -46,12 +47,14 @@ export function createApp(
             ],
           },
   });
+  registerStartupTimings(app, pool);
   app.register(cors, {
     origin: config.CORS_ALLOWED_ORIGINS.split(",")
       .map((s) => s.trim())
       .filter(Boolean),
     methods: ["GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: false,
+    exposedHeaders: ["Server-Timing", "X-Request-ID", "X-AIMI-Instance", "X-AIMI-Boot-At"],
   });
   const hashToken = (token: string) =>
     createHmac("sha256", config.SESSION_SIGNING_KEY)
@@ -70,7 +73,7 @@ export function createApp(
       request.headers.authorization || "",
     );
     if (!match) throw new ApiError("UNAUTHENTICATED", 401);
-    const result = await pool.query(
+    const result = await measuredQuery(pool,
       "SELECT user_id FROM aimi.sessions WHERE token_hash=$1 AND expires_at>now()",
       [hashToken(match[1])],
     );
@@ -106,7 +109,7 @@ export function createApp(
   app.get("/health/live", async () => ({ status: "ok" }));
   app.get("/health/ready", async (_request, reply) => {
     try {
-      const result = await pool.query(
+      const result = await measuredQuery(pool,
         "SELECT count(*)::int AS count FROM aimi.schema_migrations",
       );
       if (result.rows[0].count < 1) throw new Error("No migration");

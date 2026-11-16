@@ -2,9 +2,13 @@ import { parseConfig } from "./config.js";
 import { createPool } from "./db.js";
 import { loadRemoteContent } from "./services/content/remote.js";
 import { createApp } from "./app.js";
+import { performance } from "node:perf_hooks";
+import { recordBootContentLoad } from "./observability/startup.js";
 const config = parseConfig(process.env);
 const pool = createPool(config.DATABASE_URL);
+const contentLoadStarted = performance.now();
 await loadRemoteContent(pool);
+recordBootContentLoad(performance.now() - contentLoadStarted);
 const app = createApp(config, pool);
 app.addHook("onClose", async () => {
   await pool.end();

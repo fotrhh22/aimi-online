@@ -5,6 +5,7 @@ import { AnonymousLogin, SessionResult } from "@aimi/contracts";
 import { z } from "zod";
 import { ApiError } from "../../db.js";
 import { tossPartnerRequest } from "./client.js";
+import { measurePhase, measuredConnection } from "../../observability/startup.js";
 
 const exchangePath = "/api-partner/v1/apps-in-toss/users/anon-key/exchange";
 const Identity = z.object({ anonKey: z.string().min(1).max(2048) });
@@ -24,7 +25,7 @@ export function registerAnonymousAuth(
 ) {
   app.post("/auth/anonymous", async (request) => {
     const { code } = AnonymousLogin.parse(request.body);
-    const verifiedKey = await exchange(code);
+    const verifiedKey = await measurePhase("partner", () => exchange(code));
     if (!Identity.safeParse({ anonKey: verifiedKey }).success)
       throw new ApiError("TOSS_AUTH_FAILED", 502);
     const identity = createHmac("sha256", secret)
@@ -32,7 +33,7 @@ export function registerAnonymousAuth(
       .digest("hex");
     const token = randomBytes(32).toString("hex");
     const tokenHash = createHmac("sha256", secret).update(token).digest("hex");
-    const client = await pool.connect();
+    const client = await measuredConnection(pool);
     try {
       await client.query("BEGIN");
       const result = await client.query(

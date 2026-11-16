@@ -2,6 +2,7 @@ import { createHash, randomUUID } from "node:crypto";
 import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { dirname } from "node:path";
 import type { Pool } from "pg";
+import { measuredConnection, measuredQuery } from "../observability/startup.js";
 import { ApiError } from "../db.js";
 import { ECONOMY_POLICY, type UserState } from "@aimi/contracts";
 export function newState(id: string, development = false): UserState {
@@ -159,7 +160,7 @@ export class PostgresRepository implements Repository {
   async readMany(ids: string[]) {
     if (!ids.length) return {};
     // One statement snapshot keeps the wallet and aggregate consistent without row locks.
-    const r = await this.pool.query(
+    const r = await measuredQuery(this.pool,
       "SELECT p.user_id,p.state,w.balance FROM aimi.prototype_states p JOIN aimi.ep_wallets w ON w.user_id=p.user_id WHERE p.user_id=ANY($1::uuid[])",
       [[...new Set(ids)]],
     );
@@ -180,7 +181,7 @@ export class PostgresRepository implements Repository {
     ids: string[],
     fn: (states: Record<string, UserState>) => T,
   ): Promise<T> {
-    const c = await this.pool.connect();
+    const c = await measuredConnection(this.pool);
     try {
       await c.query("BEGIN");
       const states: Record<string, UserState> = {},
