@@ -1,0 +1,11 @@
+{
+  "version": "model-exclusions-20261117-r2",
+  "reason": "사용자 결정에 따른 모델 목록·추천 제외. 공급사의 서비스 종료 판정과는 별개다.",
+  "ids": [
+    "microsoft/mai-image-2.5",
+    "microsoft/mai-image-2.5-pro",
+    "recraft/recraft-v4.1-flash",
+    "openai/gpt-image-1-mini",
+    "stepfun/step-3.5-flash"
+  ]
+}

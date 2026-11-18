@@ -1,4 +1,5 @@
 import type { OutputKind, MediaRequest, MediaInfo } from "@aimi/contracts";
+import { isExcludedModel } from "@aimi/contracts";
 export type MediaModel = {
   id: string;
   name: string;
@@ -239,6 +240,7 @@ export function recommendMedia<T extends MediaModel>(
   const kind = task.outputKind ?? "text";
   const candidates = models.filter(
     (m) =>
+      !isExcludedModel(m.id) &&
       supportsOutput(m, kind) &&
       m.productTier === tier &&
       m.media?.groupPolicy.reviewStatus === "source-reviewed" &&

@@ -1,4 +1,11 @@
 import { isSupportedOutputKind } from "./output.js";
+import exclusions from "./model-exclusions.json" with { type: "json" };
+export const MODEL_EXCLUSION_POLICY_VERSION = exclusions.version;
+export const EXCLUDED_MODEL_IDS: readonly string[] = Object.freeze([...exclusions.ids]);
+const excludedModelIds = new Set(EXCLUDED_MODEL_IDS);
+export function isExcludedModel(id: string): boolean {
+  return excludedModelIds.has(id);
+}
 /** Public metadata audit is not proof of a successful per-account generation. */
 export type ModelAvailability = {
   id: string;
@@ -38,12 +45,13 @@ const cutoffDate = (date: Date) =>
     month: "2-digit",
     day: "2-digit",
   }).format(date);
-export const AUDIT_MAX_AGE_MS = 7 * 86400_000;
 export function availabilityAllowsRecommendation(
   row: ModelAvailability | undefined,
   now = new Date(),
 ): boolean {
   if (!row) return true; // Legacy pure-unit fixtures; published API always attaches scoped audit rows.
+  if (isExcludedModel(row.id)) return false;
+  // Manual review stays valid until an explicit policy change or known shutdown.
   const age = now.getTime() - Date.parse(row.checkedAt);
   return (
     row.visible &&
@@ -51,7 +59,6 @@ export function availabilityAllowsRecommendation(
     row.activeEndpointCount > 0 &&
     Number.isFinite(age) &&
     age >= 0 &&
-    age <= AUDIT_MAX_AGE_MS &&
     (!row.shutdownDate || row.shutdownDate > cutoffDate(now))
   );
 }
@@ -64,6 +71,7 @@ export function publishAvailableModels<
 ): (T & { availability?: ModelAvailability })[] {
   const rows = new Map(policy.models.map((r) => [r.id, r]));
   return models.flatMap((model) => {
+    if (isExcludedModel(model.id)) return [];
     const kind = model.media?.kind ?? "text",
       row = rows.get(model.id);
     if (!isSupportedOutputKind(kind)) return [];

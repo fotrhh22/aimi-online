@@ -9,6 +9,8 @@ import {
   publishAvailableModels,
   availabilityAllowsRecommendation,
   availabilityLabel,
+  EXCLUDED_MODEL_IDS,
+  isExcludedModel,
   type AvailabilityPolicy,
   type ModelRecord,
 } from "@aimi/contracts";
@@ -588,7 +590,38 @@ test("HTTP recommendation scopes analysis by selected output, reuses tier analys
   }
 });
 
-test("catalogue audit retains only the approved 45 images and removes ended, empty and inactive routes from every published list", async () => {
+test("explicit exclusions override an older policy that still allows the models", async () => {
+  const policy = (await read("content/catalog/model-availability.json")) as AvailabilityPolicy;
+  const media = [
+    ...(await read("content/fixtures/models.json")).models,
+    ...(await read("content/fixtures/models-media.json")).models,
+  ] as ModelRecord[];
+  const now = new Date(policy.checkedAt);
+  const stalePolicy = {
+    ...policy,
+    models: policy.models.map((row) => isExcludedModel(row.id)
+      ? { ...row, visible: true, recommendationAllowed: true, activeEndpointCount: 1 }
+      : row),
+  };
+  for (const id of EXCLUDED_MODEL_IDS) {
+    const row = stalePolicy.models.find((r) => r.id === id);
+    assert.ok(row, id);
+    assert.equal(availabilityAllowsRecommendation(row, now), false, id);
+  }
+  assert.ok(publishAvailableModels(media, stalePolicy, now)
+    .every((model) => !isExcludedModel(model.id)));
+  const oldModels = media.map((model) => ({
+    ...model, availability: stalePolicy.models.find((row) => row.id === model.id),
+  }));
+  for (const tier of ["Small", "Medium", "High"] as const) {
+    for (const outputKind of ["text", "image"] as const) {
+      const result = recommend(oldModels, { outputKind, taskType: "general", requiredCapabilities: [] }, tier, now);
+      assert.ok(result.models.every((model) => !isExcludedModel(model.id)));
+    }
+  }
+});
+
+test("catalogue audit retains 41 images after user exclusions and removes ended, empty and inactive routes from every published list", async () => {
   const text = (await read("content/fixtures/models.json"))
     .models as ModelRecord[];
   const media = (await read("content/fixtures/models-media.json"))
@@ -600,8 +633,8 @@ test("catalogue audit retains only the approved 45 images and removes ended, emp
   const published = publishAvailableModels([...text, ...media], policy, date);
   const counts = (kind: string) =>
     published.filter((m) => (m.media?.kind ?? "text") === kind).length;
-  assert.equal(counts("image"), 45);
-  assert.equal(counts("text"), 144);
+  assert.equal(counts("image"), 41);
+  assert.equal(counts("text"), 143);
   assert.equal(counts("video"), 26);
   assert.equal(counts("audio"), 0);
   const pool = await read("content/catalog/image-candidates-45.json");
@@ -610,9 +643,10 @@ test("catalogue audit retains only the approved 45 images and removes ended, emp
       .filter((m) => m.media?.kind === "image")
       .map((m) => m.id)
       .sort(),
-    [...pool.ids].sort(),
+    pool.ids.filter((id: string) => !isExcludedModel(id)).sort(),
   );
   for (const id of [
+    ...EXCLUDED_MODEL_IDS,
     "openai/gpt-image-1",
     "meta/muse-image",
     "qwen/qwen-image-3",
@@ -644,7 +678,7 @@ test("catalogue audit retains only the approved 45 images and removes ended, emp
     }
   }
 });
-test("deprecation notice, empty endpoints, stale audits and new unaudited candidates fail closed without treating zero as missing", async () => {
+test("manual audits do not expire; deprecation, empty endpoints and unaudited candidates remain excluded", async () => {
   const policy = (await read(
     "content/catalog/model-availability.json",
   )) as AvailabilityPolicy;
@@ -668,8 +702,9 @@ test("deprecation notice, empty endpoints, stale audits and new unaudited candid
       available,
       new Date(now.getTime() + 8 * 86400_000),
     ),
-    false,
+    true,
   );
+  assert.equal(availabilityLabel(available, new Date(now.getTime() + 8 * 86400_000)), null);
   assert.equal(
     availabilityAllowsRecommendation(
       available,

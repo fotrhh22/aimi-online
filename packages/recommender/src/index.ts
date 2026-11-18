@@ -1,6 +1,7 @@
 import {
   isSupportedOutputKind,
   availabilityAllowsRecommendation,
+  isExcludedModel,
   type ModelAvailability,
 } from "@aimi/contracts";
 import { recommendMedia } from "./media.js";
@@ -70,7 +71,7 @@ export function recommend(
       threshold: null,
     };
   models = models.filter((m) =>
-    availabilityAllowsRecommendation(m.availability, now),
+    !isExcludedModel(m.id) && availabilityAllowsRecommendation(m.availability, now),
   );
   if (task.outputKind && task.outputKind !== "text")
     return recommendMedia(models, task, tier, now);

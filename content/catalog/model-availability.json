@@ -15,7 +15,7 @@
     "video"
   ],
   "imageCandidateCount": 45,
-  "policy": "Retired/identity-redirected/no-provider/held/specialized routes hidden. Announced deprecations visible with notice but excluded from new recommendations. Missing/older than 7 days audit cannot recommend. Source records preserved.",
+  "policy": "Retired/identity-redirected/no-provider/held/specialized routes hidden. Announced deprecations visible with notice but excluded from new recommendations. Missing audit cannot recommend. Manual audit has no automatic age expiry. Source records preserved.",
   "models": [
     {
       "id": "openai/gpt-6.1-terra",

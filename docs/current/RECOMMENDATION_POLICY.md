@@ -7,7 +7,7 @@
 
 ## 현재 모델 제공 상태 정책 (2026-11-11)
 
-recommendation-v6. 현재 제공 출력은 text/image/video뿐이다. model-availability-v1을 먼저 적용하며 종료/제공자 없음/미확인/분리 제작 경로는 숨긴다. 예정/폐기/가입 제한은 신규 추천 제외하고 목록에서 안내한다. 감사7일 경과/미래 자료/미감사 신규ID는 보류한다. MODEL_LIFECYCLE_AUDIT.md와 content/catalog/model-availability.json을 우선한다. 아래399개·출력9종은 이전 수집 이력이다.
+recommendation-v6. 현재 제공 출력은 text/image/video뿐이다. model-availability-v1을 먼저 적용하며 종료/제공자 없음/미확인/분리 제작 경로는 숨긴다. 예정/폐기/가입 제한은 신규 추천 제외하고 목록에서 안내한다. 수동 감사는7일 경과만으로 보류하지 않으며 명시적인 사용자 제외는 유지한다. 미래 자료/미감사 신규ID는 보류한다. MODEL_LIFECYCLE_AUDIT.md와 content/catalog/model-availability.json을 우선한다. 아래399개·출력9종은 이전 수집 이력이다.
 
 ## 현재 우선 정책 · 2026-11-10
 
@@ -62,7 +62,7 @@ UI는 모델3개와 추천 이유·등급·입출력100만토큰당 USD·지표�
 
 ## 데이터 운영
 
-초기 주간+수동 수집. 7일 초과는 노후 표시, 30일 초과는 자동 추천 중단을 개발 정책으로 둔다. 수집 실패는 이전 정상 snapshot 유지. 새 모델은 이름 유사성만으로 매핑하지 않는다. 실제 계정에서 받은 필드/표시 권한을 확인하고 없는 값은 N/A. 이 설정은 별도 recommendation_policy_version에 고정한다.
+지원 여부는 수동 검토 정책을 유지하며 확인 후7일 경과에 따른 자동 추천 중단은 적용하지 않는다. 가격·성능 자료의30일 유효성 검사는 별도 규칙이다. 수집 실패는 이전 정상 snapshot 유지. 새 모델은 이름 유사성만으로 매핑하지 않는다. 실제 계정에서 받은 필드/표시 권한을 확인하고 없는 값은 N/A. 이 설정은 별도 recommendation_policy_version에 고정한다.
 
 출처: https://artificialanalysis.ai/data-api/docs/reference , https://openrouter.ai/docs/api/api-reference/models/get-models . 공식 문서는 데이터 필드·지표 버전 근거이며 위 임계값/등급/업무량은 AIMI 자체 결정이다.
 

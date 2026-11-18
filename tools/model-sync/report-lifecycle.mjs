@@ -26,7 +26,7 @@ const lines=[
  '- DeepSeek 공식 deepseek-chat 별칭 종료를 별도 호스팅된 V3 전체 종료로 확대 해석하지 않는다. API ID와 제공자 경로를 개별 확인했다.',
  '', '## 검증 범위·출처',
  '', 'OpenAI·Google·Anthropic·Mistral·Kimi 공식 상태 표와 DeepSeek·Runway·xAI·Cohere 관련 공식 문서를 대조했다. 그 외에는 기존 모델별 공급사 제품 근거를 재사용하고 공개 제공자 경로를 확인했다. 전 공급사의 모든 종료 공지를 빠짐없이 조사했다거나 목록에 남은 전 모델의 실제 호출을 완료했다고 표현하지 않는다.',
- '', '공식 출처의 검토 시점은 content/policies/lifecycle-sources-v1.json에 별도 고정한다. 엔드포인트 재수집만으로 공식 공지 검토 시점을 새로 바꾸지 않는다. 7일 지난 감사·미감사 신규 ID·미래 검토 시점·제공자0개는 신규 추천에서 보류한다.',
+ '', '공식 출처의 검토 시점은 content/policies/lifecycle-sources-v1.json에 별도 고정한다. 엔드포인트 재수집만으로 공식 공지 검토 시점을 새로 바꾸지 않는다. 수동 감사의 확인일 경과만으로 신규 추천을 보류하지 않는다. 미감사 신규 ID·미래 검토 시점·제공자0개는 신규 추천에서 보류하며 명시적인 사용자 제외·종료·제한 정책을 유지한다.',
  '', '## 파일·실행',
  '', '- content/catalog/model-availability.json:254행의 개별 상태·근거·제공자·정책.',
  '- content/catalog/image-candidates-45.json:고정 이미지 후보 ID45개.',
