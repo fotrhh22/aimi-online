@@ -63,6 +63,7 @@ let packs = loadBundled("reviewed-10d-v3");
 const archivedPacks = new Map(
   [...legacyPacks, ...packs].map((p) => [packVersion(p), p]),
 );
+const scheduledPacks = new Map<string, PuzzlePack>();
 let remoteEnabled = false;
 const urls = new Map<string, string>();
 const reviews = new Map<string, string>();
@@ -98,6 +99,30 @@ export function configureGeneratedContent(
   packs = rows.map((r) => r.manifest);
   remoteEnabled = true;
 }
+/** Date overrides are independent of the immutable ten-day fallback and replay archive. */
+export function configureScheduledPacks(rows: { date: string; manifest: PuzzlePack; target_url: string; review_status: string }[]) {
+  const dates = new Set<string>();
+  for (const r of rows) {
+    const p = r.manifest;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(r.date) || dates.has(r.date) ||
+        r.review_status !== "approved" || p.review?.status !== "approved" || !p.published ||
+        !p.assets?.generated || !/^[a-f0-9]{64}$/.test(p.assets.sha256) ||
+        !p.correct_keywords?.length || !p.candidate_keywords?.length || !p.display_labels ||
+        !/^https:\/\//.test(r.target_url) || p.correct_keywords.some(k => !p.candidate_keywords.some(c => c.id === k.id)))
+      throw Error("INVALID_SCHEDULED_CONTENT");
+    const previous = scheduledPacks.get(r.date);
+    if (previous && packVersion(previous) !== packVersion(p)) throw Error("SCHEDULED_CONTENT_IMMUTABLE");
+    dates.add(r.date);
+  }
+  for (const r of rows) {
+    const version = packVersion(r.manifest);
+    scheduledPacks.set(r.date, r.manifest);
+    archivedPacks.set(version, r.manifest);
+    urls.set(version, r.target_url);
+    reviews.set(version, r.review_status);
+  }
+  if (rows.length) remoteEnabled = true;
+}
 function targetFor(p: PuzzlePack) {
   return (
     urls.get(packVersion(p)) ??
@@ -114,6 +139,8 @@ export function generatedPack(date: string, version?: string) {
     if (!p) throw new ApiError("CONTENT_VERSION_UNAVAILABLE", 503);
     return p;
   }
+  const scheduled = scheduledPacks.get(date);
+  if (scheduled) return scheduled;
   const offset = Math.floor(
     (Date.parse(date + "T00:00:00Z") - Date.parse("2026-11-11T00:00:00Z")) /
       86400000,

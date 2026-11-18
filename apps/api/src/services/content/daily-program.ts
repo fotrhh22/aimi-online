@@ -27,6 +27,12 @@ let program = ProgramSchema.parse(
     ),
   ),
 );
+const datedTips = new Map<string, DailyTip>();
+export function configureScheduledTips(rows: { date: string; tip: DailyTip }[]) {
+  const schema = z.object({ id: z.string().min(1), title: z.string().min(1), example: z.string().min(1), body: z.string().min(1) });
+  const parsed = rows.map(r => ({ date: r.date, tip: schema.parse(r.tip) }));
+  for (const r of parsed) datedTips.set(r.date, r.tip);
+}
 export function configureDailyProgram(value: unknown) {
   program = ProgramSchema.parse(value);
 }
@@ -48,7 +54,7 @@ export function dailyProgramForDate(date: string) {
     date,
     scheduleVersion: program.version,
     gameKind: program.gamesByWeekday[new Date(time).getUTCDay()]!,
-    todayTip: program.tips[
+    todayTip: datedTips.get(date) ?? program.tips[
       ((offset % program.tips.length) + program.tips.length) %
         program.tips.length
     ]! as DailyTip,

@@ -1,6 +1,7 @@
 import { parseConfig } from "./config.js";
 import { createPool } from "./db.js";
 import { loadRemoteContent } from "./services/content/remote.js";
+import { refreshScheduledContent } from "./services/content/scheduled.js";
 import { createApp } from "./app.js";
 import { performance } from "node:perf_hooks";
 import { recordBootContentLoad } from "./observability/startup.js";
@@ -10,6 +11,14 @@ const contentLoadStarted = performance.now();
 await loadRemoteContent(pool);
 recordBootContentLoad(performance.now() - contentLoadStarted);
 const app = createApp(config, pool);
+if (process.env.AIMI_CONTENT_SCHEDULED === "true") {
+  await refreshScheduledContent(pool);
+  const timer = setInterval(() => {
+    void refreshScheduledContent(pool).catch(() => app.log.error("SCHEDULED_CONTENT_REFRESH_FAILED"));
+  }, 60_000);
+  timer.unref();
+  app.addHook("onClose", async () => clearInterval(timer));
+}
 app.addHook("onClose", async () => {
   await pool.end();
 });
