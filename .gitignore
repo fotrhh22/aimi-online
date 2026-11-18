@@ -17,3 +17,6 @@ tmp/
 
 # Generated reports, bundles and local comparison artifacts
 /output/
+
+# Private operational connection checks and server credentials
+/var/scheduled-connection-*/
